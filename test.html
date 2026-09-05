@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;font-family:'Poppins',sans-serif;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        fontFamily: {
+          sans: ['Poppins', 'sans-serif'],
+          poppins: ['Poppins', 'sans-serif'],
+          headline: ['Poppins', 'sans-serif'],
+          body: ['Poppins', 'sans-serif'],
+        },
+        colors: {
+          primary: {
+            DEFAULT: "#b38808",
+            dark: "#8c6b06",
+            light: "#d4a92c",
+            container: "#fef3c7",
+            hover: "#9a7407",
+          },
+          gold: {
+            50: "#fffbeb",
+            100: "#fef3c7",
+            200: "#fde68a",
+            500: "#c59b27",
+            600: "#b38808",
+            700: "#8c6b06",
+          },
+          surface: {
+            DEFAULT: "#ffffff",
+            subtle: "#f8f9fa",
+            muted: "#f1f5f9",
+            card: "#ffffff",
+          },
+          slateText: {
+            primary: "#0f172a",
+            secondary: "#475569",
+            muted: "#64748b",
+            light: "#94a3b8",
+          }
+        },
+        spacing: {
+          "gutter-mobile": "1.25rem",
+          "gutter-tablet": "2rem",
+          "gutter-desktop": "3.5rem",
+          "space-2xs": "0.25rem",
+          "space-xs": "0.5rem",
+          "space-sm": "0.75rem",
+          "space-md": "1rem",
+          "space-lg": "1.5rem",
+          "space-xl": "2rem",
+          "space-2xl": "3rem",
+          "space-3xl": "4.5rem",
+        }
+      }
+    }
+  }</script></head><body class="bg-[#ffffff] font-sans text-slate-800 antialiased selection:bg-amber-100 selection:text-amber-900 min-h-screen"><header class="fixed top-0 z-50 w-full border-b shadow-sm bg-white/95 backdrop-blur-xl border-slate-200"><div class="flex items-center justify-between w-full h-20 px-gutter-mobile md:px-gutter-tablet lg:px-gutter-desktop gap-space-md"><div class="flex items-center gap-space-md min-w-max"><img alt="Keng Tung Pagoda Guide Emblem" class="object-contain w-auto h-10 drop-shadow-sm" src="https://lh3.googleusercontent.com/aida/AEtjO1XUmsBl_mWHAhYbgPvDgkAzlSIOuggFIarhNl1YFCRr9xbG9JDlxR0zJo22WdnAj3zOlALlNrW7eXgGVbsM4TsE6Pf-6Svi_NBXOkdbBvmDUF1L7DAM2nXriTqctr7LP5As9aUQOiTmt52yqdKXQwUv__VWUiBnGW6i5jj347tMnlX9l_ObI3tNQzL59TEdKH3xa-LhHm6C-bG7B18XPLMbcBT8DI7b_QJlZv-ZbFlzJdr_h3676S2jATBn"/><div class="flex flex-col"><span class="text-[19px] font-bold tracking-tight text-slate-900 leading-none">Keng Tung Pagoda Guide</span><span class="text-[10px] font-semibold uppercase tracking-widest text-[#b38808] mt-1">Kyaing Tong Sacred Heritage Archive · Eastern Shan State</span></div></div><nav class="hidden xl:flex items-center gap-1.5 px-space-xs"><a class="px-3.5 py-2 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-100 font-medium text-[13px] transition-all" data-path="explore-and-directory" href="#">Explore &amp; Directory</a><a aria-current="page" class="px-3.5 py-2 transition-all bg-[#b38808] text-white font-semibold text-[13px] rounded-lg shadow-sm shadow-amber-600/20" data-path="wat-zom-kham" href="#">Wat Zom Kham (Flagship)</a><a class="px-3.5 py-2 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-100 font-medium text-[13px] transition-all" data-path="festivals-calendar" href="#">Festivals Calendar</a><a class="px-3.5 py-2 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-100 font-medium text-[13px] transition-all" data-path="pilgrimage-map" href="#">Pilgrimage Map</a><a class="px-3.5 py-2 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-100 font-medium text-[13px] transition-all" data-path="preservation-trust" href="#">Preservation Trust</a></nav><div class="flex items-center gap-space-sm"><div class="hidden md:flex items-center gap-space-xs bg-slate-100 hover:bg-slate-200/80 border border-slate-200 px-3.5 py-1.5 rounded-lg transition-colors cursor-pointer"><span class="material-symbols-outlined text-[#b38808] text-[18px]">search</span><span class="text-[13px] text-slate-500 font-normal pr-space-xs">⌘K / Search Pagodas &amp; Relics</span><span class="bg-white border border-slate-200 px-1.5 py-0.5 rounded text-[11px] font-semibold text-slate-600 shadow-2xs">⌘K</span></div><div class="items-center hidden gap-1 p-1 border rounded-lg sm:flex bg-slate-100 border-slate-200"><button class="px-2.5 py-1 rounded-md text-[11px] font-bold text-slate-900 bg-white shadow-2xs">EN</button><button class="px-2.5 py-1 rounded-md text-[11px] font-medium text-slate-500 hover:text-slate-900 transition-colors">မြန်မာ</button><button class="px-2.5 py-1 rounded-md text-[11px] font-medium text-slate-500 hover:text-slate-900 transition-colors">ᨴᩱ᩠ᨿᨡᩨ᩠ᨶ</button></div><a class="hidden lg:flex items-center gap-1.5 bg-amber-50 text-[#b38808] border border-amber-200 hover:bg-amber-100 px-3.5 py-1.5 rounded-lg text-[13px] font-semibold transition-colors" data-path="audio-guide-sanctuary" href="#"><span class="material-symbols-outlined text-[17px]">headphones</span><span>Audio Guide</span></a><div class="flex items-center justify-center rounded-full shadow-xs cursor-pointer w-9 h-9 bg-slate-900 text-amber-400"><span class="material-symbols-outlined text-[20px]">person</span></div></div></div></header><main class="w-full pt-20 bg-[#ffffff]"><div class="flex flex-col w-full">
+<!-- Immersive Editorial Top Banner / Hero -->
+<section class="relative w-full -mt-20 overflow-hidden bg-slate-900">
+<div class="w-full min-h-[640px] lg:min-h-[760px] bg-cover bg-center flex flex-col justify-end relative" data-alt="Cinematic panoramic wide shot of Wat Zom Kham golden pagoda at twilight dusk in Keng Tung Shan State Myanmar" style="background-image: url('https://lh3.googleusercontent.com/aida/AEtjO1WiBorNLGhScaZKSAWdReYdY_gEFYgtLlPW5X5e1WBtzno41oFAtRwiBEEPbXxX1XkQSzA5ZMaLBB2nQk3-_mGqJ6DROFib5p87u1dP2KSFfwMgQKRW1tb_avS3eXsYzRTOSCYoQElsYtLrvGDHbvnDyGgPBWQm5WefNjsExiwrp8bRQeeMFsWFUM6cIb37CSkEc7EbDeSY3PkXJ_eC4msD4dNrAtPRhI3QRCIMfaKX2uhqVGvmd2lMXy8')">
+<div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/65 to-slate-900/30"></div>
+<div class="relative z-10 w-full pt-32 px-gutter-mobile md:px-gutter-tablet lg:px-gutter-desktop pb-space-2xl">
+<div class="flex flex-col max-w-6xl mx-auto gap-space-lg">
+<div class="flex flex-wrap items-center gap-space-xs">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/95 backdrop-blur-md text-[#8c6b06] text-[11px] font-bold uppercase tracking-wider shadow-md">
+<span class="material-symbols-outlined text-[15px] text-[#b38808]" style="font-variation-settings: 'FILL' 1;">stars</span>
+              Monastic Monument Catalog · Ref. KT-ZOM-01
+            </span>
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-400/90 backdrop-blur-md text-slate-950 text-[11px] font-bold tracking-wide shadow-md">
+<span class="w-2 h-2 rounded-full bg-emerald-600 animate-pulse"></span>
+              Active Theravada Sanctum
+            </span>
+</div>
+<div class="flex flex-col gap-2">
+<div class="flex flex-wrap items-baseline gap-x-4 gap-y-1">
+<h1 class="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl drop-shadow-sm">
+                Wat Zom Kham
+              </h1>
+<span class="text-2xl font-medium lg:text-3xl text-amber-300/90">
+                (วัดจอมคำ)
+              </span>
+</div>
+<div class="flex flex-wrap items-center gap-3 mt-1 text-lg font-medium text-amber-200 lg:text-xl">
+<span class="tracking-wide">ဝပ်ဇွမ်ခမ်း</span>
+<span class="font-light text-white/40">|</span>
+<span class="tracking-widest">ᩅᩢ᩠ᨯᨧᩬᨾᨤᩣᩴ</span>
+</div>
+<p class="max-w-3xl mt-2 text-base font-normal leading-relaxed text-slate-200 md:text-lg">
+              The Eternal Golden Crown of Keng Tung · Established 13th Century CE. High guardian stupa enfolding the Sacred Gautama Hair Relics over the Kyaing Tong valley basin.
+            </p>
+</div>
+<!-- Metadata Spec Pills -->
+<div class="grid grid-cols-2 gap-3 pt-2 md:grid-cols-4">
+<div class="bg-white/95 backdrop-blur-md p-4 rounded-xl border border-white/20 shadow-lg flex flex-col gap-0.5">
+<span class="text-[11px] text-slate-500 uppercase tracking-wider font-semibold">Consecration</span>
+<span class="text-[#b38808] text-sm font-bold">1253 CE (Tai Khün Era)</span>
+</div>
+<div class="bg-white/95 backdrop-blur-md p-4 rounded-xl border border-white/20 shadow-lg flex flex-col gap-0.5">
+<span class="text-[11px] text-slate-500 uppercase tracking-wider font-semibold">Stupa Height</span>
+<span class="text-[#b38808] text-sm font-bold">68 Meters (223 Ft)</span>
+</div>
+<div class="bg-white/95 backdrop-blur-md p-4 rounded-xl border border-white/20 shadow-lg flex flex-col gap-0.5">
+<span class="text-[11px] text-slate-500 uppercase tracking-wider font-semibold">Architectural Lineage</span>
+<span class="text-sm font-bold truncate text-slate-900">Tai Khün · Lanna · Shan</span>
+</div>
+<div class="bg-white/95 backdrop-blur-md p-4 rounded-xl border border-white/20 shadow-lg flex flex-col gap-0.5">
+<span class="text-[11px] text-slate-500 uppercase tracking-wider font-semibold">Summit Elevation</span>
+<span class="text-sm font-bold text-slate-900">Zom Kham Ridge · 829m</span>
+</div>
+</div>
+<!-- Floating Apple-Style Votive Audio Player Dock (Light Version) -->
+<div class="flex flex-col items-center justify-between gap-4 p-4 mt-4 border shadow-2xl bg-white/95 backdrop-blur-2xl md:p-5 rounded-2xl border-slate-200/80 md:flex-row" id="audioPlayerWidget">
+<div class="flex items-center w-full gap-4 md:w-auto">
+<button class="w-12 h-12 rounded-full bg-[#b38808] hover:bg-[#8c6b06] flex items-center justify-center text-white shadow-md shadow-amber-600/30 hover:scale-105 active:scale-95 transition-all flex-shrink-0" id="audioPlayBtn">
+<span class="material-symbols-outlined text-[26px]" id="playIcon">play_arrow</span>
+</button>
+<div class="flex flex-col min-w-0">
+<span class="text-[11px] text-[#b38808] uppercase tracking-wider font-bold truncate">Sacred Audio Sanctuary · Tour Chapter 01</span>
+<span class="text-sm font-semibold truncate text-slate-900 md:text-base">The Golden Scriptorium &amp; Relic Chambers of Wat Zom Kham</span>
+<span class="text-[12px] text-slate-500">Narrator: Ven. Bhaddanta Nyanavamsa (English, Tai Khün &amp; Shan)</span>
+</div>
+</div>
+<div class="flex flex-col w-full md:max-w-md gap-1.5">
+<div class="flex items-center justify-between text-[11px] font-semibold text-slate-500">
+<span id="audioCurrent">01:42</span>
+<div class="flex items-center gap-1.5 text-[#b38808]">
+<span class="material-symbols-outlined text-[15px]">graphic_eq</span>
+<span>Spatial Audio (Binaural Chanting)</span>
+</div>
+<span>08:15</span>
+</div>
+<div class="relative w-full h-2 overflow-hidden rounded-full cursor-pointer bg-slate-200 group">
+<div class="h-full bg-[#b38808] rounded-full transition-all duration-300" style="width: 24%;"></div>
+</div>
+</div>
+<div class="hidden lg:flex items-center gap-2.5 flex-shrink-0">
+<button class="flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-slate-100 hover:bg-slate-200 border border-slate-200 text-slate-700 font-semibold text-[12px] transition-colors">
+<span class="material-symbols-outlined text-[16px] text-[#b38808]">file_download</span>
+                Offline Audio (14MB)
+              </button>
+<button class="p-2 rounded-lg bg-slate-100 hover:bg-slate-200 border border-slate-200 text-slate-600 hover:text-[#b38808] transition-colors">
+<span class="material-symbols-outlined text-[18px]">translate</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Editorial Quick Navigation Strip (Clean Light Bar) -->
+<section class="sticky z-40 w-full border-b shadow-xs bg-white/95 border-slate-200 top-20 backdrop-blur-md">
+<div class="flex items-center justify-between max-w-6xl py-3 mx-auto overflow-x-auto px-gutter-mobile md:px-gutter-tablet lg:px-gutter-desktop">
+<div class="flex items-center gap-4 whitespace-nowrap text-[12px] uppercase font-bold tracking-wider text-slate-500">
+<span class="text-[#b38808]">Jump To Section:</span>
+<a class="hover:text-[#b38808] text-slate-700 transition-colors" href="#history-timeline">Chronology &amp; Relics</a>
+<span class="text-slate-300">·</span>
+<a class="hover:text-[#b38808] text-slate-700 transition-colors" href="#photo-gallery">Archival Gallery</a>
+<span class="text-slate-300">·</span>
+<a class="hover:text-[#b38808] text-slate-700 transition-colors" href="#festivals-rituals">Festivals &amp; Rites</a>
+<span class="text-slate-300">·</span>
+<a class="hover:text-[#b38808] text-slate-700 transition-colors" href="#trustee-board">Gopaka Trustee Roster</a>
+<span class="text-slate-300">·</span>
+<a class="hover:text-[#b38808] text-slate-700 transition-colors" href="#wayfinding-guide">Ascent &amp; Wayfinding</a>
+<span class="text-slate-300">·</span>
+<a class="hover:text-[#b38808] text-slate-700 transition-colors" href="#bulletin-board">Sanctuary Bulletins</a>
+</div>
+<div class="hidden md:flex items-center gap-1.5 text-emerald-700 bg-emerald-50 border border-emerald-200 px-3 py-1 rounded-full text-[12px] font-bold">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+        Official Registered Monument
+      </div>
+</div>
+</section>
+<!-- Main Content Body -->
+<div class="flex flex-col w-full max-w-6xl mx-auto px-gutter-mobile md:px-gutter-tablet lg:px-gutter-desktop py-space-2xl gap-space-3xl">
+<!-- SECTION 2: Chronological History & Founding Legends -->
+<section class="flex flex-col gap-space-xl scroll-mt-28" id="history-timeline">
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center gap-2 text-[#b38808] text-[12px] font-bold uppercase tracking-widest">
+<span class="material-symbols-outlined text-[18px]">auto_stories</span>
+          Tai Khün Monastic Annals
+        </div>
+<h2 class="text-2xl font-bold tracking-tight lg:text-3xl text-slate-900">
+          Sacred Chronology &amp; Seven Centuries of Relic Protection
+        </h2>
+<p class="max-w-3xl text-sm leading-relaxed text-slate-600 md:text-base">
+          The foundation of Wat Zom Kham is deeply woven into the spiritual genealogy of the Keng Tung valley, from the early blessing of wandering Arhat monks to the high golden age of the hereditary Saopha rulers.
+        </p>
+</div>
+<!-- Timeline Component -->
+<div class="relative flex flex-col gap-6 pl-6 md:pl-10 before:content-[''] before:absolute before:left-2 md:before:left-3 before:top-3 before:bottom-3 before:w-[2px] before:bg-gradient-to-b before:from-[#b38808] before:via-amber-300 before:to-slate-200">
+<!-- Timeline Item 1: 1253 CE -->
+<div class="relative group">
+<div class="absolute -left-6 md:-left-10 top-1.5 w-4 md:w-6 h-4 md:h-6 rounded-full bg-white flex items-center justify-center ring-2 ring-[#b38808] shadow-sm">
+<span class="w-2 h-2 rounded-full bg-[#b38808]"></span>
+</div>
+<div class="flex flex-col justify-between gap-6 p-6 transition-all bg-white border shadow-sm border-slate-200 hover:border-amber-400/60 rounded-2xl hover:shadow-md md:flex-row md:items-start">
+<div class="flex flex-col max-w-2xl gap-2">
+<div class="flex items-center gap-2.5">
+<span class="px-2.5 py-0.5 rounded-md bg-amber-100 text-[#8c6b06] text-[12px] font-bold">1253 CE</span>
+<span class="text-[11px] font-bold uppercase tracking-wider text-slate-500">Founding by King Mangrai’s Successors</span>
+</div>
+<h3 class="text-xl font-bold text-slate-900">Establishment upon Zom Kham Knoll</h3>
+<p class="text-sm leading-relaxed text-slate-600">
+                Following the mythic taming of the ancient lake waters by the holy hermit Maha Kassapa and disciples, the third ruler of the Mangrai dynastic branch decreed that a grand gilded chedi be erected atop the prominent central hill overlooking Lake Naung Tung to serve as the spiritual core of the Tai Khün people.
+              </p>
+<div class="flex items-center gap-2 text-slate-400 text-[12px] font-medium pt-1">
+<span>Annals Ref: Chronicle of Jengtung, Palm Leaf MSS-12</span>
+</div>
+</div>
+<div class="relative flex-shrink-0 w-full overflow-hidden border md:w-56 h-36 rounded-xl bg-slate-100 border-slate-200">
+<div class="w-full h-full bg-center bg-cover" data-alt="Ancient palm leaf manuscript with Tai Khun calligraphy" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDbkD-lUBsG0zQsLV5CUeg9Nb6xL6XOYwZ1azQLgLuoeY8_b7o78RH955UwMbteDL7A7guCvgiTadu5bDNw_pPU8p5wLz9BO_pVvqHysAbL_2nGEo5f5MiGTR0OmhFIYkgMP1ahnUutenJQx1FsAjqzVAYBvZRS8fLM53EgyO6apKoVua0ZWcS0wR6H9DRKja3eyKMQlYOJvVT8B8Tej5DJC8CNduMYTGBckdyvepTqYcsWLL9l1T_ATw')"></div>
+<span class="absolute bottom-1.5 right-1.5 bg-white/90 backdrop-blur-sm px-2 py-0.5 rounded text-[10px] font-bold text-slate-900 border border-slate-200">Archive Scan</span>
+</div>
+</div>
+</div>
+<!-- Timeline Item 2: 1780 CE -->
+<div class="relative group">
+<div class="absolute -left-6 md:-left-10 top-1.5 w-4 md:w-6 h-4 md:h-6 rounded-full bg-white flex items-center justify-center ring-2 ring-[#c59b27] shadow-sm">
+<span class="w-2 h-2 rounded-full bg-[#c59b27]"></span>
+</div>
+<div class="flex flex-col justify-between gap-6 p-6 transition-all bg-white border shadow-sm border-slate-200 hover:border-amber-400/60 rounded-2xl hover:shadow-md md:flex-row md:items-start">
+<div class="flex flex-col max-w-2xl gap-2">
+<div class="flex items-center gap-2.5">
+<span class="px-2.5 py-0.5 rounded-md bg-amber-500 text-white text-[12px] font-bold">1780 CE</span>
+<span class="text-[11px] font-bold uppercase tracking-wider text-slate-500">Saopha Royal Patronage &amp; Relic Enshrinement</span>
+</div>
+<h3 class="text-xl font-bold text-slate-900">The Sacred Gautama Hair Relics Deposited</h3>
+<p class="text-sm leading-relaxed text-slate-600">
+                The Saopha (Celestial Prince) of Keng Tung ordered a complete structural casing of the primary stupa, increasing its circumference to 180 cubits and depositing six sacred strands of the Buddha's hair into an inner jeweled chamber alongside royal silver seals, amber votives, and ruby reliquaries.
+              </p>
+<div class="flex items-center gap-2 text-slate-400 text-[12px] font-medium pt-1">
+<span>Custodial Note: Reliquary remains hermetically sealed beneath the octagonal plinth</span>
+</div>
+</div>
+<div class="relative flex-shrink-0 w-full overflow-hidden border md:w-56 h-36 rounded-xl bg-slate-100 border-slate-200">
+<div class="w-full h-full bg-center bg-cover" data-alt="Antique solid silver and ruby-encrusted Shan Buddhist hair relic reliquary" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD6ARNuaTqf7ZKXRg99QVvALg5oze7DvnnRNguagAuSELAvgZV086bp-D4FlgLzz1XmrVVPmsL6veKjFDuJmlaOv-Y-Df6nwerwFRFYw7WQw36kvUnFBOPg__nk_h4Qn9mOrL_qALpLudDLFGHudSSb_YCdMWKFIYozAENz2pMw97M2kJDpSUrFnzVMqVEOcFiI39hbF1hkHszA6pjqFC7NvnV8ads6qPsvprFdoAm9hCjvkT5etTit9Q')"></div>
+<span class="absolute bottom-1.5 right-1.5 bg-white/90 backdrop-blur-sm px-2 py-0.5 rounded text-[10px] font-bold text-slate-900 border border-slate-200">Relic Archive</span>
+</div>
+</div>
+</div>
+<!-- Timeline Item 3: 1924 CE -->
+<div class="relative group">
+<div class="absolute -left-6 md:-left-10 top-1.5 w-4 md:w-6 h-4 md:h-6 rounded-full bg-white flex items-center justify-center ring-2 ring-[#b38808] shadow-sm">
+<span class="w-2 h-2 rounded-full bg-[#b38808]"></span>
+</div>
+<div class="flex flex-col justify-between gap-6 p-6 transition-all bg-white border shadow-sm border-slate-200 hover:border-amber-400/60 rounded-2xl hover:shadow-md md:flex-row md:items-start">
+<div class="flex flex-col max-w-2xl gap-2">
+<div class="flex items-center gap-2.5">
+<span class="px-2.5 py-0.5 rounded-md bg-amber-100 text-[#8c6b06] text-[12px] font-bold">1924 CE</span>
+<span class="text-[11px] font-bold uppercase tracking-wider text-slate-500">Colonial Era Elevation</span>
+</div>
+<h3 class="text-xl font-bold text-slate-900">Raising of the 9-Tiered Gemstone Parasol (Hti)</h3>
+<p class="text-sm leading-relaxed text-slate-600">
+                A community-wide metallurgical endeavor synthesized 45 kilograms of brass, pure gold leaf, and 1,200 dangling gemstone bells. When the wind sweeps across Zom Kham Hill, these wind-chimes reverberate sacred frequencies tuned to classical Tai Khün devotional modes.
+              </p>
+<div class="flex items-center gap-2 text-slate-400 text-[12px] font-medium pt-1">
+<span>Restoration Master: Master Goldsmith U Sai Hlaing of Keng Tung Guild</span>
+</div>
+</div>
+<div class="relative flex-shrink-0 w-full overflow-hidden border md:w-56 h-36 rounded-xl bg-slate-100 border-slate-200">
+<div class="w-full h-full bg-center bg-cover" data-alt="Intricate golden pagoda umbrella Hti finial with delicate brass bells" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCuaf887LmOP3cmafb0-jaH_fQTqmi1T04ubGC3FE7d4yzS3_9HY7Rn0UDMihrje5SOIlOvXiBM6kRgjPU0n9dbrU0B7WQ32pCz0aahDPgI3pioRSp9GS1FlW5GY-xB-nHpTsE5-smTy7G3WsbELKP3sZUOl4vEE1cQfViqUEJuzS04RnSRboBCGqGI1o4WDuOq9BWuz04TDepiZMtLwoLGHzcwsJiSMr1q1ksLBjgye2AYiFbSeb0joQ')"></div>
+<span class="absolute bottom-1.5 right-1.5 bg-white/90 backdrop-blur-sm px-2 py-0.5 rounded text-[10px] font-bold text-slate-900 border border-slate-200">Finial Detail</span>
+</div>
+</div>
+</div>
+<!-- Timeline Item 4: Modern Era -->
+<div class="relative group">
+<div class="absolute -left-6 md:-left-10 top-1.5 w-4 md:w-6 h-4 md:h-6 rounded-full bg-white flex items-center justify-center ring-2 ring-slate-400 shadow-sm">
+<span class="w-2 h-2 rounded-full bg-slate-500"></span>
+</div>
+<div class="flex flex-col justify-between gap-6 p-6 transition-all bg-white border shadow-sm border-slate-200 hover:border-amber-400/60 rounded-2xl hover:shadow-md md:flex-row md:items-start">
+<div class="flex flex-col max-w-2xl gap-2">
+<div class="flex items-center gap-2.5">
+<span class="px-2.5 py-0.5 rounded-md bg-slate-100 text-slate-700 text-[12px] font-bold">Present Era</span>
+<span class="text-[11px] font-bold uppercase tracking-wider text-slate-500">Perpetual Trustee Stewardship</span>
+</div>
+<h3 class="text-xl font-bold text-slate-900">Continuous Gilding &amp; Scientific Conservation</h3>
+<p class="text-sm leading-relaxed text-slate-600">
+                Governed under the oversight of the Wat Zom Kham Gopaka Trustee Committee, the stupa receives regular artisanal re-gilding with pure Shan gold leaf pounded in the traditional Loi Mwe workshops, ensuring zero structural degradation through monsoon cycles.
+              </p>
+<div class="flex items-center gap-2 text-slate-400 text-[12px] font-medium pt-1">
+<span>Conservation Cycle: Tiered Inspection Bi-Annually · Next: Dec 2024</span>
+</div>
+</div>
+<div class="relative flex-shrink-0 w-full overflow-hidden border md:w-56 h-36 rounded-xl bg-slate-100 border-slate-200">
+<div class="w-full h-full bg-center bg-cover" data-alt="Artisans applying real gold leaf to stupa spire" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCZH_q_G-IK3Kj0gdGsL_28EX-FF61k-akK8I3vS8e2SvNduyCY99ipxmWIkA3pRzX47qyrp3ohNMmV7uguRpBgnKOss0kTrPB687jeffDZJRTlgIVELRd52WiWFuW7KfXm7Ps_UkfsbfDxM5BmHnOxkx57SDvYYiNgD3U2SEJW6Ne8sZgq7XdtxN6Fvg5b9A6OAV5iQVqSaqHYhvx70-7NDHsQx5eFj3PRiFulI-HEqEeOLNt_xOfrDg')"></div>
+<span class="absolute bottom-1.5 right-1.5 bg-white/90 backdrop-blur-sm px-2 py-0.5 rounded text-[10px] font-bold text-slate-900 border border-slate-200">Active Curation</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 3: Curated High-Resolution Lightbox Grid -->
+<section class="flex flex-col gap-6 scroll-mt-28" id="photo-gallery">
+<div class="flex flex-col justify-between gap-2 md:flex-row md:items-end">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2 text-[#b38808] text-[12px] font-bold uppercase tracking-widest">
+<span class="material-symbols-outlined text-[18px]">photo_library</span>
+            Visual Archive &amp; Photographic Lightbox
+          </div>
+<h2 class="text-2xl font-bold tracking-tight lg:text-3xl text-slate-900">
+            Curatorial Architectural Plates
+          </h2>
+</div>
+<span class="text-slate-500 text-[13px] font-medium">
+          5 Verified High-Res Curated Plates · 4K Photogrammetry
+        </span>
+</div>
+<!-- Bento-style Lightbox Gallery -->
+<div class="grid grid-cols-1 gap-5 md:grid-cols-3 lg:grid-cols-4">
+<!-- Large Hero Card: Stupa at Dawn -->
+<div class="relative overflow-hidden transition-all duration-300 border shadow-sm cursor-pointer md:col-span-2 lg:col-span-2 h-96 group rounded-2xl bg-slate-100 border-slate-200 hover:shadow-xl">
+<div class="w-full h-full transition-transform duration-700 ease-out bg-center bg-cover group-hover:scale-105" data-alt="Wat Zom Kham golden stupa pierced by ethereal morning dawn mist over Keng Tung town" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuABD2uBmRy1mwO84i4XklWTr_PtNBaKYxFMWG0J5mHB0tz_ikYEfAw5UyWj46ya0RNCIbjlUwKWoJxxLvl2BHEewf3ROndsOrLx_ebznayFVaLwoquVX45fsqUkutpWeIzRqoWZnk5-pzWer5FqKPgIdA5HXNH7WefPDHsFLDxLGYJ0eNBvmxXfhSq0f2qTleqAa-k1gF2nXWD1sc52AJHxrSmbaUtkIy9IXqQCM1-AtghUG_MTCjrF2Q')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/35 to-transparent"></div>
+<div class="absolute top-4 right-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-md text-[#8c6b06] text-[11px] font-bold shadow-xs">
+            PLATE KT-01
+          </div>
+<div class="absolute flex flex-col gap-1 bottom-5 left-5 right-5">
+<span class="text-[11px] font-bold text-amber-300 uppercase tracking-widest">Dawn Atmosphere · 05:40 AM</span>
+<h4 class="text-xl font-bold text-white">The Golden Stupa at First Light</h4>
+<p class="text-xs text-slate-200 md:text-sm line-clamp-2">The octagonal plinth catching early morning mountain light, with morning mist ascending from Lake Naung Tung below.</p>
+</div>
+</div>
+<!-- Card 2: Teakwood Carvings -->
+<div class="relative overflow-hidden transition-all duration-300 border shadow-sm cursor-pointer h-96 group rounded-2xl bg-slate-100 border-slate-200 hover:shadow-xl">
+<div class="w-full h-full transition-transform duration-700 ease-out bg-center bg-cover group-hover:scale-105" data-alt="Intricate black and gold lacquer Tai Khun teakwood carved pediment" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCcQ_sJSaCq9q-s7kqdDe6PVNbWbFm_oSpqXeO8mwwC0Oga5Mynzc-EV9uJsRIDivQUHUuq513zNnHw3kQiVvF30teBUd8d1NEdgVh6ifgUB_featiavHNVrRx8P93TsW0SCxVQodo-2l3kER_AYW2lE-WPttUO26tB8ilXvsbo-TNdIFqYobeF2O83c4FeVWwjFoo1d_3R2Z2pgmM1vrMwdVi4hM9D2BZyxIyxo1WyqJYWGmhjt1gu4Q')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/30 to-transparent"></div>
+<div class="absolute top-4 right-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-md text-[#8c6b06] text-[11px] font-bold shadow-xs">
+            PLATE KT-02
+          </div>
+<div class="absolute flex flex-col gap-1 bottom-5 left-5 right-5">
+<span class="text-[11px] font-bold text-amber-300 uppercase tracking-widest">Monastic Architecture</span>
+<h4 class="text-lg font-bold text-white">Intricate Teakwood Carvings</h4>
+<p class="text-xs text-slate-200 line-clamp-2">Lanna-style multi-tiered eave carvings showcasing Tai Khün master-carpentry joinery.</p>
+</div>
+</div>
+<!-- Card 3: Antique Buddha Image -->
+<div class="relative overflow-hidden transition-all duration-300 border shadow-sm cursor-pointer h-96 group rounded-2xl bg-slate-100 border-slate-200 hover:shadow-xl">
+<div class="w-full h-full transition-transform duration-700 ease-out bg-center bg-cover group-hover:scale-105" data-alt="Ancient Shan bronze Buddha statue seated in Maravijaya posture" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD2XDuQBxiIPJlrVUCn0skTeUdR5zpOpspZAsKoyNtyU_y0e8dczZHgPW2GNykkAswrTvpLg5Vj6qJeDSs1Xk-p9RJAvYh9NwoQ1sHNbOwEbQ0PEJQsr3QsTSm2OBq67-iDR6JzQBQoYE7R7kHd7XpRFNzihwJueYG8yv1zyAHIgEqVyt-WD3p8ysCo5cbwgQ5oRuEv16b_jYSIsSISCnyKClI3oeU2MwhflhEKhxhziIlACaXviUApdA')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/30 to-transparent"></div>
+<div class="absolute top-4 right-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-md text-[#8c6b06] text-[11px] font-bold shadow-xs">
+            PLATE KT-03
+          </div>
+<div class="absolute flex flex-col gap-1 bottom-5 left-5 right-5">
+<span class="text-[11px] font-bold text-amber-300 uppercase tracking-widest">Venerable Iconography</span>
+<h4 class="text-lg font-bold text-white">Antique Buddha Image</h4>
+<p class="text-xs text-slate-200 line-clamp-2">15th-century hollow-bronze casting cast with sacred alloy collected across eastern Shan valleys.</p>
+</div>
+</div>
+<!-- Card 4: Monastic Dhamma Hall -->
+<div class="relative overflow-hidden transition-all duration-300 border shadow-sm cursor-pointer md:col-span-2 lg:col-span-2 h-72 group rounded-2xl bg-slate-100 border-slate-200 hover:shadow-xl">
+<div class="w-full h-full transition-transform duration-700 ease-out bg-center bg-cover group-hover:scale-105" data-alt="Vast interior of Wat Zom Kham wooden ordination hall" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDOyQr2i3IwhM1oHtjjRwcgKrk8UdzX4CnBHBLb4iSG-Xo5PbwSjm6NgSDPPGYTdUFfvxdRaPyPVk-dUich--v9ze1eXXOseZuVD-XqN-T0AbvymGAXSeCPGV_X_w16RkhYuFJwt7GKAlclgNR1pNGLr325Lk0RtGwQXLMqIZPJwNirIHhZHqZK3XxQSVe1ZebZsz45U2QZwf9sDWwCQwg3OT_ah7ze-u3akE2ioT7NkJO5wO54ar7IUw')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/35 to-transparent"></div>
+<div class="absolute top-4 right-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-md text-[#8c6b06] text-[11px] font-bold shadow-xs">
+            PLATE KT-04
+          </div>
+<div class="absolute flex flex-col gap-1 bottom-5 left-5 right-5">
+<span class="text-[11px] font-bold text-amber-300 uppercase tracking-widest">Assembly Hall</span>
+<h4 class="text-lg font-bold text-white">Monastic Dhamma Hall (Vihara)</h4>
+<p class="text-xs text-slate-200">The central congregation space supported by 48 colossal teak trunks adorned with gold Yun lacquer leaf stencil patterns.</p>
+</div>
+</div>
+<!-- Card 5: Annual Offering Ceremony -->
+<div class="relative overflow-hidden transition-all duration-300 border shadow-sm cursor-pointer md:col-span-1 lg:col-span-2 h-72 group rounded-2xl bg-slate-100 border-slate-200 hover:shadow-xl">
+<div class="w-full h-full transition-transform duration-700 ease-out bg-center bg-cover group-hover:scale-105" data-alt="Shan and Tai Khun pilgrims dressed in traditional festive ceremonial attire" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDAfcZeMS4UVOAL0uHLIeVcemv0BRHLZimqvZvp7i6y-qOBhoANH7TtQsgjyD923M2zRjvD8Fpd_FPZX77cinxX8jdSalsErCL5yUE_kZFa4Q5UIRLO4FgDnT1LYDdGXSqjwCOJd922BQRg8giACKsk-xLR9B8GWVP0m_2loptboZtTFTfadggaoAsIXJ2-W4LwkjMFQj-UdVaHI00s7eYiXgbRkvagMenQaQOQltfPENm_BcbJX4MEyg')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/35 to-transparent"></div>
+<div class="absolute top-4 right-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-md text-[#8c6b06] text-[11px] font-bold shadow-xs">
+            PLATE KT-05
+          </div>
+<div class="absolute flex flex-col gap-1 bottom-5 left-5 right-5">
+<span class="text-[11px] font-bold text-amber-300 uppercase tracking-widest">Living Traditions</span>
+<h4 class="text-lg font-bold text-white">Annual Offering Ceremony (Poya)</h4>
+<p class="text-xs text-slate-200">Devotees scaling the Zom Kham stairwells offering hand-woven lotus petal parasols and scented spring water.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 4: Annual Festivals & Sacred Rituals -->
+<section class="flex flex-col gap-space-xl scroll-mt-28" id="festivals-rituals">
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center gap-2 text-[#b38808] text-[12px] font-bold uppercase tracking-widest">
+<span class="material-symbols-outlined text-[18px]">celebration</span>
+          Votive Calendar &amp; Monastic Observance
+        </div>
+<h2 class="text-2xl font-bold tracking-tight lg:text-3xl text-slate-900">
+          Annual Sacred Rituals &amp; Pilgrim Protocol
+        </h2>
+<p class="max-w-3xl text-sm leading-relaxed text-slate-600 md:text-base">
+          The ritual calendar follows the lunar astrological movements of the Tai Khün calendar. Participation is welcomed for respectful observers adhering to traditional Theravada decorum.
+        </p>
+</div>
+<div class="grid grid-cols-1 gap-6 lg:grid-cols-2">
+<!-- Festival Card 1: Water Bathing -->
+<div class="relative flex flex-col justify-between gap-6 overflow-hidden transition-shadow bg-white border shadow-sm border-slate-200 p-7 rounded-2xl hover:shadow-md">
+<div class="absolute top-0 right-0 rounded-bl-full pointer-events-none w-36 h-36 bg-amber-50 -z-0"></div>
+<div class="relative z-10 flex flex-col gap-4">
+<div class="flex flex-wrap items-center justify-between gap-2">
+<span class="px-3 py-1 rounded-md bg-amber-100 text-[#8c6b06] text-[12px] font-bold">
+                Full Moon of Kason (May)
+              </span>
+<span class="text-[11px] font-bold text-slate-400 uppercase tracking-wider">Astrological Cycle: Lunar VI</span>
+</div>
+<h3 class="text-xl font-bold text-slate-900">
+              Sacred Full Moon Bathing Ritual (Buddha Bathing)
+            </h3>
+<p class="text-sm leading-relaxed text-slate-600">
+              Commemorating the Birth, Enlightenment, and Parinirvana of Gautama Buddha. Long bamboo chutes and pulleys carry scented sandal and jasmine water to the mid-tier rings of the golden stupa spire, poured by monastic elders and hereditary chieftains.
+            </p>
+<div class="flex flex-col gap-2 p-4 border bg-slate-50 border-slate-200 rounded-xl">
+<span class="text-[11px] font-bold text-[#b38808] uppercase tracking-wider">Merit-Making Procedure</span>
+<ul class="flex flex-col gap-2 text-xs list-none text-slate-600 md:text-sm">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-amber-600 text-[17px] mt-0.5">check_circle</span>
+<span>Assemble at southern staircase courtyard prior to 06:30 AM with water vessels.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-amber-600 text-[17px] mt-0.5">check_circle</span>
+<span>Participate in communal five precepts chant led by Wat Zom Kham Sayadaw.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-amber-600 text-[17px] mt-0.5">check_circle</span>
+<span>Circumambulate the chedi clockwise (Pradaksina) three times in silent meditation.</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="flex items-center justify-between pt-2 border-t border-slate-100 text-slate-500 text-[12px] font-medium relative z-10">
+<span>Next Observance: May 12, 2025</span>
+<span class="text-emerald-700 font-bold bg-emerald-50 px-2.5 py-0.5 rounded">Public Participation Permitted</span>
+</div>
+</div>
+<!-- Festival Card 2: Thadingyut Lantern Homage -->
+<div class="relative flex flex-col justify-between gap-6 overflow-hidden transition-shadow bg-white border shadow-sm border-slate-200 p-7 rounded-2xl hover:shadow-md">
+<div class="absolute top-0 right-0 rounded-bl-full pointer-events-none w-36 h-36 bg-amber-50 -z-0"></div>
+<div class="relative z-10 flex flex-col gap-4">
+<div class="flex flex-wrap items-center justify-between gap-2">
+<span class="px-3 py-1 rounded-md bg-amber-500 text-white text-[12px] font-bold">
+                Full Moon of Thadingyut (October)
+              </span>
+<span class="text-[11px] font-bold text-slate-400 uppercase tracking-wider">Astrological Cycle: Lunar XI</span>
+</div>
+<h3 class="text-xl font-bold text-slate-900">
+              Thadingyut Floating Lantern &amp; Candlelight Homage
+            </h3>
+<p class="text-sm leading-relaxed text-slate-600">
+              Marking the Buddha's descent from Tavatimsa heaven. The entire circumference of Zom Kham terrace is illuminated by over 5,000 earthenware oil lamps, while hot-air paper fire-balloons (Khmu Phay) are released above the hill into the night sky.
+            </p>
+<div class="flex flex-col gap-2 p-4 border bg-slate-50 border-slate-200 rounded-xl">
+<span class="text-[11px] font-bold text-[#b38808] uppercase tracking-wider">Visitor Etiquette &amp; Sacred Rules</span>
+<ul class="flex flex-col gap-2 text-xs text-slate-600 md:text-sm">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-rose-500 text-[17px] mt-0.5">do_not_step</span>
+<span><strong>Shoes-Off Threshold:</strong> Footwear and socks must be deposited at tier-1 outer gateway lockers.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-amber-600 text-[17px] mt-0.5">accessibility_new</span>
+<span><strong>Attire:</strong> Shoulders and knees must be fully covered (Longyi or loose trousers required).</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-slate-500 text-[17px] mt-0.5">no_photography</span>
+<span><strong>Photography:</strong> Permitted in outer courtyard. Strictly prohibited inside inner relic vault.</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="flex items-center justify-between pt-2 border-t border-slate-100 text-slate-500 text-[12px] font-medium relative z-10">
+<span>Next Observance: October 06, 2025</span>
+<span class="text-amber-800 font-bold bg-amber-50 px-2.5 py-0.5 rounded">Night Vigil Until Midnight</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 5: Members of the Board of Trustees (Gopaka Committee) -->
+<section class="flex flex-col gap-space-xl scroll-mt-28" id="trustee-board">
+<div class="flex flex-col justify-between gap-2 md:flex-row md:items-end">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2 text-[#b38808] text-[12px] font-bold uppercase tracking-widest">
+<span class="material-symbols-outlined text-[18px]">account_balance</span>
+            Custodial Governance
+          </div>
+<h2 class="text-2xl font-bold tracking-tight lg:text-3xl text-slate-900">
+            Wat Zom Kham Board of Trustees (Gopaka)
+          </h2>
+</div>
+<div class="flex items-center gap-2 text-[12px] text-slate-500 font-medium">
+<span>Official Registration:</span>
+<span class="px-2.5 py-1 rounded bg-slate-100 border border-slate-200 text-[#8c6b06] font-bold font-mono">KT-GOPAKA-041</span>
+</div>
+</div>
+<div class="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-4">
+<!-- Trustee 1 -->
+<div class="flex flex-col gap-3 p-5 transition-all bg-white border shadow-sm border-slate-200 rounded-2xl hover:shadow-md hover:border-amber-300">
+<div class="w-12 h-12 rounded-xl bg-amber-50 border border-amber-100 flex items-center justify-center text-[#b38808]">
+<span class="material-symbols-outlined text-[28px]">shield_person</span>
+</div>
+<div class="flex flex-col">
+<span class="text-lg font-bold text-slate-900">U Sai Lone</span>
+<span class="text-[11px] font-bold uppercase tracking-wider text-[#b38808] mt-0.5">Chairman of Trustees</span>
+<span class="mt-2 text-xs leading-relaxed text-slate-500">Former Eastern Shan Heritage Conservator with 34 years of stupa restoration leadership.</span>
+</div>
+<div class="pt-3 mt-auto border-t border-slate-100">
+<span class="inline-flex items-center gap-1 text-[11px] font-semibold text-emerald-700">
+<span class="material-symbols-outlined text-[14px]">verified</span>
+              Tenure: 2018–Present
+            </span>
+</div>
+</div>
+<!-- Trustee 2 -->
+<div class="flex flex-col gap-3 p-5 transition-all bg-white border shadow-sm border-slate-200 rounded-2xl hover:shadow-md hover:border-amber-300">
+<div class="w-12 h-12 rounded-xl bg-amber-50 border border-amber-100 flex items-center justify-center text-[#b38808]">
+<span class="material-symbols-outlined text-[28px]">account_balance_wallet</span>
+</div>
+<div class="flex flex-col">
+<span class="text-lg font-bold text-slate-900">Daw Nang Kham Moe</span>
+<span class="text-[11px] font-bold uppercase tracking-wider text-[#b38808] mt-0.5">Vice Chair · Financial Ledger</span>
+<span class="mt-2 text-xs leading-relaxed text-slate-500">Oversees public transparency ledgers, merit fund escrows, and municipal audit filings.</span>
+</div>
+<div class="pt-3 mt-auto border-t border-slate-100">
+<span class="inline-flex items-center gap-1 text-[11px] font-semibold text-emerald-700">
+<span class="material-symbols-outlined text-[14px]">verified</span>
+              Tenure: 2020–Present
+            </span>
+</div>
+</div>
+<!-- Trustee 3 -->
+<div class="flex flex-col gap-3 p-5 transition-all bg-white border shadow-sm border-slate-200 rounded-2xl hover:shadow-md hover:border-amber-300">
+<div class="w-12 h-12 rounded-xl bg-amber-50 border border-amber-100 flex items-center justify-center text-[#b38808]">
+<span class="material-symbols-outlined text-[28px]">architecture</span>
+</div>
+<div class="flex flex-col">
+<span class="text-lg font-bold text-slate-900">U Sai Kyaw Tint</span>
+<span class="text-[11px] font-bold uppercase tracking-wider text-[#b38808] mt-0.5">Chief Maintenance Custodian</span>
+<span class="mt-2 text-xs leading-relaxed text-slate-500">Structural engineer specializing in seismic dampening and brick masonry mortar analysis.</span>
+</div>
+<div class="pt-3 mt-auto border-t border-slate-100">
+<span class="inline-flex items-center gap-1 text-[11px] font-semibold text-emerald-700">
+<span class="material-symbols-outlined text-[14px]">verified</span>
+              Tenure: 2015–Present
+            </span>
+</div>
+</div>
+<!-- Trustee 4 -->
+<div class="flex flex-col gap-3 p-5 transition-all bg-white border shadow-sm border-slate-200 rounded-2xl hover:shadow-md hover:border-amber-300">
+<div class="w-12 h-12 rounded-xl bg-amber-50 border border-amber-100 flex items-center justify-center text-[#b38808]">
+<span class="material-symbols-outlined text-[28px]">menu_book</span>
+</div>
+<div class="flex flex-col">
+<span class="text-lg font-bold text-slate-900">U Sai Seng Hark</span>
+<span class="text-[11px] font-bold uppercase tracking-wider text-[#b38808] mt-0.5">Archives &amp; Monastic Relations</span>
+<span class="mt-2 text-xs leading-relaxed text-slate-500">Liaison to the Mahamuni Sangha Council and keeper of palm-leaf architectural codices.</span>
+</div>
+<div class="pt-3 mt-auto border-t border-slate-100">
+<span class="inline-flex items-center gap-1 text-[11px] font-semibold text-emerald-700">
+<span class="material-symbols-outlined text-[14px]">verified</span>
+              Tenure: 2019–Present
+            </span>
+</div>
+</div>
+</div>
+<!-- Trust Ledger Action & Contact Box -->
+<div class="flex flex-col items-center justify-between gap-6 p-6 border shadow-sm bg-slate-50 border-slate-200 rounded-2xl lg:flex-row">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-xl bg-white border border-slate-200 flex items-center justify-center text-[#b38808] flex-shrink-0 shadow-xs">
+<span class="material-symbols-outlined text-[26px]">account_balance</span>
+</div>
+<div class="flex flex-col">
+<span class="text-[11px] font-bold text-[#b38808] uppercase tracking-wider">Official Trustee Secretarial Bureau</span>
+<span class="text-base font-bold text-slate-900">East Stairway Administrative Annex, Wat Zom Kham, Keng Tung</span>
+<span class="text-xs text-slate-500">Open Daily 07:00 – 17:00 · Inquiries: +95 (0)84 21 042</span>
+</div>
+</div>
+<div class="flex flex-wrap items-center w-full gap-3 lg:w-auto">
+<button class="flex-1 lg:flex-initial flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg bg-[#b38808] hover:bg-[#8c6b06] text-white text-[13px] font-semibold shadow-sm transition-all">
+<span class="material-symbols-outlined text-[18px]">receipt_long</span>
+            Public Audit &amp; Donation Ledger
+          </button>
+<button class="flex-1 lg:flex-initial flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg bg-white hover:bg-slate-100 border border-slate-200 text-slate-800 text-[13px] font-semibold transition-colors">
+<span class="material-symbols-outlined text-[18px]">mail</span>
+            Contact Secretariat
+          </button>
+</div>
+</div>
+</section>
+<!-- SECTION 6: Interactive Wayfinding & Map Guide -->
+<section class="flex flex-col gap-space-xl scroll-mt-28" id="wayfinding-guide">
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center gap-2 text-[#b38808] text-[12px] font-bold uppercase tracking-widest">
+<span class="material-symbols-outlined text-[18px]">explore</span>
+          Pilgrim Cartography &amp; Route Guidelines
+        </div>
+<h2 class="text-2xl font-bold tracking-tight lg:text-3xl text-slate-900">
+          Ascent Wayfinding: Naung Tung Lake to the Summit
+        </h2>
+<p class="max-w-3xl text-sm leading-relaxed text-slate-600 md:text-base">
+          Wat Zom Kham presides over the central hill in Kyaing Tong. Access is available via ceremonial covered staircases or the southern vehicular switchback.
+        </p>
+</div>
+<!-- Map & Access Grid -->
+<div class="grid grid-cols-1 gap-6 lg:grid-cols-12">
+<!-- Interactive Map Visual Box -->
+<div class="flex flex-col gap-3 lg:col-span-7">
+<div class="w-full h-96 lg:h-[420px] rounded-2xl overflow-hidden relative shadow-sm border border-slate-200 bg-slate-100" data-location="Wat Zom Kham, Keng Tung, Shan State, Myanmar" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCW3K3x05PnpB41sWwE4Zl4GEeYtEFrG-avF9HhO2V1FDFq7zd9Vpou0j9LP93w97_IXNJsp8w9qzuJur7wrhg4oUv8q6RivblcKnJpRt141SLHgGcfsGMd8DH6BssAhdl9mPIUNNlXBAnUEyzT45nRDC6Fxd6PPY7Ts2pgarVqsGAvNzRHObW7-j3grAQlAO8FK4SwZFKRGElWuoq3s7arPSaJ507gk6K37AI-IGTZUbTHD0AxKa8_3g')">
+<!-- Map Overlay Badges -->
+<div class="absolute top-4 left-4 bg-white/95 backdrop-blur-md p-3.5 rounded-xl border border-slate-200/80 shadow-md flex flex-col gap-1 max-w-xs">
+<div class="flex items-center gap-1.5 text-[#b38808] text-[12px] font-bold">
+<span class="material-symbols-outlined text-[17px]">pin_drop</span>
+                Summit Sanctuary (829m ASL)
+              </div>
+<p class="text-xs leading-relaxed text-slate-600">Coordinates: 21.2917° N, 99.6052° E. 650m direct distance from Naung Tung Lake shore.</p>
+</div>
+<!-- Custom Map Route Markers -->
+<div class="absolute flex flex-wrap items-center justify-between gap-2 p-3 border shadow-md bottom-4 left-4 right-4 bg-white/95 backdrop-blur-md rounded-xl border-slate-200/80">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-[#b38808]"></span>
+<span class="text-[12px] font-semibold text-slate-800">Eastern Covered Stairway (218 Steps)</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-emerald-600"></span>
+<span class="text-[12px] font-semibold text-slate-800">South Vehicular Loop (Motorbike/Taxi)</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Wayfinding Details Side Panel -->
+<div class="flex flex-col gap-4 lg:col-span-5">
+<div class="flex flex-col gap-2 p-5 bg-white border shadow-sm border-slate-200 rounded-2xl">
+<div class="flex items-center gap-1.5 text-[#b38808] text-[11px] font-bold uppercase tracking-wider">
+<span class="material-symbols-outlined text-[17px]">directions_walk</span>
+              Walking Ascent from Naung Tung Lake
+            </div>
+<h4 class="text-base font-bold text-slate-900">Ceremonial Eastern Dragon Stairway</h4>
+<p class="text-xs leading-relaxed text-slate-600">
+              Begins at the northeastern lakeside promenade. Guarded by twin 18th-century stucco Chinthes (mythical lions). Shaded by ancient Bodhi trees with rest pavilions at step 80 and step 150. Duration: approx. 12-18 minutes leisurely stroll.
+            </p>
+</div>
+<div class="flex flex-col gap-2 p-5 bg-white border shadow-sm border-slate-200 rounded-2xl">
+<div class="flex items-center gap-1.5 text-emerald-700 text-[11px] font-bold uppercase tracking-wider">
+<span class="material-symbols-outlined text-[17px]">local_taxi</span>
+              Vehicular &amp; Accessible Access
+            </div>
+<h4 class="text-base font-bold text-slate-900">South Crest Drive &amp; Wheelchair Ramps</h4>
+<p class="text-xs leading-relaxed text-slate-600">
+              Taxis, tuk-tuks, and motorbikes can navigate the paved winding ridge road directly to the Upper South Gate. Level ramp access directly connects the upper car park to the stupa's primary marble pradaksina ambulatory.
+            </p>
+</div>
+<div class="flex flex-col gap-2 p-5 bg-white border shadow-sm border-slate-200 rounded-2xl">
+<div class="flex items-center gap-1.5 text-slate-700 text-[11px] font-bold uppercase tracking-wider">
+<span class="material-symbols-outlined text-[17px] text-[#b38808]">wb_twilight</span>
+              Optimal Viewing &amp; Chanting Timings
+            </div>
+<div class="grid grid-cols-2 gap-3 pt-1">
+<div class="p-3 border bg-slate-50 border-slate-100 rounded-xl">
+<span class="text-[10px] font-bold text-[#b38808] uppercase block">Sunrise Vigil</span>
+<span class="block text-xs font-bold text-slate-900">05:30 – 06:45 AM</span>
+<span class="text-slate-400 text-[11px] block mt-0.5">Quiet chanting &amp; fog.</span>
+</div>
+<div class="p-3 border bg-slate-50 border-slate-100 rounded-xl">
+<span class="text-[10px] font-bold text-[#b38808] uppercase block">Sunset Glow</span>
+<span class="block text-xs font-bold text-slate-900">17:15 – 18:30 PM</span>
+<span class="text-slate-400 text-[11px] block mt-0.5">Twilight reflections.</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 7: Announcements & Sacred News Bulletin -->
+<section class="flex flex-col gap-space-lg scroll-mt-28" id="bulletin-board">
+<div class="flex flex-col justify-between gap-2 md:flex-row md:items-end">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2 text-[#b38808] text-[12px] font-bold uppercase tracking-widest">
+<span class="material-symbols-outlined text-[18px]">campaign</span>
+            Sanctuary Bulletins
+          </div>
+<h2 class="text-2xl font-bold tracking-tight lg:text-3xl text-slate-900">
+            Announcements &amp; Conservation Dispatches
+          </h2>
+</div>
+<span class="text-[#8c6b06] text-[13px] font-bold">
+          Official Gazette of Wat Zom Kham
+        </span>
+</div>
+<div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+<!-- Bulletin 1 -->
+<div class="flex flex-col justify-between gap-5 p-6 transition-all bg-white border shadow-sm border-slate-200 rounded-2xl hover:shadow-md">
+<div class="flex flex-col gap-2.5">
+<div class="flex items-center justify-between">
+<span class="px-2.5 py-0.5 rounded-md bg-amber-100 text-[#8c6b06] text-[11px] font-bold">
+                Active Restoration Project
+              </span>
+<span class="text-slate-400 text-[12px]">Oct 28, 2024</span>
+</div>
+<h3 class="text-lg font-bold text-slate-900">
+              Renovation of Eastern Chinthes Guarding the Staircase
+            </h3>
+<p class="text-xs leading-relaxed text-slate-600 md:text-sm">
+              Master stucco artisans under the directive of the Archaeological Department have commenced restorative lime-plaster stabilization on the pair of 18th-century staircase guardians. Eastern ascent remains open through marked pedestrian scaffolding corridors.
+            </p>
+</div>
+<div class="flex items-center justify-between pt-3 border-t border-slate-100 text-slate-500 text-[12px]">
+<span>Scope: Mortar Consolidation</span>
+<span class="text-[#b38808] font-bold">Stage 2 of 4</span>
+</div>
+</div>
+<!-- Bulletin 2 -->
+<div class="flex flex-col justify-between gap-5 p-6 transition-all bg-white border shadow-sm border-slate-200 rounded-2xl hover:shadow-md">
+<div class="flex flex-col gap-2.5">
+<div class="flex items-center justify-between">
+<span class="px-2.5 py-0.5 rounded-md bg-amber-500 text-white text-[11px] font-bold">
+                Upcoming Monastic Observance
+              </span>
+<span class="text-slate-400 text-[12px]">Nov 14, 2024</span>
+</div>
+<h3 class="text-lg font-bold text-slate-900">
+              Upcoming Kathina Robe Weaving Festival Schedule (Matho Thingan)
+            </h3>
+<p class="text-xs leading-relaxed text-slate-600 md:text-sm">
+              The annual non-stop overnight loom weaving competition will commence on the eve of the Tazaungmone full moon. Weavers from eight Shan and Khün villages will weave holy robes within 24 hours to present to the Sangha at dawn.
+            </p>
+</div>
+<div class="flex items-center justify-between pt-3 border-t border-slate-100 text-slate-500 text-[12px]">
+<span>Location: Main Assembly Cloister</span>
+<span class="font-bold text-emerald-700">Commences 19:00 PM</span>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Inline Script for Audio Player Interaction -->
+<script>
+    (function() {
+      const playBtn = document.getElementById('audioPlayBtn');
+      const playIcon = document.getElementById('playIcon');
+      let isPlaying = false;
+
+      if (playBtn && playIcon) {
+        playBtn.addEventListener('click', function() {
+          isPlaying = !isPlaying;
+          if (isPlaying) {
+            playIcon.textContent = 'pause';
+            playBtn.classList.add('ring-4', 'ring-amber-300');
+          } else {
+            playIcon.textContent = 'play_arrow';
+            playBtn.classList.remove('ring-4', 'ring-amber-300');
+          }
+        });
+      }
+    })();
+  </script>
+</div></main><footer class="w-full border-t bg-slate-50 border-slate-200 text-slate-600"><div class="w-full px-gutter-mobile md:px-gutter-tablet lg:px-gutter-desktop py-space-3xl"><div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4"><div class="flex flex-col gap-3"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-[#b38808] text-[26px]">temple_buddhist</span><span class="text-lg font-bold text-slate-900">Keng Tung Archive</span></div><p class="text-xs leading-relaxed text-slate-500">Preserving the Living Heritage, Tai Khün Monastic Architecture, and Sacred Antiquities of Kyaing Tong Valley under the custodial stewardship of Monastic Sangha Trustees.</p><div class="flex items-center gap-2 pt-1"><span class="w-2 h-2 rounded-full bg-emerald-500"></span><span class="text-[11px] uppercase tracking-wider font-bold text-emerald-700">Archival Catalog Status: Active Curation</span></div></div><div class="flex flex-col gap-2.5"><span class="text-[11px] uppercase tracking-widest font-bold text-[#b38808]">Custodial Affiliations</span><p class="text-xs leading-relaxed text-slate-500">Department of Archaeology and National Museum (Shan State Sub-Circle) in formal partnership with the Keng Tung Mahamuni Monastery Sangha Council.</p><p class="text-[11px] font-mono text-slate-400">Archival Registry: KT-ARCH-2024-V2</p></div><div class="flex flex-col gap-2.5"><span class="text-[11px] uppercase tracking-widest font-bold text-[#b38808]">Pilgrim &amp; Visitor Protocol</span><div class="flex flex-col gap-1.5 text-xs"><a class="text-slate-600 hover:text-[#b38808] transition-colors" data-path="visitor-code-of-conduct" href="#">Sacred Grounds Code of Conduct</a><a class="text-slate-600 hover:text-[#b38808] transition-colors" data-path="monastic-etiquette" href="#">Monastic Votive Etiquette &amp; Offerings</a><a class="text-slate-600 hover:text-[#b38808] transition-colors" data-path="photogrammetry-permissions" href="#">Archival Photography Permissions</a><a class="text-slate-600 hover:text-[#b38808] transition-colors" data-path="preservation-trust" href="#">Trustee Board Endowments</a></div></div><div class="flex flex-col gap-2.5"><span class="text-[11px] uppercase tracking-widest font-bold text-[#b38808]">Naung Tung Sanctuary Office</span><p class="text-xs text-slate-500">Mahamuni Pagoda Precinct, Lake Naung Tung Enclave, Keng Tung, Eastern Shan State, Myanmar.</p><div class="p-3 mt-1 bg-white border border-slate-200 rounded-xl"><span class="text-[10px] uppercase font-bold text-[#b38808] block mb-1">Votive Audio Access</span><span class="block text-xs font-semibold text-slate-800">Offline Sanctuary Guide Available in 3 Dialects</span></div></div></div><div class="flex flex-col items-center justify-between gap-4 pt-6 mt-12 border-t border-slate-200 md:flex-row"><p class="text-xs text-slate-400">© 2024 Keng Tung Pagoda Cultural Guide &amp; Heritage Archive. Governed by Shan State Cultural Heritage Trust.</p><div class="flex items-center gap-6 text-[11px] font-bold uppercase text-slate-500"><a class="transition-colors hover:text-slate-900" data-path="visitor-code-of-conduct" href="#">Visitor Protocol</a><a class="transition-colors hover:text-slate-900" data-path="preservation-trust" href="#">Trustee Registry</a><a class="transition-colors hover:text-slate-900" data-path="explore-and-directory" href="#">Monuments Index</a></div></div></div></footer></body></html>

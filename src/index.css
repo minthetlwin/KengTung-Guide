@@ -1,0 +1,135 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Light theme (default) — warm ivory / lacquer-gold museum palette */
+  --color-bg: 251 249 245;
+  --color-bg-elevated: 255 255 255;
+  --color-bg-elevated-2: 244 240 232;
+  --color-bg-elevated-3: 234 227 211;
+  --color-bg-inset: 226 217 195;
+  --color-border: 229 223 209;
+  --color-border-strong: 201 191 164;
+  --color-text: 36 28 16;
+  --color-text-muted: 107 97 82;
+  --color-text-faint: 156 146 126;
+
+  --color-primary: 168 120 30;
+  --color-primary-strong: 143 100 23;
+  --color-on-primary: 255 255 255;
+  --color-primary-soft: 244 227 190;
+  --color-on-primary-soft: 91 66 16;
+
+  --color-secondary: 63 107 84;
+  --color-on-secondary: 255 255 255;
+  --color-secondary-soft: 220 234 225;
+  --color-on-secondary-soft: 35 68 55;
+
+  --color-tertiary: 181 86 46;
+  --color-on-tertiary: 255 255 255;
+  --color-tertiary-soft: 245 219 204;
+  --color-on-tertiary-soft: 122 48 16;
+
+  color-scheme: light;
+}
+
+html.dark {
+  /* Dark theme — deep slate with luminous gold accents */
+  --color-bg: 15 17 21;
+  --color-bg-elevated: 23 25 31;
+  --color-bg-elevated-2: 30 33 41;
+  --color-bg-elevated-3: 43 46 55;
+  --color-bg-inset: 10 12 16;
+  --color-border: 52 56 67;
+  --color-border-strong: 78 84 99;
+  --color-text: 236 233 225;
+  --color-text-muted: 183 174 156;
+  --color-text-faint: 139 130 113;
+
+  --color-primary: 232 195 103;
+  --color-primary-strong: 242 212 136;
+  --color-on-primary: 43 32 5;
+  --color-primary-soft: 71 55 16;
+  --color-on-primary-soft: 244 227 190;
+
+  --color-secondary: 143 193 168;
+  --color-on-secondary: 14 32 25;
+  --color-secondary-soft: 34 58 47;
+  --color-on-secondary-soft: 191 224 205;
+
+  --color-tertiary: 227 154 114;
+  --color-on-tertiary: 46 18 4;
+  --color-tertiary-soft: 74 35 19;
+  --color-on-tertiary-soft: 245 203 176;
+
+  color-scheme: dark;
+}
+
+* {
+  scrollbar-width: thin;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: rgb(var(--color-bg));
+  color: rgb(var(--color-text));
+  font-family: 'Poppins', 'Noto Sans Myanmar', 'Noto Sans Thai', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgb(var(--color-border-strong));
+  border-radius: 999px;
+}
+
+::selection {
+  background-color: rgb(var(--color-primary-soft));
+  color: rgb(var(--color-on-primary-soft));
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  font-size: 1.25rem;
+  line-height: 1;
+  vertical-align: middle;
+}
+
+@keyframes fade-slide-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-hero-in > * {
+  animation: fade-slide-in 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.animate-hero-in > *:nth-child(1) { animation-delay: 0.05s; }
+.animate-hero-in > *:nth-child(2) { animation-delay: 0.12s; }
+.animate-hero-in > *:nth-child(3) { animation-delay: 0.19s; }
+.animate-hero-in > *:nth-child(4) { animation-delay: 0.26s; }
+.animate-hero-in > *:nth-child(5) { animation-delay: 0.33s; }
+
+.mmm-satellite-labels {
+  mix-blend-mode: screen;
+  filter: grayscale(1) invert(1) brightness(1.8) contrast(3.2);
+}
