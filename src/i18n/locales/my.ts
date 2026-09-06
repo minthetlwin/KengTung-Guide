@@ -751,6 +751,7 @@ export const my: Dictionary = {
   common: {
     viewDetails: 'အသေးစိတ် ကြည့်ရန်',
     scrollToZoomHint: 'မြေပုံကို ချုံ့/ချဲ့ရန် Ctrl + scroll ကို အသုံးပြုပါ',
+    back: 'နောက်သို့ ပြန်သွားရန်',
   },
   closing: {
     text: '"ဗုဒ္ဓသာသနံ စိရံ တိဋ္ဌတု" — ဗုဒ္ဓသာသနာတော် ကြာရှည်တည်တံ့ပါစေ။',

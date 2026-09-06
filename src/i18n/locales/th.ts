@@ -744,6 +744,7 @@ export const th: Dictionary = {
   common: {
     viewDetails: 'ดูรายละเอียด',
     scrollToZoomHint: 'กด Ctrl ค้างไว้แล้วเลื่อนเพื่อซูมแผนที่',
+    back: 'ย้อนกลับ',
   },
   closing: {
     text: '"พุทธสาสนัง จิรัง ติฏฐตุ" — ขอพระพุทธศาสนาจงดำรงอยู่สืบไปชั่วกาลนาน',

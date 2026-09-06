@@ -444,6 +444,7 @@ export interface Dictionary {
   common: {
     viewDetails: string
     scrollToZoomHint: string
+    back: string
   }
   closing: {
     text: string

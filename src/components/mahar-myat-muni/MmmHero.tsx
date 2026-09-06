@@ -1,5 +1,6 @@
 import { useLanguage } from '../../context/language-context'
 import { mmmHeroImage } from '../../data/maharMyatMuni'
+import { BackButton } from '../BackButton'
 
 export function MmmHero() {
   const { t } = useLanguage()
@@ -7,6 +8,7 @@ export function MmmHero() {
 
   return (
     <section className="relative w-full overflow-hidden">
+      <BackButton />
       <div className="relative min-h-[560px] w-full sm:min-h-[620px] lg:min-h-[720px]">
         <div
           className="absolute inset-0 bg-cover bg-top"
@@ -27,10 +29,10 @@ export function MmmHero() {
           <h1 className="font-serif text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl [text-shadow:0_2px_24px_rgb(0_0_0_/_0.5)]">
             {h.title}
           </h1>
-          <span className="font-sans text-lg font-medium tracking-wide text-[#F2D488] [text-shadow:0_1px_16px_rgb(0_0_0_/_0.6)]">
+          <span className="hidden font-sans text-lg font-medium tracking-wide text-[#F2D488] [text-shadow:0_1px_16px_rgb(0_0_0_/_0.6)] sm:block">
             {h.localName}
           </span>
-          <p className="mt-2 max-w-3xl font-sans text-base leading-relaxed text-white/90 [text-shadow:0_1px_12px_rgb(0_0_0_/_0.5)] md:text-lg">
+          <p className="mt-2 hidden max-w-3xl font-sans text-base leading-relaxed text-white/90 [text-shadow:0_1px_12px_rgb(0_0_0_/_0.5)] sm:block md:text-lg">
             {h.subtitle}
           </p>
         </div>

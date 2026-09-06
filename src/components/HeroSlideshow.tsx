@@ -79,11 +79,11 @@ export function HeroSlideshow() {
                 </span>
               </h1>
 
-              <p className="max-w-xl font-sans text-subhead text-white/80 [text-shadow:0_1px_12px_rgb(0_0_0_/_0.3)]">
+              <p className="hidden max-w-xl font-sans text-subhead text-white/80 [text-shadow:0_1px_12px_rgb(0_0_0_/_0.3)] sm:block">
                 {slide.subtitle}
               </p>
 
-              <div className="flex flex-wrap items-center gap-2 pt-1">
+              <div className="hidden flex-wrap items-center gap-2 pt-1 sm:flex">
                 {slide.badges.map((badge) => (
                   <span
                     key={badge}
@@ -94,7 +94,7 @@ export function HeroSlideshow() {
                 ))}
               </div>
 
-              <div className="flex flex-wrap items-center gap-3 pt-3">
+              <div className="hidden flex-wrap items-center gap-3 pt-3 sm:flex">
                 <Link
                   to={detailPath}
                   className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 font-sans text-sm font-semibold text-on-primary shadow-elevated transition-transform hover:scale-[1.02] active:scale-[0.99]"

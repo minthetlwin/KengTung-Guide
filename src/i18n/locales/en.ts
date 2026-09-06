@@ -753,6 +753,7 @@ export const en: Dictionary = {
   common: {
     viewDetails: 'View Details',
     scrollToZoomHint: 'Use Ctrl + scroll to zoom the map',
+    back: 'Go back',
   },
   closing: {
     text: '"Buddhasasanam ciram titthatu" — may the Buddha\'s Sasana long endure.',
