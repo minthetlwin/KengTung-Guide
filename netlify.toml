@@ -1,0 +1,15 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+# React Router uses client-side routing (BrowserRouter), so every route
+# (e.g. /pagodas, /wat-zom-kham) must fall back to index.html and let the
+# app render the right page — otherwise a direct visit or refresh on any
+# route other than "/" returns Netlify's 404 page.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

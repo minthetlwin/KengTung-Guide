@@ -9,7 +9,7 @@ export function MmmHero() {
     <section className="relative w-full overflow-hidden">
       <div className="relative min-h-[560px] w-full sm:min-h-[620px] lg:min-h-[720px]">
         <div
-          className="absolute inset-0 bg-cover bg-center"
+          className="absolute inset-0 bg-cover bg-top"
           style={{ backgroundImage: `url('${mmmHeroImage}')` }}
           role="img"
           aria-label={h.title}

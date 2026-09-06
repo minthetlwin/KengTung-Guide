@@ -7,8 +7,6 @@ const WAT_JONG_KHAM_LAKE =
   'https://thumb.wikimedia.org/wikipedia/commons/thumb/8/87/Wat_jong_kham_lake_edit.jpg/1920px-Wat_jong_kham_lake_edit.jpg'
 const INDEIN_MONKS_STUPAS =
   'https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ed/Indein%2C_Buddhist_monks%2C_White_Buddhist_pagodas%2C_Shan_State%2C_Shan_Hills%2C_Myanmar.jpg/1920px-Indein%2C_Buddhist_monks%2C_White_Buddhist_pagodas%2C_Shan_State%2C_Shan_Hills%2C_Myanmar.jpg'
-const SHWEDAGON_NIGHT_3 =
-  'https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3f/Shwedagon_Pagoda_Night_3.jpg/1280px-Shwedagon_Pagoda_Night_3.jpg'
 const MAHA_MUNI_FACE =
   'https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/007_Maha_Muni_Image_%288932949118%29.jpg/1280px-007_Maha_Muni_Image_%288932949118%29.jpg'
 const GOLDEN_PALACE_CARVING =
@@ -36,7 +34,7 @@ export const mahaMuniFaceImage = MAHA_MUNI_FACE
 export const goldenPalaceCarvingImage = GOLDEN_PALACE_CARVING
 
 export const directoryImages = {
-  'KT-01': SHWEDAGON_NIGHT_3,
+  'KT-01': WAT_JONG_KHAM_GALLERY,
   'KT-04': MAHA_MYAT_MUNI_GATE,
   'KT-05': YARZAMUNI_STATUE,
 } as const

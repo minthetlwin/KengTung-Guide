@@ -1,6 +1,7 @@
 import { Link, useParams } from 'react-router-dom'
 import { useLanguage } from '../context/language-context'
 import { newsImages } from '../data/news'
+import { usePageMeta } from '../hooks/usePageMeta'
 
 export function NewsArticlePage() {
   const { t } = useLanguage()
@@ -9,6 +10,12 @@ export function NewsArticlePage() {
 
   const index = n.articles.findIndex((article) => article.slug === slug)
   const article = index === -1 ? null : n.articles[index]
+
+  usePageMeta({
+    title: article ? `${article.title} · ${t.meta.title}` : `${n.notFound} · ${t.meta.title}`,
+    description: article?.excerpt ?? n.description,
+    image: article ? newsImages[index] : undefined,
+  })
 
   if (!article) {
     return (

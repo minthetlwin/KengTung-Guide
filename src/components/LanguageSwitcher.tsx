@@ -27,7 +27,7 @@ export function LanguageSwitcher() {
         aria-expanded={open}
         className="flex h-10 items-center gap-1.5 rounded-full px-3 font-sans text-[13px] font-semibold text-text-muted transition-colors hover:bg-bg-elevated-2 hover:text-text"
       >
-        <span className="material-symbols-outlined text-[18px]">translate</span>
+        <span className="text-[16px] leading-none">{current.flag}</span>
         <span>{current.nativeLabel}</span>
       </button>
       {open && (
@@ -51,7 +51,10 @@ export function LanguageSwitcher() {
                   : 'text-text-muted hover:bg-bg-elevated-2 hover:text-text'
               }`}
             >
-              <span>{l.label}</span>
+              <span className="flex items-center gap-2">
+                <span className="text-[16px] leading-none">{l.flag}</span>
+                {l.label}
+              </span>
               <span className="text-xs opacity-70">{l.nativeLabel}</span>
             </button>
           ))}

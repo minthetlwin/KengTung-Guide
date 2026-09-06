@@ -3,6 +3,8 @@ import type { Dictionary } from '../types'
 export const en: Dictionary = {
   meta: {
     title: 'Keng Tung Pagoda Guide',
+    description:
+      'The Keng Tung Pagoda Guide is a trilingual digital archive documenting the sacred pagodas, monasteries, and pilgrimage routes of Keng Tung, Eastern Shan State.',
   },
   header: {
     brand: 'Keng Tung Pagoda Guide',
@@ -30,8 +32,8 @@ export const en: Dictionary = {
         title: 'Wat Zom Kham',
         titleAccent: 'The Golden Crown of Kyaing Tong',
         subtitle:
-          'Sacred hair relics of the Buddha, enshrined for seven centuries above the Keng Tung valley.',
-        badges: ['Elevation 829m', 'Founded 1253 CE', 'Active Sangha'],
+          "Six sacred hair relics of the Buddha, enshrined by five hermits above the Keng Tung valley since the earliest era of the city's history.",
+        badges: ['Elevation 829m', 'Sasana Era 157 Founding', 'Six Sacred Hair Relics'],
         primaryCta: 'Explore the Archive',
         secondaryCta: 'Listen to Audio Guide',
       },
@@ -82,15 +84,15 @@ export const en: Dictionary = {
     eyebrow: "Editor's Pick",
     catalogId: 'Archive ID KT-01',
     audioLabel: 'Audio Chronicle',
-    audioTitle: 'The 13th-Century Founding & the Golden Hair Relic',
-    audioMeta: '3:42 · Tai Khün & English',
-    tags: ['13th-Century Origin', 'Tai Khün Heritage', 'Active Sanctuary'],
+    audioTitle: "The Buddha's Prophecy & the Five Hermits' Founding",
+    audioMeta: 'Myanmar',
+    tags: ['Ancient Legendary Founding', 'Tai Khün Heritage', 'Active Sanctuary'],
     title: 'Wat Zom Kham',
     subtitle: 'The Golden Stupa Hill',
     description:
-      'Rising 226 feet above the valley floor, Wat Zom Kham is the spiritual heart of the Tai Khün world. Tradition holds that six hair relics of the Buddha rest within its gilded spire, crowned by a jewelled hti that chimes softly in the mountain wind.',
+      'Enshrining six sacred hair relics of the Buddha since the earliest era of the Keng Tung valley, Wat Zom Kham is the spiritual heart of the Tai Khün world — founded by five hermits after a prophecy the Buddha himself gave on this very ground.',
     statCards: [
-      { label: 'Spire Height', value: '69.8 m', sub: 'Above the valley plain' },
+      { label: 'Founded By', value: 'Five Hermits', sub: 'Sasana Era 157' },
       { label: 'Status', value: 'Living Sanctuary', sub: 'Daily dawn offerings' },
     ],
     ctaPrimary: 'Explore Full Archive',
@@ -107,7 +109,7 @@ export const en: Dictionary = {
         code: 'KT-01',
         title: 'Wat Zom Kham',
         subtitle: 'Golden Stupa Summit',
-        tags: ['Hilltop', '13th C.'],
+        tags: ['Hilltop', 'Ancient Origin'],
         categories: ['ancient', 'hilltop'],
         description:
           'The apex temple of Keng Tung, ringed by 28 mini-stupas with sweeping views of the Shan hills.',
@@ -123,7 +125,7 @@ export const en: Dictionary = {
         categories: ['lakeside', 'festivals'],
         description:
           "A gilded 1921 replica of Mandalay's Mahamuni Buddha, commissioned by the 39th Saopha and consecrated in 1926 after a 700km journey by cart and river raft.",
-        hours: '06:00 – 19:00 Daily',
+        hours: '04:30 – 20:00 Daily',
         price: 'Active Rituals',
         detailPath: '/mahar-myat-muni-pagoda',
       },
@@ -132,13 +134,20 @@ export const en: Dictionary = {
         title: 'Yarzamuni',
         subtitle: 'Abhaya Raza Muni Buddha Image',
         tags: ['Countryside', '22m Statue'],
-        categories: ['hilltop'],
+        categories: [],
         description:
           'A 22-metre seated Buddha in the Abhaya mudra of fearlessness, rising from a lotus throne near Pan Kwai village amid flower gardens and a poetry monument.',
         hours: 'Open 24 Hours',
         price: 'Free Entry',
+        detailPath: '/yarzamuni',
       },
     ],
+  },
+  pagodasPage: {
+    eyebrow: 'Verified Directory',
+    title: 'Pagodas in Kengtung',
+    description:
+      'Browse every sanctuary documented in this guide, from hilltop stupas to bronze Buddha images, with hours, rituals, and directions.',
   },
   pilgrimageMap: {
     eyebrow: 'Spatial Coordinates & Wayfinding',
@@ -163,38 +172,44 @@ export const en: Dictionary = {
     countdown: { days: 'Days', hours: 'Hours', mins: 'Mins', secs: 'Secs' },
     slides: [
       {
-        badge: 'Thingyan Water Festival',
-        subBadge: 'Myanmar New Year',
-        heading: 'Four Days of Water, Renewal & Communal Blessing',
-        description:
-          'The valley erupts in celebration as the old year is washed away. Pilgrims process to Wat Zom Kham for ceremonial hair-washing rites before the water throwing begins in the streets below.',
-        cta: 'Festival Program & Schedule',
-      },
-      {
-        badge: 'Waso Full Moon',
-        subBadge: 'Beginning of Buddhist Lent',
-        heading: "The Sangha's Three-Month Retreat Begins",
-        description:
-          'Monks across Kyaing Tong enter Vassa, the traditional rains retreat. Candlelit processions circle the monasteries at dusk as laypeople offer robes and provisions for the season ahead.',
-        cta: 'Ritual Program & Schedule',
-      },
-      {
-        badge: 'Tazaungdaing Lunar Cycle',
+        badge: 'Maha Myat Muni Pagoda Festival',
         subBadge: 'Full Moon of Tazaungmon',
-        heading: 'Festival of 9,000 Oil Lamps & Hot-Air Fire Balloons',
+        heading: 'Umbrellas, Almsgiving & the Founding Festival Day',
         description:
-          'Witness the grand congregation at Wat Zom Kham and the shores of Naung Tung Lake. Monks and devotees release hundreds of illuminated woven fire-paper balloons carrying prayers to the Sulamani Cetiya in the heavenly realm.',
+          'Since 1950, the full moon of Tazaungmon has been observed as the Maha Myat Muni Pagoda Festival — four ceremonial umbrellas offered at the temple entrance, and a great alms-offering to 85 monks at dawn, sealed with the ceremonial water-pouring to share merit.',
+        cta: 'Festival Program & Schedule',
+      },
+      {
+        badge: 'Morning Alms Offering',
+        subBadge: 'Tazaungmon Full Moon, at the Haw',
+        heading: 'The Saophas Lead Almsgiving Within the Palace',
+        description:
+          'Each year on the full moon of Tazaungmon, the Saophas lead the public in inviting monks to receive the morning alms-offering (Aruna Hsun) within the palace (Haw).',
         cta: 'Ritual Program & Schedule',
       },
       {
-        badge: 'Loy Krathong Night',
-        subBadge: 'Full Moon of the Twelfth Month',
-        heading: 'Floating Lanterns Drift Across Naung Tung Lake',
+        badge: 'Bodhi Tree Watering',
+        subBadge: 'Full Moon of Kason',
+        heading: 'Honoring the Sacred Bodhi Tree',
         description:
-          'At dusk, families gather lakeside to release krathongs woven from banana leaf and lotus, each carrying a candle, incense and a quiet wish downstream.',
-        cta: 'Festival Program & Schedule',
+          "Each year on the full moon of Kason, the Bodhi tree near Maha Myat Muni Pagoda is honored with a watering ceremony — the first rite held inside the Gandhakuti monastery hall, the watering itself at the tree's monastery compound (Wat Pha Kyauk).",
+        cta: 'Ritual Program & Schedule',
+      },
+      {
+        badge: 'Protective Paritta Chanting',
+        subBadge: 'Every Three Months, Full Moon Evening',
+        heading: '110 Monks Recite for Protection from Danger',
+        description:
+          'Once every three months, on the full moon evening at 6:00, a gathering of 110 monks recites the protective Paritta chants for freedom from danger inside the Gandhakuti monastery hall.',
+        cta: 'Ritual Program & Schedule',
       },
     ],
+  },
+  festivalCalendarPage: {
+    eyebrow: 'Living Traditions',
+    title: 'Festival Calendar',
+    description:
+      'Track every recurring ritual and votive festival at the pagodas of Keng Tung, with live countdowns to the next observance.',
   },
   watZomKham: {
     meta: { title: 'Wat Zom Kham — The Golden Crown of Kyaing Tong' },
@@ -203,217 +218,134 @@ export const en: Dictionary = {
       statusBadge: 'Active Theravada Sanctum',
       title: 'Wat Zom Kham',
       subtitle:
-        'The eternal golden crown of Keng Tung, established in the 13th century CE — a guardian stupa enshrining the sacred hair relics of Gautama Buddha above the Kyaing Tong valley.',
+        "The eternal golden crown of Keng Tung and one of its most ancient pagodas — a guardian stupa said to enshrine six sacred hair relics of Gautama Buddha, foretold by the Buddha himself above the Kyaing Tong valley.",
       metaPills: [
-        { label: 'Consecration', value: '1253 CE (Tai Khün Era)' },
-        { label: 'Stupa Height', value: '68 Meters (223 ft)' },
+        { label: 'Traditional Founding', value: 'Sasana Era 157' },
+        { label: 'Founded By', value: 'Five Tung Ga Hermits' },
         { label: 'Architectural Lineage', value: 'Tai Khün · Lanna · Shan' },
         { label: 'Summit Elevation', value: 'Zom Kham Ridge · 829m' },
       ],
-      audio: {
-        label: 'Sacred Audio Sanctuary · Chapter 01',
-        title: 'The Golden Scriptorium & Relic Chambers of Wat Zom Kham',
-        narrator: 'Narrator: Ven. Bhaddanta Nyanavamsa (English, Tai Khün & Shan)',
-        currentTime: '01:42',
-        totalTime: '08:15',
-        spatialLabel: 'Spatial Audio (Binaural Chanting)',
-        download: 'Offline Audio (14MB)',
-      },
     },
     quickNav: {
       label: 'Jump to Section:',
-      items: [
-        'Chronology & Relics',
-        'Archival Gallery',
-        'Festivals & Rites',
-        'Gopaka Trustee Roster',
-        'Ascent & Wayfinding',
-      ],
-      registeredBadge: 'Official Registered Monument',
+      items: ['Chronology & Relics', 'Archival Gallery', 'Festivals & Rites', 'Visit & Directions'],
     },
     history: {
-      eyebrow: 'Tai Khün Monastic Annals',
-      title: 'Sacred Chronology & Seven Centuries of Relic Protection',
+      eyebrow: 'Sacred Chronicle',
+      title: 'How Wat Zom Kham Came to Be',
       description:
-        'The founding of Wat Zom Kham is woven into the spiritual genealogy of the Keng Tung valley, from the early blessings of wandering Arhat monks to the golden age of the hereditary Saopha rulers.',
-      items: [
+        'Wat Zom Kham is both the pride of Keng Tung and one of its most ancient historic pagodas — its founding preserved in the city\'s earliest records and in the stone inscriptions kept at the pagoda itself.',
+      quickFacts: [
+        { label: 'Traditional Founding', value: 'Sasana Era 157' },
+        { label: 'Founded By', value: 'Five Tung Ga Hermits' },
+        { label: 'Original Name', value: 'Swan San Zedi' },
+      ],
+      sections: [
         {
-          dateBadge: '1253 CE',
-          eyebrow: "Founding by King Mangrai's Successors",
-          title: 'Establishment upon Zom Kham Knoll',
-          description:
-            'Following the taming of the ancient lake waters by the hermit Maha Kassapa and his disciples, the Mangrai dynasty decreed a gilded chedi be raised atop the hill overlooking Lake Naung Tung, to serve as the spiritual core of the Tai Khün people.',
-          citation: 'Annals Ref: Chronicle of Jengtung, Palm Leaf MSS-12',
+          heading: "The Buddha's Prophecy",
+          paragraphs: [
+            'When Gautama Buddha visited this region, the entire Keng Tung valley is said to have been a great lake, with only seven high points left dry — one of which was Swan San Kone Taung, the hill where this pagoda now stands.',
+            "Traveling with 49 arahant disciples, the Buddha bestowed six sacred hair relics upon a brother-and-sister pair of nagas, prophesying that in 150 years a great city where the Buddha's Sasana would flourish would arise here. He foretold that four hermits would come from the north to dry the lake, and instructed that the six hair relics be enshrined — and a pagoda built — upon the dry hill of Swan San Kone Taung.",
+          ],
         },
         {
-          dateBadge: '1780 CE',
-          eyebrow: 'Saopha Royal Patronage & Relic Enshrinement',
-          title: 'The Sacred Gautama Hair Relics Deposited',
-          description:
-            'The Saopha of Keng Tung ordered a complete structural re-casing of the stupa, increasing its circumference to 180 cubits and depositing six sacred hair relics into an inner jewelled chamber alongside royal silver seals and ruby reliquaries.',
-          citation: 'Custodial Note: Reliquary remains sealed beneath the octagonal plinth',
+          heading: 'The Five Hermits and the Founding of Swan San Zedi',
+          paragraphs: [
+            "Fulfilling the Buddha's prophecy, five hermits led by the hermit Tung Ga enshrined the six hair relics around Sasana Era year 157, raising a stupa with a base of 3 lan 2 taung and a height of 5 lan in the traditional units recorded on the pagoda's own inscriptions. They named it Swan San Zedi — a founding recorded both in Keng Tung's earliest history and in the stone inscriptions kept at the pagoda itself.",
+          ],
         },
         {
-          dateBadge: '1924 CE',
-          eyebrow: 'Colonial Era Elevation',
-          title: 'Raising of the Nine-Tiered Gemstone Hti',
-          description:
-            'A community-wide effort combined 45 kilograms of brass, gold leaf, and 1,200 gemstone bells. When wind sweeps across Zom Kham Hill, the wind-chimes ring in tones tuned to classical Tai Khün devotional modes.',
-          citation: 'Restoration Master: U Sai Hlaing, Keng Tung Goldsmith Guild',
+          heading: '2018: The Full Gold Robe Offering and Buddha Consecration',
+          paragraphs: [
+            'In 2018, with the blessing of the State Ovadacariya, the Sayadaw of Nagar Nhit Kaung Monastery, and the Deputy Chairman of the State Sangha Maha Nayaka Committee, the Loi Ling Sayadaw Dr. Bhaddanta Pyinnyananda, military and civil officials led by Commander-in-Chief Senior General Min Aung Hlaing joined local ethnic communities and donors to offer a full gold robe to the pagoda, holding a grand Buddha Consecration and water-pouring merit-sharing ceremony.',
+          ],
         },
         {
-          dateBadge: 'Present Era',
-          eyebrow: 'Perpetual Trustee Stewardship',
-          title: 'Continuous Gilding & Scientific Conservation',
-          description:
-            'Under the Wat Zom Kham Gopaka Trustee Committee, the stupa receives regular re-gilding with pure Shan gold leaf pounded in the traditional Loi Mwe workshops, guarding against structural wear through monsoon cycles.',
-          citation: 'Conservation Cycle: Bi-Annual Inspection',
+          heading: '2024–2025: A New Gold Robe',
+          paragraphs: [
+            'On 11 June 2024, the family of State Administration Council Chairman Senior General Min Aung Hlaing donated 30 kyat-tha of pure gold toward a new full gold robe for the pagoda. On 18 October 2024, officials led by Triangle Region Military Command Commander Major General Soe Hlaing discussed the offering and signed the contract for the work.',
+            'Combined with donations from ethnic communities and other donors, the gold robe offering began on 1 November 2024 and was completed on 31 January 2025.',
+          ],
         },
       ],
+      readMoreCta: 'Read Full History',
+      readLessCta: 'Show Less',
+    },
+    audio: {
+      title: 'Listen to the History',
+      play: 'Play',
+      pause: 'Pause',
+      credit: 'Narrated as an act of merit by Maung Kyaw Linn Htet.',
     },
     gallery: {
       eyebrow: 'Visual Archive & Photographic Record',
-      title: 'Curatorial Architectural Plates',
-      countLabel: '5 Verified High-Resolution Plates',
-      items: [
+      title: 'Photo Gallery',
+      photoCount: (count) => `${count} Photo${count === 1 ? '' : 's'}`,
+      albums: [
         {
-          plate: 'PLATE KT-01',
-          eyebrow: 'Dawn Atmosphere · 05:40 AM',
-          title: 'The Golden Stupa at First Light',
-          caption:
-            'The octagonal plinth catching early mountain light, with morning mist ascending from Lake Naung Tung below.',
-        },
-        {
-          plate: 'PLATE KT-02',
-          eyebrow: 'Monastic Architecture',
-          title: 'Intricate Teakwood Carvings',
-          caption: 'Lanna-style multi-tiered eave carvings showcasing Tai Khün master joinery.',
-        },
-        {
-          plate: 'PLATE KT-03',
-          eyebrow: 'Venerable Iconography',
-          title: 'Antique Buddha Image',
-          caption: '15th-century bronze casting, cast from sacred alloy collected across the eastern Shan valleys.',
-        },
-        {
-          plate: 'PLATE KT-04',
-          eyebrow: 'Assembly Hall',
-          title: 'Monastic Dhamma Hall (Vihara)',
-          caption:
-            'The congregation hall, supported by colossal teak trunks adorned with gold lacquer stencil patterns.',
-        },
-        {
-          plate: 'PLATE KT-05',
-          eyebrow: 'Living Traditions',
-          title: 'Annual Offering Ceremony (Poya)',
-          caption:
-            'Devotees ascending the Zom Kham stairwells with woven lotus parasols and scented spring water.',
+          eyebrow: 'Community Offering',
+          title:
+            'For the offering of a full gold robe to Wat Zom Kham, the family of the President of the Republic of the Union of Myanmar, President U Min Aung Hlaing and his wife Daw Kyu Kyu Hla, donated thirty kyat-tha of pure gold, received by the respective Gopaka trustee committees',
+          caption: 'A ceremonial handover of the donated gold at Wat Zom Kham, received by the Gopaka trustee committee.',
         },
       ],
     },
     rituals: {
-      eyebrow: 'Votive Calendar & Monastic Observance',
-      title: 'Annual Sacred Rituals & Pilgrim Protocol',
+      eyebrow: 'Annual Observances',
+      title: 'Sacred Festivals of Wat Zom Kham',
       description:
-        'The ritual calendar follows the lunar movements of the Tai Khün calendar. Participation is welcomed for respectful observers adhering to traditional Theravada decorum.',
+        'Wat Zom Kham hosts two major annual observances rooted in Keng Tung tradition — a months-long gold robe offering culminating in a grand Buddha Consecration, and the Thadingyut lighting festival.',
       festivals: [
         {
-          cycle: 'Astrological Cycle: Lunar VI',
-          period: 'Full Moon of Kason (May)',
-          title: 'Sacred Full Moon Bathing Ritual (Buddha Bathing)',
+          cycle: 'Annual · Multi-Month Observance',
+          period: 'Late October – Late January',
+          title: 'Full Gold Robe Offering & Buddha Consecration',
           description:
-            'Commemorating the Birth, Enlightenment, and Parinirvana of the Buddha. Bamboo chutes carry scented sandalwood and jasmine water to the mid-tier rings of the golden spire, poured by monastic elders and hereditary chieftains.',
+            'Each year, the offering of a full gold robe to Wat Zom Kham traditionally begins around the end of Thadingyut or the start of Tazaungmon (late October to early November) and concludes in late January with a grand Buddha Consecration (Anekazatin) ceremony.',
+          checklistHeading: 'How the Observance Unfolds',
+          checklist: [
+            'Robe-offering donations and preparations begin around Thadingyut / Tazaungmon (Oct–Nov).',
+            'Devotees and donors continue offerings through the following months.',
+            'A grand Buddha Consecration (Anekazatin) ceremony closes the observance in late January.',
+          ],
+          nextObservance: 'Late Oct – Late Jan (Lunar Calendar)',
+          statusBadge: 'Public Participation Welcome',
+        },
+        {
+          cycle: 'Annual · Full Moon of Thadingyut',
+          period: 'Full Moon of Thadingyut (October)',
+          title: 'Thadingyut Lighting Festival',
+          description:
+            'Around the full moon of Thadingyut each year, devotees light candles and oil lamps across the pagoda courtyard, with local religious associations holding their own offering ceremonies.',
           checklistHeading: 'Merit-Making Procedure',
           checklist: [
-            'Assemble at the southern staircase courtyard before 06:30 AM with water vessels.',
-            'Join the communal five-precepts chant led by the Wat Zom Kham Sayadaw.',
-            'Circumambulate the chedi clockwise (Pradaksina) three times in silent meditation.',
+            'Bring candles or oil lamps to the pagoda courtyard around the Thadingyut full moon.',
+            'Join the lamp- and candle-lighting offering with fellow devotees.',
+            'Participate in ceremonies held by local religious associations.',
           ],
-          nextObservance: 'Next Observance: May 12, 2025',
-          statusBadge: 'Public Participation Permitted',
-        },
-        {
-          cycle: 'Astrological Cycle: Lunar XI',
-          period: 'Full Moon of Thadingyut (October)',
-          title: 'Thadingyut Floating Lantern & Candlelight Homage',
-          description:
-            "Marking the Buddha's descent from Tavatimsa heaven. The Zom Kham terrace is illuminated by over 5,000 earthenware oil lamps, while paper fire-balloons (Khmu Phay) are released above the hill into the night sky.",
-          checklistHeading: 'Visitor Etiquette & Sacred Rules',
-          checklist: [
-            'Shoes-off threshold: footwear must be deposited at the tier-1 outer gateway lockers.',
-            'Attire: shoulders and knees fully covered (longyi or loose trousers required).',
-            'Photography permitted in the outer courtyard; prohibited inside the inner relic vault.',
-          ],
-          nextObservance: 'Next Observance: October 6, 2025',
-          statusBadge: 'Night Vigil Until Midnight',
+          nextObservance: 'Full Moon of Thadingyut (Lunar Calendar)',
+          statusBadge: 'Public Participation Welcome',
         },
       ],
     },
-    trustees: {
-      eyebrow: 'Custodial Governance',
-      title: 'Wat Zom Kham Board of Trustees (Gopaka)',
-      registrationLabel: 'Official Registration:',
-      registrationId: 'KT-GOPAKA-041',
-      people: [
-        {
-          name: 'U Sai Lone',
-          role: 'Chairman of Trustees',
-          bio: 'Former Eastern Shan Heritage Conservator with 34 years of stupa restoration leadership.',
-          tenure: 'Tenure: 2018–Present',
-        },
-        {
-          name: 'Daw Nang Kham Moe',
-          role: 'Vice Chair · Financial Ledger',
-          bio: 'Oversees public transparency ledgers, merit fund escrows, and municipal audit filings.',
-          tenure: 'Tenure: 2020–Present',
-        },
-        {
-          name: 'U Sai Kyaw Tint',
-          role: 'Chief Maintenance Custodian',
-          bio: 'Structural engineer specializing in seismic dampening and brick masonry mortar analysis.',
-          tenure: 'Tenure: 2015–Present',
-        },
-        {
-          name: 'U Sai Seng Hark',
-          role: 'Archives & Monastic Relations',
-          bio: 'Liaison to the Mahamuni Sangha Council and keeper of the palm-leaf architectural codices.',
-          tenure: 'Tenure: 2019–Present',
-        },
-      ],
-      contactEyebrow: 'Official Trustee Secretarial Bureau',
-      contactAddress: 'East Stairway Administrative Annex, Wat Zom Kham, Keng Tung',
-      contactHours: 'Open Daily 07:00 – 17:00 · Inquiries: +95 (0)84 21 042',
-      ctaLedger: 'Public Audit & Donation Ledger',
-      ctaContact: 'Contact Secretariat',
-    },
-    wayfinding: {
-      eyebrow: 'Pilgrim Cartography & Route Guidelines',
-      title: 'Ascent Wayfinding: Naung Tung Lake to the Summit',
+    location: {
+      eyebrow: 'Visit & Directions',
+      title: 'Find the Pagoda',
       description:
-        'Wat Zom Kham presides over the central hill in Kyaing Tong. Access is available via ceremonial covered staircases or the southern vehicular switchback.',
-      pinLabel: 'Summit Sanctuary (829m ASL)',
-      pinDetail: 'Coordinates: 21.2917° N, 99.6052° E · 650m from the Naung Tung Lake shore.',
-      routeLegendA: 'Eastern Covered Stairway (218 Steps)',
-      routeLegendB: 'South Vehicular Loop (Motorbike/Taxi)',
-      routes: [
-        {
-          eyebrow: 'Walking Ascent from Naung Tung Lake',
-          title: 'Ceremonial Eastern Dragon Stairway',
-          description:
-            'Begins at the northeastern lakeside promenade, guarded by twin 18th-century stucco chinthe (mythical lions) and shaded by ancient Bodhi trees, with rest pavilions at step 80 and step 150. Duration: 12–18 minutes.',
-        },
-        {
-          eyebrow: 'Vehicular & Accessible Access',
-          title: 'South Crest Drive & Wheelchair Ramps',
-          description:
-            "Taxis, tuk-tuks, and motorbikes navigate the paved ridge road directly to the Upper South Gate. Level ramp access connects the upper car park to the stupa's marble pradaksina ambulatory.",
-        },
-      ],
-      timingHeading: 'Optimal Viewing & Chanting Timings',
-      timingSlots: [
-        { label: 'Sunrise Vigil', time: '05:30 – 06:45 AM', note: 'Quiet chanting & fog.' },
-        { label: 'Sunset Reflection', time: '17:45 – 18:30 PM', note: 'Golden hour & temple bells.' },
-      ],
+        'Wat Zom Kham stands beside Naung Tung Lake in Ward 4 of Keng Tung town — easy to reach on foot, by bicycle, or by taxi.',
+      addressLabel: 'Address',
+      address: 'Wat Zom Kham, Ward 4, near Naung Tung Lake, Keng Tung (Kyaingtong), Shan State, Myanmar',
+      coordinatesLabel: 'Coordinates',
+      hoursLabel: 'Visiting Hours',
+      hours: '5:30 AM – 8:30 PM Daily',
+      streetView: 'Street',
+      satelliteView: 'Satellite',
+      viewMapCta: 'View on Google Maps',
+      directionsCta: 'Get Directions',
+    },
+    closing: {
+      text: '"Buddhasasanam ciram titthatu" — may the Buddha\'s Sasana long endure.',
+      cta: 'Explore the Directory',
     },
   },
   maharMyatMuni: {
@@ -433,37 +365,59 @@ export const en: Dictionary = {
         { label: 'Centennial', value: '2026' },
       ],
     },
+    quickNav: {
+      label: 'Jump to Section:',
+      items: ['History', 'Photo Gallery', 'Living Traditions', 'Board of Trustees', 'Visit & Directions'],
+    },
     history: {
       eyebrow: 'Historical Summary',
       title: 'How the Great Pagoda Came to Be',
-      items: [
+      quickFacts: [
+        { label: "Pagoda's Title", value: 'Maha Myat Muni Pagoda' },
+        { label: 'Year Enshrined', value: '1283 ME (1921 CE)' },
+        { label: "Pagoda's Patron", value: 'Saopha Sao Kawng Kiao Intaleng' },
+      ],
+      sections: [
         {
-          year: '1920',
-          title: 'The Initial Vision',
-          description:
-            'Sao Kawng Kiao Intaleng, the Saopha of Keng Tung, together with the abbot of Wat Zaing Ngarm monastery, envisioned casting a replica of the revered Mahamuni image of Mandalay to be enshrined and worshipped in Keng Tung.',
+          heading: 'Background of the Sacred Image',
+          paragraphs: [
+            "During the lifetime of the Gautama Buddha, a king of immense power and pride named Phara Sunbu — also called Zambudipati — grew so arrogant that he believed no ruler surpassed him, and refused to pay homage even to the Buddha himself.",
+            "One day, the Buddha manifested his power by donning five royal regalia even greater than the king's own and seated himself upon a royal throne in full majesty. Witnessing this, King Zambudipati was overcome with awe — his hair stood on end — and upon realizing that a being of far greater glory than himself existed in the world, his pride gave way, and he bowed before the Buddha in devotion.",
+            "While the Buddha remained seated in this crowned and regally adorned form, the King of Dhanyawaddy and his people cast a likeness of him as a sacred image — the very first of its kind to be enshrined and worshipped. It came to be known through the ages as the Rakhine (Arakan) Buddha, or the Maha Myat Muni image, a name by which it is still called today.",
+          ],
         },
         {
-          year: '1921',
-          title: 'The Casting',
-          description:
-            'Sayar U Tay of Mandalay, together with craftsmen gathered from across the region, successfully cast the bronze replica of the Mandalay Mahamuni image.',
+          heading: 'How the Idea Came to Keng Tung',
+          paragraphs: [
+            "Many years later, word of the glory and power of the Maha Myat Muni image had spread as far as Keng Tung in Eastern Shan State. In 1269 ME (1908 CE), Saopha Sao Kawng Kiao Intaleng of Keng Tung — a great patron of the pagoda — wishing for the Buddha's teachings to endure and shine like the sun and moon, consulted with sincere devotion with the chief Sayadaw of the monastic order (based at Kyaing Ngan Monastery) and the monks, as well as the pagoda's patrons throughout the town. Together they resolved, with the aim of sustaining the Buddha's teachings for five thousand years, to enshrine and worship a Maha Myat Muni image of their own.",
+          ],
         },
         {
-          year: '1926',
-          title: 'Enshrinement',
-          description:
-            'The completed sacred image was carried to a newly built monastery in the heart of Keng Tung, where it was successfully enshrined and consecrated with a grand offering ceremony in 1926.',
+          heading: 'Casting in Mandalay and the Journey to Keng Tung',
+          paragraphs: [
+            "To have a Maha Myat Muni image cast in the five sacred metals, Saopha Sao Kawng Kiao Intaleng of Keng Tung, in 1282 ME (1921 CE), sent two senior officials of his court, U Hpo Myin and U Banya Hpara Wat, to Mandalay with instructions to have the image cast. In 1283 ME, Sayagyi U Sit, a sculptor residing at Four House Row west of the old Mandalay railway station, together with his apprentices, undertook the casting, following the exact likeness of the Maha Myat Muni image of Mandalay. From the neck to the crown of the head, the image contained pure gold weighing one peiktha and seventy kyat-tha, and pure silver weighing seventeen peiktha, while the copper, bronze, and craftsmanship were paid for with fifteen thousand (15,000) old silver rupees exactly. Of this sum, Sir Sao Chey, the Saopha of Hsipaw, generously contributed half the cost.",
+            "At that time, no motor road yet existed between Hsipaw and Keng Tung, so the image was disassembled into sections and carried onward, resting for a time at Hsipaw. It was then loaded onto ox carts, and Sir Sao Chey, Saopha of Hsipaw, took responsibility for transporting it with the labour of the people and ox carts as far as the western bank crossing of the Salween River at Tako. Likewise, no motor road yet connected Keng Tung to the Tako crossing of the Salween. Saopha Sao Kawng Kiao Intaleng of Keng Tung personally organised the effort, gathering villagers along the route, and through great hardship over many stages of the journey — using both manpower and buffalo carts — carried the sacred image onward with heartfelt devotion.",
+            "Before the image crossed from the Salween River at Tako into Keng Tung, the entire population of the town turned out with drums and gongs resounding, erecting a ceremonial pavilion at the iron bridge over the Nam Khun stream on the town's western edge to joyfully welcome its arrival. From there, the crowds processed the image into the town amid great festivity, and it was kept for one Vassa retreat in a temporary hall built of thatch roofing and bamboo-matted walls at Khon Kwaing Sun — now the town's football ground — in the heart of Keng Tung, where it was venerated by the faithful.",
+          ],
+        },
+        {
+          heading: 'Building and Renovating the Monastery Hall',
+          paragraphs: [
+            "In 1288 ME (Sasana Era 2470), when the vihara monastery hall was first built, the roof was of an ordinary style covered in teak planks, the ceiling was made of plank boards, and the monastery compound was enclosed on all four sides by a brick wall. That same year, the image was carried from its temporary shelter to the throne within the newly completed vihara hall. Led by the pagoda's great patron, Saopha Sao Kawng Kiao Intaleng, a grand robe-offering ceremony known as the squirrel-fur robe (weaving) offering was organised to present a golden robe to the Maha Myat Muni image: beginning on the 14th waxing day of Tazaungmon in 1288 ME, the robe was woven through the night, and by noon on the 15th waxing day it was completed and offered to the assembled monks, along with the ceremonial water-pouring to share the merit. In the weaving of this robe, fibres drawn from the stems of lotus buds that had grown naturally in a pond were spun and woven upon the loom.",
+            "In 1300 ME, Mahadevi Sao Nang Kya Nyunt, the devoted chief consort of Kyaing Ngan Palace, consulted with local architects and had the vihara hall renovated: the old teak-plank roofing was removed and replaced with corrugated zinc sheets, built up into a tiered pyatthat-style spire, and finished with a coat of marine varnish.",
+            "In 1303 ME (1942 CE), as the Second World War approached Keng Tung, and with administrative authority at that time in the hands of the British military officer Captain Robert, Mahadevi Sao Nang Kya Nyunt of Kyaing Ngan Palace, wishing to move the Maha Myat Muni image's regalia — its crown and epaulettes set with gems — to a place of safety, entrusted them to Captain Robert along with the jewelled ceremonial ornaments customarily used to adorn the Saopha of Keng Tung's elephants during festival processions. Captain Robert took charge of them and had them sent to the treasury in Taunggyi for safekeeping. During the course of the war, it could never be clearly established whether these two sets of valuables deposited in the Taunggyi treasury were carried off to India by British forces, or lost amid the ravages of war — and so the pagoda's precious jewels were lost for good during the Second World War.",
+            "During 1308–1310 ME, the hall was renovated once again: a hti (umbrella finial) was placed atop the roof of the vihara hall, ornamental tin corner-pieces were fitted to the four corners of the tiered spire's eaves, and the brick wall enclosing the monastery compound was removed and replaced with an iron fence, in the form seen today. In 1311 ME, the plank ceiling of the hall was removed and replaced with four-foot square cement tiles, finished and gilded with gold leaf. In addition, around the interior walls, scenes from roughly ten of the Buddha's birth-story Jataka tales were rendered and gilded with gold leaf, and the names of the donors who sponsored this work were also inscribed on a stone plaque.",
+          ],
         },
       ],
+      readMoreCta: 'Read Full History',
+      readLessCta: 'Show Less',
     },
-    video: {
-      eyebrow: 'Living Devotion',
-      title: 'Inspiring Deep Respect and Reverence',
-      description:
-        'Beneath its jewelled crown, the golden image of Maha Myat Muni continues to draw quiet reverence from all who come before it — a devotion unbroken since its enshrinement a century ago.',
-      mute: 'Mute',
-      unmute: 'Unmute',
+    audio: {
+      title: 'Listen to the History',
+      play: 'Play',
+      pause: 'Pause',
+      credit: 'Narrated as an act of merit by Maung Kyaw Linn Htet.',
     },
     gallery: {
       eyebrow: 'Visual Archive',
@@ -496,19 +450,39 @@ export const en: Dictionary = {
       title: 'Living Traditions & Festivals',
       items: [
         {
-          title: 'Daily Face-Washing Ceremony',
+          title: 'Annual Pagoda Festival',
           description:
-            'As with the Mahamuni image in Mandalay, the Keng Tung Maha Myat Muni image is honored each morning with the traditional face-washing and tooth-brushing ceremony, unbroken to this day.',
+            "On the full moon of Tazaungmon in 1312 ME (1950 CE), Saopha Sao Sai Long Khemadipati of Keng Tung, together with royal relatives and the pagoda's lay patrons, offered four ceremonial umbrellas at the temple entrance and a great alms-offering to 85 monks at 6:00 AM, sealed with the ceremonial water-pouring to share merit. Since that year, the full moon of Tazaungmon has been observed without interruption as the Maha Myat Muni Pagoda Festival.",
+        },
+        {
+          title: 'Morning Alms Offering at the Palace',
+          description:
+            'Each year on the full moon of Tazaungmon, the Saophas lead the public in inviting monks to receive the morning alms-offering (Aruna Hsun) within the palace (Haw).',
+        },
+        {
+          title: 'Face-Washing Ceremony',
+          description:
+            'On every full moon and new moon day, at 5:30 in the morning, the traditional face-washing ceremony is performed for the Maha Myat Muni image.',
+        },
+        {
+          title: 'Bodhi Tree Watering Ceremony',
+          description:
+            "Each year on the full moon of Kason, the Bodhi tree near the pagoda is honored with a watering ceremony: the first rite is held inside the Gandhakuti monastery hall, and the watering itself takes place at the Bodhi tree's monastery compound (Wat Pha Kyauk).",
+        },
+        {
+          title: 'Quarterly Protective Chanting',
+          description:
+            'Once every three months, on the full moon evening at 6:00, a gathering of 110 monks recites the protective Paritta chants for freedom from danger inside the Gandhakuti monastery hall.',
+        },
+        {
+          title: 'Monthly Dhammacakka Recitation',
+          description:
+            'On the 2nd waxing and 2nd waning day of every month, at 2:00 in the afternoon, the Dhammacakka Sutta is recited and offered in the Shan language.',
         },
         {
           title: 'Centennial Celebration',
           description:
             'Having stood for a full century, 2026 marks the 100th anniversary of the Keng Tung Maha Myat Muni Pagoda.',
-        },
-        {
-          title: 'Tazaungdaing Festival',
-          description:
-            'Every year on the full moon of Tazaungmon, the pagoda hosts grand festivities in keeping with local tradition.',
         },
       ],
     },
@@ -557,6 +531,12 @@ export const en: Dictionary = {
         { name: 'U Lone Kyauk', role: 'Member' },
         { name: 'Dr. Sai Sai Tit', role: 'Member' },
       ],
+      groupSayadaw: 'Sayadaws — Great Preceptors of the Sangha',
+      groupNayaka: 'Nayaka Patrons',
+      groupLeadership: 'Chairperson & Vice Chairpersons',
+      groupOthers: 'Executive Committee & Members',
+      showMoreCta: 'Show Full Board',
+      showLessCta: 'Show Less',
     },
     location: {
       eyebrow: 'Visit & Directions',
@@ -566,13 +546,88 @@ export const en: Dictionary = {
       addressLabel: 'Address',
       address: 'Maha Myat Muni Pagoda, near Naung Tung Lake, Keng Tung (Kyaingtong), Shan State, Myanmar',
       coordinatesLabel: 'Coordinates',
+      hoursLabel: 'Visiting Hours',
+      hours: '4:30 AM – 8:00 PM Daily',
       streetView: 'Street',
       satelliteView: 'Satellite',
       viewMapCta: 'View on Google Maps',
       directionsCta: 'Get Directions',
     },
     closing: {
-      text: 'For any visitor to Keng Tung, this historic and powerful sacred image is not to be missed.',
+      text: '"Buddhasasanam ciram titthatu" — may the Buddha\'s Sasana long endure.',
+      cta: 'Explore the Directory',
+    },
+  },
+  yarzamuni: {
+    meta: { title: 'Yarzamuni — Abhaya Raza Muni Buddha Image, Keng Tung' },
+    hero: {
+      badge: 'Pan Kwai Village Landmark',
+      title: 'Yarzamuni',
+      localName: 'Abhaya Raza Muni Buddha Image',
+      subtitle:
+        'A 72-foot seated Buddha image in the Abhaya mudra of fearlessness, rising above Pan Kwai village east of Keng Tung — consecrated in 2018 under the patronage of the Defence Services.',
+    },
+    quickNav: {
+      label: 'Jump to Section:',
+      items: ['History', 'Visit & Directions'],
+    },
+    facts: {
+      pills: [
+        { label: 'Total Height', value: '72 ft (≈22 m)' },
+        { label: 'Construction Began', value: 'October 2016' },
+        { label: 'Consecration', value: 'January 30, 2018' },
+        { label: 'Location', value: 'Pan Kwai Village' },
+      ],
+    },
+    history: {
+      eyebrow: 'Historical Summary',
+      title: 'How the Abhaya Raza Muni Image Came to Be',
+      description:
+        'The great Abhaya Raza Muni Buddha image was built and consecrated in Pan Kwai village east of Keng Tung within the span of two years, under the direct patronage of the Defence Services.',
+      quickFacts: [
+        { label: 'Pedestal Height', value: '18 ft' },
+        { label: 'Image Height', value: '54 ft' },
+        { label: 'Designed By', value: 'Prof. U Zaw Than Htut' },
+      ],
+      sections: [
+        {
+          heading: 'Design & Construction',
+          paragraphs: [
+            'Construction of the great Abhaya Raza Muni Buddha image, enshrined in Pan Kwai village, Keng Tung township, Eastern Shan State, began in October 2016. Standing 72 feet in total height — a courtyard 180 feet wide, an 18-foot pedestal, and a 54-foot image — the design was drawn up by Professor U Zaw Than Htut of the University of Culture (Mandalay) together with the Directorate of Military Engineering, and approved by the Commander-in-Chief of the Defence Services.',
+          ],
+        },
+        {
+          heading: 'Relic Enshrinement & Buddha Consecration',
+          paragraphs: [
+            'The relic enshrinement and Buddha Consecration (Anekazatin) ceremony was held on 30 January 2018, attended by senior military and civil officials led by Commander-in-Chief of the Defence Services Senior General Min Aung Hlaing, together with donors.',
+          ],
+        },
+      ],
+    },
+    audio: {
+      title: 'Listen to the History',
+      play: 'Play',
+      pause: 'Pause',
+      credit: 'Narrated as an act of merit by Maung Kyaw Linn Htet.',
+    },
+    location: {
+      eyebrow: 'Visit & Directions',
+      title: 'Find the Pagoda',
+      description:
+        'The Abhaya Raza Muni Buddha image stands in Pan Kwai village, a short drive east of Keng Tung town, and is open to visitors at any hour.',
+      addressLabel: 'Address',
+      address: 'Abhaya Raza Muni Buddha Image, Pan Kwai Village, Keng Tung Township, Shan State, Myanmar',
+      coordinatesLabel: 'Coordinates',
+      approximateLabel: 'Approximate location',
+      hoursLabel: 'Visiting Hours',
+      hours: 'Open 24 Hours',
+      streetView: 'Street',
+      satelliteView: 'Satellite',
+      viewMapCta: 'View on Google Maps',
+      directionsCta: 'Get Directions',
+    },
+    closing: {
+      text: '"Buddhasasanam ciram titthatu" — may the Buddha\'s Sasana long endure.',
       cta: 'Explore the Directory',
     },
   },
@@ -642,9 +697,28 @@ export const en: Dictionary = {
     title: 'About Us',
     description:
       'The Keng Tung Pagoda Guide is a trilingual digital archive documenting the sacred pagodas, monasteries, and pilgrimage routes of Keng Tung, Eastern Shan State.',
+    features: [
+      {
+        title: 'Trilingual Access',
+        description:
+          'Every page reads in English, Myanmar, and Thai, so pilgrims, researchers, and visitors can explore in the language they know best.',
+      },
+      {
+        title: 'Verified Local History',
+        description:
+          'Histories, rituals, and festival dates are sourced from real records and community accounts, not generic filler text.',
+      },
+      {
+        title: 'Interactive Maps & Directions',
+        description:
+          'Satellite and street views, real GPS coordinates, and one-tap directions to every sanctuary in this guide.',
+      },
+    ],
     missionTitle: 'Our Mission',
     missionText:
       "This guide exists to preserve and share the history, rituals, and living traditions of Keng Tung's sacred sites — in English, Myanmar, and Thai — for pilgrims, researchers, and the local community alike.",
+    statPagodasLabel: 'Pagodas Documented',
+    statLanguagesLabel: 'Languages Supported',
     creditEyebrow: 'Built By',
     creditTitle: 'University of Computer Studies (Keng Tung)',
     creditText:
@@ -663,9 +737,25 @@ export const en: Dictionary = {
     formSuccess: "Thank you — your message has been noted. We'll get back to you soon.",
     infoTitle: 'About the Developer',
     infoText: 'This guide is maintained by the University of Computer Studies (Keng Tung), Shan State, Myanmar.',
+    locationLabel: 'Location',
+    location: 'Keng Tung, Eastern Shan State, Myanmar',
+    languagesLabel: 'Languages',
+    languages: 'English · Myanmar · Thai',
+  },
+  narrationPage: {
+    eyebrow: 'Audio Guide',
+    title: 'Narration Player',
+    description:
+      'Listen to voice narrations of each pagoda in Keng Tung, told in Myanmar and offered as an act of merit.',
+    comingSoon: 'Narration coming soon',
+    visitPage: 'Visit pagoda page',
   },
   common: {
     viewDetails: 'View Details',
+    scrollToZoomHint: 'Use Ctrl + scroll to zoom the map',
+  },
+  closing: {
+    text: '"Buddhasasanam ciram titthatu" — may the Buddha\'s Sasana long endure.',
   },
   footer: {
     tagline: 'A living archive of the sacred pagodas, monasteries and pilgrimage routes of Kyaing Tong.',

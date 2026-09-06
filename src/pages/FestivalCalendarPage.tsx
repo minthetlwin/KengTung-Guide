@@ -1,21 +1,42 @@
 import { useLanguage } from '../context/language-context'
 import { FestivalsCalendar } from '../components/FestivalsCalendar'
 import { festivalsMeta } from '../data/festivals'
+import { usePageMeta } from '../hooks/usePageMeta'
 
 const INTL_LOCALES: Record<string, string> = { en: 'en-US', my: 'my-MM', th: 'th-TH' }
 
 export function FestivalCalendarPage() {
   const { t, locale } = useLanguage()
   const f = t.festivals
+  const fc = t.festivalCalendarPage
+
+  usePageMeta({
+    title: `${fc.title} · ${t.meta.title}`,
+    description: fc.description,
+  })
 
   return (
     <div className="flex w-full flex-col gap-10 py-14">
+      <div className="mx-auto w-full max-w-[1440px] px-gutter md:px-gutter-lg">
+        <div className="flex flex-col gap-1.5">
+          <div className="flex items-center gap-2 font-sans text-xs font-bold uppercase tracking-widest text-primary">
+            <span className="material-symbols-outlined text-[18px]">temple_buddhist</span>
+            {fc.eyebrow}
+          </div>
+          <h1 className="font-serif text-[22px] font-bold tracking-tight text-text">{fc.title}</h1>
+          <p className="max-w-2xl font-sans text-[11px] leading-relaxed text-text-muted">{fc.description}</p>
+        </div>
+      </div>
+
       <FestivalsCalendar />
 
       <div className="mx-auto w-full max-w-[1440px] px-gutter md:px-gutter-lg">
         <div className="mb-6 flex flex-col gap-1.5">
-          <span className="font-sans text-eyebrow uppercase text-primary">{f.eyebrow}</span>
-          <h2 className="font-serif text-2xl font-bold tracking-tight text-text lg:text-3xl">{f.title}</h2>
+          <div className="flex items-center gap-2 font-sans text-[11px] font-bold uppercase tracking-widest text-primary">
+            <span className="material-symbols-outlined text-[18px]">calendar_month</span>
+            {f.eyebrow}
+          </div>
+          <h2 className="font-serif text-[22px] font-bold tracking-tight text-text">{f.title}</h2>
           <p className="font-sans text-sm text-text-muted">{f.dateNote}</p>
         </div>
 

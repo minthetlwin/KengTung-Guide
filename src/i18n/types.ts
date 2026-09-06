@@ -71,21 +71,6 @@ export interface WzkMetaPill {
   value: string
 }
 
-export interface WzkTimelineItem {
-  dateBadge: string
-  eyebrow: string
-  title: string
-  description: string
-  citation: string
-}
-
-export interface WzkGalleryItem {
-  plate: string
-  eyebrow: string
-  title: string
-  caption: string
-}
-
 export interface WzkFestival {
   cycle: string
   period: string
@@ -97,25 +82,6 @@ export interface WzkFestival {
   statusBadge: string
 }
 
-export interface WzkTrustee {
-  name: string
-  role: string
-  bio: string
-  tenure: string
-}
-
-export interface WzkRouteCard {
-  eyebrow: string
-  title: string
-  description: string
-}
-
-export interface WzkTimingSlot {
-  label: string
-  time: string
-  note: string
-}
-
 export interface WatZomKhamDictionary {
   meta: { title: string }
   hero: {
@@ -124,32 +90,31 @@ export interface WatZomKhamDictionary {
     title: string
     subtitle: string
     metaPills: [WzkMetaPill, WzkMetaPill, WzkMetaPill, WzkMetaPill]
-    audio: {
-      label: string
-      title: string
-      narrator: string
-      currentTime: string
-      totalTime: string
-      spatialLabel: string
-      download: string
-    }
   }
   quickNav: {
     label: string
-    items: [string, string, string, string, string]
-    registeredBadge: string
+    items: [string, string, string, string]
   }
   history: {
     eyebrow: string
     title: string
     description: string
-    items: [WzkTimelineItem, WzkTimelineItem, WzkTimelineItem, WzkTimelineItem]
+    quickFacts: [MmmFactPill, MmmFactPill, MmmFactPill]
+    sections: [MmmHistorySection, MmmHistorySection, MmmHistorySection, MmmHistorySection]
+    readMoreCta: string
+    readLessCta: string
+  }
+  audio: {
+    title: string
+    play: string
+    pause: string
+    credit: string
   }
   gallery: {
     eyebrow: string
     title: string
-    countLabel: string
-    items: [WzkGalleryItem, WzkGalleryItem, WzkGalleryItem, WzkGalleryItem, WzkGalleryItem]
+    photoCount: (count: number) => string
+    albums: MmmGalleryAlbum[]
   }
   rituals: {
     eyebrow: string
@@ -157,29 +122,23 @@ export interface WatZomKhamDictionary {
     description: string
     festivals: [WzkFestival, WzkFestival]
   }
-  trustees: {
-    eyebrow: string
-    title: string
-    registrationLabel: string
-    registrationId: string
-    people: [WzkTrustee, WzkTrustee, WzkTrustee, WzkTrustee]
-    contactEyebrow: string
-    contactAddress: string
-    contactHours: string
-    ctaLedger: string
-    ctaContact: string
-  }
-  wayfinding: {
+  location: {
     eyebrow: string
     title: string
     description: string
-    pinLabel: string
-    pinDetail: string
-    routeLegendA: string
-    routeLegendB: string
-    routes: [WzkRouteCard, WzkRouteCard]
-    timingHeading: string
-    timingSlots: [WzkTimingSlot, WzkTimingSlot]
+    addressLabel: string
+    address: string
+    coordinatesLabel: string
+    hoursLabel: string
+    hours: string
+    streetView: string
+    satelliteView: string
+    viewMapCta: string
+    directionsCta: string
+  }
+  closing: {
+    text: string
+    cta: string
   }
 }
 
@@ -188,10 +147,9 @@ export interface MmmFactPill {
   value: string
 }
 
-export interface MmmTimelineItem {
-  year: string
-  title: string
-  description: string
+export interface MmmHistorySection {
+  heading: string
+  paragraphs: string[]
 }
 
 export interface MmmBeliefItem {
@@ -223,17 +181,23 @@ export interface MaharMyatMuniDictionary {
   facts: {
     pills: [MmmFactPill, MmmFactPill, MmmFactPill, MmmFactPill]
   }
+  quickNav: {
+    label: string
+    items: [string, string, string, string, string]
+  }
   history: {
     eyebrow: string
     title: string
-    items: [MmmTimelineItem, MmmTimelineItem, MmmTimelineItem]
+    quickFacts: [MmmFactPill, MmmFactPill, MmmFactPill]
+    sections: [MmmHistorySection, MmmHistorySection, MmmHistorySection, MmmHistorySection]
+    readMoreCta: string
+    readLessCta: string
   }
-  video: {
-    eyebrow: string
+  audio: {
     title: string
-    description: string
-    mute: string
-    unmute: string
+    play: string
+    pause: string
+    credit: string
   }
   gallery: {
     eyebrow: string
@@ -244,13 +208,19 @@ export interface MaharMyatMuniDictionary {
   beliefs: {
     eyebrow: string
     title: string
-    items: [MmmBeliefItem, MmmBeliefItem, MmmBeliefItem]
+    items: MmmBeliefItem[]
   }
   trustees: {
     eyebrow: string
     title: string
     description: string
     people: MmmTrusteeMember[]
+    groupSayadaw: string
+    groupNayaka: string
+    groupLeadership: string
+    groupOthers: string
+    showMoreCta: string
+    showLessCta: string
   }
   location: {
     eyebrow: string
@@ -259,6 +229,57 @@ export interface MaharMyatMuniDictionary {
     addressLabel: string
     address: string
     coordinatesLabel: string
+    hoursLabel: string
+    hours: string
+    streetView: string
+    satelliteView: string
+    viewMapCta: string
+    directionsCta: string
+  }
+  closing: {
+    text: string
+    cta: string
+  }
+}
+
+export interface YarzamuniDictionary {
+  meta: { title: string }
+  hero: {
+    badge: string
+    title: string
+    localName: string
+    subtitle: string
+  }
+  quickNav: {
+    label: string
+    items: [string, string]
+  }
+  facts: {
+    pills: [MmmFactPill, MmmFactPill, MmmFactPill, MmmFactPill]
+  }
+  history: {
+    eyebrow: string
+    title: string
+    description: string
+    quickFacts: [MmmFactPill, MmmFactPill, MmmFactPill]
+    sections: [MmmHistorySection, MmmHistorySection]
+  }
+  audio: {
+    title: string
+    play: string
+    pause: string
+    credit: string
+  }
+  location: {
+    eyebrow: string
+    title: string
+    description: string
+    addressLabel: string
+    address: string
+    coordinatesLabel: string
+    approximateLabel: string
+    hoursLabel: string
+    hours: string
     streetView: string
     satelliteView: string
     viewMapCta: string
@@ -273,6 +294,7 @@ export interface MaharMyatMuniDictionary {
 export interface Dictionary {
   meta: {
     title: string
+    description: string
   }
   header: {
     brand: string
@@ -325,6 +347,11 @@ export interface Dictionary {
     noResults: string
     cards: [DirectoryCard, DirectoryCard, DirectoryCard]
   }
+  pagodasPage: {
+    eyebrow: string
+    title: string
+    description: string
+  }
   pilgrimageMap: {
     eyebrow: string
     title: string
@@ -345,8 +372,14 @@ export interface Dictionary {
     }
     slides: [FestivalSlide, FestivalSlide, FestivalSlide, FestivalSlide]
   }
+  festivalCalendarPage: {
+    eyebrow: string
+    title: string
+    description: string
+  }
   watZomKham: WatZomKhamDictionary
   maharMyatMuni: MaharMyatMuniDictionary
+  yarzamuni: YarzamuniDictionary
   locationMapPage: {
     eyebrow: string
     title: string
@@ -371,8 +404,15 @@ export interface Dictionary {
     eyebrow: string
     title: string
     description: string
+    features: [
+      { title: string; description: string },
+      { title: string; description: string },
+      { title: string; description: string },
+    ]
     missionTitle: string
     missionText: string
+    statPagodasLabel: string
+    statLanguagesLabel: string
     creditEyebrow: string
     creditTitle: string
     creditText: string
@@ -389,9 +429,24 @@ export interface Dictionary {
     formSuccess: string
     infoTitle: string
     infoText: string
+    locationLabel: string
+    location: string
+    languagesLabel: string
+    languages: string
+  }
+  narrationPage: {
+    eyebrow: string
+    title: string
+    description: string
+    comingSoon: string
+    visitPage: string
   }
   common: {
     viewDetails: string
+    scrollToZoomHint: string
+  }
+  closing: {
+    text: string
   }
   footer: {
     tagline: string

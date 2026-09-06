@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
+import { Link } from 'react-router-dom'
 import { useLanguage } from '../context/language-context'
 import { heroImages } from '../data/images'
 
@@ -6,6 +7,7 @@ const SLIDE_DURATION_MS = 7000
 const TICK_MS = 100
 
 const IMAGE_KEYS = ['watZomKham', 'mahaMyatMuni', 'yarzamuni'] as const
+const DETAIL_PATHS = ['/wat-zom-kham', '/mahar-myat-muni-pagoda', '/yarzamuni'] as const
 
 export function HeroSlideshow() {
   const { t } = useLanguage()
@@ -40,6 +42,7 @@ export function HeroSlideshow() {
 
   const slide = slides[index]
   const bgImage = useMemo(() => heroImages[IMAGE_KEYS[index]], [index])
+  const detailPath = DETAIL_PATHS[index]
 
   return (
     <section
@@ -92,20 +95,20 @@ export function HeroSlideshow() {
               </div>
 
               <div className="flex flex-wrap items-center gap-3 pt-3">
-                <a
-                  href="#spotlight"
+                <Link
+                  to={detailPath}
                   className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 font-sans text-sm font-semibold text-on-primary shadow-elevated transition-transform hover:scale-[1.02] active:scale-[0.99]"
                 >
                   {slide.primaryCta}
                   <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
-                </a>
-                <button
-                  type="button"
+                </Link>
+                <Link
+                  to={`${detailPath}#history-timeline`}
                   className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-black/35 px-6 py-3 font-sans text-sm font-semibold text-white backdrop-blur-md transition-colors hover:bg-black/50"
                 >
                   <span className="material-symbols-outlined text-[18px] text-[#F2D488]">headphones</span>
                   {slide.secondaryCta}
-                </button>
+                </Link>
               </div>
             </div>
           </div>

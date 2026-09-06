@@ -1,11 +1,60 @@
-import { useState } from 'react'
+import { useEffect, useRef, useState, type ChangeEvent } from 'react'
+import { Link } from 'react-router-dom'
 import { useLanguage } from '../context/language-context'
 import { spotlightImage } from '../data/images'
+import { wzkHistoryAudioSrc } from '../data/watZomKham'
+
+function formatTime(seconds: number) {
+  if (!Number.isFinite(seconds) || seconds < 0) return '0:00'
+  const m = Math.floor(seconds / 60)
+  const s = Math.floor(seconds % 60)
+  return `${m}:${String(s).padStart(2, '0')}`
+}
 
 export function FlagshipSpotlight() {
   const { t } = useLanguage()
   const s = t.spotlight
+  const audioRef = useRef<HTMLAudioElement>(null)
   const [playing, setPlaying] = useState(false)
+  const [currentTime, setCurrentTime] = useState(0)
+  const [duration, setDuration] = useState(0)
+
+  useEffect(() => {
+    const el = audioRef.current
+    if (!el) return
+    const onTimeUpdate = () => setCurrentTime(el.currentTime)
+    const onLoadedMetadata = () => setDuration(el.duration)
+    const onEnded = () => setPlaying(false)
+    el.addEventListener('timeupdate', onTimeUpdate)
+    el.addEventListener('loadedmetadata', onLoadedMetadata)
+    el.addEventListener('ended', onEnded)
+    return () => {
+      el.removeEventListener('timeupdate', onTimeUpdate)
+      el.removeEventListener('loadedmetadata', onLoadedMetadata)
+      el.removeEventListener('ended', onEnded)
+    }
+  }, [])
+
+  function togglePlay() {
+    const el = audioRef.current
+    if (!el) return
+    if (playing) {
+      el.pause()
+    } else {
+      void el.play()
+    }
+    setPlaying((p) => !p)
+  }
+
+  function handleSeek(e: ChangeEvent<HTMLInputElement>) {
+    const el = audioRef.current
+    if (!el) return
+    const value = Number(e.target.value)
+    el.currentTime = value
+    setCurrentTime(value)
+  }
+
+  const progress = duration ? (currentTime / duration) * 100 : 0
 
   return (
     <section id="spotlight" className="mx-auto w-full max-w-[1440px] px-gutter md:px-gutter-lg">
@@ -30,9 +79,10 @@ export function FlagshipSpotlight() {
           <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
 
           <div className="absolute inset-x-4 bottom-4 flex items-center gap-3 rounded-xl bg-bg-elevated/90 p-3 shadow-elevated backdrop-blur-md sm:inset-x-5 sm:bottom-5">
+            <audio ref={audioRef} src={wzkHistoryAudioSrc} preload="metadata" />
             <button
               type="button"
-              onClick={() => setPlaying((p) => !p)}
+              onClick={togglePlay}
               aria-label={playing ? t.hero.pause : t.hero.play}
               className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-primary text-on-primary shadow-soft transition-transform hover:scale-105"
             >
@@ -40,15 +90,29 @@ export function FlagshipSpotlight() {
                 {playing ? 'pause' : 'play_arrow'}
               </span>
             </button>
-            <div className="flex min-w-0 flex-col">
-              <span className="truncate font-sans text-[11px] font-bold uppercase tracking-wide text-primary">
-                {s.audioLabel}
-              </span>
+            <div className="flex min-w-0 flex-1 flex-col gap-1">
+              <div className="flex items-center justify-between gap-2">
+                <span className="truncate font-sans text-[11px] font-bold uppercase tracking-wide text-primary">
+                  {s.audioLabel} · {s.audioMeta}
+                </span>
+                <span className="shrink-0 font-sans text-[11px] font-semibold text-text-faint">
+                  {formatTime(currentTime)} / {formatTime(duration)}
+                </span>
+              </div>
               <span className="truncate font-sans text-sm text-text">{s.audioTitle}</span>
-            </div>
-            <div className="ml-auto hidden shrink-0 items-center gap-1.5 font-sans text-xs font-semibold text-secondary sm:flex">
-              <span className="material-symbols-outlined text-[18px]">graphic_eq</span>
-              {s.audioMeta}
+              <input
+                type="range"
+                min={0}
+                max={duration || 0}
+                step={0.1}
+                value={currentTime}
+                onChange={handleSeek}
+                aria-label={s.audioTitle}
+                className="h-1 w-full cursor-pointer appearance-none rounded-full accent-primary"
+                style={{
+                  background: `linear-gradient(to right, rgb(var(--color-primary)) ${progress}%, rgb(var(--color-bg-elevated-3)) ${progress}%)`,
+                }}
+              />
             </div>
           </div>
         </div>
@@ -100,13 +164,13 @@ export function FlagshipSpotlight() {
               {s.ctaPrimary}
               <span className="material-symbols-outlined text-[16px]">arrow_forward</span>
             </a>
-            <button
-              type="button"
+            <Link
+              to="/location-map"
               className="flex items-center justify-center gap-2 rounded-lg bg-bg-elevated-2 px-4 py-3 font-sans text-sm font-semibold text-text transition-colors hover:bg-bg-elevated-3"
             >
               <span className="material-symbols-outlined text-[18px] text-primary">map</span>
               {s.ctaSecondary}
-            </button>
+            </Link>
           </div>
         </div>
       </div>

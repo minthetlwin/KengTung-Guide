@@ -4,12 +4,8 @@ import L from 'leaflet'
 import 'leaflet/dist/leaflet.css'
 import { useLanguage } from '../context/language-context'
 import { pagodaLocations } from '../data/pagodaLocations'
-
-const STREET_URL = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
-const STREET_ATTRIBUTION = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-const SATELLITE_URL =
-  'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}'
-const SATELLITE_ATTRIBUTION = 'Tiles &copy; Esri — Source: Esri, Maxar, Earthstar Geographics'
+import { MAP_POLISH_OPTIONS, createBaseLayers, enhanceMapInteraction } from '../lib/mapKit'
+import { usePageMeta } from '../hooks/usePageMeta'
 
 type ViewMode = 'satellite' | 'street'
 
@@ -17,7 +13,7 @@ function makePinIcon(image: string) {
   return L.divIcon({
     className: '',
     html: `
-      <div class="relative flex flex-col items-center">
+      <div class="pagoda-pin relative flex flex-col items-center">
         <div class="h-12 w-12 -rotate-45 overflow-hidden rounded-[50%_50%_50%_0] border-[3px] border-white bg-primary shadow-floating">
           <img src="${image}" class="h-full w-full rotate-45 scale-[1.7] object-cover" />
         </div>
@@ -33,6 +29,11 @@ export function LocationMapPage() {
   const { t } = useLanguage()
   const l = t.locationMapPage
 
+  usePageMeta({
+    title: `${l.title} · ${t.meta.title}`,
+    description: l.description,
+  })
+
   const pins = useMemo(
     () =>
       pagodaLocations
@@ -46,37 +47,40 @@ export function LocationMapPage() {
   const layersRef = useRef<{ street: L.TileLayer; satellite: L.TileLayer; satelliteLabels: L.TileLayer } | null>(
     null,
   )
+  const interactionRef = useRef<ReturnType<typeof enhanceMapInteraction> | null>(null)
   const [view, setView] = useState<ViewMode>('satellite')
 
   useEffect(() => {
     if (!mapContainerRef.current || mapRef.current) return
 
     const bounds = L.latLngBounds(pagodaLocations.map((p): [number, number] => [p.lat, p.lng]))
-    const map = L.map(mapContainerRef.current, { scrollWheelZoom: false })
+    const map = L.map(mapContainerRef.current, MAP_POLISH_OPTIONS)
     map.fitBounds(bounds, { padding: [70, 70] })
+    interactionRef.current = enhanceMapInteraction(map, t.common.scrollToZoomHint)
 
-    const street = L.tileLayer(STREET_URL, { attribution: STREET_ATTRIBUTION, maxZoom: 19 })
-    const satellite = L.tileLayer(SATELLITE_URL, { attribution: SATELLITE_ATTRIBUTION, maxZoom: 19 })
-    const satelliteLabels = L.tileLayer(STREET_URL, {
-      maxZoom: 19,
-      opacity: 0.9,
-      className: 'mmm-satellite-labels',
-    })
+    const { street, satellite, satelliteLabels } = createBaseLayers()
     satellite.addTo(map)
     satelliteLabels.addTo(map)
     layersRef.current = { street, satellite, satelliteLabels }
 
     for (const loc of pagodaLocations) {
-      L.marker([loc.lat, loc.lng], { icon: makePinIcon(loc.image) }).addTo(map)
+      L.marker([loc.lat, loc.lng], { icon: makePinIcon(loc.image), riseOnHover: true }).addTo(map)
     }
 
     mapRef.current = map
     return () => {
+      interactionRef.current?.destroy()
+      interactionRef.current = null
       map.remove()
       mapRef.current = null
       layersRef.current = null
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
+
+  useEffect(() => {
+    interactionRef.current?.setHintText(t.common.scrollToZoomHint)
+  }, [t.common.scrollToZoomHint])
 
   useEffect(() => {
     const map = mapRef.current
@@ -100,8 +104,8 @@ export function LocationMapPage() {
           <span className="material-symbols-outlined text-[18px]">map</span>
           {l.eyebrow}
         </div>
-        <h1 className="font-serif text-3xl font-bold tracking-tight text-text lg:text-4xl">{l.title}</h1>
-        <p className="max-w-2xl font-sans text-sm leading-relaxed text-text-muted md:text-base">{l.description}</p>
+        <h1 className="font-serif text-[22px] font-bold tracking-tight text-text">{l.title}</h1>
+        <p className="max-w-2xl font-sans text-[11px] leading-relaxed text-text-muted">{l.description}</p>
       </div>
 
       <div className="relative isolate h-[420px] overflow-hidden rounded-2xl border border-border shadow-soft md:h-[520px]">

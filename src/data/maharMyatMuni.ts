@@ -7,10 +7,10 @@ export const mmmHeroImage = heroImages.mahaMyatMuni
 // devotional detail shot alongside the beliefs & traditions section.
 export const mmmFaceImage = mahaMuniFaceImage
 
-// Supplied directly by the project owner; re-encoded from HEVC to H.264/AAC
-// for cross-browser autoplay support.
-export const mmmVideoSrc = '/videos/mmm-reverence.mp4'
-export const mmmVideoPoster = '/videos/mmm-reverence-poster.jpg'
+// Supplied directly by the project owner; audio extracted from the source
+// .mov (a black video track wrapping a voice recording) and re-encoded to
+// MP3 for universal browser playback.
+export const mmmHistoryAudioSrc = '/audio/mmm-history-narration.mp3'
 
 export interface GalleryAlbum {
   id: string

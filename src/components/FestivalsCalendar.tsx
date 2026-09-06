@@ -64,9 +64,12 @@ export function FestivalsCalendar() {
   return (
     <section id="festivals" className="mx-auto w-full max-w-[1440px] px-gutter md:px-gutter-lg">
       <div className="mb-4 flex flex-wrap items-end justify-between gap-3">
-        <div>
-          <span className="font-sans text-eyebrow uppercase text-primary">{f.eyebrow}</span>
-          <h3 className="mt-1 font-serif text-headline text-text">{f.title}</h3>
+        <div className="flex flex-col gap-1.5">
+          <div className="flex items-center gap-2 font-sans text-[11px] font-bold uppercase tracking-widest text-primary">
+            <span className="material-symbols-outlined text-[18px]">celebration</span>
+            {f.eyebrow}
+          </div>
+          <h3 className="font-serif text-[22px] font-bold tracking-tight text-text">{f.title}</h3>
         </div>
         <div className="flex flex-col items-end gap-2">
           <span className="font-sans text-[11px] text-text-faint">{f.dateNote}</span>

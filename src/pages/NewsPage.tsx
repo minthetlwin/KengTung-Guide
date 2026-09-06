@@ -1,10 +1,16 @@
 import { useLanguage } from '../context/language-context'
 import { newsImages } from '../data/news'
 import { NewsCard } from '../components/news/NewsCard'
+import { usePageMeta } from '../hooks/usePageMeta'
 
 export function NewsPage() {
   const { t } = useLanguage()
   const n = t.news
+
+  usePageMeta({
+    title: `${n.title} · ${t.meta.title}`,
+    description: n.description,
+  })
 
   return (
     <div className="mx-auto w-full max-w-[1440px] px-gutter py-14 md:px-gutter-lg">
@@ -13,8 +19,8 @@ export function NewsPage() {
           <span className="material-symbols-outlined text-[18px]">newspaper</span>
           {n.eyebrow}
         </div>
-        <h1 className="font-serif text-3xl font-bold tracking-tight text-text lg:text-4xl">{n.title}</h1>
-        <p className="max-w-2xl font-sans text-sm leading-relaxed text-text-muted md:text-base">{n.description}</p>
+        <h1 className="font-serif text-[22px] font-bold tracking-tight text-text">{n.title}</h1>
+        <p className="max-w-2xl font-sans text-[11px] leading-relaxed text-text-muted">{n.description}</p>
       </div>
 
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
