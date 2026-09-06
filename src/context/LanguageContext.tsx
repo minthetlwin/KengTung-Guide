@@ -5,10 +5,10 @@ import { LanguageContext } from './language-context'
 const STORAGE_KEY = 'ktpg-locale'
 
 function getInitialLocale(): Locale {
-  if (typeof window === 'undefined') return 'en'
+  if (typeof window === 'undefined') return 'my'
   const stored = window.localStorage.getItem(STORAGE_KEY) as Locale | null
   if (stored && locales.some((l) => l.id === stored)) return stored
-  return 'en'
+  return 'my'
 }
 
 export function LanguageProvider({ children }: { children: ReactNode }) {

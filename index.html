@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="my">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/png" href="/keng_tung_pagoda_guide_emblem.png" />
@@ -49,8 +49,104 @@
         "inLanguage": ["en", "my", "th"]
       }
     </script>
+
+    <!--
+      Applies the saved dark/light theme before first paint, so dark-mode
+      visitors don't see a flash of the light theme while React boots.
+    -->
+    <script>
+      try {
+        if (localStorage.getItem('ktpg-theme') === 'dark') {
+          document.documentElement.classList.add('dark')
+        }
+      } catch (e) {}
+    </script>
+
+    <style>
+      #app-loader {
+        position: fixed;
+        inset: 0;
+        z-index: 9999;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 18px;
+        background: #fbf9f5;
+        transition: opacity 0.35s ease;
+      }
+      html.dark #app-loader {
+        background: #0f1115;
+      }
+      #app-loader.app-loader-hidden {
+        opacity: 0;
+        pointer-events: none;
+      }
+      .app-loader-rings {
+        position: relative;
+        width: 104px;
+        height: 104px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .app-loader-rings img {
+        position: relative;
+        z-index: 1;
+        width: 44px;
+        height: 44px;
+        object-fit: contain;
+        animation: app-loader-pulse 1.8s ease-in-out infinite;
+      }
+      .app-loader-ring {
+        position: absolute;
+        inset: 0;
+        border-radius: 50%;
+        border: 3px solid transparent;
+      }
+      .app-loader-ring-outer {
+        border-top-color: #a8781e;
+        border-right-color: #a8781e;
+        animation: app-loader-spin 1.1s linear infinite;
+      }
+      .app-loader-ring-inner {
+        inset: 16px;
+        border-bottom-color: #a8781e;
+        border-left-color: #a8781e;
+        opacity: 0.55;
+        animation: app-loader-spin-reverse 0.85s linear infinite;
+      }
+      @keyframes app-loader-pulse {
+        0%,
+        100% {
+          transform: scale(1);
+          opacity: 1;
+        }
+        50% {
+          transform: scale(1.08);
+          opacity: 0.85;
+        }
+      }
+      @keyframes app-loader-spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes app-loader-spin-reverse {
+        to {
+          transform: rotate(-360deg);
+        }
+      }
+    </style>
   </head>
   <body>
+    <div id="app-loader" aria-hidden="true">
+      <div class="app-loader-rings">
+        <span class="app-loader-ring app-loader-ring-outer"></span>
+        <span class="app-loader-ring app-loader-ring-inner"></span>
+        <img src="/keng_tung_pagoda_guide_emblem.png" alt="" />
+      </div>
+    </div>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
