@@ -1,12 +1,8 @@
 export type Locale = 'en' | 'my' | 'th'
 
-export interface NewsArticle {
-  slug: string
-  category: string
-  date: string
-  title: string
-  excerpt: string
-  body: [string, string, string]
+export interface NotablePlace {
+  name: string
+  description: string
 }
 
 export interface HeroSlide {
@@ -66,11 +62,6 @@ export interface FestivalSlide {
   cta: string
 }
 
-export interface WzkMetaPill {
-  label: string
-  value: string
-}
-
 export interface WzkFestival {
   cycle: string
   period: string
@@ -82,27 +73,39 @@ export interface WzkFestival {
   statusBadge: string
 }
 
-export interface WatZomKhamDictionary {
+export interface PagodaHeroBadge {
+  label: string
+  pulsingDot?: boolean
+}
+
+// Shared shape for the two structurally-similar pagoda detail pages (Wat Zom
+// Kham, Yarzamuni) — rendered by one generic PagodaDetailPage template.
+// gallery/rituals/readMore(Cta)/readLessCta/approximateLabel are optional
+// since Yarzamuni's page has none of them; the template conditionally
+// renders those sections/controls based on their presence.
+export interface PagodaDetailDictionary {
   meta: { title: string }
   hero: {
-    catalogBadge: string
-    statusBadge: string
+    badges: PagodaHeroBadge[]
     title: string
+    localName: string
     subtitle: string
-    metaPills: [WzkMetaPill, WzkMetaPill, WzkMetaPill, WzkMetaPill]
   }
   quickNav: {
     label: string
-    items: [string, string, string, string]
+    items: string[]
+  }
+  facts: {
+    pills: [MmmFactPill, MmmFactPill, MmmFactPill, MmmFactPill]
   }
   history: {
     eyebrow: string
     title: string
     description: string
     quickFacts: [MmmFactPill, MmmFactPill, MmmFactPill]
-    sections: [MmmHistorySection, MmmHistorySection, MmmHistorySection, MmmHistorySection]
-    readMoreCta: string
-    readLessCta: string
+    sections: MmmHistorySection[]
+    readMoreCta?: string
+    readLessCta?: string
   }
   audio: {
     title: string
@@ -110,13 +113,13 @@ export interface WatZomKhamDictionary {
     pause: string
     credit: string
   }
-  gallery: {
+  gallery?: {
     eyebrow: string
     title: string
     photoCount: (count: number) => string
     albums: MmmGalleryAlbum[]
   }
-  rituals: {
+  rituals?: {
     eyebrow: string
     title: string
     description: string
@@ -129,6 +132,7 @@ export interface WatZomKhamDictionary {
     addressLabel: string
     address: string
     coordinatesLabel: string
+    approximateLabel?: string
     hoursLabel: string
     hours: string
     streetView: string
@@ -199,6 +203,10 @@ export interface MaharMyatMuniDictionary {
     pause: string
     credit: string
   }
+  shanHistory: {
+    title: string
+    description: string
+  }
   gallery: {
     eyebrow: string
     title: string
@@ -216,11 +224,11 @@ export interface MaharMyatMuniDictionary {
     description: string
     people: MmmTrusteeMember[]
     groupSayadaw: string
+    groupOldBoard: string
+    groupNewBoard: string
     groupNayaka: string
     groupLeadership: string
     groupOthers: string
-    showMoreCta: string
-    showLessCta: string
   }
   location: {
     eyebrow: string
@@ -236,54 +244,11 @@ export interface MaharMyatMuniDictionary {
     viewMapCta: string
     directionsCta: string
   }
-  closing: {
-    text: string
-    cta: string
-  }
-}
-
-export interface YarzamuniDictionary {
-  meta: { title: string }
-  hero: {
-    badge: string
-    title: string
-    localName: string
-    subtitle: string
-  }
-  quickNav: {
-    label: string
-    items: [string, string]
-  }
-  facts: {
-    pills: [MmmFactPill, MmmFactPill, MmmFactPill, MmmFactPill]
-  }
-  history: {
+  otherPagodas: {
     eyebrow: string
     title: string
     description: string
-    quickFacts: [MmmFactPill, MmmFactPill, MmmFactPill]
-    sections: [MmmHistorySection, MmmHistorySection]
-  }
-  audio: {
-    title: string
-    play: string
-    pause: string
-    credit: string
-  }
-  location: {
-    eyebrow: string
-    title: string
-    description: string
-    addressLabel: string
-    address: string
-    coordinatesLabel: string
-    approximateLabel: string
-    hoursLabel: string
-    hours: string
-    streetView: string
-    satelliteView: string
-    viewMapCta: string
-    directionsCta: string
+    viewAll: string
   }
   closing: {
     text: string
@@ -301,7 +266,7 @@ export interface Dictionary {
     nav: {
       home: string
       pagodas: string
-      news: string
+      otherPlaces: string
       festivals: string
       map: string
       about: string
@@ -377,9 +342,9 @@ export interface Dictionary {
     title: string
     description: string
   }
-  watZomKham: WatZomKhamDictionary
+  watZomKham: PagodaDetailDictionary
   maharMyatMuni: MaharMyatMuniDictionary
-  yarzamuni: YarzamuniDictionary
+  yarzamuni: PagodaDetailDictionary
   locationMapPage: {
     eyebrow: string
     title: string
@@ -391,14 +356,12 @@ export interface Dictionary {
     viewOnMap: string
     getDirections: string
   }
-  news: {
+  otherPlaces: {
     eyebrow: string
     title: string
     description: string
-    readMore: string
-    backToNews: string
-    notFound: string
-    articles: [NewsArticle, NewsArticle, NewsArticle]
+    emptyState: string
+    places: NotablePlace[]
   }
   aboutPage: {
     eyebrow: string
@@ -443,7 +406,6 @@ export interface Dictionary {
   }
   common: {
     viewDetails: string
-    scrollToZoomHint: string
     back: string
   }
   closing: {

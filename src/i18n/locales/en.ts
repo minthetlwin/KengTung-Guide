@@ -7,11 +7,11 @@ export const en: Dictionary = {
       'The Keng Tung Pagoda Guide is a trilingual digital archive documenting the sacred pagodas, monasteries, and pilgrimage routes of Keng Tung, Eastern Shan State.',
   },
   header: {
-    brand: 'Keng Tung Pagoda Guide',
+    brand: 'Maha Myat Muni Pagoda and Historic Pagodas',
     nav: {
       home: 'Home',
       pagodas: 'Pagodas in Kengtung',
-      news: 'News',
+      otherPlaces: 'Other Notable Places',
       festivals: 'Festival Calendar',
       map: 'Location Map',
       about: 'About Us',
@@ -127,7 +127,7 @@ export const en: Dictionary = {
           "A gilded 1921 replica of Mandalay's Mahamuni Buddha, commissioned by the 39th Saopha and consecrated in 1926 after a 700km journey by cart and river raft.",
         hours: '04:30 – 20:00 Daily',
         price: 'Active Rituals',
-        detailPath: '/mahar-myat-muni-pagoda',
+        detailPath: '/',
       },
       {
         code: 'KT-05',
@@ -214,12 +214,17 @@ export const en: Dictionary = {
   watZomKham: {
     meta: { title: 'Wat Zom Kham — The Golden Crown of Kyaing Tong' },
     hero: {
-      catalogBadge: 'Monastic Monument Catalog · Ref. KT-ZOM-01',
-      statusBadge: 'Active Theravada Sanctum',
+      badges: [
+        { label: 'Monastic Monument Catalog · Ref. KT-ZOM-01' },
+        { label: 'Active Theravada Sanctum', pulsingDot: true },
+      ],
       title: 'Wat Zom Kham',
+      localName: 'ဝပ်ဇွမ်ခမ်း · ᩅᩢ᩠ᨯᨧᩬᨾᨤᩣᩴ · วัดจอมคำ',
       subtitle:
         "The eternal golden crown of Keng Tung and one of its most ancient pagodas — a guardian stupa said to enshrine six sacred hair relics of Gautama Buddha, foretold by the Buddha himself above the Kyaing Tong valley.",
-      metaPills: [
+    },
+    facts: {
+      pills: [
         { label: 'Traditional Founding', value: 'Sasana Era 157' },
         { label: 'Founded By', value: 'Five Tung Ga Hermits' },
         { label: 'Architectural Lineage', value: 'Tai Khün · Lanna · Shan' },
@@ -349,7 +354,7 @@ export const en: Dictionary = {
     },
   },
   maharMyatMuni: {
-    meta: { title: 'Maha Myat Muni Pagoda — Keng Tung' },
+    meta: { title: 'Maha Myat Muni Pagoda and Historic Pagodas' },
     hero: {
       badge: "Keng Tung's Iconic Pagoda",
       title: 'Maha Myat Muni Pagoda',
@@ -419,11 +424,28 @@ export const en: Dictionary = {
       pause: 'Pause',
       credit: 'Narrated as an act of merit by Maung Kyaw Linn Htet.',
     },
+    shanHistory: {
+      title: 'History of Maha Myat Muni Pagoda — in Gone Shan',
+      description: 'The history of Maha Myat Muni Pagoda can also be read in the Gone Shan language.',
+    },
     gallery: {
       eyebrow: 'Visual Archive',
       title: 'Photo Gallery',
       photoCount: (count) => `${count} Photo${count === 1 ? '' : 's'}`,
       albums: [
+        {
+          eyebrow: 'Centennial Ceremony',
+          title: 'Ruby Crown, Gold Umbrella & Buddha Consecration for the 100th Anniversary',
+          date: 'February 15, 2022',
+          caption:
+            "The grand ceremony marking the 100th anniversary of Maha Myat Muni Pagoda — the pride of Keng Tung, Eastern Shan State — including the offering of a ruby-and-diamond crown (Yadana Sein Hpondaw) and a gold umbrella (Shwehti), together with the Buddha Consecration (Anekazatin) grand ceremony, was held on the morning of the full moon day of Tabodwe, Sasana Year 2565, Kawza Era 1383. Presiding over the ceremony were the Sayadaws and members of the Sangha led by the chief Nayaka of Kyaing Yin Monastery in Keng Tung, Agga Maha Saddhamma Jotikadhaja Bhaddanta Khemasara.\n\nThe ceremony was attended by the Chairman of the State Administration Council and Prime Minister, Senior General Min Aung Hlaing, together with his wife Daw Kyu Kyu Hla and family members; State Administration Council members Lieutenant General Moe Myint Tun, U Sai Lone Hsai, and U Shwe Kyin; Union Ministers Lieutenant General Tun Tun Naung, U Ko Ko, U Hla Moe, Dr. Nyunt Phay, and Dr. Thet Khaing Win; Shan State Chief Minister Dr. Kyaw Tun; State Administration Council Chairman's Advisory Body member Dr. Daw Yin Yin Nwe; Commander-in-Chief (Navy) Admiral Moe Aung and his wife; Commander-in-Chief (Air) General Tun Aung and his wife; senior Tatmadaw officers from the Office of the Commander-in-Chief and their wives; Triangle Region Military Command Commander Major General Myo Min Tun and responsible officials; invited guests, sincere donors, officers, soldiers and their families, monastic associations, local ethnic residents, and traditional cultural associations.",
+        },
+        {
+          eyebrow: 'Full Moon & New Moon Ritual',
+          title: "Photo Records of Maha Myat Muni Pagoda's Face-Washing Ceremony",
+          caption:
+            'On every full moon and new moon day, at 5:30 in the morning, the traditional face-washing ceremony is performed for the Maha Myat Muni image.',
+        },
         {
           eyebrow: 'Vassa Season Ritual',
           title: 'Morning Alms Offering (Aruna Hsun)',
@@ -435,13 +457,6 @@ export const en: Dictionary = {
           title: 'Dhammacakka Sutta Recitation',
           caption:
             'Inside the Gandhakuti monastery hall of Maha Myat Muni Pagoda, devotional groups chant the Dhammacakka Sutta in the Shan language on the full moon day of Waso.',
-        },
-        {
-          eyebrow: 'Centennial Ceremony',
-          title: 'Ruby Crown, Gold Umbrella & Buddha Consecration for the 100th Anniversary',
-          date: 'February 15, 2022',
-          caption:
-            "The grand ceremony marking the 100th anniversary of Maha Myat Muni Pagoda — the pride of Keng Tung, Eastern Shan State — including the offering of a ruby-and-diamond crown (Yadana Sein Hpondaw) and a gold umbrella (Shwehti), together with the Buddha Consecration (Anekazatin) grand ceremony, was held on the morning of the full moon day of Tabodwe, Sasana Year 2565, Kawza Era 1383. Presiding over the ceremony were the Sayadaws and members of the Sangha led by the chief Nayaka of Kyaing Yin Monastery in Keng Tung, Agga Maha Saddhamma Jotikadhaja Bhaddanta Khemasara.\n\nThe ceremony was attended by the Chairman of the State Administration Council and Prime Minister, Senior General Min Aung Hlaing, together with his wife Daw Kyu Kyu Hla and family members; State Administration Council members Lieutenant General Moe Myint Tun, U Sai Lone Hsai, and U Shwe Kyin; Union Ministers Lieutenant General Tun Tun Naung, U Ko Ko, U Hla Moe, Dr. Nyunt Phay, and Dr. Thet Khaing Win; Shan State Chief Minister Dr. Kyaw Tun; State Administration Council Chairman's Advisory Body member Dr. Daw Yin Yin Nwe; Commander-in-Chief (Navy) Admiral Moe Aung and his wife; Commander-in-Chief (Air) General Tun Aung and his wife; senior Tatmadaw officers from the Office of the Commander-in-Chief and their wives; Triangle Region Military Command Commander Major General Myo Min Tun and responsible officials; invited guests, sincere donors, officers, soldiers and their families, monastic associations, local ethnic residents, and traditional cultural associations.",
         },
       ],
     },
@@ -532,11 +547,11 @@ export const en: Dictionary = {
         { name: 'Dr. Sai Sai Tit', role: 'Member' },
       ],
       groupSayadaw: 'Sayadaws — Great Preceptors of the Sangha',
+      groupOldBoard: 'Old Board',
+      groupNewBoard: 'New Board',
       groupNayaka: 'Nayaka Patrons',
       groupLeadership: 'Chairperson & Vice Chairpersons',
       groupOthers: 'Executive Committee & Members',
-      showMoreCta: 'Show Full Board',
-      showLessCta: 'Show Less',
     },
     location: {
       eyebrow: 'Visit & Directions',
@@ -553,6 +568,13 @@ export const en: Dictionary = {
       viewMapCta: 'View on Google Maps',
       directionsCta: 'Get Directions',
     },
+    otherPagodas: {
+      eyebrow: 'Continue Your Pilgrimage',
+      title: 'Other Sacred Sites in Keng Tung',
+      description:
+        'Maha Myat Muni is one of several historic pagodas and monastic compounds around Keng Tung worth visiting — explore the others below.',
+      viewAll: 'View All Pagodas',
+    },
     closing: {
       text: '"Buddhasasanam ciram titthatu" — may the Buddha\'s Sasana long endure.',
       cta: 'Explore the Directory',
@@ -561,7 +583,7 @@ export const en: Dictionary = {
   yarzamuni: {
     meta: { title: 'Yarzamuni — Abhaya Raza Muni Buddha Image, Keng Tung' },
     hero: {
-      badge: 'Pan Kwai Village Landmark',
+      badges: [{ label: 'Pan Kwai Village Landmark' }],
       title: 'Yarzamuni',
       localName: 'Abhaya Raza Muni Buddha Image',
       subtitle:
@@ -643,54 +665,12 @@ export const en: Dictionary = {
     viewOnMap: 'View on Google Maps',
     getDirections: 'Get Directions',
   },
-  news: {
-    eyebrow: 'News & Updates',
-    title: 'Latest from the Guide',
-    description: 'Fresh additions and improvements to the Keng Tung Pagoda Guide.',
-    readMore: 'Read More',
-    backToNews: 'Back to News',
-    notFound: 'Article not found.',
-    articles: [
-      {
-        slug: 'board-of-trustees-added',
-        category: 'Site Update',
-        date: 'September 5, 2026',
-        title: 'Board of Trustees Now Listed for Maha Myat Muni Pagoda',
-        excerpt:
-          'The Maha Myat Muni Pagoda page now lists its full board of trustees — senior Sayadaws, Nayaka patrons, and the executive committee — with names, roles, and photographs.',
-        body: [
-          'The Maha Myat Muni Pagoda detail page now includes a complete Board of Trustees section, listing the senior Sayadaws who serve as spiritual advisors alongside the lay Nayaka patrons and executive committee who oversee the pagoda\'s day-to-day affairs.',
-          'Each member is shown with their name, official role or title, and — where applicable — their home monastery. Portraits have been added for every listed member to make the board easier to recognize for visitors and the local community alike.',
-          'This page will continue to be updated as more verified information about the pagoda\'s governance becomes available.',
-        ],
-      },
-      {
-        slug: 'photo-gallery-added',
-        category: 'Site Update',
-        date: 'September 5, 2026',
-        title: 'Photo Gallery Added for Maha Myat Muni Pagoda',
-        excerpt:
-          'A new photo gallery documents recent ceremonies at Maha Myat Muni Pagoda, including the Vassa-season alms offering and Dhammacakka Sutta recitation.',
-        body: [
-          'A new photo gallery has been added to the Maha Myat Muni Pagoda page, documenting two recent ceremonies held at the pagoda: the morning collective alms-offering (Aruna Hsun) during the Vassa retreat, and the Dhammacakka Sutta recitation inside the Gandhakuti monastery hall on the full moon of Waso.',
-          'Visitors can click any photo to open a full-screen view with captions, and browse through the full set using the on-screen or keyboard arrow controls.',
-          'More galleries will be added for other pagodas as photographs become available.',
-        ],
-      },
-      {
-        slug: 'satellite-map-added',
-        category: 'Site Update',
-        date: 'September 5, 2026',
-        title: 'Interactive Satellite Map Added for Maha Myat Muni Pagoda',
-        excerpt:
-          'Find the pagoda more easily with a new interactive map featuring a satellite/street toggle, real road labels, and one-tap directions via Google Maps.',
-        body: [
-          'The "Find the Pagoda" section on the Maha Myat Muni page now features a fully interactive map, defaulting to a satellite view with road and place names overlaid for easy orientation.',
-          'A toggle lets visitors switch between satellite and standard street map views, and two buttons open the location directly in Google Maps for viewing or turn-by-turn directions.',
-          'This same wayfinding treatment is planned for other pagoda pages on the guide.',
-        ],
-      },
-    ],
+  otherPlaces: {
+    eyebrow: 'Beyond the Pagodas',
+    title: 'Other Notable Places',
+    description: 'More landmarks and points of interest around Keng Tung.',
+    emptyState: 'Places are being documented and will appear here soon.',
+    places: [],
   },
   aboutPage: {
     eyebrow: 'About This Guide',
@@ -752,7 +732,6 @@ export const en: Dictionary = {
   },
   common: {
     viewDetails: 'View Details',
-    scrollToZoomHint: 'Use Ctrl + scroll to zoom the map',
     back: 'Go back',
   },
   closing: {

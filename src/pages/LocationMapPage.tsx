@@ -1,29 +1,9 @@
-import { useEffect, useMemo, useRef, useState } from 'react'
+import { useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
-import L from 'leaflet'
-import 'leaflet/dist/leaflet.css'
 import { useLanguage } from '../context/language-context'
 import { pagodaLocations } from '../data/pagodaLocations'
-import { MAP_POLISH_OPTIONS, createBaseLayers, enhanceMapInteraction } from '../lib/mapKit'
 import { usePageMeta } from '../hooks/usePageMeta'
-
-type ViewMode = 'satellite' | 'street'
-
-function makePinIcon(image: string) {
-  return L.divIcon({
-    className: '',
-    html: `
-      <div class="pagoda-pin relative flex flex-col items-center">
-        <div class="h-12 w-12 -rotate-45 overflow-hidden rounded-[50%_50%_50%_0] border-[3px] border-white bg-primary shadow-floating">
-          <img src="${image}" class="h-full w-full rotate-45 scale-[1.7] object-cover" />
-        </div>
-        <div class="-mt-1 h-2 w-2 rounded-full bg-black/25 blur-[2px]"></div>
-      </div>
-    `,
-    iconSize: [48, 56],
-    iconAnchor: [24, 50],
-  })
-}
+import { GoogleMapEmbed } from '../components/GoogleMapEmbed'
 
 export function LocationMapPage() {
   const { t } = useLanguage()
@@ -42,60 +22,8 @@ export function LocationMapPage() {
     [t.directory.cards],
   )
 
-  const mapContainerRef = useRef<HTMLDivElement>(null)
-  const mapRef = useRef<L.Map | null>(null)
-  const layersRef = useRef<{ street: L.TileLayer; satellite: L.TileLayer; satelliteLabels: L.TileLayer } | null>(
-    null,
-  )
-  const interactionRef = useRef<ReturnType<typeof enhanceMapInteraction> | null>(null)
-  const [view, setView] = useState<ViewMode>('satellite')
-
-  useEffect(() => {
-    if (!mapContainerRef.current || mapRef.current) return
-
-    const bounds = L.latLngBounds(pagodaLocations.map((p): [number, number] => [p.lat, p.lng]))
-    const map = L.map(mapContainerRef.current, MAP_POLISH_OPTIONS)
-    map.fitBounds(bounds, { padding: [70, 70] })
-    interactionRef.current = enhanceMapInteraction(map, t.common.scrollToZoomHint)
-
-    const { street, satellite, satelliteLabels } = createBaseLayers()
-    satellite.addTo(map)
-    satelliteLabels.addTo(map)
-    layersRef.current = { street, satellite, satelliteLabels }
-
-    for (const loc of pagodaLocations) {
-      L.marker([loc.lat, loc.lng], { icon: makePinIcon(loc.image), riseOnHover: true }).addTo(map)
-    }
-
-    mapRef.current = map
-    return () => {
-      interactionRef.current?.destroy()
-      interactionRef.current = null
-      map.remove()
-      mapRef.current = null
-      layersRef.current = null
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
-
-  useEffect(() => {
-    interactionRef.current?.setHintText(t.common.scrollToZoomHint)
-  }, [t.common.scrollToZoomHint])
-
-  useEffect(() => {
-    const map = mapRef.current
-    const layers = layersRef.current
-    if (!map || !layers) return
-    if (view === 'satellite') {
-      map.removeLayer(layers.street)
-      layers.satellite.addTo(map)
-      layers.satelliteLabels.addTo(map)
-    } else {
-      map.removeLayer(layers.satellite)
-      map.removeLayer(layers.satelliteLabels)
-      layers.street.addTo(map)
-    }
-  }, [view])
+  const [activeCode, setActiveCode] = useState(pins[0]?.code)
+  const activePin = pins.find((pin) => pin.code === activeCode) ?? pins[0]
 
   return (
     <div className="mx-auto w-full max-w-[1440px] px-gutter py-14 md:px-gutter-lg">
@@ -108,32 +36,37 @@ export function LocationMapPage() {
         <p className="max-w-2xl font-sans text-[11px] leading-relaxed text-text-muted">{l.description}</p>
       </div>
 
-      <div className="relative isolate h-[420px] overflow-hidden rounded-2xl border border-border shadow-soft md:h-[520px]">
-        <div ref={mapContainerRef} className="h-full w-full" />
+      {activePin && (
+        <>
+          <div className="mb-3 flex flex-wrap gap-2">
+            {pins.map((pin) => (
+              <button
+                key={pin.code}
+                type="button"
+                onClick={() => setActiveCode(pin.code)}
+                aria-pressed={pin.code === activePin.code}
+                className={`rounded-full border px-4 py-2 font-sans text-xs font-semibold transition-colors ${
+                  pin.code === activePin.code
+                    ? 'border-primary bg-primary text-on-primary'
+                    : 'border-border bg-bg-elevated text-text-muted hover:bg-bg-elevated-2'
+                }`}
+              >
+                {pin.card!.title}
+              </button>
+            ))}
+          </div>
 
-        <div className="absolute right-3 top-3 z-[1000] flex overflow-hidden rounded-full border border-border bg-bg/95 shadow-elevated backdrop-blur">
-          <button
-            type="button"
-            onClick={() => setView('street')}
-            aria-pressed={view === 'street'}
-            className={`px-3.5 py-1.5 font-sans text-[11px] font-bold uppercase tracking-wide transition-colors ${
-              view === 'street' ? 'bg-primary text-on-primary' : 'text-text hover:bg-bg-elevated'
-            }`}
-          >
-            {l.streetView}
-          </button>
-          <button
-            type="button"
-            onClick={() => setView('satellite')}
-            aria-pressed={view === 'satellite'}
-            className={`px-3.5 py-1.5 font-sans text-[11px] font-bold uppercase tracking-wide transition-colors ${
-              view === 'satellite' ? 'bg-primary text-on-primary' : 'text-text hover:bg-bg-elevated'
-            }`}
-          >
-            {l.satelliteView}
-          </button>
-        </div>
-      </div>
+          <GoogleMapEmbed
+            lat={activePin.lat}
+            lng={activePin.lng}
+            zoom={activePin.approximate ? 13 : 16}
+            title={activePin.card!.title}
+            streetLabel={l.streetView}
+            satelliteLabel={l.satelliteView}
+            className="h-[420px] md:h-[520px]"
+          />
+        </>
+      )}
 
       <div className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {pins.map((pin) => {

@@ -31,8 +31,8 @@ export function Footer() {
           <Link to="/pagodas" className="font-sans text-sm text-text-muted hover:text-primary">
             {t.header.nav.pagodas}
           </Link>
-          <Link to="/news" className="font-sans text-sm text-text-muted hover:text-primary">
-            {t.header.nav.news}
+          <Link to="/other-places" className="font-sans text-sm text-text-muted hover:text-primary">
+            {t.header.nav.otherPlaces}
           </Link>
           <Link to="/festival-calendar" className="font-sans text-sm text-text-muted hover:text-primary">
             {t.header.nav.festivals}

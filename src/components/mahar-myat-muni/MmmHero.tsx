@@ -1,6 +1,5 @@
 import { useLanguage } from '../../context/language-context'
-import { mmmHeroImage } from '../../data/maharMyatMuni'
-import { BackButton } from '../BackButton'
+import { mmmHeroImage, mmmBannerImages } from '../../data/maharMyatMuni'
 
 export function MmmHero() {
   const { t } = useLanguage()
@@ -8,14 +7,21 @@ export function MmmHero() {
 
   return (
     <section className="relative w-full overflow-hidden">
-      <BackButton />
       <div className="relative min-h-[560px] w-full sm:min-h-[620px] lg:min-h-[720px]">
         <div
-          className="absolute inset-0 bg-cover bg-top"
+          className="absolute inset-0 bg-cover bg-top lg:hidden"
           style={{ backgroundImage: `url('${mmmHeroImage}')` }}
           role="img"
           aria-label={h.title}
         />
+        <div className="absolute inset-0 hidden lg:grid lg:grid-cols-[2fr_1fr]" role="img" aria-label={h.title}>
+          <div className="bg-cover bg-top" style={{ backgroundImage: `url('${mmmHeroImage}')` }} />
+          <div className="grid grid-rows-3">
+            {mmmBannerImages.map((src) => (
+              <div key={src} className="bg-cover bg-center" style={{ backgroundImage: `url('${src}')` }} />
+            ))}
+          </div>
+        </div>
         <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 via-55% to-black/10 to-100%" />
 
         <div className="relative z-10 flex h-full min-h-[560px] w-full flex-col justify-end gap-3 px-gutter pb-12 pt-32 sm:min-h-[620px] md:px-gutter-lg lg:min-h-[720px]">

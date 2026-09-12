@@ -23,8 +23,6 @@ export const wzkGalleryAlbums: GalleryAlbum[] = [
   },
 ]
 
-export const wzkNativeNames = 'ဝပ်ဇွမ်ခမ်း · ᩅᩢ᩠ᨯᨧᩬᨾᨤᩣᩴ · วัดจอมคำ'
-
 // Supplied directly by the project owner; audio extracted from the source
 // .mov (a black video track wrapping a voice recording) and re-encoded to
 // MP3 for universal browser playback.

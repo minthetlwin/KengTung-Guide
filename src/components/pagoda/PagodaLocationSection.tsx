@@ -1,14 +1,15 @@
-import { useLanguage } from '../../context/language-context'
-import { mmmCoordinates } from '../../data/maharMyatMuni'
+import type { PagodaDetailDictionary } from '../../i18n/types'
 import { GoogleMapEmbed } from '../GoogleMapEmbed'
 
-const { lat, lng } = mmmCoordinates
-const googleViewUrl = `https://www.google.com/maps/search/?api=1&query=${lat},${lng}`
-const googleDirectionsUrl = `https://www.google.com/maps/dir/?api=1&destination=${lat},${lng}`
+interface PagodaLocationSectionProps {
+  coordinates: { lat: number; lng: number }
+  zoom: number
+  location: PagodaDetailDictionary['location']
+}
 
-export function MmmLocation() {
-  const { t } = useLanguage()
-  const l = t.maharMyatMuni.location
+export function PagodaLocationSection({ coordinates: { lat, lng }, zoom, location: l }: PagodaLocationSectionProps) {
+  const googleViewUrl = `https://www.google.com/maps/search/?api=1&query=${lat},${lng}`
+  const googleDirectionsUrl = `https://www.google.com/maps/dir/?api=1&destination=${lat},${lng}`
 
   return (
     <section id="location" className="mx-auto w-full max-w-[1440px] scroll-mt-32 px-gutter md:px-gutter-lg">
@@ -25,7 +26,7 @@ export function MmmLocation() {
         <GoogleMapEmbed
           lat={lat}
           lng={lng}
-          zoom={17}
+          zoom={zoom}
           title={l.title}
           streetLabel={l.streetView}
           satelliteLabel={l.satelliteView}
@@ -52,6 +53,11 @@ export function MmmLocation() {
                 <p className="mt-0.5 font-sans text-sm font-medium text-text">
                   {lat.toFixed(6)}° N, {lng.toFixed(6)}° E
                 </p>
+                {l.approximateLabel && (
+                  <span className="mt-1 inline-block w-fit rounded bg-bg-elevated-2 px-2 py-0.5 font-sans text-[10px] font-bold uppercase tracking-wide text-text-faint">
+                    {l.approximateLabel}
+                  </span>
+                )}
               </div>
             </div>
             <div className="flex items-start gap-3 border-t border-border pt-3">

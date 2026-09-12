@@ -11,26 +11,12 @@ function focusGlobalSearch() {
   window.setTimeout(() => el.focus(), 400)
 }
 
-type HomeSection = 'top' | 'map' | 'festivals'
-
-// Sections embedded on the home page that double as previews for their own
-// full pages — scroll-spied so the matching nav link lights up while you're
-// still on "/" scrolling past that preview, not just once you follow it.
-// The directory/"Pagodas" preview is deliberately excluded: it sits directly
-// under the hero, so highlighting it reads as the header changing right as
-// the page settles rather than a deliberate section indicator.
-const HOME_SECTION_IDS: [string, HomeSection][] = [
-  ['map', 'map'],
-  ['festivals', 'festivals'],
-]
-
 export function Header() {
   const { t } = useLanguage()
   const location = useLocation()
   const isHome = location.pathname === '/'
   const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
-  const [homeSection, setHomeSection] = useState<HomeSection>('top')
 
   useEffect(() => {
     function onScroll() {
@@ -52,46 +38,13 @@ export function Header() {
     return () => window.removeEventListener('keydown', onKeydown)
   }, [])
 
-  useEffect(() => {
-    if (!isHome) return
-
-    const ANCHOR_PX = 90
-    let ticking = false
-
-    function update() {
-      ticking = false
-      let current: HomeSection = 'top'
-      for (const [id, section] of HOME_SECTION_IDS) {
-        const el = document.getElementById(id)
-        if (el && el.getBoundingClientRect().top - ANCHOR_PX <= 0) {
-          current = section
-        }
-      }
-      setHomeSection(current)
-    }
-
-    function onScroll() {
-      if (ticking) return
-      ticking = true
-      requestAnimationFrame(update)
-    }
-
-    update()
-    window.addEventListener('scroll', onScroll, { passive: true })
-    window.addEventListener('resize', onScroll)
-    return () => {
-      window.removeEventListener('scroll', onScroll)
-      window.removeEventListener('resize', onScroll)
-    }
-  }, [isHome])
-
-  const isHomeActive = isHome && homeSection === 'top'
-  const isNews = location.pathname.startsWith('/news')
-  const isLocationMap = location.pathname.startsWith('/location-map') || (isHome && homeSection === 'map')
+  const isHomeActive = isHome
+  const isOtherPlaces = location.pathname.startsWith('/other-places')
+  const isLocationMap = location.pathname.startsWith('/location-map')
   const isAbout = location.pathname.startsWith('/about')
   const isContact = location.pathname.startsWith('/contact')
   const isPagodas = location.pathname.startsWith('/pagodas')
-  const isFestivals = location.pathname.startsWith('/festival-calendar') || (isHome && homeSection === 'festivals')
+  const isFestivals = location.pathname.startsWith('/festival-calendar')
   const isNarration = location.pathname.startsWith('/narration')
 
   return (
@@ -100,7 +53,7 @@ export function Header() {
         scrolled ? 'border-b border-border shadow-soft' : 'border-b border-transparent'
       }`}
     >
-      <div className="mx-auto flex h-[76px] w-full max-w-[1440px] items-center justify-between gap-6 px-gutter md:px-gutter-lg">
+      <div className="flex h-[76px] w-full items-center justify-between gap-6 px-gutter md:px-gutter-lg">
         <Link to="/" className="flex shrink-0 items-center gap-2.5">
           <img
             src="/keng_tung_pagoda_guide_emblem.png"
@@ -134,13 +87,13 @@ export function Header() {
             />
           </Link>
           <Link
-            to="/news"
-            aria-current={isNews ? 'page' : undefined}
-            className={`group relative py-1 font-sans text-[13.5px] font-medium transition-colors hover:text-text ${isNews ? 'text-primary' : 'text-text-muted'}`}
+            to="/other-places"
+            aria-current={isOtherPlaces ? 'page' : undefined}
+            className={`group relative py-1 font-sans text-[13.5px] font-medium transition-colors hover:text-text ${isOtherPlaces ? 'text-primary' : 'text-text-muted'}`}
           >
-            {t.header.nav.news}
+            {t.header.nav.otherPlaces}
             <span
-              className={`absolute inset-x-0 -bottom-0.5 h-px origin-left bg-primary transition-transform duration-200 ease-out group-hover:scale-x-100 ${isNews ? 'scale-x-100' : 'scale-x-0'}`}
+              className={`absolute inset-x-0 -bottom-0.5 h-px origin-left bg-primary transition-transform duration-200 ease-out group-hover:scale-x-100 ${isOtherPlaces ? 'scale-x-100' : 'scale-x-0'}`}
             />
           </Link>
           <Link
@@ -245,12 +198,12 @@ export function Header() {
               {t.header.nav.pagodas}
             </Link>
             <Link
-              to="/news"
+              to="/other-places"
               onClick={() => setMobileOpen(false)}
-              aria-current={isNews ? 'page' : undefined}
-              className={`rounded-lg px-3 py-2.5 font-sans text-[15px] font-medium hover:bg-bg-elevated-2 hover:text-text ${isNews ? 'bg-bg-elevated-2 text-primary' : 'text-text-muted'}`}
+              aria-current={isOtherPlaces ? 'page' : undefined}
+              className={`rounded-lg px-3 py-2.5 font-sans text-[15px] font-medium hover:bg-bg-elevated-2 hover:text-text ${isOtherPlaces ? 'bg-bg-elevated-2 text-primary' : 'text-text-muted'}`}
             >
-              {t.header.nav.news}
+              {t.header.nav.otherPlaces}
             </Link>
             <Link
               to="/festival-calendar"

@@ -1,6 +1,5 @@
-import { useState } from 'react'
 import { useLanguage } from '../../context/language-context'
-import { mmmTrusteePhotos } from '../../data/maharMyatMuni'
+import { mmmTrusteePhotos, mmmOldBoardPhotos, mmmTodayBoardPhoto } from '../../data/maharMyatMuni'
 import type { MmmTrusteeMember } from '../../i18n/types'
 
 // The roster is a fixed, index-aligned list (8 Sayadaws, 3 Nayaka patrons, the
@@ -61,10 +60,36 @@ function TrusteeGroup({ label, people, photos }: TrusteeGroupProps) {
   )
 }
 
+interface OldBoardGroupProps {
+  label: string
+  groupPhoto: string
+  memberPhotos: string[]
+}
+
+// Each old-board photo already has its subject's name and tenure years
+// printed on the scan itself, so — unlike TrusteeGroup — there's no separate
+// name/role text to render here.
+function OldBoardGroup({ label, groupPhoto, memberPhotos }: OldBoardGroupProps) {
+  return (
+    <div className="flex flex-col gap-4">
+      <h3 className="font-serif text-base font-bold text-text">{label}</h3>
+      <div className="overflow-hidden rounded-2xl border border-border bg-bg-elevated shadow-soft">
+        <img src={groupPhoto} alt={label} className="w-full object-cover" />
+      </div>
+      <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6">
+        {memberPhotos.map((photo) => (
+          <div key={photo} className="overflow-hidden rounded-2xl border border-border bg-bg-elevated shadow-soft">
+            <img src={photo} alt="" className="aspect-[3/4] w-full object-cover" />
+          </div>
+        ))}
+      </div>
+    </div>
+  )
+}
+
 export function MmmTrustees() {
   const { t } = useLanguage()
   const tr = t.maharMyatMuni.trustees
-  const [expanded, setExpanded] = useState(false)
 
   const [sayadawEnd, nayakaEnd, leadershipEnd, othersEnd] = GROUP_BOUNDARIES.slice(1)
   const sayadaws = tr.people.slice(0, sayadawEnd)
@@ -86,36 +111,26 @@ export function MmmTrustees() {
       <div className="flex flex-col gap-8">
         <TrusteeGroup label={tr.groupSayadaw} people={sayadaws} photos={mmmTrusteePhotos.slice(0, sayadawEnd)} />
 
-        {expanded && (
-          <>
-            <TrusteeGroup
-              label={tr.groupNayaka}
-              people={nayaka}
-              photos={mmmTrusteePhotos.slice(sayadawEnd, nayakaEnd)}
-            />
-            <TrusteeGroup
-              label={tr.groupLeadership}
-              people={leadership}
-              photos={mmmTrusteePhotos.slice(nayakaEnd, leadershipEnd)}
-            />
-            <TrusteeGroup
-              label={tr.groupOthers}
-              people={others}
-              photos={mmmTrusteePhotos.slice(leadershipEnd, othersEnd)}
-            />
-          </>
-        )}
-      </div>
+        <OldBoardGroup
+          label={tr.groupOldBoard}
+          groupPhoto={mmmOldBoardPhotos.groupPhoto}
+          memberPhotos={mmmOldBoardPhotos.members}
+        />
 
-      <button
-        type="button"
-        onClick={() => setExpanded((v) => !v)}
-        aria-expanded={expanded}
-        className="mx-auto mt-6 flex items-center gap-1.5 rounded-full border border-border bg-bg-elevated px-5 py-2.5 font-sans text-xs font-bold uppercase tracking-wide text-primary shadow-soft transition-colors hover:bg-bg-elevated-2"
-      >
-        {expanded ? tr.showLessCta : tr.showMoreCta}
-        <span className="material-symbols-outlined text-[18px]">{expanded ? 'expand_less' : 'expand_more'}</span>
-      </button>
+        <div className="flex flex-col gap-8 rounded-2xl border border-border bg-bg-elevated-2/40 p-6">
+          <h3 className="font-serif text-lg font-bold text-text">{tr.groupNewBoard}</h3>
+          <div className="overflow-hidden rounded-2xl border border-border bg-bg-elevated shadow-soft">
+            <img src={mmmTodayBoardPhoto} alt={tr.groupNewBoard} className="w-full object-cover" />
+          </div>
+          <TrusteeGroup label={tr.groupNayaka} people={nayaka} photos={mmmTrusteePhotos.slice(sayadawEnd, nayakaEnd)} />
+          <TrusteeGroup
+            label={tr.groupLeadership}
+            people={leadership}
+            photos={mmmTrusteePhotos.slice(nayakaEnd, leadershipEnd)}
+          />
+          <TrusteeGroup label={tr.groupOthers} people={others} photos={mmmTrusteePhotos.slice(leadershipEnd, othersEnd)} />
+        </div>
+      </div>
     </section>
   )
 }
