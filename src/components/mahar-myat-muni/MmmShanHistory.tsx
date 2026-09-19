@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { createPortal } from 'react-dom'
 import { useLanguage } from '../../context/language-context'
 import { mmmShanHistoryPages } from '../../data/maharMyatMuni'
 
@@ -52,51 +53,56 @@ export function MmmShanHistory() {
         ))}
       </div>
 
-      {openIndex !== null && (
-        <div className="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-black/90 p-4" onClick={close}>
-          <button
-            type="button"
-            aria-label="Close"
+      {openIndex !== null &&
+        createPortal(
+          <div
+            className="animate-fade-in fixed inset-0 z-[100] flex flex-col items-center justify-center bg-black/90 p-4 backdrop-blur-md"
             onClick={close}
-            className="absolute right-4 top-4 flex h-11 w-11 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-white/20"
           >
-            <span className="material-symbols-outlined text-[24px]">close</span>
-          </button>
+            <button
+              type="button"
+              aria-label="Close"
+              onClick={close}
+              className="absolute right-4 top-4 flex h-11 w-11 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-white/20"
+            >
+              <span className="material-symbols-outlined text-[24px]">close</span>
+            </button>
 
-          <button
-            type="button"
-            aria-label="Previous page"
-            onClick={(e) => {
-              e.stopPropagation()
-              setOpenIndex((i) => (i === null ? i : (i - 1 + mmmShanHistoryPages.length) % mmmShanHistoryPages.length))
-            }}
-            className="absolute left-3 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-white/20 sm:left-6"
-          >
-            <span className="material-symbols-outlined text-[24px]">chevron_left</span>
-          </button>
-          <button
-            type="button"
-            aria-label="Next page"
-            onClick={(e) => {
-              e.stopPropagation()
-              setOpenIndex((i) => (i === null ? i : (i + 1) % mmmShanHistoryPages.length))
-            }}
-            className="absolute right-3 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-white/20 sm:right-6"
-          >
-            <span className="material-symbols-outlined text-[24px]">chevron_right</span>
-          </button>
+            <button
+              type="button"
+              aria-label="Previous page"
+              onClick={(e) => {
+                e.stopPropagation()
+                setOpenIndex((i) => (i === null ? i : (i - 1 + mmmShanHistoryPages.length) % mmmShanHistoryPages.length))
+              }}
+              className="absolute left-3 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-white/20 sm:left-6"
+            >
+              <span className="material-symbols-outlined text-[24px]">chevron_left</span>
+            </button>
+            <button
+              type="button"
+              aria-label="Next page"
+              onClick={(e) => {
+                e.stopPropagation()
+                setOpenIndex((i) => (i === null ? i : (i + 1) % mmmShanHistoryPages.length))
+              }}
+              className="absolute right-3 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-white/20 sm:right-6"
+            >
+              <span className="material-symbols-outlined text-[24px]">chevron_right</span>
+            </button>
 
-          <img
-            src={mmmShanHistoryPages[openIndex]}
-            alt={`${s.title} ${openIndex + 1}`}
-            onClick={(e) => e.stopPropagation()}
-            className="max-h-[80vh] max-w-full rounded-lg object-contain shadow-floating"
-          />
-          <span className="mt-2 font-sans text-xs font-semibold text-white/50">
-            {openIndex + 1} / {mmmShanHistoryPages.length}
-          </span>
-        </div>
-      )}
+            <img
+              src={mmmShanHistoryPages[openIndex]}
+              alt={`${s.title} ${openIndex + 1}`}
+              onClick={(e) => e.stopPropagation()}
+              className="max-h-[80vh] max-w-full rounded-lg object-contain shadow-floating"
+            />
+            <span className="mt-2 font-sans text-xs font-semibold text-white/50">
+              {openIndex + 1} / {mmmShanHistoryPages.length}
+            </span>
+          </div>,
+          document.body,
+        )}
     </section>
   )
 }

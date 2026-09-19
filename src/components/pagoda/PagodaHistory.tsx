@@ -4,8 +4,8 @@ import type { PagodaDetailDictionary } from '../../i18n/types'
 
 interface PagodaHistoryProps {
   history: PagodaDetailDictionary['history']
-  audio: PagodaDetailDictionary['audio']
-  audioSrc: string
+  audio?: PagodaDetailDictionary['audio']
+  audioSrc?: string
 }
 
 export function PagodaHistory({ history: h, audio: a, audioSrc }: PagodaHistoryProps) {
@@ -34,9 +34,11 @@ export function PagodaHistory({ history: h, audio: a, audioSrc }: PagodaHistoryP
         ))}
       </div>
 
-      <div className="mb-6">
-        <AudioNarrationPlayer src={audioSrc} title={a.title} playLabel={a.play} pauseLabel={a.pause} credit={a.credit} />
-      </div>
+      {a && audioSrc && (
+        <div className="mb-6">
+          <AudioNarrationPlayer src={audioSrc} title={a.title} playLabel={a.play} pauseLabel={a.pause} credit={a.credit} />
+        </div>
+      )}
 
       {collapsible ? (
         <>

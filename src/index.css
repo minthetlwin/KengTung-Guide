@@ -102,7 +102,43 @@ body {
   color: rgb(var(--color-on-primary-soft));
 }
 
+/*
+ * Self-hosted subset of Material Symbols Outlined — see the preload comment
+ * in index.html for why. Covers exactly the icon ligatures referenced via
+ * `material-symbols-outlined` under src/. To regenerate after adding a new
+ * icon name, request Google's CSS2 API with a `text=` param listing every
+ * icon name used (comma-separated) and the fixed axes below — the `text`
+ * param subsets by ligature, not by literal character, which is what keeps
+ * the multi-character icon names (e.g. "search_off") intact:
+ *
+ *   https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0..1,0&text=<icon1,icon2,...>&display=swap
+ *
+ * then download the woff2 the response's @font-face points at, replacing
+ * public/fonts/material-symbols-outlined.woff2. FILL is kept as a real
+ * variable axis (0..1, not pinned) because several icons in this codebase
+ * toggle it at runtime via an inline `fontVariationSettings` style.
+ */
+@font-face {
+  font-family: 'Material Symbols Outlined';
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url('/fonts/material-symbols-outlined.woff2') format('woff2');
+}
+
 .material-symbols-outlined {
+  font-family: 'Material Symbols Outlined';
+  font-weight: normal;
+  font-style: normal;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
   font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
   font-size: 1.25rem;
   line-height: 1;

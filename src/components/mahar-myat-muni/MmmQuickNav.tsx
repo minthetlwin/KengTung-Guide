@@ -1,7 +1,7 @@
 import { useLanguage } from '../../context/language-context'
 import { QuickSectionNav } from '../QuickSectionNav'
 
-const SECTION_IDS = ['history-timeline', 'photo-gallery', 'beliefs-traditions', 'trustees', 'location']
+const SECTION_IDS = ['history-timeline', 'photo-gallery', 'panorama-360', 'beliefs-traditions', 'trustees', 'location']
 
 export function MmmQuickNav() {
   const { t } = useLanguage()

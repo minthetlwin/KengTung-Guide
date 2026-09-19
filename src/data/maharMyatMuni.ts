@@ -9,7 +9,6 @@ export const mmmHeroImage = heroImages.mahaMyatMuni
 // aspect ratio). Below `lg`, the hero still falls back to `mmmHeroImage`.
 export const mmmBannerImages = [
   '/images/maharmyatmuni/banner/mahar_1.jpg',
-  '/images/maharmyatmuni/banner/face_clean_3.jpg',
   '/images/maharmyatmuni/banner/mahar_2.jpg',
 ]
 
@@ -21,6 +20,9 @@ export const mmmFaceImage = mahaMuniFaceImage
 // .mov (a black video track wrapping a voice recording) and re-encoded to
 // MP3 for universal browser playback.
 export const mmmHistoryAudioSrc = '/audio/mmm-history-narration.mp3'
+
+// Equirectangular panorama of the gilded shrine hall, supplied by the project owner.
+export const mmmPanoramaSrc = '/360photo/sv360-CIABIhDE_M7MqePMTfCjloqMrOJ--20260915-163906.jpg'
 
 export interface GalleryAlbum {
   id: string
@@ -53,22 +55,12 @@ export const mmmGalleryAlbums: GalleryAlbum[] = [
     ],
   },
   {
-    id: 'face-washing',
-    images: [
-      '/images/maharmyatmuni/04/face_clean_1.jpg',
-      '/images/maharmyatmuni/04/face_clean_2.jpg',
-      '/images/maharmyatmuni/04/face_clean_3.jpg',
-      '/images/maharmyatmuni/04/face_clean_4.jpg',
-      '/images/maharmyatmuni/04/face_clean_5.jpg',
-    ],
-  },
-  {
     id: 'almsgiving',
     images: [
+      '/images/maharmyatmuni/01/almsgiving-04.jpg',
       '/images/maharmyatmuni/01/almsgiving-01.jpg',
       '/images/maharmyatmuni/01/almsgiving-02.jpg',
       '/images/maharmyatmuni/01/almsgiving-03.jpg',
-      '/images/maharmyatmuni/01/almsgiving-04.jpg',
       '/images/maharmyatmuni/01/almsgiving-05.jpg',
       '/images/maharmyatmuni/01/almsgiving-06.jpg',
     ],

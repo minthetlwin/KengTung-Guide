@@ -1,13 +1,14 @@
 import { useMemo, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { useLanguage } from '../context/language-context'
 import { pagodaLocations } from '../data/pagodaLocations'
 import { usePageMeta } from '../hooks/usePageMeta'
-import { GoogleMapEmbed } from '../components/GoogleMapEmbed'
+import { PagodaLeafletMap } from '../components/PagodaLeafletMap'
 
 export function LocationMapPage() {
   const { t } = useLanguage()
   const l = t.locationMapPage
+  const navigate = useNavigate()
 
   usePageMeta({
     title: `${l.title} · ${t.meta.title}`,
@@ -22,8 +23,26 @@ export function LocationMapPage() {
     [t.directory.cards],
   )
 
-  const [activeCode, setActiveCode] = useState(pins[0]?.code)
-  const activePin = pins.find((pin) => pin.code === activeCode) ?? pins[0]
+  // Starts with nothing selected so the map opens on its full fitted view of
+  // every pagoda rather than immediately flying to and popping open the
+  // first one — a chip or marker click is what drives a specific selection.
+  const [activeCode, setActiveCode] = useState<string | undefined>(undefined)
+  const activePin = pins.find((pin) => pin.code === activeCode)
+
+  const mapPins = useMemo(
+    () =>
+      pins.map((pin) => ({
+        code: pin.code,
+        lat: pin.lat,
+        lng: pin.lng,
+        image: pin.image,
+        title: pin.card!.title,
+        subtitle: pin.card!.subtitle,
+        approximate: pin.approximate,
+        detailPath: pin.card!.detailPath,
+      })),
+    [pins],
+  )
 
   return (
     <div className="mx-auto w-full max-w-[1440px] px-gutter py-14 md:px-gutter-lg">
@@ -36,7 +55,7 @@ export function LocationMapPage() {
         <p className="max-w-2xl font-sans text-[11px] leading-relaxed text-text-muted">{l.description}</p>
       </div>
 
-      {activePin && (
+      {pins.length > 0 && (
         <>
           <div className="mb-3 flex flex-wrap gap-2">
             {pins.map((pin) => (
@@ -44,9 +63,9 @@ export function LocationMapPage() {
                 key={pin.code}
                 type="button"
                 onClick={() => setActiveCode(pin.code)}
-                aria-pressed={pin.code === activePin.code}
+                aria-pressed={pin.code === activePin?.code}
                 className={`rounded-full border px-4 py-2 font-sans text-xs font-semibold transition-colors ${
-                  pin.code === activePin.code
+                  pin.code === activePin?.code
                     ? 'border-primary bg-primary text-on-primary'
                     : 'border-border bg-bg-elevated text-text-muted hover:bg-bg-elevated-2'
                 }`}
@@ -56,13 +75,15 @@ export function LocationMapPage() {
             ))}
           </div>
 
-          <GoogleMapEmbed
-            lat={activePin.lat}
-            lng={activePin.lng}
-            zoom={activePin.approximate ? 13 : 16}
-            title={activePin.card!.title}
+          <PagodaLeafletMap
+            pins={mapPins}
+            activeCode={activeCode}
+            onSelect={setActiveCode}
+            onViewDetails={(path) => navigate(path)}
             streetLabel={l.streetView}
             satelliteLabel={l.satelliteView}
+            viewDetailsLabel={t.common.viewDetails}
+            approximateLabel={l.approximateLabel}
             className="h-[420px] md:h-[520px]"
           />
         </>

@@ -3,23 +3,38 @@ import { BackButton } from '../BackButton'
 
 interface PagodaHeroProps {
   image: string
+  bannerImages?: string[]
   title: string
   localName: string
   subtitle: string
   badges: PagodaHeroBadge[]
 }
 
-export function PagodaHero({ image, title, localName, subtitle, badges }: PagodaHeroProps) {
+export function PagodaHero({ image, bannerImages, title, localName, subtitle, badges }: PagodaHeroProps) {
+  const bannerCount = Math.min(bannerImages?.length ?? 0, 3)
+  const hasBannerGrid = bannerCount >= 2
+  const bannerRowsClass = bannerCount === 2 ? 'grid-rows-2' : 'grid-rows-3'
+
   return (
     <section className="relative w-full overflow-hidden">
       <BackButton />
       <div className="relative min-h-[560px] w-full sm:min-h-[620px] lg:min-h-[720px]">
         <div
-          className="absolute inset-0 bg-cover bg-top"
+          className={`absolute inset-0 bg-cover bg-top ${hasBannerGrid ? 'lg:hidden' : ''}`}
           style={{ backgroundImage: `url('${image}')` }}
           role="img"
           aria-label={title}
         />
+        {hasBannerGrid && (
+          <div className="absolute inset-0 hidden lg:grid lg:grid-cols-[2fr_1fr]" role="img" aria-label={title}>
+            <div className="bg-cover bg-top" style={{ backgroundImage: `url('${image}')` }} />
+            <div className={`grid ${bannerRowsClass}`}>
+              {bannerImages!.slice(0, 3).map((src) => (
+                <div key={src} className="bg-cover bg-center" style={{ backgroundImage: `url('${src}')` }} />
+              ))}
+            </div>
+          </div>
+        )}
         <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 via-55% to-black/10 to-100%" />
 
         <div className="relative z-10 flex h-full min-h-[560px] w-full flex-col justify-end gap-3 px-gutter pb-12 pt-32 sm:min-h-[620px] md:px-gutter-lg lg:min-h-[720px]">

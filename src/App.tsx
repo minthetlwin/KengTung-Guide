@@ -4,7 +4,17 @@ import { Footer } from './components/Footer'
 import { ScrollToTop } from './components/ScrollToTop'
 import { PagodaDetailPage } from './pages/PagodaDetailPage'
 import { MaharMyatMuniPage } from './pages/MaharMyatMuniPage'
-import { wzkPagodaConfig, yzmPagodaConfig } from './data/pagodas'
+import {
+  wzkPagodaConfig,
+  yzmPagodaConfig,
+  dslPagodaConfig,
+  srsPagodaConfig,
+  krPagodaConfig,
+  ttmbPagodaConfig,
+  skstPagodaConfig,
+  sodmPagodaConfig,
+  mhnbPagodaConfig,
+} from './data/pagodas'
 import { OtherPlacesPage } from './pages/OtherPlacesPage'
 import { LocationMapPage } from './pages/LocationMapPage'
 import { AboutPage } from './pages/AboutPage'
@@ -25,6 +35,13 @@ function App() {
             <Route path="/wat-zom-kham" element={<PagodaDetailPage config={wzkPagodaConfig} />} />
             <Route path="/mahar-myat-muni-pagoda" element={<Navigate to="/" replace />} />
             <Route path="/yarzamuni" element={<PagodaDetailPage config={yzmPagodaConfig} />} />
+            <Route path="/dat-sam-loei" element={<PagodaDetailPage config={dslPagodaConfig} />} />
+            <Route path="/satu-rattha-sumingala" element={<PagodaDetailPage config={srsPagodaConfig} />} />
+            <Route path="/khema-rattha" element={<PagodaDetailPage config={krPagodaConfig} />} />
+            <Route path="/thatta-thattaha-maha-bodhi" element={<PagodaDetailPage config={ttmbPagodaConfig} />} />
+            <Route path="/swam-kyeim-shwe-hsan-taw" element={<PagodaDetailPage config={skstPagodaConfig} />} />
+            <Route path="/shwe-ohn-daing-min" element={<PagodaDetailPage config={sodmPagodaConfig} />} />
+            <Route path="/maing-hnun-nee-bayar" element={<PagodaDetailPage config={mhnbPagodaConfig} />} />
             <Route path="/other-places" element={<OtherPlacesPage />} />
             <Route path="/location-map" element={<LocationMapPage />} />
             <Route path="/about" element={<AboutPage />} />

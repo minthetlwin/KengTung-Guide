@@ -106,6 +106,30 @@ export const en: Dictionary = {
     noResults: 'No sanctuaries match your search. Try another filter.',
     cards: [
       {
+        code: 'KT-04',
+        title: 'Mahar Myat Muni Pagoda (Keng Tung)',
+        subtitle: 'Royal Bronze Replica · Wat Pha Jao Lung',
+        tags: ['Lakeside', '1926'],
+        categories: ['lakeside', 'festivals'],
+        description:
+          "A gilded 1921 replica of Mandalay's Mahamuni Buddha, commissioned by the 39th Saopha and consecrated in 1926 after a 700km journey by cart and river raft.",
+        hours: '04:30 – 20:00 Daily',
+        price: 'Active Rituals',
+        detailPath: '/',
+      },
+      {
+        code: 'KT-06',
+        title: 'Dhat Zom Doi Pagoda',
+        subtitle: 'Kaba Aye Pagoda · Hair Relic Shrine',
+        tags: ['Hilltop', 'Hair Relic Shrine'],
+        categories: ['ancient', 'hilltop'],
+        description:
+          "A hilltop hair-relic stupa above Miang Larn tied to a Buddha-era founding legend — its design later inspired Yangon's own Kaba Aye Pagoda.",
+        hours: 'Open Daily, Dawn to Dusk',
+        price: 'Free Entry',
+        detailPath: '/dat-sam-loei',
+      },
+      {
         code: 'KT-01',
         title: 'Wat Zom Kham',
         subtitle: 'Golden Stupa Summit',
@@ -118,16 +142,76 @@ export const en: Dictionary = {
         detailPath: '/wat-zom-kham',
       },
       {
-        code: 'KT-04',
-        title: 'Mahar Myat Muni Pagoda (Keng Tung)',
-        subtitle: 'Royal Bronze Replica · Wat Pha Jao Lung',
-        tags: ['Lakeside', '1926'],
-        categories: ['lakeside', 'festivals'],
+        code: 'KT-07',
+        title: 'Satu Rattha Sumingala Pagoda',
+        subtitle: 'The Buried Buddhas of Luaymel',
+        tags: ['Hilltop', 'Modern Pagoda'],
+        categories: ['hilltop'],
         description:
-          "A gilded 1921 replica of Mandalay's Mahamuni Buddha, commissioned by the 39th Saopha and consecrated in 1926 after a 700km journey by cart and river raft.",
-        hours: '04:30 – 20:00 Daily',
-        price: 'Active Rituals',
-        detailPath: '/',
+          'A 45-foot golden stupa above Luaymel village group, raised where soldiers unearthed five buried Buddha images at a former army outpost in 1990.',
+        hours: 'Open Daily, Dawn to Dusk',
+        price: 'Free Entry',
+        detailPath: '/satu-rattha-sumingala',
+      },
+      {
+        code: 'KT-08',
+        title: 'Khema Rattha Prophecy Buddha',
+        subtitle: 'The Standing Buddha of Swam Sat Kone',
+        tags: ['Hilltop', 'Standing Buddha'],
+        categories: ['ancient', 'hilltop'],
+        description:
+          "A 67-foot golden standing Buddha atop Swam Sat Kone, raised where 1995 excavations uncovered relics and a centuries-old manuscript tracing the hill's Buddhist history back over 600 years.",
+        hours: 'Open Daily, Dawn to Dusk',
+        price: 'Free Entry',
+        detailPath: '/khema-rattha',
+      },
+      {
+        code: 'KT-09',
+        title: 'Thatta Thattaha Maha Bodhi Pagoda',
+        subtitle: 'The Mahabodhi-Style Stupa of Pan Kwe',
+        tags: ['Sandstone Carving', 'Modern Pagoda'],
+        categories: [],
+        description:
+          'A 108-foot sandstone-carved stupa modeled on the Mahabodhi Temple, raised at Pan Kwe village and consecrated over six ceremonies between 2018 and 2023.',
+        hours: 'Open Daily, Dawn to Dusk',
+        price: 'Free Entry',
+        detailPath: '/thatta-thattaha-maha-bodhi',
+      },
+      {
+        code: 'KT-10',
+        title: 'Swam Kyeim Shwe Hsan Taw Pagoda',
+        subtitle: 'The Golden Hair Relic Pagoda',
+        tags: ['Hilltop', 'Hair Relic Shrine'],
+        categories: ['ancient', 'hilltop'],
+        description:
+          "Three hair relics said to be the Buddha's own, enshrined on a hill above Swam Kyeim village after a farming family's chance encounter with him on his alms round.",
+        hours: 'Open Daily, Dawn to Dusk',
+        price: 'Free Entry',
+        detailPath: '/swam-kyeim-shwe-hsan-taw',
+      },
+      {
+        code: 'KT-11',
+        title: 'Shwe Ohn Daing Min Pagoda',
+        subtitle: 'The Golden Peacock King Pagoda',
+        tags: ['Hilltop', 'Seven Restorations'],
+        categories: ['ancient', 'hilltop'],
+        description:
+          'A hilltop pagoda named for a past-life peacock king, first raised by Emperor Ashoka according to legend and rebuilt across seven restorations from the Bagan era to 2018.',
+        hours: 'Open Daily, Dawn to Dusk',
+        price: 'Free Entry',
+        detailPath: '/shwe-ohn-daing-min',
+      },
+      {
+        code: 'KT-12',
+        title: 'Maing Hnun Nee Bayar Pagoda',
+        subtitle: 'The Bamboo-Woven Buddha Image',
+        tags: ['Woven Bamboo', 'Sacred Legend'],
+        categories: ['ancient', 'festivals'],
+        description:
+          'A Buddha image woven entirely from bamboo strips at Pakan village, said to have been completed overnight by a mysterious old weaver who then vanished without a trace.',
+        hours: 'Open Daily, Dawn to Dusk',
+        price: 'Free Entry',
+        detailPath: '/maing-hnun-nee-bayar',
       },
       {
         code: 'KT-05',
@@ -198,9 +282,9 @@ export const en: Dictionary = {
       {
         badge: 'Protective Paritta Chanting',
         subBadge: 'Every Three Months, Full Moon Evening',
-        heading: '110 Monks Recite for Protection from Danger',
+        heading: '200 Monks Recite for Protection from Danger',
         description:
-          'Once every three months, on the full moon evening at 6:00, a gathering of 110 monks recites the protective Paritta chants for freedom from danger inside the Gandhakuti monastery hall.',
+          'Once every three months, on the full moon evening at 6:00, a gathering of 200 monks recites the protective Paritta chants for freedom from danger inside the Gandhakuti monastery hall.',
         cta: 'Ritual Program & Schedule',
       },
     ],
@@ -219,7 +303,7 @@ export const en: Dictionary = {
         { label: 'Active Theravada Sanctum', pulsingDot: true },
       ],
       title: 'Wat Zom Kham',
-      localName: 'ဝပ်ဇွမ်ခမ်း · ᩅᩢ᩠ᨯᨧᩬᨾᨤᩣᩴ · วัดจอมคำ',
+      localName: 'ဝပ်စွမ်ခမ်း · ᩅᩢ᩠ᨯᨧᩬᨾᨤᩣᩴ · วัดจอมคำ',
       subtitle:
         "The eternal golden crown of Keng Tung and one of its most ancient pagodas — a guardian stupa said to enshrine six sacred hair relics of Gautama Buddha, foretold by the Buddha himself above the Kyaing Tong valley.",
     },
@@ -366,13 +450,13 @@ export const en: Dictionary = {
       pills: [
         { label: 'Local Name', value: 'Wat Phra Sao Luang' },
         { label: 'Modeled After', value: 'Mandalay Mahamuni Image' },
-        { label: 'Enshrined', value: '1926' },
-        { label: 'Centennial', value: '2026' },
+        { label: 'Enshrined', value: '1921' },
+        { label: 'Centennial', value: '2021' },
       ],
     },
     quickNav: {
       label: 'Jump to Section:',
-      items: ['History', 'Photo Gallery', 'Living Traditions', 'Board of Trustees', 'Visit & Directions'],
+      items: ['History', 'Photo Gallery', '360° View', 'Living Traditions', 'Board of Trustees', 'Visit & Directions'],
     },
     history: {
       eyebrow: 'Historical Summary',
@@ -428,6 +512,14 @@ export const en: Dictionary = {
       title: 'History of Maha Myat Muni Pagoda — in Gone Shan',
       description: 'The history of Maha Myat Muni Pagoda can also be read in the Gone Shan language.',
     },
+    panorama360: {
+      eyebrow: 'Immersive View',
+      title: '360° View of the Shrine Hall',
+      description:
+        'Step inside the gilded shrine hall and look around in every direction, from the enshrined Buddha image to the carved, gilded pillars.',
+      cta: 'View in 360°',
+      hint: 'Drag to look around · Scroll or pinch to zoom',
+    },
     gallery: {
       eyebrow: 'Visual Archive',
       title: 'Photo Gallery',
@@ -438,13 +530,7 @@ export const en: Dictionary = {
           title: 'Ruby Crown, Gold Umbrella & Buddha Consecration for the 100th Anniversary',
           date: 'February 15, 2022',
           caption:
-            "The grand ceremony marking the 100th anniversary of Maha Myat Muni Pagoda — the pride of Keng Tung, Eastern Shan State — including the offering of a ruby-and-diamond crown (Yadana Sein Hpondaw) and a gold umbrella (Shwehti), together with the Buddha Consecration (Anekazatin) grand ceremony, was held on the morning of the full moon day of Tabodwe, Sasana Year 2565, Kawza Era 1383. Presiding over the ceremony were the Sayadaws and members of the Sangha led by the chief Nayaka of Kyaing Yin Monastery in Keng Tung, Agga Maha Saddhamma Jotikadhaja Bhaddanta Khemasara.\n\nThe ceremony was attended by the Chairman of the State Administration Council and Prime Minister, Senior General Min Aung Hlaing, together with his wife Daw Kyu Kyu Hla and family members; State Administration Council members Lieutenant General Moe Myint Tun, U Sai Lone Hsai, and U Shwe Kyin; Union Ministers Lieutenant General Tun Tun Naung, U Ko Ko, U Hla Moe, Dr. Nyunt Phay, and Dr. Thet Khaing Win; Shan State Chief Minister Dr. Kyaw Tun; State Administration Council Chairman's Advisory Body member Dr. Daw Yin Yin Nwe; Commander-in-Chief (Navy) Admiral Moe Aung and his wife; Commander-in-Chief (Air) General Tun Aung and his wife; senior Tatmadaw officers from the Office of the Commander-in-Chief and their wives; Triangle Region Military Command Commander Major General Myo Min Tun and responsible officials; invited guests, sincere donors, officers, soldiers and their families, monastic associations, local ethnic residents, and traditional cultural associations.",
-        },
-        {
-          eyebrow: 'Full Moon & New Moon Ritual',
-          title: "Photo Records of Maha Myat Muni Pagoda's Face-Washing Ceremony",
-          caption:
-            'On every full moon and new moon day, at 5:30 in the morning, the traditional face-washing ceremony is performed for the Maha Myat Muni image.',
+            "The grand ceremony marking the 100th anniversary of Maha Myat Muni Pagoda — the pride of Keng Tung, Eastern Shan State — including the offering of a ruby-and-diamond crown (Yadana Sein Hpondaw) and a gold umbrella (Shwehti), together with the Buddha Consecration (Anekazatin) grand ceremony, was held on the morning of the full moon day of Tabodwe, Sasana Year 2565, Kawza Era 1383. Presiding over the ceremony were the Sayadaws and members of the Sangha led by the chief Nayaka of Kyaing Yin Monastery in Keng Tung, Agga Maha Saddhamma Jotikadhaja Bhaddanta Khemasara.\n\nThe ceremony was attended by the Chairman of the State Administration Council and (then) Prime Minister — now State President — Senior General Min Aung Hlaing, together with his wife Daw Kyu Kyu Hla and family members; State Administration Council members Lieutenant General Moe Myint Tun, U Sai Lone Hsai, and U Shwe Kyin; Union Ministers Lieutenant General Tun Tun Naung, U Ko Ko, U Hla Moe, Dr. Nyunt Phay, and Dr. Thet Khaing Win; Shan State Chief Minister Dr. Kyaw Tun; State Administration Council Chairman's Advisory Body member Dr. Daw Yin Yin Nwe; Commander-in-Chief (Navy) Admiral Moe Aung and his wife; Commander-in-Chief (Air) General Tun Aung and his wife; senior Tatmadaw officers from the Office of the Commander-in-Chief and their wives; Triangle Region Military Command Commander Major General Myo Min Tun and responsible officials; invited guests, sincere donors, officers, soldiers and their families, monastic associations, local ethnic residents, and traditional cultural associations.",
         },
         {
           eyebrow: 'Vassa Season Ritual',
@@ -453,10 +539,10 @@ export const en: Dictionary = {
             'A record of the morning collective alms-offering (Aruna Hsun) to the monks, held at Maha Myat Muni Pagoda in Keng Tung on the full moon and new moon days during the Vassa retreat.',
         },
         {
-          eyebrow: 'Waso Full Moon',
+          eyebrow: 'Full Moon & New Moon',
           title: 'Dhammacakka Sutta Recitation',
           caption:
-            'Inside the Gandhakuti monastery hall of Maha Myat Muni Pagoda, devotional groups chant the Dhammacakka Sutta in the Shan language on the full moon day of Waso.',
+            'Inside the Gandhakuti monastery hall of Maha Myat Muni Pagoda, devotional groups chant the Dhammacakka Sutta in the Shan language on every full moon and new moon day.',
         },
       ],
     },
@@ -487,7 +573,7 @@ export const en: Dictionary = {
         {
           title: 'Quarterly Protective Chanting',
           description:
-            'Once every three months, on the full moon evening at 6:00, a gathering of 110 monks recites the protective Paritta chants for freedom from danger inside the Gandhakuti monastery hall.',
+            'Once every three months, on the full moon evening at 6:00, a gathering of 200 monks recites the protective Paritta chants for freedom from danger inside the Gandhakuti monastery hall.',
         },
         {
           title: 'Monthly Dhammacakka Recitation',
@@ -497,7 +583,7 @@ export const en: Dictionary = {
         {
           title: 'Centennial Celebration',
           description:
-            'Having stood for a full century, 2026 marks the 100th anniversary of the Keng Tung Maha Myat Muni Pagoda.',
+            'Having stood for a full century, 2021 marked the 100th anniversary of the Keng Tung Maha Myat Muni Pagoda.',
         },
       ],
     },
@@ -653,6 +739,935 @@ export const en: Dictionary = {
       cta: 'Explore the Directory',
     },
   },
+  datSamLoei: {
+    meta: { title: 'Dhat Zom Doi Pagoda — The Hair Relic Shrine of Miang Larn' },
+    hero: {
+      badges: [
+        { label: 'Hair Relic Shrine · Founding Legend' },
+        { label: 'Active Pilgrimage Site', pulsingDot: true },
+      ],
+      title: 'Dhat Zom Doi Pagoda',
+      localName: 'ဓါတ်စွမ်လွဲဘုရား (ကမ္ဘာအေးဘုရား)',
+      subtitle:
+        "A hair-relic stupa on a hillside above Miang Larn where the Buddha himself is said to have prophesied Keng Tung's founding — the pagoda whose design later inspired Yangon's own Kaba Aye Pagoda.",
+    },
+    facts: {
+      pills: [
+        { label: 'Traditional Founding', value: 'Maha Sakaraj Era 115' },
+        { label: 'Founded By', value: 'Kant Eik Un & Wife' },
+        { label: 'Sacred Relics', value: '4 Hair Relics' },
+        { label: 'Location', value: 'Miang Larn, Keng Tung' },
+      ],
+    },
+    quickNav: {
+      label: 'Jump to Section:',
+      items: ['History & Legend', '360° View', 'Photo Gallery', 'Visit & Directions'],
+    },
+    history: {
+      eyebrow: 'Sacred Legend',
+      title: 'How Dhat Zom Doi Pagoda Came to Be',
+      description:
+        'In Miang Larn village group, Keng Tung township, Dhat Zom Doi Pagoda — also known as Kaba Aye Pagoda — was founded in Maha Sakaraj Era 115 by the villagers Kant Eik Un and his wife, who tradition holds received four sacred hair relics from the Buddha himself.',
+      quickFacts: [
+        { label: 'Traditional Founding', value: 'Maha Sakaraj Era 115' },
+        { label: 'Founded By', value: 'Kant Eik Un & Wife' },
+        { label: 'Also Known As', value: 'Kaba Aye Pagoda' },
+      ],
+      sections: [
+        {
+          heading: "The Buddha's Visit and the Naming of Miang Larn",
+          paragraphs: [
+            'At the time this pagoda was first founded, the site of present-day Keng Tung was still a great flooded lake, with only small hillside villages scattered above the waterline.',
+            'While touring the eastern lands with his monks to deliver beings from suffering, Gautama Buddha passed over this hill, where the villagers Kant Eik Un and his wife were cutting wood. The couple offered the Sangha, led by the Buddha, the rice parcels and honey they had carried with them.',
+            "After the Buddha accepted the offering of honey and rice, Venerable Ananda went to wash the alms bowl in the stream east of where the pagoda now stands — an act the Shan call 'lan'. In memory of this, the stream became known as Nam Lan Chaung and the village as Miang Larn. The Buddha foretold that this region would one day become the site of flourishing towns and villages.",
+          ],
+        },
+        {
+          heading: 'Four Hair Relics and the Upturned-Basket Stupa',
+          paragraphs: [
+            "After the meal, the Buddha rubbed his head and bestowed four hair relics upon Kant Eik Un, charging him with enshrining them in a stupa. Not knowing how a stupa should be built, Kant Eik Un asked the Buddha for guidance, and was told to shape it after the winnowing basket he had carried with him, turned upside down.",
+            'Kant Eik Un and his wife gathered stones from the Nam Lan stream and chose a fitting site. The hair relics were placed inside a bamboo tube, the bamboo tube inside a gold tube, and the gold tube inside a silver tube, then sealed in a stone casket together with gold, silver, and gems, and buried seven cubits deep — with the upturned-basket-shaped stupa raised above.',
+          ],
+        },
+        {
+          heading: 'The Guardian Wind Vent',
+          paragraphs: [
+            'To keep the enshrined gold and relics safe from thieves, arahants together with the guardian spirits are said to have installed a wind-vent mechanism at an opening in the pagoda\'s northwest corner. No umbrella spire containing iron, bronze, or other metal can be raised over the pagoda — should one be installed, wind rushing from the vent tears it loose.',
+            'The bronze bell and umbrella spire now hung at the pagoda\'s eastern portico were recast and reinstalled after the originals, raised during a ceremony on the full moon of Nayon in Myanmar Era 1315, were torn down by the wind vent that same night.',
+            'Objects or scraps of monastic robe thrown into that opening are said to be carried up into the sky within about a minute. To prevent any mishap, the vent was sealed roughly 65 years ago by the Gon sect\'s presiding Sayadaw together with the pagoda\'s resident Sayadaw.',
+          ],
+        },
+        {
+          heading: "Prime Minister U Nu and Yangon's Kaba Aye Pagoda",
+          paragraphs: [
+            "After Myanmar's independence, Prime Minister U Nu, flying to Keng Tung, caught sight of Dhat Zom Doi Pagoda from the air. Once in Keng Tung, he visited and admired the pagoda, taking careful note of its design.",
+            "U Nu is said to have carried that impression back to Yangon, where he built the Kaba Aye Pagoda on what is now Kaba Aye Pagoda Road — modeled on the pagoda he had seen at Keng Tung. For this reason, Dhat Zom Doi Pagoda is also widely known today as Kaba Aye Zedi.",
+          ],
+        },
+        {
+          heading: 'Sacred Signs and the Guardian Nagas',
+          paragraphs: [
+            "On full moon and new moon nights, star-shaped rays of light are said to radiate from the diamond bud at the pagoda's summit.",
+            'On the terrace at the southern corner stand two dragon (naga) figures, heads turned toward the courtyard, carved decades ago by a resident Sayadaw. Around 65 years ago, a caretaker Sayadaw found algae, pond-scum, and lotus leaves clinging to the stone dragons despite there being no water nearby — and found them clinging again after each clearing. Taking this as a sign that the figures housed living naga spirits rather than ordinary carvings, the Sayadaw had them cut into segments rather than left whole, a precaution still visible in the statues today.',
+          ],
+        },
+      ],
+      readMoreCta: 'Read Full History',
+      readLessCta: 'Show Less',
+    },
+    audio: {
+      title: 'Listen to the History',
+      play: 'Play',
+      pause: 'Pause',
+      credit: 'Narrated as an act of merit by Maung Kyaw Linn Htet.',
+    },
+    panorama360: {
+      eyebrow: 'Immersive View',
+      title: '360° Courtyard Panorama',
+      description:
+        'Step into the pagoda courtyard and look around in every direction, from the red-and-gold shrine hall to the surrounding hills.',
+      cta: 'View in 360°',
+      hint: 'Drag to look around · Scroll or pinch to zoom',
+    },
+    gallery: {
+      eyebrow: 'Visual Archive & Photographic Record',
+      title: 'Photo Gallery',
+      photoCount: (count) => `${count} Photo${count === 1 ? '' : 's'}`,
+      albums: [
+        {
+          eyebrow: 'Architecture',
+          title: 'The Pagoda Hall, Seen from the Courtyard',
+          caption:
+            'The tiered red-and-gold roof and naga-flanked stairway of the pagoda hall, crowned with a gilded spire.',
+        },
+        {
+          eyebrow: 'Architecture',
+          title: 'Another View of the Pagoda Hall',
+          caption: 'A second angle of the shrine hall, showing its gilded relief carvings and covered stairway entrances.',
+        },
+        {
+          eyebrow: 'Shrine Hall',
+          title: 'Inside the Gilded Shrine Hall',
+          caption:
+            "The main Buddha image inside the pagoda's red-and-gold shrine hall, its walls patterned with a thousand small Buddha images.",
+        },
+        {
+          eyebrow: 'Devotion',
+          title: 'The Enshrined Buddha Image and Attendant Figures',
+          caption:
+            'The gilded seated Buddha image enshrined inside the pagoda, flanked by standing Buddha images and statues of the Sangha.',
+        },
+        {
+          eyebrow: 'Sacred Bell',
+          title: "The Pagoda's Bronze Gong",
+          caption: 'The bronze gong hanging at the pagoda terrace, with the Miang Larn valley and hills spreading out below.',
+        },
+      ],
+    },
+    location: {
+      eyebrow: 'Visit & Directions',
+      title: 'Find the Pagoda',
+      description:
+        'Dhat Zom Doi Pagoda sits on a hillside in Miang Larn village group, Keng Tung township, reachable by road from town.',
+      addressLabel: 'Address',
+      address: 'Dhat Zom Doi (Kaba Aye) Pagoda, Miang Larn Village Group, Keng Tung Township, Shan State (East)',
+      coordinatesLabel: 'Coordinates',
+      hoursLabel: 'Visiting Hours',
+      hours: 'Open Daily, Dawn to Dusk',
+      streetView: 'Street',
+      satelliteView: 'Satellite',
+      viewMapCta: 'View on Google Maps',
+      directionsCta: 'Get Directions',
+    },
+    closing: {
+      text: '"Buddhasasanam ciram titthatu" — may the Buddha\'s Sasana long endure.',
+      cta: 'Explore the Directory',
+    },
+  },
+  satuRatthaSumingala: {
+    meta: { title: 'Satu Rattha Sumingala Pagoda — The Buried Buddhas of Luaymel' },
+    hero: {
+      badges: [
+        { label: 'Buried Buddha Images · Military-Era Founding' },
+        { label: 'Active Pilgrimage Site', pulsingDot: true },
+      ],
+      title: 'Satu Rattha Sumingala Pagoda',
+      localName: 'စတုရဋ္ဌသုမင်္ဂလစေတီတော်',
+      subtitle:
+        'A 45-foot golden stupa rising above Luaymel village group, raised on a former army outpost where five Buddha images were unearthed beneath a decades-old sand-mound shrine.',
+    },
+    facts: {
+      pills: [
+        { label: 'Traditional Founding', value: '1990–91' },
+        { label: 'Sponsored By', value: 'Senior General Than Shwe' },
+        { label: 'Summit Height', value: '45 ft' },
+        { label: 'Location', value: 'Luaymel, Keng Tung' },
+      ],
+    },
+    quickNav: {
+      label: 'Jump to Section:',
+      items: ['History & Legend', '360° View', 'Photo Gallery', 'Visit & Directions'],
+    },
+    history: {
+      eyebrow: 'Sacred History',
+      title: 'How Satu Rattha Sumingala Pagoda Came to Be',
+      description:
+        'In Luaymel village group, Keng Tung township, Satu Rattha Sumingala Pagoda grew from a small army-outpost shrine into a 45-foot golden stupa, after soldiers clearing the site in 1990 uncovered five Buddha images buried beneath it.',
+      quickFacts: [
+        { label: 'Traditional Founding', value: 'Myanmar Era 1351–52' },
+        { label: 'Sponsored By', value: 'Senior General Than Shwe' },
+        { label: 'Original Site', value: '1960 Sand-Mound Stupa' },
+      ],
+      sections: [
+        {
+          heading: 'Founding on an Army Outpost',
+          paragraphs: [
+            'Luaymel village group, in Keng Tung township, is home to more than ten ethnic communities — Akha, Lahu, Shan-Chinese, Shan Li Shaw, Loi, Wa, Bamar, and others — spread across 38 villages. In 1960, under the Revolutionary Council, Infantry Battalion No. 3 was first stationed here.',
+            "At the time, Buddhist practice in the area was overshadowed by other beliefs. With an aspiration that all beings — human, spirit, and brahma — on the Luaymel hill be freed from suffering, the battalion's families raised a small sand-mound stupa in its place.",
+          ],
+        },
+        {
+          heading: 'The Buried Buddha Images and a Grand New Stupa',
+          paragraphs: [
+            'Over the following decades, one battalion after another was stationed at the outpost. In 1990, acting commander of Infantry Battalion No. 226, Colonel Soe Win — later Prime Minister and Senior General — arrived at the post. Clearing the brush that had overgrown the old sand-mound stupa left by Battalion No. 3, his soldiers uncovered five Buddha images buried at the site.',
+            'Moved by the discovery, State Peace and Development Council Chairman Senior General Than Shwe sponsored the construction of a 45-foot stupa on the site — the Satu Rattha Sumingala Pagoda. Its foundation-laying ceremony began on 19 October 1990 (2nd waxing of Tazaungmon, Myanmar Era 1351), received by the monks Bhaddanta Khemasara of Kyaing Yin Monastery, Bhaddanta Arzeya of Dhammodaya Monastery, and Bhaddanta Zawtika of Ho Khon Monastery, with military and civil officials and the people of Keng Tung in attendance. Construction was completed on 7 April 1991 (9th waning of late Tagu, Myanmar Era 1352).',
+          ],
+        },
+        {
+          heading: 'A Year of Building',
+          paragraphs: [
+            'In little over a year, the pagoda precinct took shape around the 45-foot stupa: four assembly halls, four small shrine porches, four thrones, twelve zodiac pillars, a 168-foot covered lamp corridor, a flagpole, two small ponds, four satellite stupas, a corner-shrine throne, a bell-bearer statue, and an inscription-stone pavilion.',
+          ],
+        },
+        {
+          heading: 'Gold Robes and the Diamond Finial',
+          paragraphs: [
+            'On 20 February 2014, the pagoda received the offering of a full gold robe. Then, at 6:30 am on 13 May 2014 — Tuesday, the full moon of Kason, Myanmar Era 1376 — a grand ceremony offered a diamond finial, a sacred bird ornament, and a gold umbrella spire, capped by a Buddha Consecration (Anekazatin).',
+            'A further gold robe offering was contracted on 10 December 2024, began on 26 December 2024, and was completed on 8 March 2025. Today, Satu Rattha Sumingala Pagoda stands with its 45-foot stupa, four satellite stupas, and four assembly halls, actively worshipped by pilgrims.',
+          ],
+        },
+      ],
+      readMoreCta: 'Read Full History',
+      readLessCta: 'Show Less',
+    },
+    audio: {
+      title: 'Listen to the History',
+      play: 'Play',
+      pause: 'Pause',
+      credit: 'Narrated as an act of merit by Maung Kyaw Linn Htet.',
+    },
+    panorama360: {
+      eyebrow: 'Immersive View',
+      title: '360° Courtyard Panorama',
+      description:
+        'Step into the pagoda courtyard and look around in every direction, from the golden stupa to the red-and-gold shrine halls.',
+      cta: 'View in 360°',
+      hint: 'Drag to look around · Scroll or pinch to zoom',
+    },
+    gallery: {
+      eyebrow: 'Visual Archive & Photographic Record',
+      title: 'Photo Gallery',
+      photoCount: (count) => `${count} Photo${count === 1 ? '' : 's'}`,
+      albums: [
+        {
+          eyebrow: 'Architecture',
+          title: 'The Golden Stupa in Morning Mist',
+          caption: 'The 45-foot stupa and its flanking shrine halls wrapped in morning fog.',
+        },
+        {
+          eyebrow: 'Architecture',
+          title: "The Pagoda's Guardian Gate",
+          caption:
+            'The gilded entrance arch, flanked by a pair of lion (chinthe) guardian statues, framing the golden stupa beyond.',
+        },
+      ],
+    },
+    location: {
+      eyebrow: 'Visit & Directions',
+      title: 'Find the Pagoda',
+      description:
+        'Satu Rattha Sumingala Pagoda sits on a hillside in Luaymel village group, Keng Tung township, reachable by road from town.',
+      addressLabel: 'Address',
+      address: 'Satu Rattha Sumingala Pagoda, Luaymel Village Group, Keng Tung Township, Shan State (East)',
+      coordinatesLabel: 'Coordinates',
+      hoursLabel: 'Visiting Hours',
+      hours: 'Open Daily, Dawn to Dusk',
+      streetView: 'Street',
+      satelliteView: 'Satellite',
+      viewMapCta: 'View on Google Maps',
+      directionsCta: 'Get Directions',
+    },
+    closing: {
+      text: '"Buddhasasanam ciram titthatu" — may the Buddha\'s Sasana long endure.',
+      cta: 'Explore the Directory',
+    },
+  },
+  khemaRattha: {
+    meta: { title: 'Khema Rattha Prophecy Buddha — The Standing Buddha of Swam Sat Kone' },
+    hero: {
+      badges: [
+        { label: 'Ancient Manuscript · 1995 Excavation' },
+        { label: 'Active Pilgrimage Site', pulsingDot: true },
+      ],
+      title: 'Khema Rattha Prophecy Buddha',
+      localName: 'ခေမရဋ္ဌဗျာဒိတ်တော်ပေးရပ်တော်မူဘုရားကြီး',
+      subtitle:
+        "A 67-foot golden standing Buddha, hand raised in a gesture of prophecy, rising from Swam Sat Kone hill where 1995 excavations unearthed centuries of Buddhist relics beneath the ruins of an ancient monastery.",
+    },
+    facts: {
+      pills: [
+        { label: 'Traditional Founding', value: '1995 Excavation' },
+        { label: 'Consecrated', value: '30 April 1998' },
+        { label: 'Standing Height', value: '67 ft 6 in' },
+        { label: 'Location', value: 'Ward 1, Keng Tung' },
+      ],
+    },
+    quickNav: {
+      label: 'Jump to Section:',
+      items: ['History & Legend', '360° View', 'Photo Gallery', 'Visit & Directions'],
+    },
+    history: {
+      eyebrow: 'Sacred History',
+      title: 'How the Khema Rattha Prophecy Buddha Came to Be',
+      description:
+        'On Swam Sat Kone hill in Ward 1, Keng Tung, the Khema Rattha Prophecy Buddha rose from a 1995 excavation that uncovered ancient Buddha images, burial relics, and a centuries-old palm-leaf manuscript recording the hill\'s long Buddhist history.',
+      quickFacts: [
+        { label: 'Excavation Began', value: '6 June 1995' },
+        { label: 'Consecrated', value: '30 April 1998' },
+        { label: 'Manuscript Verified By', value: 'Department of Archaeology' },
+      ],
+      sections: [
+        {
+          heading: 'Discovery on Swam Sat Kone',
+          paragraphs: [
+            "On 6 June 1995, U Kyaw Min, station chief of the Department of Meteorology and Hydrology on Swam Sat Kone hill in Ward 1, Keng Tung, was digging a pit when he uncovered ancient Buddha images and burial relics. Monks and lay devotees soon gathered to venerate the find as a 'self-revealed' Buddha image.",
+            'On the morning of 30 July 1995, State Law and Order Restoration Council Vice-Chairman and Deputy Commander-in-Chief General Maung Aye, together with Council Secretary (2) Lieutenant-General Tin Oo, visited the ancient Buddha image on Swam Sat Kone. General Maung Aye directed that the site be excavated further and that supporting historical evidence be sought, while Lieutenant-General Tin Oo directed that the unearthed items be properly catalogued and preserved.',
+          ],
+        },
+        {
+          heading: 'The Ancient Manuscript',
+          paragraphs: [
+            'On the evening of 20 July 1995, U Sai Mote Tit of Waw Kut village allowed officials to copy an ancient palm-leaf manuscript, handed down through his family, recording the history of the Swam Sat Kone stupas and monastery. Department of Archaeology researcher U Min Way confirmed the manuscript as a genuine record of Swam Sat\'s history; Sayadaw Bhaddanta Arzeya of Dhammodaya Monastery and Sayadaw Bhaddanta Pyinnyathami of Tuyar Monastery each examined the copy that same night.',
+            'The manuscript recounts that after Sayadaw U Wunna left for another country, his disciple Shin Kaw Ri Ya was ordained by the local donors and became abbot of a simple monastery of brick-footed posts, a thatched roof, and plank walls and floor. In Sakkaraj 767, Shin Kaw Ri Ya and the donors together built a stupa; by Sakkaraj 770 no monk remained to reside there. Around Sakkaraj 775, a Thai monk arrived by way of Laos carrying five rubies gifted by a Lao chief, each said to hold its own singular power. With the donors\' agreement, he enshrined the rubies in a new stupa named Swam Sat Pattamya Zedi. The Keng Tung Sawbwa built his own stupa nearby — carving a tiger figure into its stairway and naming it Yaza Aung Myin Zedi — while the wider public, moved by devotion, raised 28 satellite stupas of their own.',
+          ],
+        },
+        {
+          heading: 'A Warning Ignored',
+          paragraphs: [
+            'The manuscript also preserves a warning attributed to the Thai monk: that after his passing, later generations must watch over the stupas — and that if no one would care for them, his own stupa should rather be destroyed than let its five powerful rubies fall into the hands of the wicked.',
+            'According to the manuscript, villagers of Waw Naik, La, and Pha Yan asked a destitute wanderer known as Kyaung Hair, or Musay, whether he dared destroy the stupas. He answered that he could not do it alone, but could with five or six companions — so the villagers told him to gather them and proceed. The stupas were torn down. The manuscript records that within months, everyone in that group fell ill, suffered severe dysentery, and died. Its closing dedication urges Buddhists never to destroy the stupas they venerate, but to cherish and protect them always.',
+          ],
+        },
+        {
+          heading: "The Mission's Arrival",
+          paragraphs: [
+            'The manuscript also preserves an account, given by U Lonta of Kaingkhon village during the reign of Sawbwa Sao Kawng Kyawk, of a Christian mission\'s arrival in Keng Tung. On 10 February 1912, a missionary reached the town and asked the Sawbwa for land to rest at temporarily while trading, requesting the high ground of Swam Sat where the ruins of an old monastery stood. Asked how much land was needed, the missionary asked only for as much as a single hide could cover; the Sawbwa granted enough ground for one hut, and the missionary was overjoyed.',
+            'At the time, the ruined monastery still stood with forty posts, along with quantities of brick tile and rubble. The mission\'s party pulled out the old posts and burned them; three people died during the work, and others fell too ill to rise — a detail the manuscript records as confirming the site\'s true identity as the ancient monastery.',
+            'Elsewhere in the manuscript, the Tang Yan-born chronicler Saw Na Ying appeals in old Shan script to those who would come after him: that no one should take the good high ground of Swam Sat, however many fine things stood upon it, and that none of it should be taken or destroyed.',
+          ],
+        },
+        {
+          heading: 'Six Centuries of Sacred Ground',
+          paragraphs: [
+            'The manuscript\'s own chronology places the Anawrahta Zedi\'s founding by a Myanmar king during Sayadaw U Wunna\'s abbotship, in Sakkaraj 733–766 — a period, historians note, that overlapped war between the Myanmar and Yodaya (Thai) kingdoms, context worth weighing when reading its account of vows and undertakings from that time.',
+            'Taken together, the manuscript places 623 years of continuous Buddhist significance on Swam Sat Kone: resident monks and a Myanmar king\'s Anawrahta Zedi; Shin Kaw Ri Ya and the donors\' Mahasiri Zedi; the Thai monk and donors\' Swam Sat Pattamya Zedi; the Keng Tung Sawbwa\'s Yaza Aung Myin Zedi; and the public\'s own 28 satellite stupas — earning the hill its name, Maha Swam Sat Kone Myay, the great Buddha-Sasana ground.',
+          ],
+        },
+        {
+          heading: 'A New Standing Buddha',
+          paragraphs: [
+            'In June and July 1995, staff of the Department of Meteorology and Hydrology digging on Swam Sat Kone uncovered further ancient Buddha images and burial relics. Officials who examined the finds concluded the hill had historically been Sasana land, and resolved to enshrine a standing Buddha image there — both so that the Theravada Sasana might shine like the sun and moon, and to ward off and pacify every manner of danger.',
+          ],
+        },
+        {
+          heading: 'Consecration in Stages',
+          paragraphs: [
+            'The Khema Rattha Prophecy Buddha was consecrated in stages by Triangle Region Military Command Commander Colonel Thein Sein and regional officials, following scriptural precedent and Myanmar tradition, at auspicious times: ground purification on 22 January 1998 (9th waxing of Pyatho, Myanmar Era 1359); the foundation-digging ceremony on the 10th waxing of Tabodwe, Myanmar Era 1359, led by the State Peace and Development Council (Eastern) Chairman, Triangle Region Military Command Commander Colonel Thein Sein (retired); the jewel foundation-laying ceremony performed by nine city Sayadaws on 30 April 1998 (5th waxing of Kason, Myanmar Era 1360); and a grand Buddha Consecration (Anekazatin), with a celebratory almsgiving of fresh rice to the Sangha, on 19 February 2000 (full moon of Tabodwe, Myanmar Era 1361).',
+            'The completed image stands 67 feet 6 inches from sole to crown, on a 7-foot lotus throne, with a 6-foot chest width and an 18-foot forehead diadem weighing one viss of gold. From its founding through completion, it was raised through the donated labor of soldiers and Keng Tung\'s ethnic communities, alongside gold robe offerings in 2006, 2007, and 2008 totaling 350 lakh kyats.',
+          ],
+        },
+        {
+          heading: 'Gold Robes, 2024–2025',
+          paragraphs: [
+            'On 11 June 2024, the family of State Administration Council Chairman Senior General Min Aung Hlaing donated 30 kyat-tha of pure gold toward a new full gold robe for the image. On 18 October 2024, Triangle Region Military Command Commander Major General Soe Hlaing and officials discussed and signed the contract for the work.',
+            'Combined with donations from ethnic communities and other donors, the gold robe offering began on 10 November 2024 and was completed on 26 February 2025. The Khema Rattha Prophecy Buddha stands today at 67 feet 6 inches, its lotus throne 7 feet high, its chest 6 feet wide, and its forehead diadem 18 feet long and weighing one viss of gold.',
+          ],
+        },
+      ],
+      readMoreCta: 'Read Full History',
+      readLessCta: 'Show Less',
+    },
+    audio: {
+      title: 'Listen to the History',
+      play: 'Play',
+      pause: 'Pause',
+      credit: 'Narrated as an act of merit by Maung Kyaw Linn Htet.',
+    },
+    panorama360: {
+      eyebrow: 'Immersive View',
+      title: '360° Statue Plaza Panorama',
+      description:
+        'Step onto the plaza before the Khema Rattha Prophecy Buddha and look around in every direction, from the golden standing image to the surrounding pagoda grounds.',
+      cta: 'View in 360°',
+      hint: 'Drag to look around · Scroll or pinch to zoom',
+    },
+    gallery: {
+      eyebrow: 'Visual Archive & Photographic Record',
+      title: 'Photo Gallery',
+      photoCount: (count) => `${count} Photo${count === 1 ? '' : 's'}`,
+      albums: [
+        {
+          eyebrow: 'Gold Robe Offering',
+          title: 'Recording the Gold Robe Donation',
+          caption:
+            "The family of Union President U Min Aung Hlaing and Daw Kyu Kyu Hla donate three kyat-tha of pure gold toward the Khema Rattha Prophecy Buddha's full gold robe, received by the Bahuthathanuppyu Monastery Sayadaw and the pagoda's board of trustees.",
+        },
+      ],
+    },
+    location: {
+      eyebrow: 'Visit & Directions',
+      title: 'Find the Pagoda',
+      description:
+        'Khema Rattha Prophecy Buddha stands on Swam Sat Kone hill in Ward 1, Keng Tung, reachable by road from town.',
+      addressLabel: 'Address',
+      address: 'Khema Rattha Prophecy Buddha, Swam Sat Kone, Ward 1, Keng Tung, Shan State (East)',
+      coordinatesLabel: 'Coordinates',
+      hoursLabel: 'Visiting Hours',
+      hours: 'Open Daily, Dawn to Dusk',
+      streetView: 'Street',
+      satelliteView: 'Satellite',
+      viewMapCta: 'View on Google Maps',
+      directionsCta: 'Get Directions',
+    },
+    closing: {
+      text: '"Buddhasasanam ciram titthatu" — may the Buddha\'s Sasana long endure.',
+      cta: 'Explore the Directory',
+    },
+  },
+  thattaThattahaMahaBodhi: {
+    meta: { title: 'Thatta Thattaha Maha Bodhi Pagoda — The Seven Weeks Stupa of Pan Kwe' },
+    hero: {
+      badges: [
+        { label: 'Mahabodhi-Style Stupa · Sandstone Carving' },
+        { label: 'Active Pilgrimage Site', pulsingDot: true },
+      ],
+      title: 'Thatta Thattaha Maha Bodhi Pagoda',
+      localName: 'သတ္တသတ္တာဟ မဟာဗောဓိစေတီတော်မြတ်ကြီး',
+      subtitle:
+        'A 108-foot sandstone-carved stupa modeled on the Mahabodhi Temple, raised in a Buddha Garden at Pan Kwe village and consecrated over six ceremonies between 2018 and 2023.',
+    },
+    facts: {
+      pills: [
+        { label: 'Traditional Founding', value: '2018–2023' },
+        { label: 'Consecrated', value: '13 May 2023' },
+        { label: 'Summit Height', value: '108 ft' },
+        { label: 'Location', value: 'Pan Kwe, Keng Tung' },
+      ],
+    },
+    quickNav: {
+      label: 'Jump to Section:',
+      items: ['History & Legend', '360° View', 'Photo Gallery', 'Visit & Directions'],
+    },
+    history: {
+      eyebrow: 'Sacred History',
+      title: 'How Thatta Thattaha Maha Bodhi Pagoda Came to Be',
+      description:
+        'In a Buddha Garden compound at Pan Kwe village, Keng Tung township, Thatta Thattaha Maha Bodhi Pagoda rises 108 feet, its sandstone-carved form modeled on India\'s Mahabodhi Temple, raised under the guidance of the Wazipit Sayadaw and consecrated over six ceremonies between 2018 and 2023.',
+      quickFacts: [
+        { label: 'Spiritual Guidance', value: 'Wazipit Sayadaw' },
+        { label: 'Chief Donors', value: 'Senior General Min Aung Hlaing & Family' },
+        { label: 'Consecrated', value: '13 May 2023' },
+      ],
+      sections: [
+        {
+          heading: 'A Pagoda for All Myanmar Buddhists',
+          paragraphs: [
+            'Within a Buddha Garden compound at Pan Kwe village, Keng Tung township, Thatta Thattaha Maha Bodhi Pagoda was raised as a place of refuge and devotion for Myanmar\'s Buddhist peoples of every ethnicity — a grand and dignified monument adorned with Myanmar artistry, gathering together the pride, customs, and distinctive character of the nation\'s ethnic communities, so that monks and lay devotees alike might visit and venerate it daily.',
+            'Its founders intended it equally to support peace and prosperity and the long-term endurance of the Buddha Sasana in Shan State (East), and to welcome pilgrims from home and abroad — drawing tourism that would open livelihoods and improve the social and economic life of the local ethnic communities.',
+          ],
+        },
+        {
+          heading: 'Spiritual Guidance and Sponsorship',
+          paragraphs: [
+            'The pagoda was raised under the guidance of the Chief Nayaka Sayadaw of Thila Dhamma Kone Thawara Monastery in Keng Tung, Aggamahasaddhammajotikadhaja Bhaddanta Kawvida, known as the Wazipit Sayadaw.',
+            'Its chief donors were State Administration Council Chairman, State Prime Minister, and Defence Services Commander-in-Chief Senior General Min Aung Hlaing and his wife Daw Kyu Kyu Hla, together with families of the Army, Navy, and Air Force, devoted donors, and the local ethnic communities, whose combined merit carried the project through six ceremonies over five years.',
+          ],
+        },
+        {
+          heading: 'Six Ceremonies, 2018–2023',
+          paragraphs: [
+            'Following traditional Myanmar Sasana custom and the customary rites for founding a pagoda and consecrating an image, the project proceeded through six ceremonies: ground purification, free of all obstacles, on 12 May 2018; the jewel foundation-pegging ceremony on 15 May 2018; the jewel foundation-laying ceremony on 29 October 2018; the offering of the original and middle relic enshrinements on 13 May 2019; the raising of the final corner finial posts on 25 February 2021; and the offering of the upper relic enshrinement together with the grand Buddha Consecration (Anekazatin) on 13 May 2023.',
+          ],
+        },
+        {
+          heading: 'Building the Mahabodhi-Style Stupa',
+          paragraphs: [
+            "Standing 108 feet tall, the pagoda's gold umbrella spire — 11 feet high and cast in bronze — was gilded and set with pure gold, an array of gems, and white pearls. Both the main stupa and its subsidiary stupas were carved from local sandstone, while the lotus pedestal beneath them was built up in stucco relief.",
+            "A seated Buddha image (the Metta Buddha) on the ground floor and a standing image (the Arimetteya Buddha) on the upper level were both cast in bronze, alongside four subsidiary stupas, entrance images at ground level, two standing images on the pedestal, and images in a variety of mudras — the stupa body and its small corner stupas all carved, like the main structure, from local sandstone. The surrounding Maharam wall was raised in stucco relief, and two 27-inch bronze 'peace bells' were cast and hung from stucco pillars.",
+            'The work was carried out jointly by officers and soldiers of the Army Commander-in-Chief\'s Office under architect U San Maung; stone-carving specialist Professor U Zaw Than Htut of the National University of Culture and Arts, Mandalay, and his team; retired lecturer and stone-carving specialist U Kyaw Kyaw Lwin of the National University of Culture and Arts, Yangon, and his team; and Myanmar traditional arts specialist U Kyin Thein and his team.',
+          ],
+        },
+        {
+          heading: 'Completion in 2023',
+          paragraphs: [
+            'The pagoda was completed on 13 May 2023 (10th waning of Kason, Myanmar Era 1385), marked by a water-libation ceremony of merit-sharing performed before the assembled Sayadaws and Sangha.',
+          ],
+        },
+      ],
+      readMoreCta: 'Read Full History',
+      readLessCta: 'Show Less',
+    },
+    audio: {
+      title: 'Listen to the History',
+      play: 'Play',
+      pause: 'Pause',
+      credit: 'Narrated as an act of merit by Maung Kyaw Linn Htet.',
+    },
+    panorama360: {
+      eyebrow: 'Immersive View',
+      title: '360° Temple Courtyard Panorama',
+      description:
+        'Step onto the courtyard before the Mahabodhi-style stupa and look around in every direction, from the sandstone-carved tower to the surrounding grounds.',
+      cta: 'View in 360°',
+      hint: 'Drag to look around · Scroll or pinch to zoom',
+    },
+    gallery: {
+      eyebrow: 'Visual Archive & Photographic Record',
+      title: 'Photo Gallery',
+      photoCount: (count) => `${count} Photo${count === 1 ? '' : 's'}`,
+      albums: [
+        {
+          eyebrow: 'Consecration Ceremony',
+          title:
+            'Photographic Record of the Upper Relic Enshrinement and Gold Umbrella Spire Offering for Thatta Thattaha Maha Bodhi Pagoda in the Buddha Garden Compound, Keng Tung',
+          date: '13 May 2023',
+          caption: 'Scenes from the ceremony enshrining the upper relics and raising the gold umbrella spire.',
+        },
+      ],
+    },
+    location: {
+      eyebrow: 'Visit & Directions',
+      title: 'Find the Pagoda',
+      description:
+        'Thatta Thattaha Maha Bodhi Pagoda stands within a Buddha Garden compound at Pan Kwe village, Keng Tung township, reachable by road from town.',
+      addressLabel: 'Address',
+      address: 'Thatta Thattaha Maha Bodhi Pagoda, Pan Kwe Village, Keng Tung Township, Shan State (East)',
+      coordinatesLabel: 'Coordinates',
+      hoursLabel: 'Visiting Hours',
+      hours: 'Open Daily, Dawn to Dusk',
+      streetView: 'Street',
+      satelliteView: 'Satellite',
+      viewMapCta: 'View on Google Maps',
+      directionsCta: 'Get Directions',
+    },
+    closing: {
+      text: '"Buddhasasanam ciram titthatu" — may the Buddha\'s Sasana long endure.',
+      cta: 'Explore the Directory',
+    },
+  },
+  swamKyeimShweHsanTaw: {
+    meta: { title: 'Swam Kyeim Shwe Hsan Taw Pagoda — The Golden Hair Relic Pagoda' },
+    hero: {
+      badges: [
+        { label: 'Three Hair Relics · Gone Shan Legend' },
+        { label: 'Active Pilgrimage Site', pulsingDot: true },
+      ],
+      title: 'Swam Kyeim Shwe Hsan Taw Pagoda',
+      localName: 'စွမ်ကြိမ်ရွှေဆံတော်မြတ်စေတီ',
+      subtitle:
+        "A great stupa enshrining three of the Buddha's own hair relics, raised by a farming family on a hill above Swam Kyeim village after the Buddha himself, disguised as an alms-seeking monk, revealed his identity and blessed them.",
+    },
+    facts: {
+      pills: [
+        { label: 'Traditional Founding', value: 'Undated (Gone Shan Legend)' },
+        { label: 'Founded By', value: 'The Tampula Family' },
+        { label: 'Sacred Relics', value: '3 Hair Relics' },
+        { label: 'Location', value: 'Swam Kyeim, Maing Pyin' },
+      ],
+    },
+    quickNav: {
+      label: 'Jump to Section:',
+      items: ['History & Legend', 'Visit & Directions'],
+    },
+    history: {
+      eyebrow: 'Sacred Legend',
+      title: 'How Swam Kyeim Shwe Hsan Taw Pagoda Came to Be',
+      description:
+        'Above Swam Kyeim village in Maing Pu Un village group, Swam Kyeim Shwe Hsan Taw Pagoda enshrines three hair relics said to have been given directly by the Buddha to a farming family he encountered on an alms round — its history preserved only in a Gone Shan manuscript, with no year recorded.',
+      quickFacts: [
+        { label: 'Source', value: 'Gone Shan Manuscript' },
+        { label: 'Founded By', value: 'The Tampula Family' },
+        { label: 'Sacred Relics', value: '3 Hair Relics' },
+      ],
+      sections: [
+        {
+          heading: "The Farming Family and the Buddha's Visit",
+          paragraphs: [
+            "This pagoda's history comes down only through a Gone Shan manuscript, consulted and retold here — and since that record carries no year, none can be given for the pagoda's founding. Long ago, a family of the Tampula people — a husband and wife with a young daughter and son, four in all — made their living farming the land at the foot of the hill where the pagoda now stands.",
+            "One day the couple rose before dawn, cooked rice and curry, and went out to the fields. When the two children woke and found their parents gone, they called out across the field: 'Mother, Father — we're hungry, we want to eat!' The couple broke off their work and came back to the hut to wash before the meal. Just as they were about to eat, a monk arrived unannounced on his alms round, and without hesitation the family offered him all the rice and curry they had prepared for themselves. Having never before encountered so radiant a monk, they felt only joy and rapture at having been able to give.",
+          ],
+        },
+        {
+          heading: 'Three Hair Relics and the First Enshrinement',
+          paragraphs: [
+            "The monk was no ordinary monk. He blessed the family himself and declared: 'I am the Buddha without equal, the Fully Awakened One, who alone has broken through, unaided, to see with perfect clarity the whole of what is to be known.' Realizing they stood before the great compassionate one who had come to deliver the three realms — of nats, of humans, and of brahmas — the family pressed their palms together and cried 'Sadhu' three times.",
+            "Moved by great compassion for them, the Buddha reached up, drew three hairs from his own head with his hand, and gave them to the family. He told them that the untouched hill nearby — where, in a past life, a hermit named Tampula had once dwelt, a hill that Sakka himself had shaped — was a fitting place to enshrine the relics 'so that pilgrims from every direction, without number, may come to venerate them.' He instructed them to build a stupa there and enshrine the relics inside it, then departed.",
+          ],
+        },
+        {
+          heading: "Sakka's Night Visit and the Growing Stupa",
+          paragraphs: [
+            'That same day, the couple carried the hairs up the hill as the Buddha had instructed, chose a fitting spot, dug three cubits down, and enshrined them. Returning to their hut expecting to cook, they found the pot already full of rice and curry — the whole family marveled. At dawn the next morning, they were astonished again to see the hilltop glowing gold.',
+            'On the night of the enshrinement, Sakka himself descended, placed the three hairs in a diamond casket, and re-enshrined them ten cubits deep at the very same spot — and the stupa itself grew naturally more magnificent and larger. Villagers from the surrounding hamlets, hearing the commotion, looked up at dawn to see the hilltop shining in astonishing golden light.',
+          ],
+        },
+        {
+          heading: "The Elephant Herd's Pilgrimage",
+          paragraphs: [
+            'Word of the pagoda\'s sanctity spread in every direction, drawing humans, nats, brahmas, and other beings to come and pay homage. From time to time rays of light would burst from the hill, deepening the devotion of all who witnessed it, until pilgrims came to venerate it almost daily.',
+            'News of it reached even the guardian spirit of Loi Pa Yay hill, and five hundred elephants dwelling on Loi Pa Yay — also known as Suwannashan — set out under their leader to worship the pagoda, arriving on the full moon of Tabaung. Among them was a bull elephant from Loi Sault mountain, who had fallen for a young cow elephant of the Suwannashan herd and followed her all the way to the pagoda.',
+            'At the foot of the hill, as the herd paid its respects, the bull searched desperately for his beloved; when the two lovestruck elephants, overcome with desire, caused a great commotion within sight of the pagoda, a peal of thunder rolled across the whole sky. Sakka, witnessing this misconduct at a moment of veneration, struck the pair with lightning. The bull fled, bleeding, and died at Loi Pel Maing Taung; the cow elephant died sometime after — and is said to remain the pagoda\'s guardian spirit to this day.',
+          ],
+        },
+        {
+          heading: 'A Lesson in Devotion',
+          paragraphs: [
+            "The legend holds this as a lesson: any being who comes to the pagoda without sincerity and without patience risks a fate like the two elephants'. But anyone who performs meritorious deeds at Shwe Hsan Taw Pagoda with a sincere heart, it is said, will see their wishes fulfilled without fail.",
+          ],
+        },
+        {
+          heading: 'Village and Geography',
+          paragraphs: [
+            'Swam Kyeim Shwe Hsan Taw Pagoda stands in Swam Kyeim village, Maing Pu Un village group, ringed by thirteen ironwood trees, some 12 miles from Maing Pyin (Mong Ping) town. The Nam Pu and Nam Wun streams meet nearby to form the Nam Pin, which flows past the foot of the pagoda\'s hill.',
+          ],
+        },
+        {
+          heading: 'Sights, Restoration, and Local Lore',
+          paragraphs: [
+            'Around the pagoda, large stones shaped like elephants in various forms still stand today. The pagoda has been maintained across generations through the combined efforts of the monks of Swam Kyeim village monastery, local villagers, and devoted donors.',
+            'Local tradition holds that this may be the pagoda the Buddha foretold in his prophecy of Keng Tung during his twelfth year after enlightenment, arriving at Maing Pyin town, Maing Pu Un village group, as the Shwe Hsan Taw Pagoda meant to deliver beings there. The young cow elephant, it is said, did not truly die — she remains to this day as a large boulder, split down the middle, in the rice field east of the pagoda. A footprint left on a boulder is said to mark where the Tampula couple\'s young son once stood crying out for food. Villagers say pigs cannot be raised in Swam Kyeim, as the pagoda\'s guardian spirit disfavors unclean offerings. And during the Buddhist Lent, large fish are said to come to the Nam Pin stream at the foot of the hill to pay the pagoda homage.',
+          ],
+        },
+      ],
+      readMoreCta: 'Read Full History',
+      readLessCta: 'Show Less',
+    },
+    audio: {
+      title: 'Listen to the History',
+      play: 'Play',
+      pause: 'Pause',
+      credit: 'Narrated as an act of merit by Maung Kyaw Linn Htet.',
+    },
+    location: {
+      eyebrow: 'Visit & Directions',
+      title: 'Find the Pagoda',
+      description:
+        'Swam Kyeim Shwe Hsan Taw Pagoda stands on a hill above Swam Kyeim village, Maing Pu Un village group, roughly 12 miles from Maing Pyin (Mong Ping) town.',
+      addressLabel: 'Address',
+      address:
+        'Swam Kyeim Shwe Hsan Taw Pagoda, Swam Kyeim Village, Maing Pu Un Village Group, near Maing Pyin (Mong Ping), Shan State (East)',
+      coordinatesLabel: 'Coordinates',
+      approximateLabel: 'Approximate location',
+      hoursLabel: 'Visiting Hours',
+      hours: 'Open Daily, Dawn to Dusk',
+      streetView: 'Street',
+      satelliteView: 'Satellite',
+      viewMapCta: 'View on Google Maps',
+      directionsCta: 'Get Directions',
+    },
+    closing: {
+      text: '"Buddhasasanam ciram titthatu" — may the Buddha\'s Sasana long endure.',
+      cta: 'Explore the Directory',
+    },
+  },
+  shweOhnDaingMin: {
+    meta: { title: 'Shwe Ohn Daing Min Pagoda — The Golden Peacock King Pagoda' },
+    hero: {
+      badges: [
+        { label: 'Seven Restorations · Ashoka-Era Legend' },
+        { label: 'Active Pilgrimage Site', pulsingDot: true },
+      ],
+      title: 'Shwe Ohn Daing Min Pagoda',
+      localName: 'သမိုင်းဝင်ရွှေဥဒေါင်းမင်းစေတီတော်',
+      subtitle:
+        'A hilltop stupa named for a past-life peacock king, said to have been first raised by Emperor Ashoka and rebuilt across seven restorations spanning the Bagan, Konbaung, and modern eras.',
+    },
+    facts: {
+      pills: [
+        { label: 'Traditional Founding', value: 'Sasana Era 218–225' },
+        { label: 'Founded By', value: 'Emperor Ashoka (Legend)' },
+        { label: 'Restorations', value: '7 Recorded' },
+        { label: 'Location', value: 'Yan Mine, Maing Khat' },
+      ],
+    },
+    quickNav: {
+      label: 'Jump to Section:',
+      items: ['History & Legend', 'Photo Gallery', 'Visit & Directions'],
+    },
+    history: {
+      eyebrow: 'Sacred Legend',
+      title: 'How Shwe Ohn Daing Min Pagoda Came to Be',
+      description:
+        'On a hill above Yan Mine village, Maing Khat township, Shwe Ohn Daing Min Pagoda takes its name from a past life in which the Buddha-to-be lived and died on this hill as a peacock king — and has been founded, lost, and restored across seven recorded phases from Emperor Ashoka\'s reign to 2018.',
+      quickFacts: [
+        { label: 'Founded By', value: 'Emperor Ashoka (Legend)' },
+        { label: 'Restorations', value: '7 Recorded' },
+        { label: 'Latest Gold Umbrella', value: '1 March 2018' },
+      ],
+      sections: [
+        {
+          heading: 'Named for a Peacock King',
+          paragraphs: [
+            'Shwe Ohn Daing Min Pagoda stands on a hill near Yan Mine village, Maing Khat township, at approximate map reference LK-334284. In earlier times the hill was known as Mawya Giri hill, or in Shan as Loi Nan Yon Kham; in Myanmar, Shwe Ohn Daing (\'Golden Peacock King\') hill.',
+            'The name comes from a tradition that while the young Gautama Buddha was still fulfilling the perfections as a bodhisatta, he lived on this hill in the form of a peacock king, and that upon his death he was buried here. To this day, on full moon and new moon nights, when all is quiet, peacocks are said to come to the hill and dance in their natural way as an offering to the pagoda.',
+          ],
+        },
+        {
+          heading: "First: Emperor Ashoka's Founding",
+          paragraphs: [
+            'In Sasana Era 218, King Siridhammasoka ascended the throne in the kingdom of Pataliputra — a mighty ruler consecrated as universal emperor of the whole of Jambudipa, his authority said to reach one yojana below the earth and one yojana into the sky. In Sasana Era 225, he retrieved the relics enshrined in the Dhatunidhana Pagoda at Rajagriha, built by King Ajatasattu, and with them raised 84,000 pagodas and 84,000 ponds across Jambudipa.',
+            'In doing so, guided by the sasana\'s guardian spirits, he sought out sites the Buddha himself had prophesied, and places where the bodhisatta had once fulfilled the perfections in a past existence. This hill — where the bodhisatta peacock king had lived and been laid to rest — was one such place, and it was here, under the guardian spirits\' guidance, that Ashoka founded Shwe Ohn Daing Min Pagoda.',
+            'At the foot of the hill lies one of the 84,000 ponds, known in Shan as Naung Mo and in Myanmar as Kya Kan Taw, the Lotus Pond. At the pagoda\'s founding, an aspiration was made that lotuses should bloom abundantly there whenever future restorers of the pagoda arose, or whenever the Sasana was flourishing. In 2002, the pond\'s lotuses bloomed abundantly — the first time in twenty years.',
+          ],
+        },
+        {
+          heading: "Second Restoration: King Alaungsithu's Gold Umbrella",
+          paragraphs: [
+            'In the Bagan era, Myanmar Era 454, King Alaungsithu of Arimaddanapura ascended the throne — a mighty king who traveled the length and breadth of his realm building pagodas, reaching as far as the Malay Peninsula, Sri Lanka, the tip of Jambudipa, and China. Journeying by royal raft across his kingdom, he came near Shwe Ohn Daing Min hill.',
+            'The hill\'s guardian spirit halted the royal raft and appealed to the king, explaining that this sacred hill was where the bodhisatta peacock king had once fulfilled the perfections, and that the pagoda Ashoka had raised here had since fallen into ruin — asking that it be restored. The king granted the guardian spirit\'s request, cleared the ruined pagoda, built it anew, and offered a new gold umbrella spire on the second day after the full moon of Thadingyut.',
+          ],
+        },
+        {
+          heading: "Third Restoration: Commander U Nat's Rebuilding",
+          paragraphs: [
+            'In the Konbaung era, more than 200 years ago, a combined column of Myanmar troops under commander U Nat, together with soldiers of the Thenni and Maing Pon Sawbwas, camped near Shwe Ohn Daing Min hill. At night, rays of light were seen streaming from the hilltop; by day, golden peacocks flew in and danced — extraordinary sights that led U Nat to question the local people.',
+            'They told him of a ruined pagoda on the hill, and of the old tradition, passed down through generations, that the bodhisatta had once lived there as a peacock king, and that the pagoda had been restored in stages by Emperor Ashoka and King Alaungsithu. United Shan and Myanmar soldiers together with local villagers cleared the overgrown ruin, rebuilt the pagoda, and offered a new gold umbrella on the second day of the Myanmar new year. Two large lion statues were also carved on the pagoda\'s eastern side.',
+          ],
+        },
+        {
+          heading: 'The Maha Myat Muni Replica',
+          paragraphs: [
+            "Once the restoration and gold umbrella offering were complete, commander U Nat found himself missing his home capital, and longing to see the great Maha Myat Muni image enshrined there. So he had a brick-and-stucco image built near the hill, matching the Maha Myat Muni image in design and scale, and raised a golden monastery hall to house it. Local people to this day call this image 'Maung Nat Bayar' — 'Mr. Nat's Buddha' — and old mural paintings on its walls can still be seen.",
+            'Behind the image\'s throne are two small square openings, which local tradition holds were made to commemorate two royal brothers once sealed within the brick structure. The original wooden monastery hall has since been replaced by local donors with a new building; no separate historical record of the image itself has yet been found.',
+          ],
+        },
+        {
+          heading: 'Fourth Restoration: The British-Era Rebuilding and the Lost Chicks',
+          paragraphs: [
+            'More than 100 years ago, in the British colonial era, a large village called Wan Hi stood west of Pha Laing village, Maing Khat township, at approximate map reference LK-351277. Its people had migrated from Thenni town in northern Shan State, and the village was governed by a widow, Daw Nan Twi Yaung, a relative of the Thenni Sawbwa\'s line.',
+            'Chicks kept by the villagers repeatedly went missing. One day Daw Nan Twi Yaung saw a large bird carry off three chicks from her own household, and followed its flight path, together with fellow villagers, all the way to Shwe Ohn Daing Min hill. There, atop a tree that had grown up through the ruined pagoda, they found the three chicks playing safely.',
+            'Around the pagoda they were astonished to find every chick their village had ever lost, being fed and cared for like a parent by a wild civet. On the hill, crows too were seen playing together in evident affection, and nearby a hermit sat in meditation. Concluding that this was no ordinary hill but one where loving-kindness itself dwelt, Daw Nan Twi Yaung led the villagers to petition the hermit for help restoring the ruined pagoda. The hermit recounted its history, guided the restoration, and a new gold umbrella was offered.',
+          ],
+        },
+        {
+          heading: "Fifth Restoration: A Son's Devotion",
+          paragraphs: [
+            'Under the Revolutionary Council, Maing Khat township headman U Shwe Won governed jointly with the regional army. During his tenure, three ancient Buddha images from the Maha Myat Muni monastery that commander U Nat had built at Yan Mine village went missing, and village leader U Taya reported the loss to the township head. With the army\'s help, the three images were found near Wan Tapin village; U Taya of Yan Mine was summoned to receive them back, but for fear they might be stolen again, they were instead kept in the township head\'s own care.',
+            'When U Shwe Won retired due to old age, it troubled him deeply that he had never been able to return the three images to their rightful place. Under the People\'s Council, in 1980, during its second term, his son U Aik Lop became chairman of Wan Khut village group, Maing Khat township. To fulfill his father\'s wish, he organized fundraising among the villages of Wan Khut, Kwan Mon, Pha Laing, Pin Nin, Maing Hnun, and Yan Mine, and restoration began in 1981.',
+            'Clearing the ruin, the workers found a lead inscription donated by commander U Nat, recording the pagoda\'s name in Shan as \'Htat Hwe Hine.\' Once restored, the three Buddha images were enshrined once more, together with silver ceremonial vessels. No new gold umbrella was offered this time — a stone umbrella was used in its place. The bell\'s lower fittings kept their original form, with the restoration work beginning roughly at the bell\'s midpoint. The pagoda then stood 19 cubits tall, and the work was completed in 1982.',
+          ],
+        },
+        {
+          heading: 'Sixth Restoration: The 2002 Comprehensive Rebuilding',
+          paragraphs: [
+            'Under the State Peace and Development Council, in 2002, military strategy commander Colonel Soe Thein was stationed at Maing Khat. At that time the pagoda at Yan Mine village had, through earthquake and natural wear, tilted eastward and stood near collapse.',
+            'The pagoda repeatedly showed rays of light; peacocks that had long vanished from the hill returned to pay it homage; and lotuses that had disappeared from the pond for twenty years bloomed once more. Moved by these signs, local people petitioned Colonel Soe Thein to restore the pagoda. He inspected it himself and confirmed that restoration was genuinely needed.',
+            'Under the guidance of local Sayadaws, he assigned Maing Khat Township Peace and Development Council chairman U Ko Ko Aung and department officials their respective duties, and restoration began on 13 June 2002. Members of the Union Solidarity and Development Association, other community associations, government staff, and local ethnic communities worked together in unity, and the restoration was completed successfully on 18 November 2002.',
+            'The original pagoda had stood 19 cubits tall; enclosing that original structure, the new work raised it to 27 cubits. The public donated money and materials, while the gold umbrella itself was offered by Colonel Soe Thein and his wife, Daw Than Chit, and their family. On 25 November 2002, a grand ceremony unveiled the pagoda\'s rediscovered history and celebrated the new gold umbrella offering, together with a Buddha Consecration (Anekazatin) festival.',
+          ],
+        },
+        {
+          heading: 'Seventh Restoration: The 2018 Rebuilding',
+          paragraphs: [
+            'On the full moon of Tabodwe, Sasana Era 2561 (Myanmar Era 1379), this ancient and historic pagoda underwent its seventh comprehensive restoration, guided by Bhaddanta Khaymeinda of the Theravada Buddha Sasana Propagation (Central) Monastery, Maing Khat, and led by Triangle Region Military Command Commander Brigadier General Aung Zaw Aye, Strategic Command (Base) Maing Khat Strategy Commander Colonel Thurein Tun, and Maing Khat Township Administrator U Zaw Min Han.',
+            'With 21.5 million kyats raised from donors organized by birth weekday, the work offered new gold umbrella spires, a new flagpole, two new lion statues, a new monastery hall, a pond and monastic quarters, a full gold robe offering, a renovated lotus platform, images honoring the four directions, a newly tiled courtyard, a new Maharam wall, a renovated pavilion, a new stairway, the excavation of the historic pond, and a new access road for pilgrims.',
+            'Work began on Saturday, 6 January 2018, and concluded with a grand ceremony raising the new gold umbrella finial on Thursday, 1 March 2018.',
+          ],
+        },
+      ],
+      readMoreCta: 'Read Full History',
+      readLessCta: 'Show Less',
+    },
+    audio: {
+      title: 'Listen to the History',
+      play: 'Play',
+      pause: 'Pause',
+      credit: 'Narrated as an act of merit by Maung Kyaw Linn Htet.',
+    },
+    gallery: {
+      eyebrow: 'Visual Archive & Photographic Record',
+      title: 'Photo Gallery',
+      photoCount: (count) => `${count} Photo${count === 1 ? '' : 's'}`,
+      albums: [
+        {
+          eyebrow: 'Hilltop Pagoda',
+          title: 'Shwe Ohn Daing Min Pagoda, Viewed from the Courtyard',
+          caption:
+            'The gilded stupa and its cluster of smaller pagodas, seen from the surrounding courtyard on the hill above Yan Mine village.',
+        },
+      ],
+    },
+    location: {
+      eyebrow: 'Visit & Directions',
+      title: 'Find the Pagoda',
+      description: 'Shwe Ohn Daing Min Pagoda stands on a hill near Yan Mine village, Maing Khat township.',
+      addressLabel: 'Address',
+      address: 'Shwe Ohn Daing Min Pagoda, Yan Mine Village, Maing Khat Township, Shan State (East)',
+      coordinatesLabel: 'Coordinates',
+      approximateLabel: 'Approximate location',
+      hoursLabel: 'Visiting Hours',
+      hours: 'Open Daily, Dawn to Dusk',
+      streetView: 'Street',
+      satelliteView: 'Satellite',
+      viewMapCta: 'View on Google Maps',
+      directionsCta: 'Get Directions',
+    },
+    closing: {
+      text: '"Buddhasasanam ciram titthatu" — may the Buddha\'s Sasana long endure.',
+      cta: 'Explore the Directory',
+    },
+  },
+  maingHnunNeeBayar: {
+    meta: { title: 'Maing Hnun Nee Bayar Pagoda — The Bamboo-Woven Buddha Image' },
+    hero: {
+      badges: [
+        { label: 'Woven from Bamboo Strips · Myanmar Era 700' },
+        { label: 'Active Pilgrimage Site', pulsingDot: true },
+      ],
+      title: 'Maing Hnun Nee Bayar Pagoda',
+      localName: 'မိုင်းနှုန်းနှီးဘုရားစေတီတော်',
+      subtitle:
+        'A Buddha image woven entirely from split bamboo strips at the direction of Sayadaw Maha Gunanda Thera, raised at Pakan village in Myanmar Era 700 after a mysterious old weaver appeared, completed the sacred image overnight, and vanished without a trace.',
+    },
+    facts: {
+      pills: [
+        { label: 'Founded', value: 'Myanmar Era 700' },
+        { label: 'Material', value: 'Woven Bamboo Strips' },
+        { label: 'Annual Festival', value: 'Kason Full Moon' },
+        { label: 'Location', value: 'Pakan, Maing Khat' },
+      ],
+    },
+    quickNav: {
+      label: 'Jump to Section:',
+      items: ['History & Legend', '360° View', 'Visit & Directions'],
+    },
+    history: {
+      eyebrow: 'Sacred Legend',
+      title: 'How Maing Hnun Nee Bayar Pagoda Came to Be',
+      description:
+        'At Pakan village, one of 45 villages once governed from Maing Khat by town chief U Khan Shan, revered Sayadaw Maha Gunanda Thera was moved by a dream to have a Buddha image woven entirely from bamboo strips — a form, Sakka told him, that did not yet exist among Myanmar\'s gold, silver, bronze, and wooden images.',
+      quickFacts: [
+        { label: 'Founded', value: 'Myanmar Era 700' },
+        { label: 'Material', value: 'Woven Bamboo Strips' },
+        { label: 'Gandhakuti Renovation', value: '2023' },
+      ],
+      sections: [
+        {
+          heading: "The Sayadaw's Dream",
+          paragraphs: [
+            'Around Myanmar Era 700 — before Maing Khat had yet emerged as a township in its own right — 42 large villages and 3 small ones, 45 in all, were governed by town chief U Khan Shan (known in Shan as Pha Khan Shan), who appointed two samada deputies, village elder U Shan Nan as his right hand and samada elder U Shan Nan (a namesake) as his left.',
+            'Among these 45 villages, at Pakan village, lived Sayadaw Maha Thera Upalan — known in Myanmar as Ashin Maha Gunanda Thera — a monk revered across the entire Maing Hnun region, teaching scripture to 164 disciple monks in residence. Accomplished in scriptural learning, practice, and realization, and regarded by the whole region as an arahant, he was fluent even in Magadhi, the language said to be understood by all beings, and devas and Sakka themselves were said to come pay him homage for his virtue, concentration, and wisdom.',
+            'In his 58th year, the Sayadaw had a dream: Myanmar had Buddha images cast in gold, silver, and bronze, and carved from wood, but none yet woven from bamboo strips. In the dream, Sakka, king of the devas, came to the Sayadaw and asked him to have such an image made.',
+            'The next morning, the Sayadaw summoned town chief U Khan Shan and the two samada deputies, U Shan Nan and U Shan Nan, related his dream, and proposed that a bamboo-woven Buddha image be made and enshrined. The chief and the village elders agreed. The Sayadaw then gave detailed instructions: the bamboo must be cut from stalks one year old, free of blemish, with well-spaced joints, cut to a length of three-and-a-half cubits; and those who cut and gathered it must be genuine unmarried young men and women, among whom those bearing the names Shwe (gold), Ngwe (silver), Kyauk (gem-stone), and Shan should be specially chosen.',
+          ],
+        },
+        {
+          heading: 'Cutting and Preparing the Bamboo',
+          paragraphs: [
+            'On the 8th waxing day of Nadaw, Myanmar Era 700, the bamboo-cutting began. Before setting out, the 57 chosen young men and women first took the five precepts from the Sayadaw, then cut and gathered fine, sound, one-year-old bamboo of three-and-a-half-cubit lengths in a single day. Stalks that did not meet the standard were set upright in a specially built pavilion, in readiness for the weaving.',
+            'On the 8th day after the full moon of Nadaw, Myanmar Era 700, all who would weave the bamboo again took the five precepts from the Sayadaw before the weaving began. Once the strips were split, it was proposed that they be soaked in water — to keep them from drying out before the image was woven, and to protect them from insects over time. In the end all agreed to dig a pond and soak the strips there, and a pond was built and the bamboo strips placed inside.',
+            'Because the pond had to be filled with water carried from the Nam Hnun stream, the town chief ordered that, to keep the water pure, no one was to wash clothes or bathe there the following day. That same night, from the new-moon night of Nadaw onward, heavy rain fell without stopping for seven days and seven nights before finally clearing.',
+          ],
+        },
+        {
+          heading: 'The Flood and the Pond of Guardian Fish',
+          paragraphs: [
+            'The rain fell so heavily that the Nam Hnun stream overflowed and submerged the pond where the bamboo strips were soaking, and everyone assumed the strips had all been washed away. The next morning, on the 7th waxing day of Pyatho, villagers went to check the pond — and found the bamboo strips had not washed away at all. The pond was instead full of water, and fish, prawns, and turtles were seen playing joyfully within it.',
+            'Beginning on the 8th waxing day of Pyatho, Myanmar Era 700, the weaving of the sacred Nee Bayar image itself began. When the strips were lifted from the pond, the fish, prawns, and turtles had vanished on their own, with no trace of where they had gone. When the Sayadaw was told of this, he explained that these had been devas and Sakka, come in the form of water creatures to pay homage to the strips destined to become the Buddha image.',
+          ],
+        },
+        {
+          heading: 'The Mysterious Old Weaver',
+          paragraphs: [
+            'On the 11th waxing day of Pyatho, an old man arrived at the weaving site dressed in pure white, a carrying-pole balanced on his shoulder with a basket at each end. He asked the villagers what they were doing; they explained they were weaving a Buddha image from bamboo strips. The villagers in turn asked where he was from, how old he was, why he had come, whether he knew how to weave bamboo, and whether he could help weave the sacred image.',
+            'The old man said he was 87 years old, that he made his living selling betel leaves, and that although he had traveled widely selling betel, he had never before seen a Buddha image woven from bamboo strips. When the villagers offered to buy all his betel leaves if he would help weave the image, he said he had never woven a Buddha image before, only other objects, but that he would help however he could if the villagers wished.',
+            'What made the old man unusual was that he would vanish, unseen by anyone, whenever the villagers working on the sacred image paused for their meal, and again once the day\'s work was finished. Each time, everyone forgot, in the moment, to ask his name, his home village, or where he went at night — and by the time they remembered, back at their own homes, it was too late to ask; the next day at the worksite, they would forget again. And so it was agreed that the weaving of the sacred image\'s face would begin the following day, and everyone went home to rest.',
+            'The next morning, as dawn broke, town chief Pha Khan Shan and his attendants arrived early at the pavilion — and found that the bamboo-woven Buddha image, left unfinished the evening before, was now complete, its proportions so graceful and beautiful that the chief was overcome with joy, and he sent his men out at once to find the old man and reward him properly. Messengers were sent to all 42 villages to search for him, but the old man was never found.',
+          ],
+        },
+        {
+          heading: 'Consecration and Early Endowments',
+          paragraphs: [
+            'The sacred bamboo-woven image was then coated with tree resin and offered a gold robe; a monastery was built and endowed for the Sayadaw to reside in beside it; in Myanmar Era 702 a sima ordination hall was built; and in Myanmar Era 703 a new monastery building was built and endowed for the Sayadaw\'s residence.',
+          ],
+        },
+        {
+          heading: 'Extraordinary Signs',
+          paragraphs: [
+            'During the Japanese occupation, a policeman serving under the Kengtung Sawbwa came to pay homage and offer a candle at the pagoda. Unnoticed by anyone, the candle flame grew and spread into a blaze, until a sudden violent thunderstorm and gale broke out around the monastery, drawing villagers outside to see what was happening. Finding the fire, they worked together to put it out — and the moment the fire was extinguished, the storm cleared as suddenly as it had come, witnessed by everyone present.',
+            'A defense unit\'s Shan leadership group once tried to photograph the sacred image with five or six cameras, and to their astonishment not a single photograph came out. Only when they asked permission, explaining they wished to raise donations for the Sayadaw and the monastery, did every photograph come out clearly.',
+            'One family, after offering various donated items to the pagoda, poured a water libation from the offering vessel kept there — and were astonished to see the water fail to fall, suspended rather than pouring down. It was said that this happened because the donated items were not entirely pure, containing something unfit to be offered. The wife of a Maing Khat township official who came to pay homage at the pagoda likewise reported that, for reasons unknown, she was unable to see the image\'s face at all.',
+          ],
+        },
+        {
+          heading: 'The Annual Festival',
+          paragraphs: [
+            'The great Maing Hnun Nee Bayar pagoda festival is held every year from the 8th waxing day of Kason through the full moon day.',
+          ],
+        },
+        {
+          heading: 'The 2008 Restoration',
+          paragraphs: [
+            'By the modern era, age and years spent housed deep in forest and hills had left the sacred bamboo image deteriorating from the waist down. To preserve the original craftsmanship for future generations of the faithful, the resident Sayadaw, Kyaukzeehtat, consulted with donors and Maing Hnun village-tract officials on a restoration.',
+            'On 1 June 2008, offerings of rice, flowers, cool water, and candles were made at the image\'s morning devotions, and after the Sayadaw took the five precepts, the restoration work began. On 2 June 2008, the Sayadaw himself led the careful, step-by-step work of re-binding the image from the head down to below the waist with wire coils in the original proportions, preserving the antique craftsmanship, over roughly a week with the help of donors.',
+            'On 6 June 2008, the restoration of the sacred image was completed. As some of the pedestal blocks it had rested on were found decayed, the Sayadaw had them replaced with a new pedestal. On 7 June 2008, offerings of rice, flowers, cool water, and candles were made, a water libation poured and merit shared, and the sacred Nee Bayar image was enshrined once more on its new pedestal — restored true to its original form, and open to this day for pilgrims to venerate in peace.',
+          ],
+        },
+        {
+          heading: 'The Gateway and the Gandhakuti Monastery Hall',
+          paragraphs: [
+            'On 4 April 2008, donors together with the people of Maing Hnun village began building a grand entrance gateway (mouk oo wa) at the monastery compound. On 23 April 2010, the gateway was completed, and donors and villagers joyfully carried in music a statue of Sakka to be installed above its central archway, flanked by two naga guardians — a sight pilgrims and monastics can still see today.',
+            'Following the guidance of Sayadaw Bhaddanta Khemazara of the Gon Shan sect\'s Kengyaing monastery and Sayadaw Bhaddanta Kawvida of the Thilathamma Kontha monastery, given on 9 September 2022, and under the direction of Triangle Region Military Command Commander Brigadier General Nay Lin Aung, ground work for a full renovation of the pagoda\'s Gandhakuti monastery hall — to withstand weather and natural wear — began on 13 November 2022 with donors\' permission. The renovated Gandhakuti monastery hall was completed with a grand ceremony offering its new spire and pouring a water libation on Friday, 2 June 2023.',
+          ],
+        },
+      ],
+      readMoreCta: 'Read Full History',
+      readLessCta: 'Show Less',
+    },
+    audio: {
+      title: 'Listen to the History',
+      play: 'Play',
+      pause: 'Pause',
+      credit: 'Narrated as an act of merit by Maung Kyaw Linn Htet.',
+    },
+    panorama360: {
+      eyebrow: 'Immersive View',
+      title: '360° Pagoda Grounds Panorama',
+      description:
+        'Step into the pagoda grounds and look around in every direction, from the bamboo-woven Nee Bayar image to the surrounding monastery courtyard.',
+      cta: 'View in 360°',
+      hint: 'Drag to look around · Scroll or pinch to zoom',
+    },
+    location: {
+      eyebrow: 'Visit & Directions',
+      title: 'Find the Pagoda',
+      description: 'Maing Hnun Nee Bayar Pagoda stands at Pakan village, Maing Khat township.',
+      addressLabel: 'Address',
+      address: 'Maing Hnun Nee Bayar Pagoda, Pakan Village, Maing Khat Township, Shan State (East)',
+      coordinatesLabel: 'Coordinates',
+      approximateLabel: 'Approximate location',
+      hoursLabel: 'Visiting Hours',
+      hours: 'Open Daily, Dawn to Dusk',
+      streetView: 'Street',
+      satelliteView: 'Satellite',
+      viewMapCta: 'View on Google Maps',
+      directionsCta: 'Get Directions',
+    },
+    closing: {
+      text: '"Buddhasasanam ciram titthatu" — may the Buddha\'s Sasana long endure.',
+      cta: 'Explore the Directory',
+    },
+  },
   locationMapPage: {
     eyebrow: 'Pilgrimage Cartography',
     title: 'Location Map',
@@ -700,23 +1715,26 @@ export const en: Dictionary = {
     statPagodasLabel: 'Pagodas Documented',
     statLanguagesLabel: 'Languages Supported',
     creditEyebrow: 'Built By',
-    creditTitle: 'University of Computer Studies (Keng Tung)',
+    creditTitle: 'Polytechnic University (Keng Tung)',
     creditText:
-      'This site was designed and developed by the University of Computer Studies (Keng Tung) as a digital heritage project documenting the sacred pagodas of Keng Tung for the local community and visitors alike.',
+      'This site was designed and developed by Polytechnic University (Keng Tung) as a digital heritage project documenting the sacred pagodas of Keng Tung for the local community and visitors alike.',
   },
   contactPage: {
     eyebrow: 'Get in Touch',
     title: 'Contact Us',
     description:
-      'Have a question, a correction, or information to share about a pagoda in this guide? Send us a message below.',
-    formName: 'Name',
-    formEmail: 'Email',
-    formSubject: 'Subject',
-    formMessage: 'Message',
-    formSubmit: 'Send Message',
-    formSuccess: "Thank you — your message has been noted. We'll get back to you soon.",
+      'Have a question, a correction, or information to share about a pagoda in this guide? Reach out to one of the chairmen below.',
+    chairmenLabel: 'Chairmen',
+    chairmen: [
+      { name: 'ဦးစိုင်းဆိုင်ခမ်း', phone: '09428225914' },
+      { name: 'ဦးစိုင်းရီတိမ္မဝုန်း', phone: '095250274' },
+      { name: 'ဦးဆမ်သန်း', phone: '095252480' },
+      { name: 'ဦးနန်မဟာသန်း', phone: '09428215636' },
+      { name: 'ဦးအောင်သန်း(ခ)ဦးနန်ဟောင်', phone: '095252381' },
+      { name: 'ဦးစိုင်းမုန်ရွက်', phone: '09783166717' },
+    ],
     infoTitle: 'About the Developer',
-    infoText: 'This guide is maintained by the University of Computer Studies (Keng Tung), Shan State, Myanmar.',
+    infoText: 'This guide is maintained by Polytechnic University (Keng Tung), Shan State, Myanmar.',
     locationLabel: 'Location',
     location: 'Keng Tung, Eastern Shan State, Myanmar',
     languagesLabel: 'Languages',

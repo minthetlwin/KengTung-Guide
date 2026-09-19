@@ -4,6 +4,7 @@ import { PagodaHero } from '../components/pagoda/PagodaHero'
 import { QuickSectionNav } from '../components/QuickSectionNav'
 import { PagodaFactPills } from '../components/pagoda/PagodaFactPills'
 import { PagodaHistory } from '../components/pagoda/PagodaHistory'
+import { Panorama360Section } from '../components/Panorama360Section'
 import { PagodaGallery } from '../components/pagoda/PagodaGallery'
 import { PagodaRituals } from '../components/pagoda/PagodaRituals'
 import { PagodaLocationSection } from '../components/pagoda/PagodaLocationSection'
@@ -41,6 +42,7 @@ export function PagodaDetailPage({ config }: PagodaDetailPageProps) {
     <div className="flex w-full flex-col">
       <PagodaHero
         image={config.heroImage}
+        bannerImages={config.bannerImages}
         title={dict.hero.title}
         localName={dict.hero.localName}
         subtitle={dict.hero.subtitle}
@@ -50,6 +52,16 @@ export function PagodaDetailPage({ config }: PagodaDetailPageProps) {
       <PagodaFactPills pills={dict.facts.pills} />
       <div className="flex w-full flex-col gap-16 py-14 md:gap-20">
         <PagodaHistory history={dict.history} audio={dict.audio} audioSrc={config.audioSrc} />
+        {dict.panorama360 && config.panorama && (
+          <Panorama360Section
+            eyebrow={dict.panorama360.eyebrow}
+            title={dict.panorama360.title}
+            description={dict.panorama360.description}
+            cta={dict.panorama360.cta}
+            hint={dict.panorama360.hint}
+            src={config.panorama.src}
+          />
+        )}
         {dict.gallery && config.gallery && <PagodaGallery gallery={dict.gallery} albums={config.gallery.albums} />}
         {dict.rituals && <PagodaRituals rituals={dict.rituals} />}
         <PagodaLocationSection coordinates={config.coordinates} zoom={config.locationZoom} location={dict.location} />

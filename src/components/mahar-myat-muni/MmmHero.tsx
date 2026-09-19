@@ -16,7 +16,7 @@ export function MmmHero() {
         />
         <div className="absolute inset-0 hidden lg:grid lg:grid-cols-[2fr_1fr]" role="img" aria-label={h.title}>
           <div className="bg-cover bg-top" style={{ backgroundImage: `url('${mmmHeroImage}')` }} />
-          <div className="grid grid-rows-3">
+          <div className={`grid ${mmmBannerImages.length === 2 ? 'grid-rows-2' : 'grid-rows-3'}`}>
             {mmmBannerImages.map((src) => (
               <div key={src} className="bg-cover bg-center" style={{ backgroundImage: `url('${src}')` }} />
             ))}

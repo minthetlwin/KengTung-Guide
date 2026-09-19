@@ -5,6 +5,11 @@ export interface NotablePlace {
   description: string
 }
 
+export interface ContactPerson {
+  name: string
+  phone: string
+}
+
 export interface HeroSlide {
   tag: string
   coordinate: string
@@ -78,6 +83,16 @@ export interface PagodaHeroBadge {
   pulsingDot?: boolean
 }
 
+// Copy for the click-to-expand 360° panorama section, shared by the generic
+// PagodaDetailPage template and the standalone Mahar Myat Muni page.
+export interface Panorama360Dictionary {
+  eyebrow: string
+  title: string
+  description: string
+  cta: string
+  hint: string
+}
+
 // Shared shape for the two structurally-similar pagoda detail pages (Wat Zom
 // Kham, Yarzamuni) — rendered by one generic PagodaDetailPage template.
 // gallery/rituals/readMore(Cta)/readLessCta/approximateLabel are optional
@@ -107,12 +122,13 @@ export interface PagodaDetailDictionary {
     readMoreCta?: string
     readLessCta?: string
   }
-  audio: {
+  audio?: {
     title: string
     play: string
     pause: string
     credit: string
   }
+  panorama360?: Panorama360Dictionary
   gallery?: {
     eyebrow: string
     title: string
@@ -187,7 +203,7 @@ export interface MaharMyatMuniDictionary {
   }
   quickNav: {
     label: string
-    items: [string, string, string, string, string]
+    items: [string, string, string, string, string, string]
   }
   history: {
     eyebrow: string
@@ -207,6 +223,7 @@ export interface MaharMyatMuniDictionary {
     title: string
     description: string
   }
+  panorama360?: Panorama360Dictionary
   gallery: {
     eyebrow: string
     title: string
@@ -310,7 +327,18 @@ export interface Dictionary {
     viewingLabel: (shown: number, total: number) => string
     viewAll: string
     noResults: string
-    cards: [DirectoryCard, DirectoryCard, DirectoryCard]
+    cards: [
+      DirectoryCard,
+      DirectoryCard,
+      DirectoryCard,
+      DirectoryCard,
+      DirectoryCard,
+      DirectoryCard,
+      DirectoryCard,
+      DirectoryCard,
+      DirectoryCard,
+      DirectoryCard,
+    ]
   }
   pagodasPage: {
     eyebrow: string
@@ -345,6 +373,13 @@ export interface Dictionary {
   watZomKham: PagodaDetailDictionary
   maharMyatMuni: MaharMyatMuniDictionary
   yarzamuni: PagodaDetailDictionary
+  datSamLoei: PagodaDetailDictionary
+  satuRatthaSumingala: PagodaDetailDictionary
+  khemaRattha: PagodaDetailDictionary
+  thattaThattahaMahaBodhi: PagodaDetailDictionary
+  swamKyeimShweHsanTaw: PagodaDetailDictionary
+  shweOhnDaingMin: PagodaDetailDictionary
+  maingHnunNeeBayar: PagodaDetailDictionary
   locationMapPage: {
     eyebrow: string
     title: string
@@ -384,12 +419,8 @@ export interface Dictionary {
     eyebrow: string
     title: string
     description: string
-    formName: string
-    formEmail: string
-    formSubject: string
-    formMessage: string
-    formSubmit: string
-    formSuccess: string
+    chairmenLabel: string
+    chairmen: ContactPerson[]
     infoTitle: string
     infoText: string
     locationLabel: string

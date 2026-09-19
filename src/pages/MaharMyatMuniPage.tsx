@@ -10,9 +10,10 @@ import { MmmLocation } from '../components/mahar-myat-muni/MmmLocation'
 import { MmmOtherPagodas } from '../components/mahar-myat-muni/MmmOtherPagodas'
 import { MmmClosing } from '../components/mahar-myat-muni/MmmClosing'
 import { Reveal } from '../components/Reveal'
+import { Panorama360Section } from '../components/Panorama360Section'
 import { useLanguage } from '../context/language-context'
 import { usePageMeta } from '../hooks/usePageMeta'
-import { mmmHeroImage, mmmCoordinates } from '../data/maharMyatMuni'
+import { mmmHeroImage, mmmCoordinates, mmmPanoramaSrc } from '../data/maharMyatMuni'
 
 export function MaharMyatMuniPage() {
   const { t } = useLanguage()
@@ -58,6 +59,19 @@ export function MaharMyatMuniPage() {
         <Reveal>
           <MmmGallery />
         </Reveal>
+        {m.panorama360 && (
+          <Reveal>
+            <Panorama360Section
+              id="panorama-360"
+              eyebrow={m.panorama360.eyebrow}
+              title={m.panorama360.title}
+              description={m.panorama360.description}
+              cta={m.panorama360.cta}
+              hint={m.panorama360.hint}
+              src={mmmPanoramaSrc}
+            />
+          </Reveal>
+        )}
         <Reveal>
           <MmmLocation />
         </Reveal>
