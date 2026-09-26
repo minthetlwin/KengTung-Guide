@@ -2,36 +2,44 @@
 <html lang="my">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/keng_tung_pagoda_guide_emblem.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Keng Tung Pagoda Guide — a living archive of the sacred pagodas, monasteries and pilgrimage routes of Kyaing Tong, Eastern Shan State." />
-    <meta name="robots" content="index, follow" />
+    <meta name="description" content="ကျိုင်းတုံ ဘုရားလမ်းညွှန်သည် ရှမ်းပြည်နယ်(အရှေ့ပိုင်း) ကျိုင်းတုံမြို့ရှိ သန့်ရှင်းမြင့်မြတ်သော ဘုရားကျောင်းများ၊ ဘုရားဖူးလမ်းကြောင်းများကို ဘာသာစကားသုံးမျိုးဖြင့် မှတ်တမ်းတင်ထားသည့် ဒစ်ဂျစ်တယ် မော်ကွန်းတိုက်တစ်ခု ဖြစ်ပါသည်။" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
     <meta name="color-scheme" content="light dark" />
     <meta name="theme-color" content="#A8781E" />
+    <link rel="canonical" href="__SITE_URL__/" />
 
     <!--
-      These tags are what social platforms and chat apps (Facebook, Twitter/X,
-      Discord, iMessage, Slack, WhatsApp, ...) actually read when a link is
-      shared — their scrapers fetch this raw HTML and do not run JavaScript,
-      so this preview stays the same no matter which page of the site is
-      linked. React (see src/hooks/usePageMeta.ts) updates the equivalent
-      tags per-route for the browser tab and for crawlers that do execute
-      JavaScript, such as Googlebot — but that never changes what a shared
-      link preview shows.
-      Replace the two "REPLACE_WITH_..." values below once the site has a
-      real production domain, so scrapers can resolve an absolute image URL
-      and a canonical link back to this exact site.
+      These tags are what social platforms and chat apps (Facebook, Messenger,
+      Viber, Telegram, X, ...) actually read when a link is shared — their
+      scrapers fetch this raw HTML and do not run JavaScript, so this preview
+      stays the same no matter which page of the site is linked. React (see
+      src/hooks/usePageMeta.ts) updates the equivalent tags per-route for the
+      browser tab and for crawlers that do execute JavaScript, such as
+      Googlebot. __SITE_URL__ is filled in at build time (see vite.config.ts).
+      /og-image.jpg is the 1200×630 share card: Maha Myat Muni photo, logo and
+      Myanmar title.
     -->
     <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="Keng Tung Pagoda Guide" />
-    <meta property="og:title" content="Keng Tung Pagoda Guide" />
-    <meta property="og:description" content="A living archive of the sacred pagodas, monasteries and pilgrimage routes of Kyaing Tong, Eastern Shan State." />
-    <meta property="og:image" content="REPLACE_WITH_PRODUCTION_URL/keng_tung_pagoda_guide_emblem.png" />
-    <meta property="og:url" content="REPLACE_WITH_PRODUCTION_URL/" />
+    <meta property="og:locale" content="my_MM" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta property="og:locale:alternate" content="th_TH" />
+    <meta property="og:site_name" content="မဟာမြတ်မုနိဘုရားနှင့် သမိုင်းဝင်ဘုရားများ" />
+    <meta property="og:title" content="မဟာမြတ်မုနိဘုရားနှင့် သမိုင်းဝင်ဘုရားများ" />
+    <meta property="og:description" content="ရှမ်းပြည်နယ်(အရှေ့ပိုင်း) ကျိုင်းတုံမြို့ရှိ မဟာမြတ်မုနိဘုရားနှင့် သမိုင်းဝင်ဘုရားကျောင်းများ၊ ပွဲတော်များနှင့် ဘုရားဖူးလမ်းကြောင်းများကို မှတ်တမ်းတင်ထားသည့် ဒစ်ဂျစ်တယ် လမ်းညွှန်။" />
+    <meta property="og:url" content="__SITE_URL__/" />
+    <meta property="og:image" content="__SITE_URL__/og-image.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="ကျိုင်းတုံ မဟာမြတ်မုနိဘုရား" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Keng Tung Pagoda Guide" />
-    <meta name="twitter:description" content="A living archive of the sacred pagodas, monasteries and pilgrimage routes of Kyaing Tong, Eastern Shan State." />
-    <meta name="twitter:image" content="REPLACE_WITH_PRODUCTION_URL/keng_tung_pagoda_guide_emblem.png" />
+    <meta name="twitter:title" content="မဟာမြတ်မုနိဘုရားနှင့် သမိုင်းဝင်ဘုရားများ" />
+    <meta name="twitter:description" content="ရှမ်းပြည်နယ်(အရှေ့ပိုင်း) ကျိုင်းတုံမြို့ရှိ မဟာမြတ်မုနိဘုရားနှင့် သမိုင်းဝင်ဘုရားကျောင်းများ၊ ပွဲတော်များနှင့် ဘုရားဖူးလမ်းကြောင်းများကို မှတ်တမ်းတင်ထားသည့် ဒစ်ဂျစ်တယ် လမ်းညွှန်။" />
+    <meta name="twitter:image" content="__SITE_URL__/og-image.jpg" />
+    <meta name="twitter:image:alt" content="ကျိုင်းတုံ မဟာမြတ်မုနိဘုရား" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -49,14 +57,27 @@
       the initial HTML parse instead of after CSS discovers it.
     -->
     <link rel="preload" href="/fonts/material-symbols-outlined.woff2" as="font" type="font/woff2" crossorigin />
-    <title>Keng Tung Pagoda Guide</title>
+    <title>မဟာမြတ်မုနိဘုရားနှင့် သမိုင်းဝင်ဘုရားများ</title>
+    <!--
+      WebSite `name` is what Google shows as the site name above results;
+      `alternateName` covers English searches. `publisher.logo` feeds the
+      logo Google may show for the site.
+    -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "WebSite",
-        "name": "Keng Tung Pagoda Guide",
-        "description": "A living archive of the sacred pagodas, monasteries and pilgrimage routes of Kyaing Tong, Eastern Shan State.",
-        "inLanguage": ["en", "my", "th"]
+        "name": "မဟာမြတ်မုနိဘုရားနှင့် သမိုင်းဝင်ဘုရားများ",
+        "alternateName": ["Keng Tung Pagoda Guide", "Maha Myat Muni Pagoda, Kengtung"],
+        "url": "__SITE_URL__/",
+        "description": "ရှမ်းပြည်နယ်(အရှေ့ပိုင်း) ကျိုင်းတုံမြို့ရှိ မဟာမြတ်မုနိဘုရားနှင့် သမိုင်းဝင်ဘုရားကျောင်းများ၊ ပွဲတော်များနှင့် ဘုရားဖူးလမ်းကြောင်းများကို မှတ်တမ်းတင်ထားသည့် ဒစ်ဂျစ်တယ် လမ်းညွှန်။",
+        "inLanguage": ["my", "en", "th"],
+        "image": "__SITE_URL__/og-image.jpg",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Polytechnic University (Kyaing Tong)",
+          "logo": "__SITE_URL__/icon-192.png"
+        }
       }
     </script>
 

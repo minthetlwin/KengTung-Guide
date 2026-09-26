@@ -9,6 +9,8 @@ interface PageMetaOptions {
 }
 
 const STRUCTURED_DATA_ID = 'page-structured-data'
+const DEFAULT_SHARE_IMAGE = '/og-image.jpg'
+const OG_LOCALES: Record<string, string> = { my: 'my_MM', en: 'en_US', th: 'th_TH' }
 
 function upsertMeta(attr: 'name' | 'property', key: string, content: string) {
   let el = document.querySelector<HTMLMetaElement>(`meta[${attr}="${key}"]`)
@@ -49,11 +51,13 @@ export function usePageMeta({ title, description, image, structuredData }: PageM
     upsertMeta('name', 'twitter:title', title)
     upsertMeta('name', 'twitter:description', description)
 
-    if (image) {
-      const absoluteImage = new URL(image, window.location.origin).toString()
-      upsertMeta('property', 'og:image', absoluteImage)
-      upsertMeta('name', 'twitter:image', absoluteImage)
-    }
+    upsertMeta('property', 'og:locale', OG_LOCALES[locale] ?? 'my_MM')
+
+    // Pages without their own photo fall back to the site share card, so a
+    // previous page's image never lingers after client-side navigation.
+    const absoluteImage = new URL(image ?? DEFAULT_SHARE_IMAGE, window.location.origin).toString()
+    upsertMeta('property', 'og:image', absoluteImage)
+    upsertMeta('name', 'twitter:image', absoluteImage)
 
     upsertCanonical(window.location.origin + window.location.pathname)
 
