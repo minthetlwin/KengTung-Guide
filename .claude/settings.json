@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "Bash(python3 -)",
+      "Bash(pkill -f \"vite preview --port 4179\")"
+    ]
+  }
+}

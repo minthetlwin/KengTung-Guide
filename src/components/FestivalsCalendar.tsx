@@ -2,28 +2,7 @@ import { useEffect, useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useLanguage } from '../context/language-context'
 import { festivalsMeta } from '../data/festivals'
-
-interface Countdown {
-  days: number
-  hours: number
-  mins: number
-  secs: number
-}
-
-function getCountdown(targetDate: string): Countdown {
-  const diff = Math.max(0, new Date(targetDate).getTime() - Date.now())
-  const totalSeconds = Math.floor(diff / 1000)
-  return {
-    days: Math.floor(totalSeconds / 86400),
-    hours: Math.floor((totalSeconds % 86400) / 3600),
-    mins: Math.floor((totalSeconds % 3600) / 60),
-    secs: totalSeconds % 60,
-  }
-}
-
-function pad(n: number) {
-  return String(n).padStart(2, '0')
-}
+import { getCountdown, pad } from '../utils/countdown'
 
 export function FestivalsCalendar() {
   const { t } = useLanguage()
@@ -37,7 +16,7 @@ export function FestivalsCalendar() {
     const id = window.setInterval(() => setTick((n) => n + 1), 1000)
     return () => window.clearInterval(id)
   }, [])
-  const countdown = getCountdown(target)
+  const countdown = target ? getCountdown(target) : null
 
   useEffect(() => {
     festivalsMeta.forEach((meta) => {
@@ -52,12 +31,13 @@ export function FestivalsCalendar() {
   const image = festivalsMeta[index].image
 
   const countdownFields = useMemo(
-    () => [
-      { label: f.countdown.days, value: pad(countdown.days) },
-      { label: f.countdown.hours, value: pad(countdown.hours) },
-      { label: f.countdown.mins, value: pad(countdown.mins) },
-      { label: f.countdown.secs, value: pad(countdown.secs) },
-    ],
+    () =>
+      countdown && [
+        { label: f.countdown.days, value: pad(countdown.days) },
+        { label: f.countdown.hours, value: pad(countdown.hours) },
+        { label: f.countdown.mins, value: pad(countdown.mins) },
+        { label: f.countdown.secs, value: pad(countdown.secs) },
+      ],
     [countdown, f.countdown],
   )
 
@@ -92,7 +72,7 @@ export function FestivalsCalendar() {
       <div className="relative overflow-hidden rounded-2xl border border-border shadow-elevated">
         <div key={index} className="relative min-h-[520px] w-full lg:min-h-[400px]">
           <div
-            className="absolute inset-0 bg-cover bg-center"
+            className="absolute inset-0 bg-bg-elevated-3 bg-cover bg-center"
             style={{ backgroundImage: `url('${image}')` }}
             role="img"
             aria-label={slide.heading}
@@ -114,23 +94,30 @@ export function FestivalsCalendar() {
             </div>
 
             <div className="flex shrink-0 flex-col items-stretch gap-4 sm:flex-row sm:items-center">
-              <div className="grid grid-cols-4 gap-2 text-center">
-                {countdownFields.map((field) => (
-                  <div
-                    key={field.label}
-                    className="min-w-[62px] rounded-xl border border-white/20 bg-white/10 p-3 backdrop-blur-md"
-                  >
-                    <span className="block font-serif text-2xl font-semibold leading-none text-white">
-                      {field.value}
-                    </span>
-                    <span className="mt-1 block font-sans text-[10px] font-semibold uppercase text-white/70">
-                      {field.label}
-                    </span>
-                  </div>
-                ))}
-              </div>
+              {countdownFields ? (
+                <div className="grid grid-cols-4 gap-2 text-center">
+                  {countdownFields.map((field) => (
+                    <div
+                      key={field.label}
+                      className="min-w-[62px] rounded-xl border border-white/20 bg-white/10 p-3 backdrop-blur-md"
+                    >
+                      <span className="block font-serif text-2xl font-semibold leading-none text-white">
+                        {field.value}
+                      </span>
+                      <span className="mt-1 block font-sans text-[10px] font-semibold uppercase text-white/70">
+                        {field.label}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              ) : (
+                <span className="flex items-center justify-center gap-1.5 rounded-xl border border-white/20 bg-white/10 px-4 py-3 font-sans text-sm font-semibold text-white backdrop-blur-md">
+                  <span className="material-symbols-outlined text-[18px]">event</span>
+                  {f.dateTba}
+                </span>
+              )}
               <Link
-                to="/festival-calendar"
+                to={`/festival-calendar/${festivalsMeta[index].id}`}
                 className="inline-flex items-center justify-center rounded-xl bg-primary px-6 py-3.5 font-sans text-xs font-semibold uppercase tracking-wider text-on-primary shadow-soft transition-transform hover:scale-[1.02] whitespace-nowrap"
               >
                 {slide.cta}

@@ -1,4 +1,6 @@
+import { Link } from 'react-router-dom'
 import { useLanguage } from '../context/language-context'
+import { otherPlacesMeta } from '../data/otherPlaces'
 import { usePageMeta } from '../hooks/usePageMeta'
 
 export function OtherPlacesPage() {
@@ -28,15 +30,35 @@ export function OtherPlacesPage() {
         </div>
       ) : (
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {p.places.map((place) => (
-            <div
-              key={place.name}
-              className="flex flex-col gap-2 rounded-2xl border border-border bg-bg-elevated p-6 shadow-soft transition-all duration-300 hover:-translate-y-1 hover:shadow-elevated"
-            >
-              <h3 className="font-serif text-lg font-bold text-text">{place.name}</h3>
-              <p className="font-sans text-sm leading-relaxed text-text-muted">{place.description}</p>
-            </div>
-          ))}
+          {p.places.map((place, i) => {
+            const meta = otherPlacesMeta[i]
+            return (
+              <Link
+                key={place.name}
+                to={meta.path}
+                className="group flex flex-col overflow-hidden rounded-2xl border border-border bg-bg-elevated shadow-soft transition-all duration-300 hover:-translate-y-1 hover:shadow-elevated"
+              >
+                <div className="h-56 w-full overflow-hidden bg-bg-elevated-3">
+                  <div
+                    className="h-full w-full bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
+                    style={{ backgroundImage: `url('${meta.image}')` }}
+                    role="img"
+                    aria-label={place.name}
+                  />
+                </div>
+                <div className="flex flex-1 flex-col gap-2 p-5">
+                  <h3 className="font-serif text-lg font-bold text-text transition-colors group-hover:text-primary">
+                    {place.name}
+                  </h3>
+                  <p className="font-sans text-sm leading-relaxed text-text-muted">{place.description}</p>
+                  <span className="mt-auto flex items-center gap-1 pt-2 font-sans text-sm font-semibold text-primary">
+                    {t.common.viewDetails}
+                    <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
+                  </span>
+                </div>
+              </Link>
+            )
+          })}
         </div>
       )}
     </div>

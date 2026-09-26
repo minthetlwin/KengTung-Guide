@@ -253,6 +253,7 @@ export const en: Dictionary = {
     eyebrow: 'Sacred Calendar',
     title: 'Upcoming Votive Festivals',
     dateNote: 'Dates are estimated from the traditional lunar calendar.',
+    dateTba: 'Date to be announced',
     countdown: { days: 'Days', hours: 'Hours', mins: 'Mins', secs: 'Secs' },
     slides: [
       {
@@ -287,6 +288,70 @@ export const en: Dictionary = {
           'Once every three months, on the full moon evening at 6:00, a gathering of 200 monks recites the protective Paritta chants for freedom from danger inside the Gandhakuti monastery hall.',
         cta: 'Ritual Program & Schedule',
       },
+      {
+        badge: 'Akha Swing Festival',
+        subBadge: 'After the Planting Season · Akha Villages',
+        heading: 'A Celebration of Akha Culture',
+        description:
+          'One of the most important traditional festivals of the Akha people of eastern Shan State — celebrated after the planting season with the ceremonial swing, traditional dress, music and dance, and prayers for a good harvest.',
+        cta: 'Festival Program & Details',
+      },
+      {
+        badge: 'Lahu New Year Festival',
+        subBadge: 'Collective New Year · Kengtung Township',
+        heading: 'Heritage, Community and New Beginnings',
+        description:
+          'One of the most important traditional celebrations of the Lahu people — Lahu communities gather in Kengtung to welcome the new year with gourd-pipe music, communal dances, traditional dress and shared food.',
+        cta: 'Festival Program & Details',
+      },
+      {
+        badge: 'Akha New Year Festival',
+        subBadge: 'Usually in December · Akha Communities',
+        heading: 'Welcoming the New Year in Akha Tradition',
+        description:
+          'Akha communities around Kengtung welcome the New Year with traditional music, dancing, shared food and the silver-ornamented headdresses of Akha women.',
+        cta: 'Festival Program & Details',
+      },
+      {
+        badge: 'Nanda Bayri Drum Ceremony',
+        subBadge: 'Thingyan (Myanmar New Year) · April',
+        heading: 'The Sacred Drum of the Gon Shan New Year',
+        description:
+          'A distinctive Gon Shan Thingyan tradition — the sacred Nanda Bayri Mingala Drum is raised, blessed and sounded, then carried in procession through Kengtung to Nam Khin Creek.',
+        cta: 'Festival Program & Details',
+      },
+      {
+        badge: 'Wa New Year Festival',
+        subBadge: '1st Waxing Day of Tabodwe · Pingsai Wa Village',
+        heading: 'Welcoming the New Year in Wa Tradition',
+        description:
+          'Wa communities around Kengtung gather at Pingsai Wa Village to welcome the New Year with traditional songs, dances, bamboo pipes and drums, traditional dress and shared food.',
+        cta: 'Festival Program & Details',
+      },
+      {
+        badge: 'Shan New Year Festival',
+        subBadge: 'Late November – December · Kengtung',
+        heading: 'Kinnari Dances and Shan Heritage',
+        description:
+          'Shan communities and other ethnic groups gather in Kengtung to welcome the Shan New Year with Kinnari and Kinnara dances, traditional songs, cultural exhibitions and shared food.',
+        cta: 'Festival Program & Details',
+      },
+      {
+        badge: 'Sao Fa Market Day',
+        subBadge: 'Once a Year, One Day · Old Market Area',
+        heading: 'The Old Market of the Saophas',
+        description:
+          'For one day a year, the streets around Pa Leng Gate and the old Sao Fa tombs fill with stalls — a tradition said to date back to 1368, where buying something is believed to bring good fortune.',
+        cta: 'Festival Program & Details',
+      },
+      {
+        badge: 'Loi Mwe Cherry Blossom Festival',
+        subBadge: 'December – January · Loi Mwe',
+        heading: 'Mountains in Pink and White',
+        description:
+          'An annual festival held since 2022 among more than 1,000 cherry trees in the cool mountains of Loi Mwe — with blossom viewing, ethnic dances, traditional food and local products.',
+        cta: 'Festival Program & Details',
+      },
     ],
   },
   festivalCalendarPage: {
@@ -294,6 +359,756 @@ export const en: Dictionary = {
     title: 'Festival Calendar',
     description:
       'Track every recurring ritual and votive festival at the pagodas of Keng Tung, with live countdowns to the next observance.',
+  },
+  festivalDetailPage: {
+    aboutEyebrow: 'About the Festival',
+    nextObservance: 'Next Observance',
+    heldAtLabel: 'Held At',
+    heldAt: 'Maha Myat Muni Pagoda, Keng Tung',
+    visitPagoda: 'Visit the Pagoda',
+    backToCalendar: 'Back to Festival Calendar',
+    viewDetails: 'View Details',
+    programTitle: 'Ceremony Program',
+    tipsTitle: 'Visitor Tips',
+    tips: [
+      'Dress modestly — cover shoulders and knees.',
+      'Remove shoes and socks before entering the pagoda grounds.',
+      'Dates follow the Myanmar lunar calendar and may shift — confirm with the pagoda trustees before travelling.',
+      'Arrive early for dawn ceremonies, and keep quiet during chanting and offerings.',
+    ],
+    festivals: [
+      {
+        sections: [
+          {
+            heading: 'How the Festival Began',
+            paragraphs: [
+              "On the full moon of Tazaungmon in 1312 ME (1950 CE), Saopha Sao Sai Long Khemadipati of Keng Tung, together with royal relatives and the pagoda's lay patrons, offered four ceremonial umbrellas at the temple entrances and a great alms-offering to 85 monks at 6:00 AM, sealed with the ceremonial water-pouring to share merit.",
+              'Since that year, the full moon of Tazaungmon has been observed without interruption as the Maha Myat Muni Pagoda Festival.',
+            ],
+          },
+          {
+            heading: 'The Four Umbrellas',
+            paragraphs: [
+              'Ceremonial umbrellas (hti) are among the highest honours that can be offered to the Buddha in Myanmar and Shan tradition. On the first festival day, four umbrellas were offered at the entrances on all four sides of the pagoda.',
+            ],
+          },
+          {
+            heading: 'Sharing the Merit',
+            paragraphs: [
+              'The festival morning closes with the ceremonial water-pouring (Yay Zet Cha). As the donors slowly pour water, the merit of the offering is dedicated to all beings, and everyone present responds "Sadhu, Sadhu, Sadhu."',
+            ],
+          },
+        ],
+        program: [
+          { time: '6:00 AM', activity: 'Monks are invited and receive the great alms-offering' },
+          { time: 'Morning', activity: 'Offering of ceremonial umbrellas at the temple entrances' },
+          { time: 'Closing', activity: 'Water-pouring ceremony to share the merit' },
+        ],
+      },
+      {
+        sections: [
+          {
+            heading: 'A Royal Tradition',
+            paragraphs: [
+              'Each year on the full moon of Tazaungmon, the Saophas lead the public in inviting monks to receive the morning alms-offering (Aruna Hsun) within the palace (Haw).',
+              'The almsgiving falls on the same full moon as the Maha Myat Muni Pagoda Festival, making the Tazaungmon full moon one of the most important days of the year in Keng Tung.',
+            ],
+          },
+          {
+            heading: 'What Is Aruna Hsun?',
+            paragraphs: [
+              'Aruna means dawn. Aruna Hsun is the alms-food offered to the monks at first light, as the day begins — a quiet, devoted offering made before the town wakes.',
+            ],
+          },
+          {
+            heading: 'The Kengtung Haw',
+            paragraphs: [
+              'The Haw was the palace of the Kengtung Saophas, built between 1903 and 1906. The original building was demolished in 1991; a replica museum now stands beside Naung Tung Lake.',
+            ],
+          },
+        ],
+        program: [
+          { time: 'Before dawn', activity: 'Devotees gather at the Haw with alms-food' },
+          { time: 'Dawn', activity: 'Led by the Saophas, the public invites the monks and offers Aruna Hsun' },
+        ],
+      },
+      {
+        sections: [
+          {
+            heading: 'Honoring the Bodhi Tree',
+            paragraphs: [
+              "Each year on the full moon of Kason, the Bodhi tree near Maha Myat Muni Pagoda is honored with a watering ceremony: the first rite is held inside the Gandhakuti monastery hall, and the watering itself takes place at the Bodhi tree's monastery compound (Wat Pha Kyauk).",
+            ],
+          },
+          {
+            heading: 'Why the Full Moon of Kason?',
+            paragraphs: [
+              "The full moon of Kason is the most sacred day of the Buddhist year — the day of the Buddha's birth, his Enlightenment beneath the Bodhi tree, and his final passing. Watering the Bodhi tree on this day honours the tree under which the Buddha attained Enlightenment, and in the hottest season of the year it also keeps the tree green and alive.",
+            ],
+          },
+        ],
+        program: [
+          { time: 'Part 1', activity: 'Opening rite inside the Gandhakuti monastery hall' },
+          { time: 'Part 2', activity: 'Watering the Bodhi tree at Wat Pha Kyauk' },
+        ],
+      },
+      {
+        sections: [
+          {
+            heading: 'Chanting for Protection',
+            paragraphs: [
+              'Once every three months, on the full moon evening at 6:00, a gathering of 200 monks recites the protective Paritta chants for freedom from danger inside the Gandhakuti monastery hall of Maha Myat Muni Pagoda.',
+            ],
+          },
+          {
+            heading: 'What Is Paritta?',
+            paragraphs: [
+              'Paritta are protective discourses of the Buddha, chanted in Pali — among them the Mangala, Ratana and Metta Suttas. Their recitation is believed to bring blessings and protection from danger, illness and misfortune to all who listen with faith.',
+            ],
+          },
+          {
+            heading: 'Joining the Chanting',
+            paragraphs: [
+              'Devotees are welcome to sit quietly in the hall and listen as the voices of 200 monks fill the Gandhakuti hall.',
+            ],
+          },
+        ],
+        program: [
+          { time: '6:00 PM', activity: '200 monks gather inside the Gandhakuti monastery hall' },
+          { time: 'Evening', activity: 'Recitation of the protective Paritta chants' },
+        ],
+      },
+      {
+        heldAt: 'Akha villages around Kengtung',
+        sections: [
+          {
+            heading: 'A Celebration of Akha Culture',
+            paragraphs: [
+              'The Akha Traditional Swing Festival is one of the important traditional festivals of the Akha people living in eastern Shan State, Myanmar.',
+              'The festival is celebrated by Akha communities in mountainous areas around Kengtung, Tachileik, Mong Hsat and surrounding regions.',
+              'More than a festival, it is a celebration of community, agriculture, tradition and cultural identity.',
+            ],
+          },
+          {
+            heading: 'The Festival and Agriculture',
+            paragraphs: [
+              'The Swing Festival is closely connected with the agricultural life of the Akha people.',
+              'Traditionally, the festival is held after the planting season and an important period of agricultural work has been completed.',
+              'It becomes a time for the community to celebrate the progress of the new crop, pray for a successful harvest and hope for sufficient food in the coming season.',
+            ],
+          },
+          {
+            heading: 'The Meaning of the Swing',
+            paragraphs: [
+              'The traditional swing is the central symbol of the festival.',
+              'For the Akha people, the swing has a cultural and spiritual meaning that goes beyond entertainment.',
+              'According to Akha traditional belief, their ancestors descended from the heavens through the swing.',
+              'Because of this belief, ceremonial swinging is an important part of the festival and represents a connection between Akha traditions, ancestors and the community.',
+            ],
+          },
+          {
+            heading: 'A Celebration of Unity',
+            paragraphs: [
+              'The festival brings together people from the community and provides an opportunity for families and different generations to celebrate together.',
+              'The festival is associated with peace, unity, prosperity and food sufficiency.',
+              'It also provides an opportunity for younger generations to learn about and continue the traditional customs of their ancestors.',
+            ],
+          },
+          {
+            heading: 'Traditional Clothing',
+            paragraphs: [
+              'Akha traditional clothing is one of the most distinctive features of the festival.',
+              'Women and men wear traditional costumes decorated with patterns and ornaments that reflect Akha cultural identity.',
+              'The festival provides an opportunity for people to proudly display these traditional clothes and pass their cultural knowledge to younger generations.',
+            ],
+          },
+          {
+            heading: 'Traditional Music and Dance',
+            paragraphs: [
+              'Traditional music and dance are important parts of the celebration.',
+              'Akha men and women perform traditional dances and songs during the festival, creating a lively atmosphere filled with music, movement and community participation.',
+              'These performances also allow visitors to experience the cultural heritage of the Akha people.',
+            ],
+          },
+          {
+            heading: 'The Swing Ceremony',
+            paragraphs: [
+              'The ceremonial swing is prepared according to traditional customs.',
+              'During the festival, community members participate in the ceremonial riding of the swing.',
+              'The ceremony represents more than a physical activity. It is a symbolic expression of Akha tradition, community identity and connection with ancestral beliefs.',
+            ],
+          },
+          {
+            heading: 'The Festival in Kengtung',
+            paragraphs: [
+              'Akha communities around Kengtung regularly organize traditional swing festivals.',
+              'In Kengtung Township, the festival has attracted local communities as well as visitors interested in experiencing Akha culture.',
+              'The surrounding villages provide an opportunity to see traditional lifestyles, clothing, food, music and agricultural practices alongside the festival itself.',
+            ],
+          },
+          {
+            heading: 'Preserving Cultural Heritage',
+            paragraphs: [
+              'The Akha Swing Festival plays an important role in preserving traditional culture.',
+              'As modern life changes the way communities live, festivals such as this provide opportunities to maintain traditional music, clothing, ceremonies, language and social customs.',
+              'The festival also introduces Akha culture to visitors from other parts of Myanmar and beyond.',
+            ],
+          },
+          {
+            heading: 'A Living Tradition',
+            paragraphs: [
+              'The Akha Traditional Swing Festival is not simply a performance for visitors. It is a living cultural tradition practiced by Akha communities.',
+              'The swing, traditional clothing, music, dance, agricultural beliefs and community gatherings all form part of a cultural heritage passed from one generation to another.',
+              'For Kengtung and eastern Shan State, the festival provides a window into the diverse ethnic cultures that have shaped the region.',
+            ],
+          },
+          {
+            heading: 'A Festival of Culture and Community',
+            paragraphs: [
+              'The Akha Traditional Swing Festival brings together agriculture, spirituality, family, music, traditional clothing and community life.',
+              'Through the movement of the swing and the rhythm of traditional songs and dances, generations come together to celebrate their heritage.',
+              "For visitors to Kengtung, experiencing an Akha Swing Festival provides an opportunity to see not only a traditional celebration, but also a living expression of the cultural identity of one of eastern Shan State's important ethnic communities.",
+            ],
+          },
+        ],
+        program: [
+          { time: 'Preparation', activity: 'The ceremonial swing is prepared according to traditional customs' },
+          { time: 'Ceremony', activity: 'Community members take part in the ceremonial riding of the swing' },
+          { time: 'Celebration', activity: 'Akha men and women perform traditional songs and dances' },
+        ],
+        tips: [
+          'Festival dates follow the Akha calendar and vary by village — confirm with a local guide before travelling.',
+          'A local guide can arrange transport to the villages and help with introductions.',
+          'Ask permission before photographing people, especially during the ceremony.',
+          'Treat the ceremonial swing with respect — ride it only if invited by the community.',
+        ],
+        album: {
+          eyebrow: 'Akha Villages',
+          title: 'The Akha Swing Festival',
+          caption: 'The ceremonial swing, traditional dress and circle dances of the Akha Swing Festival.',
+        },
+      },
+      {
+        heldAt: 'Kengtung Township · collective festival',
+        sections: [
+          {
+            heading: 'A Celebration of Heritage, Community and New Beginnings',
+            paragraphs: [
+              'The Lahu New Year Festival is one of the important traditional celebrations of the Lahu people living in eastern Shan State. In and around Kengtung, the festival brings together Lahu communities to welcome a new year, honour their traditions, strengthen relationships, and celebrate their shared cultural identity.',
+              'More than a celebration marking the beginning of a new year, the festival is a time when families and communities come together through traditional music, dance, ceremonies, food, and cultural activities. The colourful clothing, distinctive musical instruments, traditional dances, and communal gatherings create a unique atmosphere that reflects the living heritage of the Lahu people.',
+            ],
+          },
+          {
+            heading: 'A Traditional New Year',
+            paragraphs: [
+              'The Lahu New Year is traditionally associated with a period of renewal and community gathering. During the celebration, people return to their communities, meet relatives and friends, and participate in activities that connect younger generations with their cultural traditions.',
+              'In Kengtung, collective Lahu New Year celebrations have been organized for many years, bringing representatives and community members together from different Lahu villages.',
+            ],
+          },
+          {
+            heading: 'The Collective Celebration',
+            paragraphs: [
+              'One of the distinctive features of the Lahu New Year celebration is its communal character. Rather than being limited to individual families, the festival provides an opportunity for members of different communities to gather in one place.',
+              'Traditional ceremonies, cultural performances, music, dancing, and community activities take place throughout the celebration. These gatherings also provide an important opportunity for younger Lahu people to experience traditions that have been passed down through generations.',
+            ],
+          },
+          {
+            heading: 'Music of the Lahu',
+            paragraphs: [
+              'Music is an essential part of the celebration.',
+              'Traditional Lahu musicians perform using instruments associated with their cultural heritage. Among the most recognizable are bamboo and gourd-based wind instruments, whose distinctive sounds accompany traditional dances and community gatherings.',
+              'The music is not simply entertainment. It forms part of the atmosphere of the festival and helps connect traditional performance with community participation.',
+            ],
+          },
+          {
+            heading: 'Traditional Dance',
+            paragraphs: [
+              'Traditional dancing is another important part of the Lahu New Year celebration.',
+              'Groups of dancers often move together in coordinated formations while musicians perform traditional melodies. These communal dances create a strong sense of participation, with people gathering around the performers rather than simply watching from a distance.',
+              'Through dance, rhythm, and movement, the festival becomes a shared experience for the entire community.',
+            ],
+          },
+          {
+            heading: 'Traditional Clothing',
+            paragraphs: [
+              'The Lahu are also recognized for their distinctive traditional clothing.',
+              'During New Year celebrations, men and women may wear traditional garments and accessories that reflect their community and cultural identity. Dark-coloured fabrics, decorative elements, embroidery, and traditional headwear can form important parts of Lahu dress.',
+              'These clothes are more than festival costumes. They represent cultural identity and provide a visible connection between present-day communities and previous generations.',
+            ],
+          },
+          {
+            heading: 'The Festival Gathering',
+            paragraphs: [
+              'At a Lahu New Year celebration, the atmosphere extends beyond formal ceremonies.',
+              'Families and friends meet, people share food, musicians perform, and community members spend time together. The festival becomes a social gathering where relationships are renewed and strengthened.',
+              'For visitors, these moments provide an opportunity to see Lahu culture not simply as a historical tradition, but as a living part of everyday community life.',
+            ],
+          },
+          {
+            heading: 'A Symbol of Community',
+            paragraphs: [
+              'The collective nature of the festival is one of its most meaningful characteristics.',
+              'People from different villages and communities can gather to celebrate their shared heritage. The event creates a space where cultural traditions, family relationships, music, dance, and community identity come together.',
+              'In this sense, the Lahu New Year Festival represents both a celebration of a new year and a celebration of belonging.',
+            ],
+          },
+          {
+            heading: 'Lahu New Year in Kengtung',
+            paragraphs: [
+              'Kengtung is home to many ethnic communities and has long been an important cultural crossroads in eastern Shan State. The Lahu New Year Festival is one of the events that demonstrates this cultural diversity.',
+              'Recent collective celebrations have taken place in Kengtung Township. The 41st Lahu Ethnic Collective Traditional New Year Festival was held in February 2025, while the 42nd collective festival was held in January 2026.',
+              'These celebrations demonstrate the continuing importance of Lahu traditions within the cultural landscape of Kengtung.',
+            ],
+          },
+          {
+            heading: 'Preserving a Living Heritage',
+            paragraphs: [
+              'Traditional festivals play an important role in keeping cultural knowledge alive.',
+              'For younger generations, participating in traditional music, dance, clothing, ceremonies, and community gatherings provides an opportunity to learn about their heritage directly from older generations.',
+              'The Lahu New Year Festival therefore represents more than a yearly celebration. It is also a living cultural space where traditions can be practiced, shared, and passed on.',
+            ],
+          },
+          {
+            heading: 'A New Year, a Continuing Tradition',
+            paragraphs: [
+              'As another year begins, the Lahu community gathers once again through music, dance, ceremony, and friendship.',
+              'The sound of traditional instruments, the movement of communal dances, the colours of traditional clothing, and the gathering of families and villages all contribute to the atmosphere of the celebration.',
+              "For Kengtung, the Lahu New Year Festival is another reminder of the region's remarkable cultural diversity. For the Lahu people, it is a celebration of heritage, community, and a new beginning.",
+            ],
+          },
+          {
+            heading: 'Documentary Timeline',
+            paragraphs: [
+              'Traditional — Lahu New Year celebrations held annually within Lahu communities.',
+              '2018 — Documentary photographs recorded Lahu New Year celebrations in Kengtung.',
+              'February 2025 — 41st Lahu Ethnic Collective Traditional New Year Festival, Kengtung Township.',
+              'January 2026 — 42nd Lahu Ethnic Collective Traditional New Year Festival, Kengtung.',
+            ],
+          },
+        ],
+        program: [
+          { time: 'Gathering', activity: 'Lahu communities from different villages gather in one place' },
+          { time: 'Ceremony', activity: 'Traditional ceremonies and cultural performances' },
+          { time: 'Music & Dance', activity: 'Bamboo and gourd-pipe music accompanies communal dances' },
+          { time: 'Community', activity: 'Families and friends meet and share food' },
+        ],
+        tips: [
+          'The collective festival date changes each year (January–February) — confirm with local organisers before travelling.',
+          'Ask permission before photographing people in traditional dress.',
+          'Watch the communal dances respectfully — join in only when invited.',
+          'Follow the guidance of community elders and festival organisers.',
+        ],
+        album: {
+          eyebrow: 'Kengtung Township',
+          title: 'The Lahu New Year Festival',
+          caption: 'Gourd-pipe musicians, drummers and communal dances in traditional Lahu dress.',
+        },
+      },
+      {
+        heldAt: 'Akha communities around Kengtung',
+        sections: [
+          {
+            heading: 'Welcoming the New Year',
+            paragraphs: [
+              'The Akha New Year Festival is one of the important traditional celebrations of the Akha communities around Kengtung, eastern Shan State. Usually held in December, the festival brings together Akha communities to welcome the New Year through traditional music, dancing, cultural gatherings, food, and distinctive traditional dress.',
+            ],
+          },
+          {
+            heading: 'Headdresses and Traditional Dress',
+            paragraphs: [
+              'One of the most recognizable features of the celebration is the elaborate clothing and headdresses worn by Akha women. Decorated with silver ornaments, beads, coins, and other traditional elements, these headdresses reflect the cultural identity and craftsmanship of different Akha communities.',
+            ],
+          },
+          {
+            heading: 'Songs, Dances and Shared Food',
+            paragraphs: [
+              'During the festival, groups gather to perform traditional songs and dances, while families and community members share food and spend time together. The celebration is not only a New Year gathering but also an opportunity for younger generations to experience and preserve traditions passed down through their communities.',
+            ],
+          },
+          {
+            heading: 'The Festival in Kengtung',
+            paragraphs: [
+              'In Kengtung, the festival brings together different Akha groups, including communities with distinctive styles of dress and cultural expression. The colorful costumes, rhythmic music, group dances, traditional foods, and large community gatherings create a vivid celebration of Akha heritage and identity.',
+            ],
+          },
+          {
+            heading: 'A Glimpse of Akha Heritage',
+            paragraphs: [
+              'For visitors, the Akha New Year Festival offers a glimpse into the cultural diversity of Kengtung and the traditions that continue to connect Akha communities with their history and one another.',
+            ],
+          },
+        ],
+        program: [
+          { time: 'Gathering', activity: 'Akha groups from different communities come together in traditional dress' },
+          { time: 'Celebration', activity: 'Traditional songs, music and group dances' },
+          { time: 'Community', activity: 'Families and community members share food and spend time together' },
+        ],
+        tips: [
+          'The festival is usually held in December, but dates vary — confirm with a local guide before travelling.',
+          'Ask permission before photographing people, especially women in traditional headdresses.',
+          'Do not touch headdresses or silver ornaments — they are treasured family pieces.',
+          'Watch the dances respectfully and join in only when invited.',
+        ],
+        album: {
+          eyebrow: 'Akha Communities',
+          title: 'The Akha New Year Festival',
+          caption: 'Silver-ornamented headdresses, traditional dress and group dances of the Akha New Year.',
+        },
+      },
+      {
+        heldAt: 'Kengtung town · procession to Nam Khin Creek',
+        sections: [
+          {
+            heading: 'A Sacred New Year Drum',
+            paragraphs: [
+              'The Gon Shan Traditional Thingyan Mingala Nanda Bayri Drum Ceremony is one of Kengtung’s distinctive traditional celebrations, held during the Myanmar New Year period in April. The ceremony centers on the sacred Nanda Bayri Mingala Drum and brings together local communities to preserve an old cultural tradition through ritual, music, dance, and procession.',
+            ],
+          },
+          {
+            heading: 'The Ceremony',
+            paragraphs: [
+              'The ceremony begins with traditional Gon Shan cultural performances and the raising of the Nanda Bayri Mingala Drum. Traditional prayers and ceremonial rites are performed, including the sounding of the drum seven times and the sprinkling of scented water over the drum. Traditional songs and dances are also performed as part of the celebration.',
+            ],
+          },
+          {
+            heading: 'The Procession to Nam Khin Creek',
+            paragraphs: [
+              'A major part of the tradition is the continuous drumming that follows the ceremony. The sacred drum is then ceremonially conveyed through Kengtung, accompanied by local people and traditional cultural groups. The procession continues toward Nam Khin Creek, where further traditional rituals are performed.',
+            ],
+          },
+          {
+            heading: 'Rain, Protection and Plenty',
+            paragraphs: [
+              'The festival is closely connected with traditional beliefs about welcoming the New Year, protecting the community from misfortune, encouraging good rainfall, and supporting prosperity and agricultural abundance. These beliefs reflect the historical relationship between the Gon Shan community, nature, water, and agriculture.',
+            ],
+          },
+          {
+            heading: 'A Living Heritage',
+            paragraphs: [
+              'The Nanda Bayri Drum Ceremony is more than a festival of music. It is a living expression of Kengtung’s cultural heritage, bringing together traditional beliefs, ceremonial music, dance, community participation, and the distinctive identity of the Gon Shan people.',
+              'Today, the ceremony continues to provide an opportunity for younger generations to experience and preserve the traditions passed down through their communities. Through the sound of the Nanda Bayri drum and the procession through Kengtung, an important part of the city’s cultural heritage continues to live on.',
+            ],
+          },
+        ],
+        program: [
+          { time: 'Opening', activity: 'Gon Shan cultural performances and the raising of the Nanda Bayri Mingala Drum' },
+          { time: 'Rites', activity: 'Traditional prayers — the drum is sounded seven times and sprinkled with scented water' },
+          { time: 'Celebration', activity: 'Traditional songs and dances' },
+          { time: 'Drumming', activity: 'Continuous drumming follows the ceremony' },
+          { time: 'Procession', activity: 'The drum is carried through Kengtung to Nam Khin Creek for further rituals' },
+        ],
+        tips: [
+          'The ceremony falls during Thingyan in April — confirm the exact day locally before travelling.',
+          'It is the water festival season: expect to get wet and keep phones and cameras protected.',
+          'Ask permission before photographing the rites up close.',
+          'Give way to the procession and follow the directions of the organisers.',
+        ],
+        album: {
+          eyebrow: 'Kengtung · Thingyan',
+          title: 'The Nanda Bayri Drum Ceremony',
+          caption: 'Prayers before the sacred drum, the drummers and the Thingyan water blessing.',
+        },
+      },
+      {
+        heldAt: 'Pingsai Wa Village, Mainzin Village Tract, Kengtung Township',
+        sections: [
+          {
+            heading: 'Welcoming the Wa New Year',
+            paragraphs: [
+              'The Wa New Year Festival is an important traditional celebration of the Wa communities living in and around Kengtung Township in eastern Shan State. The festival brings communities together to welcome the New Year, celebrate their cultural identity, and preserve traditional customs through music, dance, food, and community gatherings.',
+            ],
+          },
+          {
+            heading: 'The Collective Festival at Pingsai',
+            paragraphs: [
+              'In Kengtung, the collective Wa New Year Festival has been held at Pingsai Wa Village in the Mainzin Village Tract. Recent celebrations include the 48th festival in 2024, the 49th in 2025, and the 50th festival in 2026. The 50th Wa Ethnic Traditional Collective New Year Festival was held on 28 January 2026 at Pingsai Wa Village, bringing together Wa communities for a day of cultural celebration.',
+            ],
+          },
+          {
+            heading: 'The First Waxing Day of Tabodwe',
+            paragraphs: [
+              'The festival is traditionally held on the first waxing day of Tabodwe, known in Myanmar as တပို့တွဲလဆန်း ၁ ရက်. This day marks the beginning of the Wa New Year celebration and provides an opportunity for members of the community to gather and take part in traditional activities.',
+            ],
+          },
+          {
+            heading: 'Music and Dance',
+            paragraphs: [
+              'Music and dance are at the heart of the celebration. Wa cultural groups perform traditional songs and dances, accompanied by traditional musical instruments such as bamboo or pipe instruments and drums. These performances are not simply entertainment; they provide a way for younger generations to learn about and continue the cultural traditions of their communities.',
+            ],
+          },
+          {
+            heading: 'Traditional Dress',
+            paragraphs: [
+              'Traditional clothing also plays an important role in the festival. Men and women gather wearing distinctive Wa traditional dress, creating a colorful expression of cultural identity. Through clothing, music, dance, and ceremonies, the festival allows cultural knowledge and traditions to remain visible and meaningful within the community.',
+            ],
+          },
+          {
+            heading: 'Food and Harvest',
+            paragraphs: [
+              'Food is another important part of the celebration. Traditional Wa foods and locally produced agricultural products are displayed and shared during the festival. These foods and products reflect the close relationship between the community, agriculture, and the surrounding environment.',
+            ],
+          },
+          {
+            heading: 'A Time for Community',
+            paragraphs: [
+              "The festival is also a time for community connection. Families, elders, young people, and cultural groups come together to participate in the celebration. In some recent festivals, people from neighboring ethnic communities have also attended and participated in cultural activities, making the event an opportunity for cultural exchange in Kengtung's diverse social landscape.",
+            ],
+          },
+          {
+            heading: 'Preserving Wa Heritage',
+            paragraphs: [
+              'Beyond the celebration itself, the Wa New Year Festival represents the continuing effort of Wa communities to preserve their cultural heritage. Traditional songs, dances, clothing, musical instruments, food, and community practices are passed from one generation to another through gatherings such as this.',
+            ],
+          },
+          {
+            heading: 'Wa Culture in Kengtung',
+            paragraphs: [
+              "For Kengtung, the Wa New Year Festival is part of the region's wider cultural diversity. It offers visitors an opportunity to witness Wa traditions in a community setting and to understand how ethnic heritage continues to live through everyday people, shared traditions, and collective celebrations.",
+              'Today, the Wa New Year Festival continues to bring people together in Kengtung, connecting the younger generation with the traditions of their elders while keeping an important part of Wa cultural heritage alive.',
+            ],
+          },
+        ],
+        program: [
+          { time: 'Gathering', activity: 'Wa communities gather at Pingsai Wa Village in traditional dress' },
+          { time: 'Music & Dance', activity: 'Traditional songs and dances with bamboo pipes and drums' },
+          { time: 'Food', activity: 'Traditional Wa foods and local agricultural products are displayed and shared' },
+          { time: 'Exchange', activity: 'Neighbouring ethnic communities join the cultural activities' },
+        ],
+        tips: [
+          'The festival follows the 1st waxing day of Tabodwe (January–February) — confirm the date locally before travelling.',
+          'Pingsai Wa Village is outside town — a local guide can arrange transport and introductions.',
+          'Ask permission before photographing people, especially elders and performers.',
+          'Try the traditional foods on offer, and follow the guidance of village elders and organisers.',
+        ],
+        album: {
+          eyebrow: 'Wa Communities',
+          title: 'The Wa New Year Festival',
+          caption: 'Village elders, traditional dress and Wa songs and dances.',
+        },
+      },
+      {
+        heldAt: 'Kengtung District Sports Ground',
+        sections: [
+          {
+            heading: 'Welcoming the Shan New Year',
+            paragraphs: [
+              'The Shan New Year Festival is one of the important cultural celebrations held in Kengtung, eastern Shan State, bringing together Shan communities and other ethnic groups to welcome the New Year and celebrate their cultural heritage.',
+            ],
+          },
+          {
+            heading: 'The 2024 Festival',
+            paragraphs: [
+              'In 2024, the Kengtung Shan New Year Festival was held from 26 to 30 November at the Kengtung District Sports Ground.',
+            ],
+          },
+          {
+            heading: 'Dances and Songs',
+            paragraphs: [
+              'Throughout the celebration, visitors and local communities could experience a variety of traditional cultural activities, including Shan traditional dances such as Kinnari and Kinnara dances, To-Naya dances, traditional songs, and performances by different ethnic groups.',
+            ],
+          },
+          {
+            heading: 'Exhibitions and Competitions',
+            paragraphs: [
+              'The festival also featured cultural exhibition booths where traditional foods, clothing, and other aspects of local heritage were displayed. Traditional singing competitions and cultural performances added to the festive atmosphere, while people gathered together to share food, music, and traditions.',
+            ],
+          },
+          {
+            heading: 'Passing On Tradition',
+            paragraphs: [
+              'The festival is not only a celebration of the beginning of a new year but also an opportunity for the people of Kengtung to preserve, present, and pass their cultural traditions to future generations.',
+            ],
+          },
+        ],
+        program: [
+          { time: 'Stage', activity: 'Kinnari and Kinnara dances, To-Naya dances and traditional songs' },
+          { time: 'Performances', activity: 'Cultural performances by different ethnic groups' },
+          { time: 'Exhibitions', activity: 'Cultural booths with traditional foods, clothing and local heritage' },
+          { time: 'Competitions', activity: 'Traditional singing competitions' },
+        ],
+        tips: [
+          'The festival follows the Shan calendar (late November–December) and runs over several days — confirm the dates locally.',
+          'Visit the exhibition booths to try traditional foods and see local clothing and crafts.',
+          'Ask permission before photographing performers up close.',
+          'Stay for performances by the other ethnic groups, not only the Shan dances.',
+        ],
+        album: {
+          eyebrow: 'Kengtung District Sports Ground',
+          title: 'The Shan New Year Festival',
+          caption: 'Kinnari and Kinnara dancers, the opening ceremony and stage performances.',
+        },
+      },
+      {
+        heldAt: 'Old market area around Pa Leng Gate, Kengtung',
+        sections: [
+          {
+            heading: 'A Market Held Once a Year',
+            paragraphs: [
+              'Sao Fa Market Day, also known as the Old Market Day, is one of Kengtung’s distinctive traditional cultural events. Unlike an ordinary daily market, it is held only once a year for one day, bringing together local residents, visitors, and vendors from surrounding areas.',
+            ],
+          },
+          {
+            heading: 'Rooted in Saopha History',
+            paragraphs: [
+              'The tradition is associated with the history of the Shan Saophas and has been preserved as an important part of Kengtung’s cultural heritage. Historical accounts place the tradition as far back as 1368 AD, during the time of Saopha Sao Sit Pan Tu. Over time, the original marketplace changed as Kengtung developed, but the annual gathering continued at the historic area.',
+            ],
+          },
+          {
+            heading: 'The Market Streets',
+            paragraphs: [
+              'On Sao Fa Market Day, the streets around the old Sao Fa tombs, Parlian Gate, Loimwe Road, Zaytangyi Road and nearby market streets become filled with temporary stalls and visitors. Vendors bring local crops, traditional foods, ethnic clothing, handicrafts and everyday goods to sell during the one-day event.',
+            ],
+          },
+          {
+            heading: 'Remembrance at the Saopha Tombs',
+            paragraphs: [
+              'The market is also closely connected with local traditions of remembrance and respect. Visitors come to the eight stupa tombs associated with past Saophas, where offerings such as fruits, flowers, candles and incense are made.',
+            ],
+          },
+          {
+            heading: 'Good Fortune and Community',
+            paragraphs: [
+              "For many local people, buying something at Sao Fa Market is more than ordinary shopping. It is part of a long-standing tradition associated with good fortune, health, social well-being and prosperity. The market therefore becomes both a place of commerce and a gathering that connects Kengtung's present-day community with its history and cultural traditions.",
+            ],
+          },
+          {
+            heading: 'A Market That Lasts Only One Day',
+            paragraphs: [
+              'From early in the morning, people gather around the historic market area to shop, meet one another, experience local traditions and pay their respects. The temporary nature of the market makes the day particularly special: once the day ends, the historic market streets return to their normal rhythm.',
+              "Sao Fa Market Day continues to serve as a living expression of Kengtung's Shan heritage, traditional commerce and community life.",
+            ],
+          },
+        ],
+        program: [
+          { time: 'Early morning', activity: 'People gather around the historic market area' },
+          { time: 'All day', activity: 'Stalls of local crops, traditional foods, ethnic clothing and handicrafts fill the streets' },
+          { time: 'Remembrance', activity: 'Offerings of fruits, flowers, candles and incense at the eight Saopha stupa tombs' },
+          { time: 'Day’s end', activity: 'The market closes and the old streets return to their normal rhythm' },
+        ],
+        tips: [
+          'The market is held on a single day each year — confirm the date locally before travelling.',
+          'Arrive early: the streets around Pa Leng Gate get very crowded.',
+          'Buy something small — by local tradition it brings good fortune.',
+          'Be respectful at the Saopha stupa tombs, where people make offerings.',
+        ],
+        album: {
+          eyebrow: 'Pa Leng Gate · Old Market',
+          title: 'Sao Fa Market Day',
+          caption: 'Stalls and crowds around Pa Leng Gate and the old market streets.',
+        },
+      },
+      {
+        heldAt: 'Loi Mwe, Kengtung Township',
+        sections: [
+          {
+            heading: 'Overview',
+            paragraphs: [
+              'The Loi Mwe Cherry Blossom Festival is an annual cultural and tourism festival held in Loi Mwe, Kengtung Township, eastern Shan State, Myanmar. Located at approximately 5,542 feet (1,689 metres) above sea level, Loi Mwe is a cool mountain area known for its natural scenery, historic sites, and beautiful cherry trees. During the flowering season, the trees transform the mountain landscape with shades of pink and white, attracting visitors from different parts of the region.',
+            ],
+          },
+          {
+            heading: 'The Beginning of the Festival',
+            paragraphs: [
+              'The first Loi Mwe Cherry Blossom Festival was held in January 2022. The festival was established to promote tourism in the Loi Mwe area, encourage appreciation and conservation of the cherry trees, and introduce visitors to the traditions, culture, food, and local products of communities around Kengtung.',
+              'Since its beginning, the festival has developed into a major seasonal attraction in eastern Shan State. Festival dates vary depending on the flowering season of the cherry trees.',
+            ],
+          },
+          {
+            heading: 'A Landscape Filled with Cherry Blossoms',
+            paragraphs: [
+              'Cherry trees have been associated with Loi Mwe for many years. Some of the older trees are believed to date back to the colonial period, while additional trees were planted by later generations.',
+              'Around 500 cherry trees were planted during the 1990s, followed by another approximately 500 trees between 2022 and 2023. These plantings brought the reported number of cherry trees in the Loi Mwe area to more than 1,000.',
+              'The area is known for different types of cherry trees that bloom at different times. As a result, the flowering season can continue for several weeks, allowing visitors to experience the blossoms over an extended period.',
+            ],
+          },
+          {
+            heading: 'A Celebration of Culture',
+            paragraphs: [
+              'The Loi Mwe Cherry Blossom Festival is not only a celebration of flowers. It is also an opportunity to showcase the cultural diversity of the Kengtung region.',
+              'Festival programmes have included traditional dance performances, music, ethnic costumes, and cultural presentations by local communities. Groups representing ethnic communities such as the Shan, Akha, Lahu, Wa, Lisu, Loi, and Ahkhe have participated in cultural activities associated with the festival.',
+              'Through these performances, visitors can experience the traditions and cultural heritage of eastern Shan State alongside the natural beauty of Loi Mwe.',
+            ],
+          },
+          {
+            heading: 'Local Food and Products',
+            paragraphs: [
+              'Local food and traditional products are an important part of the festival.',
+              'Visitors can experience and purchase a variety of regional products, including traditional local foods, ethnic traditional dishes, local wines, traditional handicrafts, Shan traditional products, agricultural products, locally produced goods, MSME products, and regional souvenirs.',
+              'Food fairs and local product exhibitions provide visitors with an opportunity to experience the everyday culture and traditions of communities around Kengtung.',
+            ],
+          },
+          {
+            heading: 'The Festival and Tourism',
+            paragraphs: [
+              'One of the main purposes of the Loi Mwe Cherry Blossom Festival is to promote Loi Mwe as a tourism destination.',
+              'The festival attracts visitors from Kengtung and other parts of eastern Shan State, including areas such as Mongkhet, Mongyawng, Mongla, and Tachileik.',
+              'The event provides an opportunity for visitors to enjoy the cherry blossoms while also exploring the surrounding mountain landscapes, historical sites, lakes, and cultural attractions.',
+              'The festival has therefore become an important seasonal event for tourism in the Kengtung region.',
+            ],
+          },
+          {
+            heading: 'Beyond the Blossoms',
+            paragraphs: [
+              'Loi Mwe offers more than its famous cherry trees. The surrounding area contains several natural and historical attractions that make it a destination throughout the year.',
+              'Among the notable places are Loi Mwe Lake and the Centennial Mansion.',
+              'Loi Mwe Lake provides a peaceful natural setting surrounded by the mountain landscape. It offers visitors an opportunity to enjoy the quieter side of Loi Mwe away from the festival crowds.',
+              'The Centennial Mansion is another important historical landmark in the area. Together with the lake, mountain scenery, and cherry-tree areas, it reflects the natural and historical character of Loi Mwe.',
+            ],
+          },
+          {
+            heading: 'Conservation of the Cherry Trees',
+            paragraphs: [
+              'The development of the cherry blossom festival is closely connected with the conservation and expansion of cherry trees in Loi Mwe.',
+              'New trees have continued to be planted in the area to expand the cherry landscape and preserve the seasonal attraction for future generations.',
+              'The festival therefore serves not only as a tourism event but also as an opportunity to raise awareness of the importance of protecting the natural environment and maintaining the unique character of Loi Mwe.',
+            ],
+          },
+          {
+            heading: 'Why Loi Mwe Is Special',
+            paragraphs: [
+              'The Loi Mwe Cherry Blossom Festival brings together three important elements: nature, history, and culture.',
+              'The cool mountain environment provides the setting. Thousands of cherry trees create the seasonal spectacle. Traditional music, dance, clothing, food, handicrafts, and local products add a strong cultural dimension to the celebration.',
+              'For visitors, the festival offers more than an opportunity to see flowers. It provides a chance to experience the natural beauty and cultural diversity of Loi Mwe and the wider Kengtung region.',
+            ],
+          },
+          {
+            heading: 'A Festival in Bloom',
+            paragraphs: [
+              'Every flowering season, Loi Mwe becomes a meeting place for nature, culture, and community.',
+              'The pink and white cherry blossoms provide the visual identity of the festival, while the surrounding mountains, historic buildings, traditional cultures, and local products tell a wider story about the region.',
+              'The Loi Mwe Cherry Blossom Festival has become one of the seasonal cultural attractions of eastern Shan State, offering visitors a memorable way to experience the landscape and heritage of Kengtung.',
+            ],
+          },
+          {
+            heading: 'Documentary Timeline',
+            paragraphs: [
+              '2022 — First Loi Mwe Cherry Blossom Festival.',
+              '2023 — The festival continued with cherry blossom viewing, cultural performances, traditional food, and local product exhibitions.',
+              '2024 — The third edition of the festival continued to promote Loi Mwe as a seasonal tourism destination.',
+              '2025 — The fourth festival was held in January, while the fifth festival was held from 24–26 December 2025.',
+              '2026 — Continued development and planting of cherry trees have been reported as part of efforts to expand the attraction of Loi Mwe.',
+            ],
+          },
+        ],
+        program: [
+          { time: 'Blossoms', activity: 'Cherry blossom viewing along the mountain paths and lakeside' },
+          { time: 'Culture', activity: 'Traditional dances, music and ethnic costumes by local communities' },
+          { time: 'Food & Products', activity: 'Food fairs and exhibitions of local foods, wines, handicrafts and products' },
+          { time: 'Nearby', activity: 'Loi Mwe Lake and the Centennial Mansion' },
+        ],
+        tips: [
+          'Festival dates change each year with the flowering of the cherry trees — confirm before travelling.',
+          'Loi Mwe sits at 5,542 ft — bring warm clothes for the cool mountain air.',
+          'Help protect the cherry trees — do not pick blossoms or break branches.',
+          'Visit Loi Mwe Lake and the Centennial Mansion for the quieter side of Loi Mwe.',
+        ],
+        album: {
+          eyebrow: 'Loi Mwe',
+          title: 'Loi Mwe Cherry Blossom Festival',
+          caption: 'Cherry blossoms along the mountain paths and lakeside, the festival opening and cultural performances.',
+        },
+      },
+    ],
   },
   watZomKham: {
     meta: { title: 'Wat Zom Kham — The Golden Crown of Kyaing Tong' },
@@ -543,6 +1358,11 @@ export const en: Dictionary = {
           title: 'Dhammacakka Sutta Recitation',
           caption:
             'Inside the Gandhakuti monastery hall of Maha Myat Muni Pagoda, devotional groups chant the Dhammacakka Sutta in the Shan language on every full moon and new moon day.',
+        },
+        {
+          eyebrow: 'Full Moon of Kason',
+          title: 'Bodhi Tree Watering Festival at Maha Myat Muni',
+          caption: 'A record of the Bodhi tree watering festival (Nyaung Ye Thun) held at Maha Myat Muni Pagoda.',
         },
       ],
     },
@@ -1122,6 +1942,17 @@ export const en: Dictionary = {
           caption:
             "The family of Union President U Min Aung Hlaing and Daw Kyu Kyu Hla donate three kyat-tha of pure gold toward the Khema Rattha Prophecy Buddha's full gold robe, received by the Bahuthathanuppyu Monastery Sayadaw and the pagoda's board of trustees.",
         },
+        {
+          eyebrow: 'Statue Grounds',
+          title: 'Around the Khema Rattha Prophecy Buddha',
+          caption: 'The standing Buddha, its inscribed gateway, the prayer-flag pole, and the bronze bell on the hilltop terrace.',
+        },
+        {
+          eyebrow: 'Archaeological Finds',
+          title: 'Relics Unearthed from the Earlier Pagoda',
+          caption:
+            'When the ground was dug to build the Prophecy Buddha, relics of the earlier pagoda were recovered — votive tablets, gold-leaf offerings, cowrie shells, pottery, and jewelry, now kept on display.',
+        },
       ],
     },
     location: {
@@ -1242,6 +2073,11 @@ export const en: Dictionary = {
             'Photographic Record of the Upper Relic Enshrinement and Gold Umbrella Spire Offering for Thatta Thattaha Maha Bodhi Pagoda in the Buddha Garden Compound, Keng Tung',
           date: '13 May 2023',
           caption: 'Scenes from the ceremony enshrining the upper relics and raising the gold umbrella spire.',
+        },
+        {
+          eyebrow: 'Pagoda Grounds',
+          title: 'The Buddha Garden Compound',
+          caption: 'Shrines, halls, gateways, and Buddha images across the Buddha Garden compound.',
         },
       ],
     },
@@ -1668,6 +2504,447 @@ export const en: Dictionary = {
       cta: 'Explore the Directory',
     },
   },
+  loneTreeHill: {
+    meta: { title: 'Lone Tree Hill (Thit Ta Bin Taung) — Keng Tung' },
+    hero: {
+      badges: [{ label: 'Cultural Landmark' }],
+      title: 'Lone Tree Hill',
+      localName: 'Thit Ta Bin Taung',
+      subtitle:
+        'A 218-foot Kanyin Phyu tree, said in Gon Shan records to have been planted around 1426 A.D., standing alone atop Suam Mong Hill above the Keng Tung valley.',
+    },
+    quickNav: {
+      label: 'Jump to Section:',
+      items: ['History', 'Photo Gallery', 'Visit & Directions'],
+    },
+    facts: {
+      pills: [
+        { label: 'Tree Height', value: '218 ft' },
+        { label: 'Species', value: 'Kanyin Phyu' },
+        { label: 'Planted', value: 'c. 1426 A.D.' },
+        { label: 'Location', value: 'Suam Mong Hill' },
+      ],
+    },
+    history: {
+      eyebrow: 'Shan Folklore & History',
+      title: 'The Legend of the Lone Tree',
+      description:
+        'Steeped in the rich tapestry of Shan folklore, Lone Tree Hill (locally known as Thit Ta Bin Taung) stands as one of the most prominent cultural landmarks in Kengtung (Kyaing Tong), Myanmar.',
+      quickFacts: [
+        { label: 'Local Name', value: 'Thit Ta Bin Taung' },
+        { label: 'Botanical Name', value: 'Dipterocarpus alatus' },
+        { label: 'Age', value: 'About 600 years' },
+      ],
+      sections: [
+        {
+          heading: 'A Tree Planted for Brotherhood',
+          paragraphs: [
+            'Perched atop Suam Mong Hill (or Som Moan), the site is famous for its towering, ancient Kanyin Phyu tree (Dipterocarpus alatus), which reaches an astonishing 218 feet in height. According to early Gon Shan ethnic records, this giant tree is much more than a natural wonder; local legend dates it back to around 1426 A.D., when it was planted by the youngest son of a legendary chief warrior to solidify territorial boundaries and serve as a living symbol of fraternity.',
+          ],
+        },
+        {
+          heading: 'Sentinel of the Kengtung Valley',
+          paragraphs: [
+            'For over half a millennium, this solitary sentinel has overseen the changing eras of the Kengtung valley. Today, it remains a deeply revered historical site where travelers can gaze across sweeping vistas of the historic town center, the tranquil Naung Tung Lake, and the distant mountain ranges, bridging the ancient world of the Shan Sawbwas (royal rulers) with the vibrant living heritage of the surrounding hill tribe communities.',
+          ],
+        },
+      ],
+    },
+    gallery: {
+      eyebrow: 'Visual Archive',
+      title: 'Photo Gallery',
+      photoCount: (count) => `${count} Photo${count === 1 ? '' : 's'}`,
+      albums: [
+        {
+          eyebrow: 'Suam Mong Hill',
+          title: 'The Lone Kanyin Tree',
+          caption: 'The 218-foot Kanyin Phyu tree and its flower gardens on the summit of Suam Mong Hill.',
+        },
+      ],
+    },
+    location: {
+      eyebrow: 'Visit & Directions',
+      title: 'Find Lone Tree Hill',
+      description:
+        'Lone Tree Hill rises on Suam Mong Hill on the western edge of Keng Tung, a short drive from the town centre and Naung Tung Lake.',
+      addressLabel: 'Address',
+      address: 'Lone Tree Hill (Thit Ta Bin Taung), Suam Mong Hill, Keng Tung, Shan State, Myanmar',
+      coordinatesLabel: 'Coordinates',
+      approximateLabel: 'Approximate location',
+      hoursLabel: 'Visiting Hours',
+      hours: 'Open Daily',
+      streetView: 'Street',
+      satelliteView: 'Satellite',
+      viewMapCta: 'View on Google Maps',
+      directionsCta: 'Get Directions',
+    },
+    closing: {
+      text: 'Six centuries on, the lone tree still keeps watch over the Keng Tung valley.',
+      cta: 'Explore the Directory',
+    },
+  },
+  kengTungWaterfall: {
+    meta: { title: 'Keng Tung Waterfall (Pin Tauk Waterfall) — Keng Tung' },
+    hero: {
+      badges: [{ label: 'Natural Attraction' }],
+      title: 'Keng Tung Waterfall',
+      localName: 'Pin Tauk Waterfall',
+      subtitle:
+        'Multi-tiered cascades, flower gardens, and forest pools 10 to 15 kilometers east of Keng Tung — one of the primary natural attractions of Eastern Shan State.',
+    },
+    quickNav: {
+      label: 'Jump to Section:',
+      items: ['About', 'Photo Gallery', 'Visit & Directions'],
+    },
+    facts: {
+      pills: [
+        { label: 'Distance', value: '10–15 km east of town' },
+        { label: 'Travel Time', value: '20–30 minutes' },
+        { label: 'Best Season', value: 'September – February' },
+        { label: 'Opening Hours', value: 'Daily, daylight hours' },
+      ],
+    },
+    history: {
+      eyebrow: 'About the Waterfall',
+      title: 'Cascades in the Forest East of Keng Tung',
+      description:
+        'Keng Tung Waterfall, commonly known as Pin Tauk Waterfall, stands as one of the primary natural attractions in Eastern Shan State.',
+      quickFacts: [
+        { label: 'Nearby Villages', value: 'Pin Tauk & Hoyang' },
+        { label: 'Getting There', value: 'Car, motorbike taxi, or tuk-tuk' },
+        { label: 'Best Light', value: 'Morning to early afternoon' },
+      ],
+      sections: [
+        {
+          heading: 'Getting There',
+          paragraphs: [
+            'Situated roughly 10 to 15 kilometers east of Keng Tung town center near Pin Tauk and Hoyang villages, the park is open daily during daylight hours and easily accessible within a 20 to 30-minute ride by hired car, motorbike taxi, or local tuk-tuk.',
+          ],
+        },
+        {
+          heading: 'Cascades & Gardens',
+          paragraphs: [
+            'The main attraction features multi-tiered cascades where water flows down smooth, terraced rock formations into natural pools framed by a dense forest canopy. Enhancing the natural landscape, the surrounding grounds are developed with manicured flower beds, orchids, wooden walkways, and covered rest gazebos.',
+          ],
+        },
+        {
+          heading: 'A Base for Hill-Tribe Treks',
+          paragraphs: [
+            'Due to its proximity to several ethnic minority communities—including Akha, Lahu, and Ann hill tribes—the site routinely serves as a cultural trekking base and a popular rest or lunch spot on full-day regional hiking routes, with local guides often arranging transport to and from the starting points.',
+          ],
+        },
+        {
+          heading: 'When to Visit',
+          paragraphs: [
+            'The ideal visiting window spans from September to February during the post-monsoon and cool dry season, when water flow is strongest and the surrounding gardens are in full bloom. Planning a visit between the morning and early afternoon guarantees the clearest natural light filtering through the tree canopy. While the park offers basic picnic areas and local food stalls selling drinks and snacks, carrying extra bottled water and snacks is recommended for those planning longer treks.',
+          ],
+        },
+      ],
+    },
+    gallery: {
+      eyebrow: 'Visual Archive',
+      title: 'Photo Gallery',
+      photoCount: (count) => `${count} Photo${count === 1 ? '' : 's'}`,
+      albums: [
+        {
+          eyebrow: 'Pin Tauk',
+          title: 'Keng Tung Waterfall & Its Gardens',
+          caption: 'The terraced cascades, forest pools, and flower gardens of Keng Tung Waterfall.',
+        },
+      ],
+    },
+    location: {
+      eyebrow: 'Visit & Directions',
+      title: 'Find Keng Tung Waterfall',
+      description:
+        'The waterfall lies roughly 10 to 15 kilometers east of Keng Tung near Pin Tauk and Hoyang villages — a 20 to 30-minute ride by hired car, motorbike taxi, or tuk-tuk.',
+      addressLabel: 'Address',
+      address: 'Keng Tung Waterfall (Pin Tauk Waterfall), near Pin Tauk Village, Keng Tung Township, Shan State, Myanmar',
+      coordinatesLabel: 'Coordinates',
+      approximateLabel: 'Approximate location',
+      hoursLabel: 'Visiting Hours',
+      hours: 'Open Daily, Daylight Hours',
+      streetView: 'Street',
+      satelliteView: 'Satellite',
+      viewMapCta: 'View on Google Maps',
+      directionsCta: 'Get Directions',
+    },
+    closing: {
+      text: 'Where the forest meets the water — a quiet rest stop on the trails east of Keng Tung.',
+      cta: 'Explore the Directory',
+    },
+  },
+  kengTungHawPalace: {
+    meta: { title: 'Kengtung Haw Palace — Keng Tung' },
+    hero: {
+      badges: [{ label: 'Historic Landmark' }],
+      title: 'Kengtung Haw Palace',
+      localName: 'Kengtung Haw',
+      subtitle:
+        'The historic palace of the Sawbwa of Kengtung State — built 1903–1906, demolished in 1991, and reconstructed as a replica museum on Naung Tung Lake in 2024.',
+    },
+    quickNav: {
+      label: 'Jump to Section:',
+      items: ['History', 'Photo Gallery', 'Visit & Directions'],
+    },
+    facts: {
+      pills: [
+        { label: 'Built', value: '1903 – 1906' },
+        { label: 'Demolished', value: '1991' },
+        { label: 'Replica Museum Opened', value: '12 May 2024' },
+        { label: 'Location', value: 'Naung Tung Lake, Ward 5' },
+      ],
+    },
+    history: {
+      eyebrow: 'Royal Heritage',
+      title: 'The Palace of the Kengtung Sawbwa',
+      description:
+        'The Kengtung Haw Palace, also known as Kengtung Haw, was the historic palace of the Sawbwa of Kengtung State in eastern Shan State, Myanmar.',
+      quickFacts: [
+        { label: 'Commissioned By', value: 'Sao Kawng Kiao Intaleng' },
+        { label: 'Architecture', value: 'Shan, Myanmar, European & Indian' },
+        { label: 'Today', value: 'Replica Museum' },
+      ],
+      sections: [
+        {
+          heading: 'The Original Palace',
+          paragraphs: [
+            'The original Kengtung Haw Palace was commissioned by Sao Kawng Kiao Intaleng, the Saopha of Kengtung. Construction began in 1903 with the assistance of experts from India and was completed in 1906.',
+            'The palace represented a unique combination of Shan and Myanmar traditional architecture with European and Indian influences. Its distinctive architectural design reflected the historical connections and cultural diversity of Kengtung during the early twentieth century.',
+            'The palace was also regarded as the first cement building in Kengtung.',
+          ],
+        },
+        {
+          heading: 'The Saopha Family',
+          paragraphs: [
+            'The Haw Palace was the residence of generations of the Kengtung ruling family.',
+            'Sao Kawng Kiao Intaleng, his son Sao Kawng Tai, and his grandson Sao Sai Long, together with their families, lived in the palace until 1959.',
+            'In 1962, the palace was later used as a government office.',
+          ],
+        },
+        {
+          heading: 'A Lost Historical Landmark',
+          paragraphs: [
+            'The original Kengtung Haw Palace was demolished in 1991.',
+            "The destruction of the palace marked the disappearance of one of Kengtung's most important historical landmarks. Today, historical photographs and documents provide valuable evidence of the original building and its place in the history of Kengtung.",
+          ],
+        },
+        {
+          heading: 'Historical Photographs',
+          paragraphs: [
+            'Historical photographs preserved in collections such as the British Library document the Kengtung Haw and its surroundings.',
+            'Photographs from the late nineteenth and early twentieth centuries show the palace, its architecture, the surrounding town, and views from the Haw.',
+            'These photographs are important visual records because the original palace no longer survives.',
+          ],
+        },
+        {
+          heading: 'The Reconstructed Haw Palace',
+          paragraphs: [
+            'A replica of the Kengtung Haw Palace was constructed to preserve and present the history of the former palace.',
+            'The Kengtung Haw Palace Replica Museum was inaugurated on 12 May 2024 at Haw Palace Park on the Nawngtong Lake circular road in Ward 5 of Kengtung.',
+            'The reconstructed building follows the historical identity of the former Haw Palace and serves as a museum dedicated to the history of the Kengtung Saopha and his family.',
+          ],
+        },
+        {
+          heading: 'Inside the Museum',
+          paragraphs: [
+            'The museum contains historical photographs, documentary materials, traditional utensils, and displays representing the rooms and life of the former Haw Palace.',
+            'Visitors can learn about the Saopha family, the history of the palace, and the cultural heritage associated with Kengtung.',
+          ],
+        },
+        {
+          heading: "A Symbol of Kengtung's History",
+          paragraphs: [
+            'The Kengtung Haw is more than a historic building.',
+            "It represents an important period in the history of Kengtung and the Shan States, connecting the region's royal heritage, architecture, culture, and changing political history.",
+            'Although the original palace was lost, historical photographs, documents, and the reconstructed museum provide new generations with an opportunity to learn about the former Kengtung Haw Palace.',
+            'Today, the reconstructed Haw Palace stands as a place where visitors can explore the history and cultural heritage of Kengtung.',
+          ],
+        },
+      ],
+      readMoreCta: 'Read Full History',
+      readLessCta: 'Show Less',
+    },
+    gallery: {
+      eyebrow: 'Visual Archive',
+      title: 'Photo Gallery',
+      photoCount: (count) => `${count} Photo${count === 1 ? '' : 's'}`,
+      albums: [
+        {
+          eyebrow: 'Historical Photograph',
+          title: 'The Original Kengtung Haw',
+          caption: 'The original palace of the Kengtung Sawbwa, built 1903–1906 and demolished in 1991.',
+        },
+        {
+          eyebrow: 'Opened 12 May 2024',
+          title: 'The Haw Palace Replica Museum',
+          caption: 'The reconstructed Haw Palace at its inauguration, and seen across Naung Tung Lake at dusk.',
+        },
+      ],
+    },
+    location: {
+      eyebrow: 'Visit & Directions',
+      title: 'Find the Haw Palace',
+      description:
+        'The Kengtung Haw Palace Replica Museum stands in Haw Palace Park on the Naung Tung Lake circular road, Ward 5, in the centre of Kengtung.',
+      addressLabel: 'Address',
+      address: 'Haw Palace Park, Naung Tung Lake Circular Road, Ward 5, Kengtung, Shan State, Myanmar',
+      coordinatesLabel: 'Coordinates',
+      approximateLabel: 'Approximate location',
+      hoursLabel: 'Visiting Hours',
+      hours: 'Check locally for museum hours',
+      streetView: 'Street',
+      satelliteView: 'Satellite',
+      viewMapCta: 'View on Google Maps',
+      directionsCta: 'Get Directions',
+    },
+    closing: {
+      text: 'Though the original palace was lost, its story lives on beside Naung Tung Lake.',
+      cta: 'Explore the Directory',
+    },
+  },
+  naungTungLake: {
+    meta: { title: 'Naung Tung Lake — Keng Tung' },
+    hero: {
+      badges: [{ label: 'Heart of the City' }],
+      title: 'Naung Tung Lake',
+      localName: 'The Lake at the Heart of Kengtung',
+      subtitle:
+        'The historic 33-acre lake between Swam Tong and Swam Sat hills, around which Kengtung grew — ringed by pagodas, the Haw Palace site, and a scenic lakeside walk.',
+    },
+    quickNav: {
+      label: 'Jump to Section:',
+      items: ['History & Legend', 'Photo Gallery', 'Visit & Directions'],
+    },
+    facts: {
+      pills: [
+        { label: 'Area', value: 'About 33 acres' },
+        { label: 'Location', value: 'Kengtung town centre' },
+        { label: 'Between', value: 'Swam Tong & Swam Sat Hills' },
+        { label: 'Best Time', value: 'Morning & evening' },
+      ],
+    },
+    history: {
+      eyebrow: 'The Lake at the Heart of Kengtung',
+      title: 'History & Legend of Naung Tung Lake',
+      description:
+        'Naung Tung Lake is one of the most recognizable landmarks of Kengtung, eastern Shan State, Myanmar. Located in the heart of the city, the historic lake has long been closely connected with the development and identity of Kengtung.',
+      quickFacts: [
+        { label: 'Legend', value: 'Drained by four hermits' },
+        { label: 'Name Origin', value: 'The hermit Tonga' },
+        { label: 'Nearby', value: 'Swam Tong Pagoda & Haw Palace' },
+      ],
+      sections: [
+        {
+          heading: 'The Lake at the Heart of Kengtung',
+          paragraphs: [
+            'Naung Tung Lake is one of the most recognizable landmarks of Kengtung, eastern Shan State, Myanmar.',
+            'Located in the heart of the city, the historic lake has long been closely connected with the development and identity of Kengtung.',
+            'The lake lies between the hills of Swam Tong and Swam Sat and covers approximately 33 acres according to historical tourism records.',
+          ],
+        },
+        {
+          heading: 'A Walk Through History',
+          paragraphs: [
+            'Kengtung developed around Naung Tung Lake.',
+            'The eastern side of the lake became an important part of the early settlement of Kengtung, and many historical landmarks were established around the lake and its surrounding hills.',
+            'Among these are Swam Tong Pagoda, the former Kengtung Haw Palace site, Maha Myat Muni Pagoda, Pa Leng Gate, the old market area, and other sites connected with the history of the city.',
+          ],
+        },
+        {
+          heading: 'The Legend of Naung Tung Lake',
+          paragraphs: [
+            'According to traditional Gon Shan historical accounts, the area where Kengtung now stands was once a vast flooded region.',
+            'Four hermits are said to have arrived from the north and drained the water from the flooded land.',
+            'After seven years and seven months, only a smaller lake remained.',
+            'One of the hermits, known as Tonga, is said to have built a pagoda on Swam Tong Hill after the water receded.',
+            'According to this traditional account, the name of the lake became associated with Tonga and eventually developed into the name Naung Tung, while the city became known as Kengtung.',
+            'This story is preserved as part of the traditional history and legends of Kengtung.',
+          ],
+        },
+        {
+          heading: 'A Landmark Surrounded by History',
+          paragraphs: [
+            'Naung Tung Lake is surrounded by several important cultural and historical landmarks.',
+            'On Swam Tong Hill stands the historic Swam Tong Pagoda.',
+            'On Swam Mon Hill stands the famous Kanyin Phyu tree, rising prominently above the surrounding landscape.',
+            'To the southwest of the lake is a large Standing Buddha image that can be seen from many parts of Kengtung.',
+            'The area around the lake also connects visitors with the former Haw Palace site and other historical locations in the city.',
+          ],
+        },
+        {
+          heading: 'The Lake Today',
+          paragraphs: [
+            'Today, Naung Tung Lake remains one of the most recognizable places in Kengtung.',
+            'A scenic walking route surrounds the lake, with trees, flowers and places for people to rest.',
+            'The surrounding area also contains restaurants, food stalls, hotels and other local businesses.',
+            'In the morning and evening, the lake becomes a gathering place for local residents, walkers, families, children and visitors.',
+          ],
+        },
+        {
+          heading: 'The View',
+          paragraphs: [
+            'The western side of the lake provides one of the notable viewpoints.',
+            'Looking southwest, visitors can see the Standing Buddha.',
+            'Looking south, Swam Mon Hill rises above the lake with the distinctive Kanyin Phyu tree standing prominently on the hilltop.',
+            'During the evening, the lake becomes especially peaceful as the surrounding landscape reflects across the water.',
+          ],
+        },
+        {
+          heading: 'A Symbol of Kengtung',
+          paragraphs: [
+            'Naung Tung Lake is more than a natural lake.',
+            'It is a place where the natural landscape, traditional legends, religious heritage and history of Kengtung come together.',
+            'For generations, the lake has remained closely connected with the identity of the city.',
+            'It is both a landmark for visitors and a place deeply valued by local residents.',
+          ],
+        },
+        {
+          heading: 'The Heart of the City',
+          paragraphs: [
+            'From its traditional origin stories to the historic landmarks surrounding its shores, Naung Tung Lake tells an important part of the story of Kengtung.',
+            'The lake, the surrounding hills, ancient pagodas, historic buildings and modern city life create a landscape where the past and present of Kengtung meet.',
+            'For anyone exploring Kengtung, Naung Tung Lake is not simply a place to visit.',
+            'It is a place to understand the history, culture and identity of the city.',
+          ],
+        },
+      ],
+      readMoreCta: 'Read Full History',
+      readLessCta: 'Show Less',
+    },
+    gallery: {
+      eyebrow: 'Visual Archive',
+      title: 'Photo Gallery',
+      photoCount: (count) => `${count} Photo${count === 1 ? '' : 's'}`,
+      albums: [
+        {
+          eyebrow: 'Kengtung Town Centre',
+          title: 'Views of Naung Tung Lake',
+          caption: 'The lake from above, the pagoda reflected at sunset, and the Haw Palace replica across the water at dusk.',
+        },
+      ],
+    },
+    location: {
+      eyebrow: 'Visit & Directions',
+      title: 'Find Naung Tung Lake',
+      description:
+        'Naung Tung Lake lies in the heart of Kengtung. A walking route circles the lake — mornings and evenings are the liveliest and most peaceful times to visit.',
+      addressLabel: 'Address',
+      address: 'Naung Tung Lake, Kengtung Town Centre, Shan State, Myanmar',
+      coordinatesLabel: 'Coordinates',
+      approximateLabel: 'Approximate location',
+      hoursLabel: 'Visiting Hours',
+      hours: 'Open 24 Hours',
+      streetView: 'Street',
+      satelliteView: 'Satellite',
+      viewMapCta: 'View on Google Maps',
+      directionsCta: 'Get Directions',
+    },
+    closing: {
+      text: 'Where the past and present of Kengtung meet.',
+      cta: 'Explore the Directory',
+    },
+  },
   locationMapPage: {
     eyebrow: 'Pilgrimage Cartography',
     title: 'Location Map',
@@ -1685,7 +2962,24 @@ export const en: Dictionary = {
     title: 'Other Notable Places',
     description: 'More landmarks and points of interest around Keng Tung.',
     emptyState: 'Places are being documented and will appear here soon.',
-    places: [],
+    places: [
+      {
+        name: 'Lone Tree Hill',
+        description: 'A 218-foot Kanyin Phyu tree on Suam Mong Hill, planted around 1426 A.D. according to Shan legend.',
+      },
+      {
+        name: 'Keng Tung Waterfall',
+        description: 'Also known as Pin Tauk Waterfall — terraced cascades and flower gardens 10 to 15 km east of town.',
+      },
+      {
+        name: 'Kengtung Haw Palace',
+        description: 'The palace of the Kengtung Sawbwa, built 1903–1906 and reborn as a replica museum on Naung Tung Lake in 2024.',
+      },
+      {
+        name: 'Naung Tung Lake',
+        description: 'The historic lake at the heart of Kengtung, around which the city grew — and the source of its name.',
+      },
+    ],
   },
   aboutPage: {
     eyebrow: 'About This Guide',

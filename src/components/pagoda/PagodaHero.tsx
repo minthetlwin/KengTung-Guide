@@ -35,8 +35,6 @@ export function PagodaHero({ image, bannerImages, title, localName, subtitle, ba
             </div>
           </div>
         )}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 via-55% to-black/10 to-100%" />
-
         <div className="relative z-10 flex h-full min-h-[560px] w-full flex-col justify-end gap-3 px-gutter pb-12 pt-32 sm:min-h-[620px] md:px-gutter-lg lg:min-h-[720px]">
           <div className="flex flex-wrap items-center gap-2">
             {badges.map((badge, i) => (

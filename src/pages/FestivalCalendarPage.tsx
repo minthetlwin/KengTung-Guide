@@ -1,9 +1,8 @@
+import { Link } from 'react-router-dom'
 import { useLanguage } from '../context/language-context'
 import { FestivalsCalendar } from '../components/FestivalsCalendar'
-import { festivalsMeta } from '../data/festivals'
+import { festivalsMeta, formatFestivalDate } from '../data/festivals'
 import { usePageMeta } from '../hooks/usePageMeta'
-
-const INTL_LOCALES: Record<string, string> = { en: 'en-US', my: 'my-MM', th: 'th-TH' }
 
 export function FestivalCalendarPage() {
   const { t, locale } = useLanguage()
@@ -40,23 +39,20 @@ export function FestivalCalendarPage() {
           <p className="font-sans text-sm text-text-muted">{f.dateNote}</p>
         </div>
 
-        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {f.slides.map((slide, i) => {
             const meta = festivalsMeta[i]
-            const dateLabel = new Intl.DateTimeFormat(INTL_LOCALES[locale] ?? 'en-US', {
-              day: 'numeric',
-              month: 'long',
-              year: 'numeric',
-            }).format(new Date(meta.targetDate))
+            const dateLabel = meta.targetDate ? formatFestivalDate(meta.targetDate, locale) : f.dateTba
 
             return (
-              <div
+              <Link
                 key={meta.id}
-                className="flex flex-col overflow-hidden rounded-2xl border border-border bg-bg-elevated shadow-soft"
+                to={`/festival-calendar/${meta.id}`}
+                className="group flex flex-col overflow-hidden rounded-2xl border border-border bg-bg-elevated shadow-soft transition-all duration-300 hover:-translate-y-1 hover:shadow-elevated"
               >
                 <div className="relative h-40 w-full">
                   <div
-                    className="h-full w-full bg-cover bg-center"
+                    className="h-full w-full bg-bg-elevated-3 bg-cover bg-center"
                     style={{ backgroundImage: `url('${meta.image}')` }}
                     role="img"
                     aria-label={slide.heading}
@@ -70,16 +66,22 @@ export function FestivalCalendarPage() {
                   <span className="font-sans text-[11px] font-semibold uppercase tracking-wide text-text-faint">
                     {slide.subBadge}
                   </span>
-                  <h3 className="font-serif text-lg font-bold text-text">{slide.heading}</h3>
+                  <h3 className="font-serif text-lg font-bold text-text transition-colors group-hover:text-primary">
+                    {slide.heading}
+                  </h3>
                   <p className="line-clamp-3 font-sans text-sm leading-relaxed text-text-muted">
                     {slide.description}
                   </p>
                   <span className="mt-auto flex items-center gap-1.5 border-t border-border pt-3 font-sans text-xs font-semibold text-primary">
                     <span className="material-symbols-outlined text-[16px]">event</span>
                     {dateLabel}
+                    <span className="ml-auto flex items-center gap-0.5">
+                      {t.festivalDetailPage.viewDetails}
+                      <span className="material-symbols-outlined text-[16px]">arrow_forward</span>
+                    </span>
                   </span>
                 </div>
-              </div>
+              </Link>
             )
           })}
         </div>

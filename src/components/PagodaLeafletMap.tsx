@@ -91,12 +91,24 @@ export function PagodaLeafletMap({
     const el = containerRef.current
     if (!el || mapRef.current) return
 
-    const map = L.map(el, { scrollWheelZoom: false, zoomControl: false })
+    // Wheel/trackpad zoom tuned for a continuous feel: fractional zoom levels
+    // instead of whole-level jumps, more wheel travel per level so a mouse
+    // notch glides rather than lurches, and a short debounce so trackpad
+    // swipes track the fingers closely. The +/- buttons keep whole steps.
+    const map = L.map(el, {
+      zoomControl: false,
+      scrollWheelZoom: true,
+      zoomSnap: 0.25,
+      wheelPxPerZoomLevel: 120,
+      wheelDebounceTime: 20,
+    })
     L.control.zoom({ position: 'bottomright' }).addTo(map)
     mapRef.current = map
 
-    const street = L.tileLayer(STREET_TILES, { attribution: STREET_ATTRIBUTION, maxZoom: 19 })
-    const satellite = L.tileLayer(SATELLITE_TILES, { attribution: SATELLITE_ATTRIBUTION, maxZoom: 19 })
+    // A wider off-screen tile buffer so zooming out or panning reveals
+    // already-loaded tiles instead of flashing blank grey edges.
+    const street = L.tileLayer(STREET_TILES, { attribution: STREET_ATTRIBUTION, maxZoom: 19, keepBuffer: 4 })
+    const satellite = L.tileLayer(SATELLITE_TILES, { attribution: SATELLITE_ATTRIBUTION, maxZoom: 19, keepBuffer: 4 })
     layersRef.current = { street, satellite }
     satellite.addTo(map)
 

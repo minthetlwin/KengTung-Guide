@@ -14,6 +14,10 @@ import {
   skstPagodaConfig,
   sodmPagodaConfig,
   mhnbPagodaConfig,
+  lthPlaceConfig,
+  ktwPlaceConfig,
+  khpPlaceConfig,
+  ntlPlaceConfig,
 } from './data/pagodas'
 import { OtherPlacesPage } from './pages/OtherPlacesPage'
 import { LocationMapPage } from './pages/LocationMapPage'
@@ -21,6 +25,7 @@ import { AboutPage } from './pages/AboutPage'
 import { ContactPage } from './pages/ContactPage'
 import { PagodasPage } from './pages/PagodasPage'
 import { FestivalCalendarPage } from './pages/FestivalCalendarPage'
+import { FestivalDetailPage } from './pages/FestivalDetailPage'
 import { NarrationPage } from './pages/NarrationPage'
 
 function App() {
@@ -43,11 +48,20 @@ function App() {
             <Route path="/shwe-ohn-daing-min" element={<PagodaDetailPage config={sodmPagodaConfig} />} />
             <Route path="/maing-hnun-nee-bayar" element={<PagodaDetailPage config={mhnbPagodaConfig} />} />
             <Route path="/other-places" element={<OtherPlacesPage />} />
+            <Route path="/other-places/lone-tree-hill" element={<PagodaDetailPage config={lthPlaceConfig} />} />
+            <Route path="/other-places/keng-tung-waterfall" element={<PagodaDetailPage config={ktwPlaceConfig} />} />
+            <Route
+              path="/other-places/loi-mwe-cherry-blossom-festival"
+              element={<Navigate to="/festival-calendar/loi-mwe-cherry-blossom-festival" replace />}
+            />
+            <Route path="/other-places/keng-tung-haw-palace" element={<PagodaDetailPage config={khpPlaceConfig} />} />
+            <Route path="/other-places/naung-tung-lake" element={<PagodaDetailPage config={ntlPlaceConfig} />} />
             <Route path="/location-map" element={<LocationMapPage />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/pagodas" element={<PagodasPage />} />
             <Route path="/festival-calendar" element={<FestivalCalendarPage />} />
+            <Route path="/festival-calendar/:festivalId" element={<FestivalDetailPage />} />
             <Route path="/narration" element={<NarrationPage />} />
           </Routes>
         </main>

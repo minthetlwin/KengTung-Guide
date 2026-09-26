@@ -58,11 +58,12 @@ export const mmmGalleryAlbums: GalleryAlbum[] = [
     id: 'almsgiving',
     images: [
       '/images/maharmyatmuni/01/almsgiving-04.jpg',
-      '/images/maharmyatmuni/01/almsgiving-01.jpg',
-      '/images/maharmyatmuni/01/almsgiving-02.jpg',
-      '/images/maharmyatmuni/01/almsgiving-03.jpg',
-      '/images/maharmyatmuni/01/almsgiving-05.jpg',
-      '/images/maharmyatmuni/01/almsgiving-06.jpg',
+      '/images/maharmyatmuni/01/photo_2026-09-24 20.10.01.jpeg',
+      '/images/maharmyatmuni/01/photo_2026-09-24 20.09.46.jpeg',
+      '/images/maharmyatmuni/01/photo_2026-09-24 20.09.49.jpeg',
+      '/images/maharmyatmuni/01/photo_2026-09-24 20.09.52.jpeg',
+      '/images/maharmyatmuni/01/photo_2026-09-24 20.09.55.jpeg',
+      '/images/maharmyatmuni/01/photo_2026-09-24 20.09.57.jpeg',
     ],
   },
   {
@@ -73,6 +74,17 @@ export const mmmGalleryAlbums: GalleryAlbum[] = [
       '/images/maharmyatmuni/02/dhammacakka-03.jpg',
       '/images/maharmyatmuni/02/dhammacakka-04.jpg',
       '/images/maharmyatmuni/02/dhammacakka-05.jpg',
+    ],
+  },
+  {
+    id: 'bodhi-watering',
+    images: [
+      '/images/maharmyatmuni/05/photo_2026-09-26 20.17.06.jpeg',
+      '/images/maharmyatmuni/05/photo_2026-09-26 20.17.08.jpeg',
+      '/images/maharmyatmuni/05/2026-09-26 20.16.48.jpg',
+      '/images/maharmyatmuni/05/photo_2026-09-26 20.17.09.jpeg',
+      '/images/maharmyatmuni/05/photo_2026-09-26 20.16.54.jpeg',
+      '/images/maharmyatmuni/05/photo_2026-09-26 20.17.04.jpeg',
     ],
   },
 ]

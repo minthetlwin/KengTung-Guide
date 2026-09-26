@@ -67,6 +67,16 @@ export interface FestivalSlide {
   cta: string
 }
 
+export interface FestivalDetailContent {
+  sections: MmmHistorySection[]
+  program: { time: string; activity: string }[]
+  // Overrides for festivals not held at Maha Myat Muni Pagoda.
+  heldAt?: string
+  tips?: string[]
+  // Gallery copy when the festival has its own photos (`FestivalMeta.images`).
+  album?: MmmGalleryAlbum
+}
+
 export interface WzkFestival {
   cycle: string
   period: string
@@ -357,18 +367,59 @@ export interface Dictionary {
     eyebrow: string
     title: string
     dateNote: string
+    dateTba: string
     countdown: {
       days: string
       hours: string
       mins: string
       secs: string
     }
-    slides: [FestivalSlide, FestivalSlide, FestivalSlide, FestivalSlide]
+    slides: [
+      FestivalSlide,
+      FestivalSlide,
+      FestivalSlide,
+      FestivalSlide,
+      FestivalSlide,
+      FestivalSlide,
+      FestivalSlide,
+      FestivalSlide,
+      FestivalSlide,
+      FestivalSlide,
+      FestivalSlide,
+      FestivalSlide,
+    ]
   }
   festivalCalendarPage: {
     eyebrow: string
     title: string
     description: string
+  }
+  festivalDetailPage: {
+    aboutEyebrow: string
+    nextObservance: string
+    heldAtLabel: string
+    heldAt: string
+    visitPagoda: string
+    backToCalendar: string
+    viewDetails: string
+    programTitle: string
+    tipsTitle: string
+    tips: string[]
+    // Index-matched with `festivals.slides` / `festivalsMeta`.
+    festivals: [
+      FestivalDetailContent,
+      FestivalDetailContent,
+      FestivalDetailContent,
+      FestivalDetailContent,
+      FestivalDetailContent,
+      FestivalDetailContent,
+      FestivalDetailContent,
+      FestivalDetailContent,
+      FestivalDetailContent,
+      FestivalDetailContent,
+      FestivalDetailContent,
+      FestivalDetailContent,
+    ]
   }
   watZomKham: PagodaDetailDictionary
   maharMyatMuni: MaharMyatMuniDictionary
@@ -380,6 +431,10 @@ export interface Dictionary {
   swamKyeimShweHsanTaw: PagodaDetailDictionary
   shweOhnDaingMin: PagodaDetailDictionary
   maingHnunNeeBayar: PagodaDetailDictionary
+  loneTreeHill: PagodaDetailDictionary
+  kengTungWaterfall: PagodaDetailDictionary
+  kengTungHawPalace: PagodaDetailDictionary
+  naungTungLake: PagodaDetailDictionary
   locationMapPage: {
     eyebrow: string
     title: string

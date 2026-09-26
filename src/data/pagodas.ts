@@ -15,10 +15,15 @@ import {
   ttmbCoordinates,
   ttmbPanoramaSrc,
   ttmbGalleryAlbums,
+  ttmbBannerImages,
   ttmbHistoryAudioSrc,
 } from './thattaThattahaMahaBodhi'
 import { skstHeroImage, skstCoordinates, skstHistoryAudioSrc } from './swamKyeimShweHsanTaw'
 import { sodmHeroImage, sodmCoordinates, sodmHistoryAudioSrc, sodmGalleryAlbums } from './shweOhnDaingMin'
+import { ntlHeroImage, ntlBannerImages, ntlCoordinates, ntlGalleryAlbums } from './naungTungLake'
+import { khpHeroImage, khpBannerImages, khpCoordinates, khpGalleryAlbums } from './kengTungHawPalace'
+import { ktwHeroImage, ktwBannerImages, ktwCoordinates, ktwGalleryAlbums } from './kengTungWaterfall'
+import { lthHeroImage, lthBannerImages, lthCoordinates, lthGalleryAlbums } from './loneTreeHill'
 import { mhnbHeroImage, mhnbCoordinates, mhnbHistoryAudioSrc, mhnbPanoramaSrc } from './maingHnunNeeBayar'
 
 export interface PagodaGalleryConfig {
@@ -40,6 +45,10 @@ export interface PagodaConfig {
     | 'swamKyeimShweHsanTaw'
     | 'shweOhnDaingMin'
     | 'maingHnunNeeBayar'
+    | 'loneTreeHill'
+    | 'kengTungWaterfall'
+    | 'kengTungHawPalace'
+    | 'naungTungLake'
   heroImage: string
   bannerImages?: string[]
   coordinates: { lat: number; lng: number }
@@ -111,6 +120,7 @@ export const krPagodaConfig: PagodaConfig = {
 export const ttmbPagodaConfig: PagodaConfig = {
   dictKey: 'thattaThattahaMahaBodhi',
   heroImage: ttmbHeroImage,
+  bannerImages: ttmbBannerImages,
   coordinates: ttmbCoordinates,
   locationZoom: 16,
   audioSrc: ttmbHistoryAudioSrc,
@@ -146,4 +156,44 @@ export const mhnbPagodaConfig: PagodaConfig = {
   audioSrc: mhnbHistoryAudioSrc,
   quickNavSectionIds: ['history-timeline', 'panorama-360', 'location'],
   panorama: { src: mhnbPanoramaSrc },
+}
+
+export const lthPlaceConfig: PagodaConfig = {
+  dictKey: 'loneTreeHill',
+  heroImage: lthHeroImage,
+  bannerImages: lthBannerImages,
+  coordinates: lthCoordinates,
+  locationZoom: 16,
+  quickNavSectionIds: ['history-timeline', 'photo-gallery', 'location'],
+  gallery: { albums: lthGalleryAlbums },
+}
+
+export const ktwPlaceConfig: PagodaConfig = {
+  dictKey: 'kengTungWaterfall',
+  heroImage: ktwHeroImage,
+  bannerImages: ktwBannerImages,
+  coordinates: ktwCoordinates,
+  locationZoom: 13,
+  quickNavSectionIds: ['history-timeline', 'photo-gallery', 'location'],
+  gallery: { albums: ktwGalleryAlbums },
+}
+
+export const khpPlaceConfig: PagodaConfig = {
+  dictKey: 'kengTungHawPalace',
+  heroImage: khpHeroImage,
+  bannerImages: khpBannerImages,
+  coordinates: khpCoordinates,
+  locationZoom: 16,
+  quickNavSectionIds: ['history-timeline', 'photo-gallery', 'location'],
+  gallery: { albums: khpGalleryAlbums },
+}
+
+export const ntlPlaceConfig: PagodaConfig = {
+  dictKey: 'naungTungLake',
+  heroImage: ntlHeroImage,
+  bannerImages: ntlBannerImages,
+  coordinates: ntlCoordinates,
+  locationZoom: 16,
+  quickNavSectionIds: ['history-timeline', 'photo-gallery', 'location'],
+  gallery: { albums: ntlGalleryAlbums },
 }
