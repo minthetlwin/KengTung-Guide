@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import { Header } from './components/Header'
 import { Footer } from './components/Footer'
 import { ScrollToTop } from './components/ScrollToTop'
+import { OfflineStatus } from './components/OfflineStatus'
 import { PagodaDetailPage } from './pages/PagodaDetailPage'
 import { MaharMyatMuniPage } from './pages/MaharMyatMuniPage'
 import {
@@ -32,6 +33,7 @@ function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
+      <OfflineStatus />
       <div className="min-h-screen bg-bg">
         <Header />
         <main className="w-full pt-[76px]">

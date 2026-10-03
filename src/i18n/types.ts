@@ -494,6 +494,10 @@ export interface Dictionary {
     viewDetails: string
     back: string
   }
+  offline: {
+    downloading: string
+    ready: string
+  }
   closing: {
     text: string
   }

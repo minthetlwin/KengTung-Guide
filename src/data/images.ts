@@ -8,9 +8,9 @@ const WAT_JONG_KHAM_LAKE =
 const INDEIN_MONKS_STUPAS =
   'https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ed/Indein%2C_Buddhist_monks%2C_White_Buddhist_pagodas%2C_Shan_State%2C_Shan_Hills%2C_Myanmar.jpg/1920px-Indein%2C_Buddhist_monks%2C_White_Buddhist_pagodas%2C_Shan_State%2C_Shan_Hills%2C_Myanmar.jpg'
 const MAHA_MUNI_FACE =
-  'https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/007_Maha_Muni_Image_%288932949118%29.jpg/1280px-007_Maha_Muni_Image_%288932949118%29.jpg'
+  'https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/007_Maha_Muni_Image_%288932949118%29.jpg/1920px-007_Maha_Muni_Image_%288932949118%29.jpg'
 const GOLDEN_PALACE_CARVING =
-  'https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5c/Golden_Palace_Monastery_-_Mandalay_20130211-002.jpg/1280px-Golden_Palace_Monastery_-_Mandalay_20130211-002.jpg'
+  'https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5c/Golden_Palace_Monastery_-_Mandalay_20130211-002.jpg/1920px-Golden_Palace_Monastery_-_Mandalay_20130211-002.jpg'
 
 // Supplied directly by the project owner (originals converted to optimized JPEG).
 const MAHA_MYAT_MUNI_GATE = '/maha-myat-muni.jpg'

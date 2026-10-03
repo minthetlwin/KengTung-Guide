@@ -11,7 +11,7 @@ export function SanctuaryCard({ card, image }: SanctuaryCardProps) {
   const { t } = useLanguage()
 
   return (
-    <article className="group flex flex-col overflow-hidden rounded-xl border border-border bg-bg-elevated shadow-soft transition-all duration-300 hover:-translate-y-1 hover:shadow-elevated">
+    <article className="group relative flex flex-col overflow-hidden rounded-xl border border-border bg-bg-elevated shadow-soft transition-all duration-300 hover:-translate-y-1 hover:shadow-elevated">
       <div className="relative h-52 w-full overflow-hidden bg-bg-elevated-3">
         <div
           className="h-full w-full bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
@@ -58,7 +58,7 @@ export function SanctuaryCard({ card, image }: SanctuaryCardProps) {
           {card.detailPath ? (
             <Link
               to={card.detailPath}
-              className="w-full rounded-lg bg-bg-elevated-2 py-2 text-center font-sans text-xs font-semibold uppercase tracking-wide text-text transition-colors hover:bg-primary hover:text-on-primary"
+              className="w-full rounded-lg bg-bg-elevated-2 py-2 text-center font-sans text-xs font-semibold uppercase tracking-wide text-text transition-colors hover:bg-primary hover:text-on-primary after:absolute after:inset-0 after:content-['']"
             >
               {t.common.viewDetails}
             </Link>

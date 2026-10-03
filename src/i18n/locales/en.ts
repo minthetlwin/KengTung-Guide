@@ -1348,6 +1348,17 @@ export const en: Dictionary = {
             "The grand ceremony marking the 100th anniversary of Maha Myat Muni Pagoda — the pride of Keng Tung, Eastern Shan State — including the offering of a ruby-and-diamond crown (Yadana Sein Hpondaw) and a gold umbrella (Shwehti), together with the Buddha Consecration (Anekazatin) grand ceremony, was held on the morning of the full moon day of Tabodwe, Sasana Year 2565, Kawza Era 1383. Presiding over the ceremony were the Sayadaws and members of the Sangha led by the chief Nayaka of Kyaing Yin Monastery in Keng Tung, Agga Maha Saddhamma Jotikadhaja Bhaddanta Khemasara.\n\nThe ceremony was attended by the Chairman of the State Administration Council and (then) Prime Minister — now State President — Senior General Min Aung Hlaing, together with his wife Daw Kyu Kyu Hla and family members; State Administration Council members Lieutenant General Moe Myint Tun, U Sai Lone Hsai, and U Shwe Kyin; Union Ministers Lieutenant General Tun Tun Naung, U Ko Ko, U Hla Moe, Dr. Nyunt Phay, and Dr. Thet Khaing Win; Shan State Chief Minister Dr. Kyaw Tun; State Administration Council Chairman's Advisory Body member Dr. Daw Yin Yin Nwe; Commander-in-Chief (Navy) Admiral Moe Aung and his wife; Commander-in-Chief (Air) General Tun Aung and his wife; senior Tatmadaw officers from the Office of the Commander-in-Chief and their wives; Triangle Region Military Command Commander Major General Myo Min Tun and responsible officials; invited guests, sincere donors, officers, soldiers and their families, monastic associations, local ethnic residents, and traditional cultural associations.",
         },
         {
+          eyebrow: 'Face Washing Ceremony',
+          title: 'Face Washing of the Maha Myat Muni Buddha, Keng Tung',
+          caption:
+            'A photo record of the face-washing of the Maha Myat Muni Buddha image at Maha Myat Muni Pagoda in Keng Tung.',
+        },
+        {
+          eyebrow: 'Full Moon of Kason',
+          title: 'Bodhi Tree Watering Festival at Maha Myat Muni Pagoda, Keng Tung, on the Full Moon of Kason',
+          caption: 'A record of the Bodhi tree watering festival (Nyaung Ye Thun) held at Maha Myat Muni Pagoda.',
+        },
+        {
           eyebrow: 'Vassa Season Ritual',
           title: 'Morning Alms Offering (Aruna Hsun)',
           caption:
@@ -1355,14 +1366,9 @@ export const en: Dictionary = {
         },
         {
           eyebrow: 'Full Moon & New Moon',
-          title: 'Dhammacakka Sutta Recitation',
+          title: 'Dhammacakka Sutta Recitation in Gone Shan at Maha Myat Muni Pagoda, Keng Tung',
           caption:
             'Inside the Gandhakuti monastery hall of Maha Myat Muni Pagoda, devotional groups chant the Dhammacakka Sutta in the Shan language on every full moon and new moon day.',
-        },
-        {
-          eyebrow: 'Full Moon of Kason',
-          title: 'Bodhi Tree Watering Festival at Maha Myat Muni',
-          caption: 'A record of the Bodhi tree watering festival (Nyaung Ye Thun) held at Maha Myat Muni Pagoda.',
         },
       ],
     },
@@ -3045,6 +3051,10 @@ export const en: Dictionary = {
   common: {
     viewDetails: 'View Details',
     back: 'Go back',
+  },
+  offline: {
+    downloading: 'Downloading photos and audio for offline use…',
+    ready: 'Ready — the guide now works without internet',
   },
   closing: {
     text: '"Buddhasasanam ciram titthatu" — may the Buddha\'s Sasana long endure.',
