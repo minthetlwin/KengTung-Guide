@@ -499,6 +499,11 @@ export interface Dictionary {
   offline: {
     downloading: string
     ready: string
+    title: string
+    description: string
+    cta: string
+    downloaded: string
+    iosHint: string
   }
   closing: {
     text: string

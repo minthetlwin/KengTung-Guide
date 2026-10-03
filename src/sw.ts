@@ -1,11 +1,14 @@
 /// <reference lib="webworker" />
 // Service worker for the installable (offline) build — e.g. the app installed
-// on a smart LED board. On install it downloads every built asset: JS/CSS,
+// on a smart LED board. It's only registered when the visitor presses the
+// footer's download button (src/hooks/useOfflineDownload.ts), never on a
+// normal visit. On install it downloads every built asset: JS/CSS,
 // fonts, all full-resolution photos, the 360° panoramas and the narration
 // audio (see `globPatterns` in vite.config.ts), so after that one download the
 // whole site runs with no internet connection and no image loading delay.
 import { clientsClaim } from 'workbox-core'
 import {
+  addPlugins,
   cleanupOutdatedCaches,
   createHandlerBoundToURL,
   matchPrecache,
@@ -37,7 +40,23 @@ registerRoute(
   },
 )
 
-precacheAndRoute(self.__WB_MANIFEST)
+const manifest = self.__WB_MANIFEST
+
+// Report each downloaded file to the page so the download button can show a
+// progress bar. On the first install the page isn't controlled yet, hence
+// includeUncontrolled.
+let cachedCount = 0
+addPlugins([
+  {
+    cacheDidUpdate: async () => {
+      cachedCount += 1
+      const windows = await self.clients.matchAll({ type: 'window', includeUncontrolled: true })
+      windows.forEach((w) => w.postMessage({ type: 'PRECACHE_PROGRESS', done: cachedCount, total: manifest.length }))
+    },
+  },
+])
+
+precacheAndRoute(manifest)
 cleanupOutdatedCaches()
 
 // Client-side routes (/pagodas, /wat-zom-kham, …) all resolve to the app shell.

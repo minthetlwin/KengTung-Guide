@@ -1,10 +1,12 @@
 import { Link } from 'react-router-dom'
 import { useLanguage } from '../context/language-context'
 import { locales } from '../i18n'
+import { isIosNotInstalled, startOfflineDownload, useOfflineDownload } from '../hooks/useOfflineDownload'
 
 export function Footer() {
   const { t, locale, setLocale } = useLanguage()
   const year = new Date().getFullYear()
+  const offline = useOfflineDownload()
 
   return (
     <footer className="mt-16 border-t border-border bg-bg-elevated">
@@ -90,6 +92,58 @@ export function Footer() {
           </div>
         </div>
       </div>
+
+      {offline.status !== 'unsupported' && (
+        <div className="border-t border-border px-gutter py-8 md:px-gutter-lg">
+          <div className="mx-auto flex max-w-[1440px] flex-col gap-5 md:flex-row md:items-center md:justify-between">
+            <div className="flex items-start gap-3">
+              <span className="material-symbols-outlined text-[28px] text-primary">install_mobile</span>
+              <div className="flex flex-col gap-1">
+                <span className="font-serif text-base font-semibold text-text">{t.offline.title}</span>
+                <p className="max-w-2xl font-sans text-sm leading-relaxed text-text-muted">{t.offline.description}</p>
+                {isIosNotInstalled() && <p className="font-sans text-xs text-text-faint">{t.offline.iosHint}</p>}
+              </div>
+            </div>
+
+            {offline.status === 'idle' && (
+              <button
+                type="button"
+                onClick={startOfflineDownload}
+                className="flex shrink-0 items-center justify-center gap-2 rounded-full bg-primary px-6 py-3 font-sans text-sm font-semibold text-on-primary shadow-soft transition-opacity hover:opacity-90"
+              >
+                <span className="material-symbols-outlined text-[20px]">download</span>
+                {t.offline.cta}
+              </button>
+            )}
+            {offline.status === 'downloading' && (
+              <div
+                role="progressbar"
+                aria-valuenow={Math.round(offline.progress * 100)}
+                aria-valuemin={0}
+                aria-valuemax={100}
+                className="flex w-full shrink-0 flex-col gap-2 md:w-72"
+              >
+                <div className="flex items-center justify-between font-sans text-xs text-text-muted">
+                  <span>{t.offline.downloading}</span>
+                  <span className="font-semibold text-text">{Math.round(offline.progress * 100)}%</span>
+                </div>
+                <div className="h-2 w-full overflow-hidden rounded-full bg-bg-elevated-3">
+                  <div
+                    className="h-full rounded-full bg-primary transition-[width] duration-300"
+                    style={{ width: `${offline.progress * 100}%` }}
+                  />
+                </div>
+              </div>
+            )}
+            {offline.status === 'ready' && (
+              <span className="flex shrink-0 items-center gap-2 font-sans text-sm font-semibold text-primary">
+                <span className="material-symbols-outlined text-[20px]">check_circle</span>
+                {t.offline.downloaded}
+              </span>
+            )}
+          </div>
+        </div>
+      )}
 
       <div className="border-t border-border px-gutter py-5 md:px-gutter-lg">
         <p className="mx-auto max-w-[1440px] font-sans text-xs text-text-faint">

@@ -3466,6 +3466,12 @@ export const en: Dictionary = {
   offline: {
     downloading: 'Downloading photos and audio for offline use…',
     ready: 'Ready — the guide now works without internet',
+    title: 'Use the guide offline',
+    description:
+      'Install the guide on your home screen and download every page, photo and narration so it works without internet. It is a large download — Wi-Fi is recommended.',
+    cta: 'Download App',
+    downloaded: 'Downloaded — works offline',
+    iosHint: 'On iPhone or iPad: tap the Share button, then “Add to Home Screen”.',
   },
   closing: {
     text: '"Buddhasasanam ciram titthatu" — may the Buddha\'s Sasana long endure.',
