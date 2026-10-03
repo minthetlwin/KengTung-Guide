@@ -7,7 +7,7 @@ import type { MmmTrusteeMember } from '../../i18n/types'
 // The roster is a fixed, index-aligned list (8 Sayadaws, 3 Nayaka patrons, the
 // Chairperson + 2 Vice Chairpersons, then the rest of the executive
 // committee) — the same order `mmmTrusteePhotos` is aligned to.
-const GROUP_BOUNDARIES = [0, 8, 11, 14, 22] as const
+const GROUP_BOUNDARIES = [0, 8, 12, 15, 34] as const
 
 interface TrusteeCardProps {
   person: MmmTrusteeMember

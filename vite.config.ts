@@ -39,7 +39,7 @@ export default defineConfig({
         maximumFileSizeToCacheInBytes: 50 * 1024 * 1024,
       },
       manifest: {
-        name: 'မဟာမြတ်မုနိဘုရားနှင့် သမိုင်းဝင်ဘုရားများ',
+        name: 'ကျိုင်းတုံမြို့မဟာမြတ်မုနိဘုရားနှင့် သမိုင်းဝင်ဘုရားများ',
         short_name: 'Keng Tung Guide',
         description: 'Keng Tung Pagoda Guide',
         lang: 'my',

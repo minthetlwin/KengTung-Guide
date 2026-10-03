@@ -62,7 +62,6 @@ export function NarrationPage() {
                     title={audio.title}
                     playLabel={audio.play}
                     pauseLabel={audio.pause}
-                    credit={audio.credit}
                   />
                 ) : (
                   <div className="flex items-center gap-2 rounded-xl border border-dashed border-border bg-bg px-4 py-3.5 font-sans text-xs font-semibold text-text-faint">

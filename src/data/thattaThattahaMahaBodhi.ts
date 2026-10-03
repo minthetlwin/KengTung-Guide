@@ -25,7 +25,6 @@ export const ttmbGalleryAlbums: GalleryAlbum[] = [
     images: [
       '/images/hattaThattahaMahaBodhi/01/upper-relic-enshrinement-01.jpg',
       '/images/hattaThattahaMahaBodhi/01/golden-bell-consecration.jpg',
-      '/images/hattaThattahaMahaBodhi/01/golden-umbrella-spire.jpg',
     ],
   },
   {

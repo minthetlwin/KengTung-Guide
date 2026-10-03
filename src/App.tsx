@@ -19,6 +19,10 @@ import {
   ktwPlaceConfig,
   khpPlaceConfig,
   ntlPlaceConfig,
+  kbgPlaceConfig,
+  kctPlaceConfig,
+  nklPlaceConfig,
+  plgPlaceConfig,
 } from './data/pagodas'
 import { OtherPlacesPage } from './pages/OtherPlacesPage'
 import { LocationMapPage } from './pages/LocationMapPage'
@@ -58,6 +62,10 @@ function App() {
             />
             <Route path="/other-places/keng-tung-haw-palace" element={<PagodaDetailPage config={khpPlaceConfig} />} />
             <Route path="/other-places/naung-tung-lake" element={<PagodaDetailPage config={ntlPlaceConfig} />} />
+            <Route path="/other-places/keng-tung-buddha-garden" element={<PagodaDetailPage config={kbgPlaceConfig} />} />
+            <Route path="/other-places/keng-tung-clock-tower" element={<PagodaDetailPage config={kctPlaceConfig} />} />
+            <Route path="/other-places/naung-kham-lake" element={<PagodaDetailPage config={nklPlaceConfig} />} />
+            <Route path="/other-places/paliang-gate" element={<PagodaDetailPage config={plgPlaceConfig} />} />
             <Route path="/location-map" element={<LocationMapPage />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/contact" element={<ContactPage />} />

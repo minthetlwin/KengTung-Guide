@@ -24,6 +24,10 @@ import { ntlHeroImage, ntlBannerImages, ntlCoordinates, ntlGalleryAlbums } from 
 import { khpHeroImage, khpBannerImages, khpCoordinates, khpGalleryAlbums } from './kengTungHawPalace'
 import { ktwHeroImage, ktwBannerImages, ktwCoordinates, ktwGalleryAlbums } from './kengTungWaterfall'
 import { lthHeroImage, lthBannerImages, lthCoordinates, lthGalleryAlbums } from './loneTreeHill'
+import { kbgHeroImage, kbgBannerImages, kbgCoordinates, kbgGalleryAlbums } from './kengTungBuddhaGarden'
+import { kctHeroImage, kctBannerImages, kctCoordinates, kctGalleryAlbums } from './kengTungClockTower'
+import { nklHeroImage, nklBannerImages, nklCoordinates, nklGalleryAlbums } from './naungKhamLake'
+import { plgHeroImage, plgBannerImages, plgCoordinates, plgGalleryAlbums } from './paliangGate'
 import { mhnbHeroImage, mhnbCoordinates, mhnbHistoryAudioSrc, mhnbPanoramaSrc } from './maingHnunNeeBayar'
 
 export interface PagodaGalleryConfig {
@@ -49,6 +53,10 @@ export interface PagodaConfig {
     | 'kengTungWaterfall'
     | 'kengTungHawPalace'
     | 'naungTungLake'
+    | 'kengTungBuddhaGarden'
+    | 'kengTungClockTower'
+    | 'naungKhamLake'
+    | 'paliangGate'
   heroImage: string
   bannerImages?: string[]
   coordinates: { lat: number; lng: number }
@@ -196,4 +204,44 @@ export const ntlPlaceConfig: PagodaConfig = {
   locationZoom: 16,
   quickNavSectionIds: ['history-timeline', 'photo-gallery', 'location'],
   gallery: { albums: ntlGalleryAlbums },
+}
+
+export const kbgPlaceConfig: PagodaConfig = {
+  dictKey: 'kengTungBuddhaGarden',
+  heroImage: kbgHeroImage,
+  bannerImages: kbgBannerImages,
+  coordinates: kbgCoordinates,
+  locationZoom: 15,
+  quickNavSectionIds: ['history-timeline', 'photo-gallery', 'location'],
+  gallery: { albums: kbgGalleryAlbums },
+}
+
+export const kctPlaceConfig: PagodaConfig = {
+  dictKey: 'kengTungClockTower',
+  heroImage: kctHeroImage,
+  bannerImages: kctBannerImages,
+  coordinates: kctCoordinates,
+  locationZoom: 17,
+  quickNavSectionIds: ['history-timeline', 'photo-gallery', 'location'],
+  gallery: { albums: kctGalleryAlbums },
+}
+
+export const nklPlaceConfig: PagodaConfig = {
+  dictKey: 'naungKhamLake',
+  heroImage: nklHeroImage,
+  bannerImages: nklBannerImages,
+  coordinates: nklCoordinates,
+  locationZoom: 16,
+  quickNavSectionIds: ['history-timeline', 'photo-gallery', 'location'],
+  gallery: { albums: nklGalleryAlbums },
+}
+
+export const plgPlaceConfig: PagodaConfig = {
+  dictKey: 'paliangGate',
+  heroImage: plgHeroImage,
+  bannerImages: plgBannerImages,
+  coordinates: plgCoordinates,
+  locationZoom: 17,
+  quickNavSectionIds: ['history-timeline', 'photo-gallery', 'location'],
+  gallery: { albums: plgGalleryAlbums },
 }

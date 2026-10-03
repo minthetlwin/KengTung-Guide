@@ -136,7 +136,6 @@ export interface PagodaDetailDictionary {
     title: string
     play: string
     pause: string
-    credit: string
   }
   panorama360?: Panorama360Dictionary
   gallery?: {
@@ -227,7 +226,6 @@ export interface MaharMyatMuniDictionary {
     title: string
     play: string
     pause: string
-    credit: string
   }
   shanHistory: {
     title: string
@@ -435,6 +433,10 @@ export interface Dictionary {
   kengTungWaterfall: PagodaDetailDictionary
   kengTungHawPalace: PagodaDetailDictionary
   naungTungLake: PagodaDetailDictionary
+  kengTungBuddhaGarden: PagodaDetailDictionary
+  kengTungClockTower: PagodaDetailDictionary
+  naungKhamLake: PagodaDetailDictionary
+  paliangGate: PagodaDetailDictionary
   locationMapPage: {
     eyebrow: string
     title: string
@@ -503,6 +505,9 @@ export interface Dictionary {
   }
   footer: {
     tagline: string
+    authors: { name: string; email: string; phone: string }[]
+    emailLabel: string
+    phoneLabel: string
     exploreHeading: string
     resourcesHeading: string
     languageHeading: string

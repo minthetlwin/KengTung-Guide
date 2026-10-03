@@ -36,7 +36,6 @@ export function MmmHistory() {
           title={a.title}
           playLabel={a.play}
           pauseLabel={a.pause}
-          credit={a.credit}
         />
       </div>
 

@@ -36,7 +36,7 @@ export function PagodaHistory({ history: h, audio: a, audioSrc }: PagodaHistoryP
 
       {a && audioSrc && (
         <div className="mb-6">
-          <AudioNarrationPlayer src={audioSrc} title={a.title} playLabel={a.play} pauseLabel={a.pause} credit={a.credit} />
+          <AudioNarrationPlayer src={audioSrc} title={a.title} playLabel={a.play} pauseLabel={a.pause} />
         </div>
       )}
 

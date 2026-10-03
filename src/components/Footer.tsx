@@ -19,6 +19,25 @@ export function Footer() {
             <span className="font-serif text-base font-semibold text-text">{t.header.brand}</span>
           </Link>
           <p className="max-w-sm font-sans text-sm leading-relaxed text-text-muted">{t.footer.tagline}</p>
+          <div className="mt-1 flex flex-col gap-4 sm:flex-row sm:gap-10">
+            {t.footer.authors.map((a) => (
+              <div key={a.email} className="flex flex-col gap-0.5 font-sans text-sm">
+                <span className="font-semibold text-text">{a.name}</span>
+                <span className="text-text-muted">
+                  {t.footer.emailLabel}:{' '}
+                  <a href={`mailto:${a.email}`} className="hover:text-primary">
+                    {a.email}
+                  </a>
+                </span>
+                <span className="text-text-muted">
+                  {t.footer.phoneLabel}:{' '}
+                  <a href={`tel:${a.phone.replace(/\s/g, '')}`} className="hover:text-primary">
+                    {a.phone}
+                  </a>
+                </span>
+              </div>
+            ))}
+          </div>
         </div>
 
         <div className="flex flex-col gap-3">

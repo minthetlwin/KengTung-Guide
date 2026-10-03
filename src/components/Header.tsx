@@ -60,16 +60,16 @@ export function Header() {
             alt="Keng Tung Pagoda Guide emblem"
             className="h-14 w-14 shrink-0 object-contain"
           />
-          <span className="hidden truncate font-serif text-[17px] font-semibold tracking-tight text-text sm:inline-block">
+          <span className="hidden max-w-[240px] font-serif text-[15px] font-semibold leading-snug tracking-tight text-text sm:line-clamp-2 2xl:max-w-[320px] 2xl:text-[17px]">
             {t.header.brand}
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-6 lg:flex">
+        <nav className="hidden items-center gap-4 min-[1440px]:flex 2xl:gap-6">
           <Link
             to="/"
             aria-current={isHomeActive ? 'page' : undefined}
-            className={`group relative py-1 font-sans text-[13.5px] font-medium transition-colors hover:text-text ${isHomeActive ? 'text-primary' : 'text-text-muted'}`}
+            className={`group relative whitespace-nowrap py-1 font-sans text-[13px] font-medium transition-colors hover:text-text ${isHomeActive ? 'text-primary' : 'text-text-muted'}`}
           >
             {t.header.nav.home}
             <span
@@ -79,7 +79,7 @@ export function Header() {
           <Link
             to="/pagodas"
             aria-current={isPagodas ? 'page' : undefined}
-            className={`group relative py-1 font-sans text-[13.5px] font-medium transition-colors hover:text-text ${isPagodas ? 'text-primary' : 'text-text-muted'}`}
+            className={`group relative whitespace-nowrap py-1 font-sans text-[13px] font-medium transition-colors hover:text-text ${isPagodas ? 'text-primary' : 'text-text-muted'}`}
           >
             {t.header.nav.pagodas}
             <span
@@ -89,7 +89,7 @@ export function Header() {
           <Link
             to="/other-places"
             aria-current={isOtherPlaces ? 'page' : undefined}
-            className={`group relative py-1 font-sans text-[13.5px] font-medium transition-colors hover:text-text ${isOtherPlaces ? 'text-primary' : 'text-text-muted'}`}
+            className={`group relative whitespace-nowrap py-1 font-sans text-[13px] font-medium transition-colors hover:text-text ${isOtherPlaces ? 'text-primary' : 'text-text-muted'}`}
           >
             {t.header.nav.otherPlaces}
             <span
@@ -99,7 +99,7 @@ export function Header() {
           <Link
             to="/festival-calendar"
             aria-current={isFestivals ? 'page' : undefined}
-            className={`group relative py-1 font-sans text-[13.5px] font-medium transition-colors hover:text-text ${isFestivals ? 'text-primary' : 'text-text-muted'}`}
+            className={`group relative whitespace-nowrap py-1 font-sans text-[13px] font-medium transition-colors hover:text-text ${isFestivals ? 'text-primary' : 'text-text-muted'}`}
           >
             {t.header.nav.festivals}
             <span
@@ -109,7 +109,7 @@ export function Header() {
           <Link
             to="/location-map"
             aria-current={isLocationMap ? 'page' : undefined}
-            className={`group relative py-1 font-sans text-[13.5px] font-medium transition-colors hover:text-text ${isLocationMap ? 'text-primary' : 'text-text-muted'}`}
+            className={`group relative whitespace-nowrap py-1 font-sans text-[13px] font-medium transition-colors hover:text-text ${isLocationMap ? 'text-primary' : 'text-text-muted'}`}
           >
             {t.header.nav.map}
             <span
@@ -119,7 +119,7 @@ export function Header() {
           <Link
             to="/about"
             aria-current={isAbout ? 'page' : undefined}
-            className={`group relative py-1 font-sans text-[13.5px] font-medium transition-colors hover:text-text ${isAbout ? 'text-primary' : 'text-text-muted'}`}
+            className={`group relative whitespace-nowrap py-1 font-sans text-[13px] font-medium transition-colors hover:text-text ${isAbout ? 'text-primary' : 'text-text-muted'}`}
           >
             {t.header.nav.about}
             <span
@@ -129,7 +129,7 @@ export function Header() {
           <Link
             to="/contact"
             aria-current={isContact ? 'page' : undefined}
-            className={`group relative py-1 font-sans text-[13.5px] font-medium transition-colors hover:text-text ${isContact ? 'text-primary' : 'text-text-muted'}`}
+            className={`group relative whitespace-nowrap py-1 font-sans text-[13px] font-medium transition-colors hover:text-text ${isContact ? 'text-primary' : 'text-text-muted'}`}
           >
             {t.header.nav.contact}
             <span
@@ -146,7 +146,7 @@ export function Header() {
             className="hidden h-10 items-center gap-1.5 rounded-full px-3 text-text-faint transition-colors hover:bg-bg-elevated-2 hover:text-text-muted sm:flex"
           >
             <span className="material-symbols-outlined text-[19px]">search</span>
-            <kbd className="hidden rounded border border-border px-1.5 py-0.5 font-sans text-[10px] text-text-faint xl:inline">
+            <kbd className="hidden rounded border border-border px-1.5 py-0.5 font-sans text-[10px] text-text-faint 2xl:inline">
               ⌘K
             </kbd>
           </Link>
@@ -169,7 +169,7 @@ export function Header() {
             onClick={() => setMobileOpen((v) => !v)}
             aria-label="Toggle menu"
             aria-expanded={mobileOpen}
-            className="flex h-10 w-10 items-center justify-center rounded-full text-text transition-colors hover:bg-bg-elevated-2 lg:hidden"
+            className="flex h-10 w-10 items-center justify-center rounded-full text-text transition-colors hover:bg-bg-elevated-2 min-[1440px]:hidden"
           >
             <span className="material-symbols-outlined text-[20px]">
               {mobileOpen ? 'close' : 'menu'}
@@ -179,7 +179,7 @@ export function Header() {
       </div>
 
       {mobileOpen && (
-        <div className="border-t border-border bg-bg px-gutter py-4 lg:hidden animate-fade-in">
+        <div className="border-t border-border bg-bg px-gutter py-4 min-[1440px]:hidden animate-fade-in">
           <nav className="flex flex-col gap-0.5">
             <Link
               to="/"

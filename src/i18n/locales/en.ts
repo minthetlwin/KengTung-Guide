@@ -1179,7 +1179,6 @@ export const en: Dictionary = {
       title: 'Listen to the History',
       play: 'Play',
       pause: 'Pause',
-      credit: 'Narrated as an act of merit by Maung Kyaw Linn Htet.',
     },
     gallery: {
       eyebrow: 'Visual Archive & Photographic Record',
@@ -1321,7 +1320,6 @@ export const en: Dictionary = {
       title: 'Listen to the History',
       play: 'Play',
       pause: 'Pause',
-      credit: 'Narrated as an act of merit by Maung Kyaw Linn Htet.',
     },
     shanHistory: {
       title: 'History of Maha Myat Muni Pagoda — in Gone Shan',
@@ -1446,6 +1444,7 @@ export const en: Dictionary = {
         { name: 'U Sai Tit Aung', role: 'Nayaka (Patron)' },
         { name: 'U Loon Sai', role: 'Nayaka (Patron)' },
         { name: 'U San Yi', role: 'Nayaka (Patron)' },
+        { name: 'U San San', role: 'Nayaka (Patron)' },
         { name: 'U Sai Sai Khan', role: 'Chairperson' },
         { name: 'U Sai Ri Tim Wun', role: 'Vice Chairperson 1' },
         { name: 'U Sam Than', role: 'Vice Chairperson 2' },
@@ -1455,8 +1454,19 @@ export const en: Dictionary = {
         { name: 'Nang Wo Thaung', role: 'Accountant' },
         { name: 'U Sai Sai Hsai', role: 'Treasurer' },
         { name: 'U Sai Kyaw Kyaw', role: 'Auditor 1' },
+        { name: 'U Sai Seng Naw', role: 'Member (1)' },
         { name: 'U Lone Kyauk', role: 'Member' },
+        { name: 'Dr. Sai Mauk Zing', role: 'Member (3)' },
         { name: 'Dr. Sai Sai Tit', role: 'Member' },
+        { name: 'U Nan Seik', role: 'Member' },
+        { name: 'U Nan Yi', role: 'Member (2)' },
+        { name: 'U Sai Lone Ya', role: 'Member' },
+        { name: 'U Sai Shein Tit', role: 'Member' },
+        { name: 'U Sai Law', role: 'Office Staff' },
+        { name: 'U Sai Sai Tit', role: 'Office Staff' },
+        { name: 'U Sai Aye', role: 'Office Staff' },
+        { name: 'Sai Khay Shein Swam', role: 'Office Staff' },
+        { name: 'Nang Lat Lyo Wan', role: 'Office Staff' },
       ],
       groupSayadaw: 'Sayadaws — Great Preceptors of the Sangha',
       groupOldBoard: 'Old Board',
@@ -1542,7 +1552,6 @@ export const en: Dictionary = {
       title: 'Listen to the History',
       play: 'Play',
       pause: 'Pause',
-      credit: 'Narrated as an act of merit by Maung Kyaw Linn Htet.',
     },
     location: {
       eyebrow: 'Visit & Directions',
@@ -1645,7 +1654,6 @@ export const en: Dictionary = {
       title: 'Listen to the History',
       play: 'Play',
       pause: 'Pause',
-      credit: 'Narrated as an act of merit by Maung Kyaw Linn Htet.',
     },
     panorama360: {
       eyebrow: 'Immersive View',
@@ -1780,7 +1788,6 @@ export const en: Dictionary = {
       title: 'Listen to the History',
       play: 'Play',
       pause: 'Pause',
-      credit: 'Narrated as an act of merit by Maung Kyaw Linn Htet.',
     },
     panorama360: {
       eyebrow: 'Immersive View',
@@ -1927,7 +1934,6 @@ export const en: Dictionary = {
       title: 'Listen to the History',
       play: 'Play',
       pause: 'Pause',
-      credit: 'Narrated as an act of merit by Maung Kyaw Linn Htet.',
     },
     panorama360: {
       eyebrow: 'Immersive View',
@@ -2058,7 +2064,6 @@ export const en: Dictionary = {
       title: 'Listen to the History',
       play: 'Play',
       pause: 'Pause',
-      credit: 'Narrated as an act of merit by Maung Kyaw Linn Htet.',
     },
     panorama360: {
       eyebrow: 'Immersive View',
@@ -2198,7 +2203,6 @@ export const en: Dictionary = {
       title: 'Listen to the History',
       play: 'Play',
       pause: 'Pause',
-      credit: 'Narrated as an act of merit by Maung Kyaw Linn Htet.',
     },
     location: {
       eyebrow: 'Visit & Directions',
@@ -2334,7 +2338,6 @@ export const en: Dictionary = {
       title: 'Listen to the History',
       play: 'Play',
       pause: 'Pause',
-      credit: 'Narrated as an act of merit by Maung Kyaw Linn Htet.',
     },
     gallery: {
       eyebrow: 'Visual Archive & Photographic Record',
@@ -2480,7 +2483,6 @@ export const en: Dictionary = {
       title: 'Listen to the History',
       play: 'Play',
       pause: 'Pause',
-      credit: 'Narrated as an act of merit by Maung Kyaw Linn Htet.',
     },
     panorama360: {
       eyebrow: 'Immersive View',
@@ -2951,6 +2953,399 @@ export const en: Dictionary = {
       cta: 'Explore the Directory',
     },
   },
+  kengTungBuddhaGarden: {
+    meta: { title: 'Keng Tung Buddha Garden — Keng Tung' },
+    hero: {
+      badges: [{ label: 'Place of Peace' }],
+      title: 'Keng Tung Buddha Garden',
+      localName: 'Sacred Images in a Peaceful Garden',
+      subtitle:
+        'A landmark in a calm corner of Keng Tung where Buddhist sacred sites and the beauty of nature can be enjoyed together in one place.',
+    },
+    quickNav: {
+      label: 'Jump to Section:',
+      items: ['About the Garden', 'Photo Gallery', 'Visit & Directions'],
+    },
+    facts: {
+      pills: [
+        { label: 'Type', value: 'Buddhist garden' },
+        { label: 'Location', value: 'Keng Tung' },
+        { label: 'Highlights', value: 'Many Buddha images' },
+        { label: 'Good For', value: 'Meditation & quiet rest' },
+      ],
+    },
+    history: {
+      eyebrow: 'A Place of Peace in Keng Tung',
+      title: 'About the Keng Tung Buddha Garden',
+      description:
+        'The Keng Tung Buddha Garden is a landmark where Buddhist sacred sites and the beauty of nature come together in the calm, peaceful surroundings of Keng Tung.',
+      quickFacts: [
+        { label: 'Setting', value: 'Quiet, green surroundings' },
+        { label: 'Activities', value: 'Worship, meditation, rest' },
+        { label: 'Visit With', value: 'Family & friends' },
+      ],
+      sections: [
+        {
+          heading: 'Introduction',
+          paragraphs: [
+            'Inside the garden, visitors can pay respect to many Buddha images.',
+            'Its pleasant, peaceful surroundings also make it especially well suited to meditation, resting quietly, visiting with family and friends, and paying homage at its sacred sites.',
+          ],
+        },
+        {
+          heading: 'Things to Know',
+          paragraphs: [
+            'The quiet, still atmosphere of the garden, its lush green natural scenery and its Buddhist spirit bring calm and joy to visitors.',
+            'It offers a good chance to rest for a while and set aside the tiredness of daily life.',
+            'When visiting Keng Tung, the Buddha Garden is a place not to be missed — somewhere to experience religious atmosphere and peaceful natural beauty at the same time, and to take home good memories.',
+          ],
+        },
+      ],
+      readMoreCta: 'Read More',
+      readLessCta: 'Show Less',
+    },
+    gallery: {
+      eyebrow: 'Visual Archive',
+      title: 'Photo Gallery',
+      photoCount: (count) => `${count} Photo${count === 1 ? '' : 's'}`,
+      albums: [
+        {
+          eyebrow: 'Keng Tung',
+          title: 'Views of the Buddha Garden',
+          caption: 'Photos courtesy of the "Kyaing Tong, Myanmar" Facebook page.',
+        },
+      ],
+    },
+    location: {
+      eyebrow: 'Visit & Directions',
+      title: 'Find the Buddha Garden',
+      description: 'The Buddha Garden is in Keng Tung. Daytime visits are best for enjoying the garden and its Buddha images.',
+      addressLabel: 'Address',
+      address: 'Keng Tung Buddha Garden, Keng Tung, Shan State, Myanmar',
+      coordinatesLabel: 'Coordinates',
+      approximateLabel: 'Approximate location',
+      hoursLabel: 'Visiting Hours',
+      hours: 'Daytime',
+      streetView: 'Street',
+      satelliteView: 'Satellite',
+      viewMapCta: 'View on Google Maps',
+      directionsCta: 'Get Directions',
+    },
+    closing: {
+      text: 'Faith and nature, side by side in Keng Tung.',
+      cta: 'Explore the Directory',
+    },
+  },
+  kengTungClockTower: {
+    meta: { title: 'Keng Tung Clock Tower — Keng Tung' },
+    hero: {
+      badges: [{ label: 'Built 2020' }],
+      title: 'Keng Tung Clock Tower',
+      localName: 'A Landmark of Keng Tung',
+      subtitle:
+        'A 46-foot landmark at the main junction by the central market, bringing together the town’s modern beauty and its historic heritage.',
+    },
+    quickNav: {
+      label: 'Jump to Section:',
+      items: ['About the Clock Tower', 'Photo Gallery', 'Visit & Directions'],
+    },
+    facts: {
+      pills: [
+        { label: 'Built', value: '2020' },
+        { label: 'Height', value: '46 feet' },
+        { label: 'Clock Faces', value: 'Four' },
+        { label: 'Location', value: 'By the central market' },
+      ],
+    },
+    history: {
+      eyebrow: 'A Landmark of Keng Tung',
+      title: 'About the Keng Tung Clock Tower',
+      description:
+        'The Keng Tung Clock Tower is a landmark of Keng Tung, Eastern Shan State, that brings together the town’s urban beauty and its historic heritage.',
+      quickFacts: [
+        { label: 'Design', value: 'Modern, based on local art' },
+        { label: 'Setting', value: 'Main town-centre junction' },
+        { label: 'Symbol Of', value: 'Old heritage meets new town' },
+      ],
+      sections: [
+        {
+          heading: 'Introduction',
+          paragraphs: [
+            'The Keng Tung Clock Tower is a landmark of Keng Tung, Eastern Shan State, combining the town’s urban beauty with its historic heritage.',
+            'Built in 2020, the clock tower was created in a modern design based on the traditional culture and artistic craftsmanship of the Keng Tung region.',
+          ],
+        },
+        {
+          heading: 'In the Heart of Town',
+          paragraphs: [
+            'Standing at the main junction near Keng Tung’s central market in the middle of town, it has become a prominent place easily seen not only by local residents but also by visitors to Keng Tung.',
+            'The 46-foot tower has clock faces on all four sides, marking the flow of time alongside the town’s daily life while adding to the beauty of the town.',
+          ],
+        },
+        {
+          heading: 'Old Town, New Town',
+          paragraphs: [
+            'In Keng Tung, a town with a long history reaching back to the days of the old Sawbwas, the clock tower has become a symbol connecting the heritage of the old town with the beauty of the modern town.',
+          ],
+        },
+        {
+          heading: 'Things to Know',
+          paragraphs: [
+            'The area around the clock tower is busy with the daily life of local ethnic communities, shoppers and visitors — a good place to feel the lively town life of Keng Tung.',
+            'Visitors to Keng Tung can stop by the clock tower to see the town’s modern beauty, traditional culture and local daily life all in one place.',
+          ],
+        },
+      ],
+      readMoreCta: 'Read More',
+      readLessCta: 'Show Less',
+    },
+    gallery: {
+      eyebrow: 'Visual Archive',
+      title: 'Photo Gallery',
+      photoCount: (count) => `${count} Photo${count === 1 ? '' : 's'}`,
+      albums: [
+        {
+          eyebrow: 'Keng Tung Town Centre',
+          title: 'Views of the Clock Tower',
+          caption: 'The clock tower at the main junction near Keng Tung’s central market.',
+        },
+      ],
+    },
+    location: {
+      eyebrow: 'Visit & Directions',
+      title: 'Find the Clock Tower',
+      description:
+        'The clock tower stands at the main junction near Keng Tung’s central market, in the middle of town — easy to reach on foot from the town centre.',
+      addressLabel: 'Address',
+      address: 'Main junction near Keng Tung Central Market, Keng Tung, Shan State, Myanmar',
+      coordinatesLabel: 'Coordinates',
+      approximateLabel: 'Approximate location',
+      hoursLabel: 'Visiting Hours',
+      hours: 'Open 24 Hours',
+      streetView: 'Street',
+      satelliteView: 'Satellite',
+      viewMapCta: 'View on Google Maps',
+      directionsCta: 'Get Directions',
+    },
+    closing: {
+      text: 'Where the old town of Keng Tung meets the new.',
+      cta: 'Explore the Directory',
+    },
+  },
+  naungKhamLake: {
+    meta: { title: 'Naung Kham Lake — Keng Tung' },
+    hero: {
+      badges: [{ label: 'The Golden Lake' }],
+      title: 'Naung Kham Lake',
+      localName: 'The Golden Lake of Keng Tung',
+      subtitle:
+        'A historic natural lake that has been part of Keng Tung since the founding of the town — quieter than Naung Tung, with a pagoda and religious hall on the water.',
+    },
+    quickNav: {
+      label: 'Jump to Section:',
+      items: ['History & Meaning', 'Photo Gallery', 'Visit & Directions'],
+    },
+    facts: {
+      pills: [
+        { label: 'Meaning', value: '“Golden Lake”' },
+        { label: 'Size', value: 'Second-largest natural lake' },
+        { label: 'Location', value: 'Airport Road' },
+        { label: 'Best Time', value: 'Morning & evening' },
+      ],
+    },
+    history: {
+      eyebrow: 'The Golden Lake',
+      title: 'History of Naung Kham Lake',
+      description:
+        'According to the historical traditions of Keng Tung, Naung Kham Lake is an ancient natural lake that, together with the great Naung Tung Lake, has been part of the town since its founding.',
+      quickFacts: [
+        { label: 'One Of', value: 'Three great natural lakes' },
+        { label: 'On the Water', value: 'A pagoda & religious hall' },
+        { label: 'Nearby', value: 'Seng Tip Hotel' },
+      ],
+      sections: [
+        {
+          heading: 'Introduction',
+          paragraphs: [
+            'When hermits drained the water from the great Keng Tung valley to found the town, three major natural lakes remained — Naung Tung, Naung Yan and Naung Kham. Naung Kham is one of them.',
+            'Since the days of the old Myanmar kings and the Shan Sawbwas, it was carefully maintained as a feature of the southern part of the town.',
+          ],
+        },
+        {
+          heading: 'The Name',
+          paragraphs: [
+            'In the Shan language, “Naung” means “lake” and “Kham” means “gold”, so the name means “Golden Lake”.',
+          ],
+        },
+        {
+          heading: 'A Lake in the Making of the Town',
+          paragraphs: [
+            'Naung Kham Lake played an important role in the history of how the town was laid out and in its ancient system of water management.',
+            'In the history of Keng Tung (Khemarattha Tungkapuri), even when the city walls and gates were being built, the town plan was developed around these great natural lakes so that water would flow well and the town would never be short of water.',
+          ],
+        },
+        {
+          heading: 'Things to Know',
+          paragraphs: [
+            'Naung Kham Lake is the second-largest natural lake after the famous Naung Tung Lake in the town centre.',
+            'It lies on Airport Road, the road to Keng Tung Airport, diagonally across from the Seng Tip Hotel, and gives a quieter, more natural and peaceful feeling than Naung Tung Lake in the middle of town.',
+            'The wide water and the natural scenery around it bring out the beauty of the lake, making it a good place to rest between the still water and the cool breeze.',
+            'Especially in the morning and evening, the light falling across the water and the surrounding scenery create beautiful views for photography.',
+          ],
+        },
+        {
+          heading: 'Faith on the Water',
+          paragraphs: [
+            'A religious hall (Thathana Beikman) and a pagoda stand within the lake, so the natural beauty of the lake and its religious atmosphere combine into a distinctive scene.',
+            'Visitors from Myanmar and abroad come to Naung Kham Lake and often record its lovely scenery in photographs as keepsakes.',
+          ],
+        },
+        {
+          heading: 'A Landmark of Keng Tung',
+          paragraphs: [
+            'With traces of history, the calm of nature and religious heritage all together, Naung Kham Lake is one of the treasured landmarks of Keng Tung — a place well worth visiting for anyone who wants to feel the peaceful beauty of the town.',
+          ],
+        },
+      ],
+      readMoreCta: 'Read Full History',
+      readLessCta: 'Show Less',
+    },
+    gallery: {
+      eyebrow: 'Visual Archive',
+      title: 'Photo Gallery',
+      photoCount: (count) => `${count} Photo${count === 1 ? '' : 's'}`,
+      albums: [
+        {
+          eyebrow: 'Airport Road, Keng Tung',
+          title: 'Views of Naung Kham Lake',
+          caption: 'Photos courtesy of the "Kyaing Tong, Myanmar" Facebook page.',
+        },
+      ],
+    },
+    location: {
+      eyebrow: 'Visit & Directions',
+      title: 'Find Naung Kham Lake',
+      description:
+        'Naung Kham Lake lies on Airport Road, the road to Keng Tung Airport, diagonally across from the Seng Tip Hotel. Mornings and evenings bring the best light over the water.',
+      addressLabel: 'Address',
+      address: 'Naung Kham Lake, Airport Road, Keng Tung, Shan State, Myanmar',
+      coordinatesLabel: 'Coordinates',
+      approximateLabel: 'Approximate location',
+      hoursLabel: 'Visiting Hours',
+      hours: 'Open 24 Hours',
+      streetView: 'Street',
+      satelliteView: 'Satellite',
+      viewMapCta: 'View on Google Maps',
+      directionsCta: 'Get Directions',
+    },
+    closing: {
+      text: 'History, nature and faith, reflected in the Golden Lake.',
+      cta: 'Explore the Directory',
+    },
+  },
+  paliangGate: {
+    meta: { title: 'Pa Liang Gate — Keng Tung' },
+    hero: {
+      badges: [{ label: 'Built 1819' }],
+      title: 'Pa Liang Gate',
+      localName: 'Padaeng Gate — The Last Original City Gate',
+      subtitle:
+        'The only one of Keng Tung’s twelve old city gates still standing in its original form — a stone gateway built under Sawbwa Sao Maha Khanan.',
+    },
+    quickNav: {
+      label: 'Jump to Section:',
+      items: ['History', 'Photo Gallery', 'Visit & Directions'],
+    },
+    facts: {
+      pills: [
+        { label: 'Built', value: 'AD 1819' },
+        { label: 'Built Under', value: 'Sawbwa Sao Maha Khanan' },
+        { label: 'Gateway', value: 'About 10 ft wide, 18 ft high' },
+        { label: 'Material', value: 'Large stone blocks' },
+      ],
+    },
+    history: {
+      eyebrow: 'The Last Original City Gate',
+      title: 'History of Pa Liang Gate',
+      description:
+        'Pa Liang Gate is a historic landmark that still reflects the ancient history and cultural heritage of Keng Tung today.',
+      quickFacts: [
+        { label: 'City Gates', value: '12 in all' },
+        { label: 'City Wall', value: 'About 4 miles 1 furlong' },
+        { label: 'Source', value: 'Gon Shan history' },
+      ],
+      sections: [
+        {
+          heading: 'Introduction',
+          paragraphs: [
+            'According to Gon Shan history, during the reign of Sawbwa Sao Maha Khanan (AD 1814–1857), in AD 1819 the Keng Tung city wall — which had eight ruined gates — was repaired and four more gates were added.',
+            'The ancient wall, about 4 miles and 1 furlong long in total, had twelve city gates. Pa Liang Gate is one of the gates that were added at that time.',
+            'Of the twelve city gates, Pa Liang Gate is remarkable as the only ancient gate that still stands firmly in its original form today.',
+          ],
+        },
+        {
+          heading: 'Built of Stone',
+          paragraphs: [
+            'Standing east of Keng Tung on the road to Loi Mwe, Pa Liang Gate was built with large, solid stone blocks in keeping with local traditional architecture.',
+            'The gateway is about 10 feet wide and about 18 feet high — a rare work through which the building skills and fortification styles of the old days can be studied.',
+          ],
+        },
+        {
+          heading: 'A Gate of the Sawbwa Era',
+          paragraphs: [
+            'In the days of the old Keng Tung Sawbwas, the city walls, moats and gates were built systematically to support the security and the trade of the town.',
+            'At that time, Pa Liang Gate was an important entrance where people coming into and going out of the town were watched and controlled.',
+          ],
+        },
+        {
+          heading: 'A Surviving Witness',
+          paragraphs: [
+            'Over the generations, as the town changed and grew, the other city gates and most of the wall were damaged and disappeared — but Pa Liang Gate still proudly stands today as a heritage that bears witness to Keng Tung’s ancient past.',
+            'The simple yet dignified appearance of the great stone gate brings back the feeling of old Keng Tung.',
+          ],
+        },
+        {
+          heading: 'Worth the Visit',
+          paragraphs: [
+            'Pa Liang Gate is a valuable historic heritage of Keng Tung that should not be missed — not only by those interested in history and culture, but also by anyone who wants to study the town’s ancient beauty and local architecture.',
+          ],
+        },
+      ],
+      readMoreCta: 'Read Full History',
+      readLessCta: 'Show Less',
+    },
+    gallery: {
+      eyebrow: 'Visual Archive',
+      title: 'Photo Gallery',
+      photoCount: (count) => `${count} Photo${count === 1 ? '' : 's'}`,
+      albums: [
+        {
+          eyebrow: 'Road to Loi Mwe',
+          title: 'Views of Pa Liang Gate',
+          caption: 'The stone gateway and the memorial plaque beside it, east of the Keng Tung town centre.',
+        },
+      ],
+    },
+    location: {
+      eyebrow: 'Visit & Directions',
+      title: 'Find Pa Liang Gate',
+      description: 'Pa Liang Gate stands east of Keng Tung, on the road to Loi Mwe. The road still passes through the gateway.',
+      addressLabel: 'Address',
+      address: 'Pa Liang Gate, Loi Mwe Road, Keng Tung, Shan State, Myanmar',
+      coordinatesLabel: 'Coordinates',
+      approximateLabel: 'Approximate location',
+      hoursLabel: 'Visiting Hours',
+      hours: 'Open 24 Hours',
+      streetView: 'Street',
+      satelliteView: 'Satellite',
+      viewMapCta: 'View on Google Maps',
+      directionsCta: 'Get Directions',
+    },
+    closing: {
+      text: 'The last gate of old Keng Tung, still standing.',
+      cta: 'Explore the Directory',
+    },
+  },
   locationMapPage: {
     eyebrow: 'Pilgrimage Cartography',
     title: 'Location Map',
@@ -2970,8 +3365,8 @@ export const en: Dictionary = {
     emptyState: 'Places are being documented and will appear here soon.',
     places: [
       {
-        name: 'Lone Tree Hill',
-        description: 'A 218-foot Kanyin Phyu tree on Suam Mong Hill, planted around 1426 A.D. according to Shan legend.',
+        name: 'Keng Tung Buddha Garden',
+        description: 'A peaceful garden of many Buddha images, where sacred sites and natural beauty meet.',
       },
       {
         name: 'Keng Tung Waterfall',
@@ -2982,8 +3377,24 @@ export const en: Dictionary = {
         description: 'The palace of the Kengtung Sawbwa, built 1903–1906 and reborn as a replica museum on Naung Tung Lake in 2024.',
       },
       {
+        name: 'Keng Tung Clock Tower',
+        description: 'A 46-foot clock tower built in 2020 at the main junction by the central market.',
+      },
+      {
         name: 'Naung Tung Lake',
         description: 'The historic lake at the heart of Kengtung, around which the city grew — and the source of its name.',
+      },
+      {
+        name: 'Naung Kham Lake',
+        description: 'The “Golden Lake” on Airport Road — quieter than Naung Tung, with a pagoda on the water.',
+      },
+      {
+        name: 'Pa Liang Gate',
+        description: 'Built in 1819, the only one of Keng Tung’s twelve city gates still in its original form.',
+      },
+      {
+        name: 'Lone Tree Hill',
+        description: 'A 218-foot Kanyin Phyu tree on Suam Mong Hill, planted around 1426 A.D. according to Shan legend.',
       },
     ],
   },
@@ -3061,6 +3472,12 @@ export const en: Dictionary = {
   },
   footer: {
     tagline: 'A living archive of the sacred pagodas, monasteries and pilgrimage routes of Kyaing Tong.',
+    authors: [
+      { name: 'Dr. Yin Win Chit', email: 'yinwin.chit@gmail.com', phone: '+959 444032657' },
+      { name: 'Dr. Nwe Ni Kyaw', email: 'nwenikyaw.nnk1989@gmail.com', phone: '+959 756746787' },
+    ],
+    emailLabel: 'Email',
+    phoneLabel: 'Phone',
     exploreHeading: 'Explore',
     resourcesHeading: 'Resources',
     languageHeading: 'Language',

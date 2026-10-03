@@ -12,10 +12,9 @@ interface AudioNarrationPlayerProps {
   title: string
   playLabel: string
   pauseLabel: string
-  credit: string
 }
 
-export function AudioNarrationPlayer({ src, title, playLabel, pauseLabel, credit }: AudioNarrationPlayerProps) {
+export function AudioNarrationPlayer({ src, title, playLabel, pauseLabel }: AudioNarrationPlayerProps) {
   const audioRef = useRef<HTMLAudioElement>(null)
   const [playing, setPlaying] = useState(false)
   const [currentTime, setCurrentTime] = useState(0)
@@ -95,7 +94,6 @@ export function AudioNarrationPlayer({ src, title, playLabel, pauseLabel, credit
             background: `linear-gradient(to right, rgb(var(--color-primary)) ${progress}%, rgb(var(--color-bg-elevated-3)) ${progress}%)`,
           }}
         />
-        <span className="font-sans text-xs text-text-faint">{credit}</span>
       </div>
     </div>
   )
